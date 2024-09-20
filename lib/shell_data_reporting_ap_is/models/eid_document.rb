@@ -24,8 +24,8 @@ module ShellDataReportingApIs
 
     # Document type.
     # Possible values:
-    # •	NAT (National)
-    # •	INT (International)
+    # •    NAT (National)
+    # •    INT (International)
     # @return [String]
     attr_accessor :document_type
 
@@ -48,10 +48,10 @@ module ShellDataReportingApIs
 
     # Document status.
     # Possible values:
-    # •	NEW
-    # •	VIEWED
-    # •	DOWNLOADED
-    # •	RESTORED
+    # •    NEW
+    # •    VIEWED
+    # •    DOWNLOADED
+    # •    RESTORED
     # @return [String]
     attr_accessor :document_status
 
@@ -107,16 +107,11 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(document_id = SKIP,
-                   account_group_id = SKIP,
-                   account_group_name = SKIP,
-                   document_type = SKIP,
-                   document_format = SKIP,
-                   document_date = SKIP,
-                   number_of_invoices = SKIP,
-                   file_size = SKIP,
-                   document_status = SKIP,
-                   document_name = SKIP)
+    def initialize(document_id = SKIP, account_group_id = SKIP,
+                   account_group_name = SKIP, document_type = SKIP,
+                   document_format = SKIP, document_date = SKIP,
+                   number_of_invoices = SKIP, file_size = SKIP,
+                   document_status = SKIP, document_name = SKIP)
       @document_id = document_id unless document_id == SKIP
       @account_group_id = account_group_id unless account_group_id == SKIP
       @account_group_name = account_group_name unless account_group_name == SKIP

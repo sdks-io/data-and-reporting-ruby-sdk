@@ -76,13 +76,9 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(tier_min = SKIP,
-                   tier_max = SKIP,
-                   date_effective = SKIP,
-                   date_terminated = SKIP,
-                   tier_value = SKIP,
-                   fee_rule_basis_id = SKIP,
-                   fee_rule_basis_description = SKIP)
+    def initialize(tier_min = SKIP, tier_max = SKIP, date_effective = SKIP,
+                   date_terminated = SKIP, tier_value = SKIP,
+                   fee_rule_basis_id = SKIP, fee_rule_basis_description = SKIP)
       @tier_min = tier_min unless tier_min == SKIP
       @tier_max = tier_max unless tier_max == SKIP
       @date_effective = date_effective unless date_effective == SKIP

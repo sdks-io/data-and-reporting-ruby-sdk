@@ -19,7 +19,7 @@ module ShellDataReportingApIs
     # Type of the additional document.
     # Mandatory
     # Possible values:
-    # •	KSeF - Applicable for Poland market.
+    # •    KSeF - Applicable for Poland market.
     # @return [String]
     attr_accessor :type
 
@@ -54,9 +54,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(reference = SKIP,
-                   type = SKIP,
-                   is_applicable = SKIP)
+    def initialize(reference = SKIP, type = SKIP, is_applicable = SKIP)
       @reference = reference unless reference == SKIP
       @type = type unless type == SKIP
       @is_applicable = is_applicable unless is_applicable == SKIP

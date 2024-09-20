@@ -44,9 +44,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(filters = SKIP,
-                   page = SKIP,
-                   page_size = SKIP)
+    def initialize(filters = SKIP, page = SKIP, page_size = SKIP)
       @filters = filters unless filters == SKIP
       @page = page unless page == SKIP
       @page_size = page_size unless page_size == SKIP

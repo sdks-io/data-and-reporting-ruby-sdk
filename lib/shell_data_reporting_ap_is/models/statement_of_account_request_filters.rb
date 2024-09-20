@@ -117,15 +117,12 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_code = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
+    def initialize(col_co_code = SKIP, payer_id = SKIP, payer_number = SKIP,
                    include_monthly_invoice_trend = SKIP,
                    include_past_statement_of_accounts = SKIP,
                    due_or_over_due_soa_documents_only = SKIP,
                    number_of_soa_documents = SKIP,
-                   include_account_invoices_summary = SKIP,
-                   col_co_id = SKIP,
+                   include_account_invoices_summary = SKIP, col_co_id = SKIP,
                    accounts = SKIP)
       @col_co_code = col_co_code unless col_co_code == SKIP
       @payer_id = payer_id unless payer_id == SKIP

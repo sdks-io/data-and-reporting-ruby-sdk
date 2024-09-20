@@ -39,8 +39,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(invoice_numbers = SKIP,
-                   invoice_dates = SKIP)
+    def initialize(invoice_numbers = SKIP, invoice_dates = SKIP)
       @invoice_numbers = invoice_numbers unless invoice_numbers == SKIP
       @invoice_dates = invoice_dates unless invoice_dates == SKIP
     end

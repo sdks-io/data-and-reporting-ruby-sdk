@@ -90,18 +90,18 @@ module ShellDataReportingApIs
     # value or usage to be identified in the given transactions date range. It
     # is only applied when the Output Type is specified as "Cards".
     # Mandatory when Output Type is Cards
-    # 1.	Month
-    # 2.	Week
-    # 3.	Day
-    # 4.	Date Range
+    # 1.    Month
+    # 2.    Week
+    # 3.    Day
+    # 4.    Date Range
     # @return [Integer]
     attr_accessor :exception_period
 
     # Output Type for Exceptions.
     # Mandatory.
     # Possible values:
-    # 1.	Transactions
-    # 2.	Cards
+    # 1.    Transactions
+    # 2.    Cards
     # @return [Integer]
     attr_accessor :output_type
 
@@ -172,21 +172,12 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(transactions_from_date = nil,
-                   transactions_to_date = nil,
-                   condition = nil,
-                   output_type = nil,
-                   col_co_id = SKIP,
-                   col_co_code = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   accounts = SKIP,
-                   value = SKIP,
-                   products = SKIP,
-                   exception_period = SKIP,
-                   fuel_only = SKIP,
-                   site_group_ids = SKIP,
-                   use_field_id = SKIP)
+    def initialize(transactions_from_date = nil, transactions_to_date = nil,
+                   condition = nil, output_type = nil, col_co_id = SKIP,
+                   col_co_code = SKIP, payer_id = SKIP, payer_number = SKIP,
+                   accounts = SKIP, value = SKIP, products = SKIP,
+                   exception_period = SKIP, fuel_only = SKIP,
+                   site_group_ids = SKIP, use_field_id = SKIP)
       @col_co_id = col_co_id unless col_co_id == SKIP
       @col_co_code = col_co_code unless col_co_code == SKIP
       @payer_id = payer_id unless payer_id == SKIP

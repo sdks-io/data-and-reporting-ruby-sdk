@@ -63,11 +63,8 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_code = nil,
-                   payer_number = nil,
-                   account_number = SKIP,
-                   document_reference = SKIP,
-                   invoice_or_soa_number = SKIP)
+    def initialize(col_co_code = nil, payer_number = nil, account_number = SKIP,
+                   document_reference = SKIP, invoice_or_soa_number = SKIP)
       @col_co_code = col_co_code
       @payer_number = payer_number
       @account_number = account_number unless account_number == SKIP

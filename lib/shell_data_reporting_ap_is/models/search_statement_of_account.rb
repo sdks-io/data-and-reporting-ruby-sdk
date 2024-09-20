@@ -49,9 +49,9 @@ module ShellDataReportingApIs
 
     # Due date for payment. Format: yyyyMMdd
     # Note: 
-    # •	Clients to convert this to appropriate DateTime type.
-    # •	SoA due date is considered as the latest due date of the invoices within
-    # the SoA
+    # •    Clients to convert this to appropriate DateTime type.
+    # •    SoA due date is considered as the latest due date of the invoices
+    # within the SoA
     # @return [String]
     attr_accessor :due_date
 
@@ -62,10 +62,10 @@ module ShellDataReportingApIs
     attr_accessor :invoiced_on_behalf_of
 
     # Status of the document. Valid values –
-    # 1.	Paid – Fully paid all Invoices with in the SOA.
-    # 2.	Overdue – At least one invoice payment due date is less than current
+    # 1.    Paid – Fully paid all Invoices with in the SOA.
+    # 2.    Overdue – At least one invoice payment due date is less than current
     # date with in the SOA.
-    # 3.	Due – At least one invoice is due for payment and is within the due
+    # 3.    Due – At least one invoice is due for payment and is within the due
     # date. There is no invoice overdue for payment.
     # @return [String]
     attr_accessor :status
@@ -138,18 +138,11 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(statement_of_account_id = SKIP,
-                   so_a_reference_number = SKIP,
-                   statement_date = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   amount_due = SKIP,
-                   amount_overdue = SKIP,
-                   currency_code = SKIP,
-                   currency_symbol = SKIP,
-                   due_date = SKIP,
-                   invoiced_on_behalf_of = SKIP,
-                   status = SKIP,
+    def initialize(statement_of_account_id = SKIP, so_a_reference_number = SKIP,
+                   statement_date = SKIP, payer_id = SKIP, payer_number = SKIP,
+                   amount_due = SKIP, amount_overdue = SKIP,
+                   currency_code = SKIP, currency_symbol = SKIP,
+                   due_date = SKIP, invoiced_on_behalf_of = SKIP, status = SKIP,
                    gross_amount_customer_currency = SKIP,
                    document_reference_number = SKIP)
       @statement_of_account_id = statement_of_account_id unless statement_of_account_id == SKIP

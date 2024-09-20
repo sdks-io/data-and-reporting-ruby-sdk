@@ -41,57 +41,57 @@ module ShellDataReportingApIs
 
     # Current billing frequency of the account.
     # A few of the possible IDs and Description are below:
-    # 1	Daily (all days)
-    # 2	Daily (only working days)
-    # 3	Weekly - Monday
-    # 4	Weekly - Tuesday
-    # 5	Weekly - Wednesday
-    # 6	Weekly - Thursday
-    # 7	Weekly - Friday
-    # 8	Weekly - Saturday
-    # 9	Weekly - Sunday
-    # 10	Monthly - 1st
+    # 1    Daily (all days)
+    # 2    Daily (only working days)
+    # 3    Weekly - Monday
+    # 4    Weekly - Tuesday
+    # 5    Weekly - Wednesday
+    # 6    Weekly - Thursday
+    # 7    Weekly - Friday
+    # 8    Weekly - Saturday
+    # 9    Weekly - Sunday
+    # 10    Monthly - 1st
     # Example: Weekly – Wednesday
     # @return [String]
     attr_accessor :current_billing_frequency
 
     # Current billing frequency id of the account.
     # A few of the possible IDs and Description are below:
-    # 1	Daily (all days)
-    # 2	Daily (only working days)
-    # 3	Weekly - Monday
-    # 4	Weekly - Tuesday
-    # 5	Weekly - Wednesday
-    # 6	Weekly - Thursday
-    # 7	Weekly - Friday
-    # 8	Weekly - Saturday
-    # 9	Weekly - Sunday
-    # 10	Monthly - 1st
+    # 1    Daily (all days)
+    # 2    Daily (only working days)
+    # 3    Weekly - Monday
+    # 4    Weekly - Tuesday
+    # 5    Weekly - Wednesday
+    # 6    Weekly - Thursday
+    # 7    Weekly - Friday
+    # 8    Weekly - Saturday
+    # 9    Weekly - Sunday
+    # 10    Monthly - 1st
     # Example: 5
     # @return [Integer]
     attr_accessor :current_billing_frequency_id
 
     # Current distribution method name of the account.
     # Example : Id & Description
-    # 1	e-mail
-    # 2	Fax
-    # 3	Courier to Customer
-    # 4	Courier to Client
-    # 5	Print
-    # 6	FTP
-    # 7	SMS
+    # 1    e-mail
+    # 2    Fax
+    # 3    Courier to Customer
+    # 4    Courier to Client
+    # 5    Print
+    # 6    FTP
+    # 7    SMS
     # @return [String]
     attr_accessor :current_distribution_method
 
     # Current distribution method id of the account.
     # Example : Id & Description
-    # 1	e-mail
-    # 2	Fax
-    # 3	Courier to Customer
-    # 4	Courier to Client
-    # 5	Print
-    # 6	FTP
-    # 7	SMS
+    # 1    e-mail
+    # 2    Fax
+    # 3    Courier to Customer
+    # 4    Courier to Client
+    # 5    Print
+    # 6    FTP
+    # 7    SMS
     # @return [Integer]
     attr_accessor :current_distribution_method_id
 
@@ -194,21 +194,21 @@ module ShellDataReportingApIs
     attr_accessor :payer_number
 
     # A few of the possible IDs and Descriptions are below:
-    # 1	14 days after Invoice
-    # 2	15 days after Invoice
-    # 3	21 days after Invoice
-    # 4	30 days after Invoice
-    # 5	45 days after Invoice
+    # 1    14 days after Invoice
+    # 2    15 days after Invoice
+    # 3    21 days after Invoice
+    # 4    30 days after Invoice
+    # 5    45 days after Invoice
     # @return [String]
     attr_accessor :payment_terms
 
     # Payment terms id of the payment customer.
     # A few of the possible IDs and Descriptions are below:
-    # 1	14 days after Invoice
-    # 2	15 days after Invoice
-    # 3	21 days after Invoice
-    # 4	30 days after Invoice
-    # 5	45 days after Invoice
+    # 1    14 days after Invoice
+    # 2    15 days after Invoice
+    # 3    21 days after Invoice
+    # 4    30 days after Invoice
+    # 5    45 days after Invoice
     # @return [Integer]
     attr_accessor :payment_terms_id
 
@@ -223,32 +223,32 @@ module ShellDataReportingApIs
     attr_accessor :reversal_invoice_id
 
     # Status of the document. Valid values –
-    # •	[Empty] – For all document types except for Invoice and Statement.
-    # •	Due – Invoices/Statements due for payment and is within the due date.
-    # •	Paid – Fully paid Invoices/Statements.
+    # •    [Empty] – For all document types except for Invoice and Statement.
+    # •    Due – Invoices/Statements due for payment and is within the due date.
+    # •    Paid – Fully paid Invoices/Statements.
     # Overdue – Invoices/Statements due of payment and has crossed the due date.
     # @return [String]
     attr_accessor :status
 
     # Billing type description.
     # Example: Id & Description
-    # -3	Guarantee History
-    # -1	Initial Balance
-    # 0	Standard Invoice
-    # 1	Immediate Invoice
-    # 2	Guarantee
-    # 4	Advanced DD Invoice
+    # -3    Guarantee History
+    # -1    Initial Balance
+    # 0    Standard Invoice
+    # 1    Immediate Invoice
+    # 2    Guarantee
+    # 4    Advanced DD Invoice
     # @return [String]
     attr_accessor :summary_document_billing_type
 
     # Billing type id.
     # Example: Id & Description
-    # -3	Guarantee History
-    # -1	Initial Balance
-    # 0	Standard Invoice
-    # 1	Immediate Invoice
-    # 2	Guarantee
-    # 4	Advanced DD Invoice
+    # -3    Guarantee History
+    # -1    Initial Balance
+    # 0    Standard Invoice
+    # 1    Immediate Invoice
+    # 2    Guarantee
+    # 4    Advanced DD Invoice
     # @return [Integer]
     attr_accessor :summary_document_billing_type_id
 
@@ -305,18 +305,18 @@ module ShellDataReportingApIs
 
     # Invoice type description.
     # A few of the possible IDs and Description are below:
-    # 1	Original
-    # 2	Reversal
-    # 3	Replacement
+    # 1    Original
+    # 2    Reversal
+    # 3    Replacement
     # Example: Original
     # @return [String]
     attr_accessor :type
 
     # Invoice type id.
     # A few of the possible IDs and Descriptions are below:
-    # 1	Original
-    # 2	Reversal
-    # 3	Replacement
+    # 1    Original
+    # 2    Reversal
+    # 3    Replacement
     # Example: 1
     # @return [Integer]
     attr_accessor :type_id
@@ -557,64 +557,43 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(account_full_name = SKIP,
-                   account_id = SKIP,
-                   account_number = SKIP,
-                   account_short_name = SKIP,
-                   col_co_id = SKIP,
-                   col_co_op_co_id = SKIP,
+    def initialize(account_full_name = SKIP, account_id = SKIP,
+                   account_number = SKIP, account_short_name = SKIP,
+                   col_co_id = SKIP, col_co_op_co_id = SKIP,
                    current_billing_frequency = SKIP,
                    current_billing_frequency_id = SKIP,
                    current_distribution_method = SKIP,
                    current_distribution_method_id = SKIP,
                    customer_currency_code = SKIP,
-                   customer_currency_symbol = SKIP,
-                   del_co_client_number = SKIP,
-                   del_co_id = SKIP,
-                   del_co_op_co_id = SKIP,
-                   document_type = SKIP,
-                   document_type_id = SKIP,
-                   due_date = SKIP,
-                   gross_amount_customer_currency = SKIP,
+                   customer_currency_symbol = SKIP, del_co_client_number = SKIP,
+                   del_co_id = SKIP, del_co_op_co_id = SKIP,
+                   document_type = SKIP, document_type_id = SKIP,
+                   due_date = SKIP, gross_amount_customer_currency = SKIP,
                    gross_amount_transaction_currency = SKIP,
-                   invoice_date = SKIP,
-                   invoiced_by = SKIP,
-                   invoiced_on_behalf_of = SKIP,
-                   invoice_id = SKIP,
-                   invoice_number = SKIP,
-                   is_international = SKIP,
-                   is_national = SKIP,
-                   net_amount_customer_currency = SKIP,
-                   net_amount_transaction_currency = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   payment_terms = SKIP,
-                   payment_terms_id = SKIP,
-                   replacement_invoice_id = SKIP,
-                   reversal_invoice_id = SKIP,
-                   status = SKIP,
+                   invoice_date = SKIP, invoiced_by = SKIP,
+                   invoiced_on_behalf_of = SKIP, invoice_id = SKIP,
+                   invoice_number = SKIP, is_international = SKIP,
+                   is_national = SKIP, net_amount_customer_currency = SKIP,
+                   net_amount_transaction_currency = SKIP, payer_id = SKIP,
+                   payer_number = SKIP, payment_terms = SKIP,
+                   payment_terms_id = SKIP, replacement_invoice_id = SKIP,
+                   reversal_invoice_id = SKIP, status = SKIP,
                    summary_document_billing_type = SKIP,
                    summary_document_billing_type_id = SKIP,
                    summary_document_date = SKIP,
                    summary_document_dd_amount = SKIP,
-                   summary_document_due_date = SKIP,
-                   summary_document_id = SKIP,
+                   summary_document_due_date = SKIP, summary_document_id = SKIP,
                    summary_document_is_fully_paid = SKIP,
                    summary_document_number = SKIP,
                    summary_document_paid_amount = SKIP,
                    summary_document_so_a_reference_number = SKIP,
                    summary_document_statement_of_account_id = SKIP,
                    transaction_currency_code = SKIP,
-                   transaction_currency_symbol = SKIP,
-                   type = SKIP,
-                   type_id = SKIP,
-                   vat_amount_customer_currency = SKIP,
-                   vat_amount_transaction_currency = SKIP,
-                   vat_country = SKIP,
-                   vat_country_id = SKIP,
-                   vat_country_iso_code = SKIP,
-                   vat_country_op_co_id = SKIP,
-                   document_reference = SKIP,
+                   transaction_currency_symbol = SKIP, type = SKIP,
+                   type_id = SKIP, vat_amount_customer_currency = SKIP,
+                   vat_amount_transaction_currency = SKIP, vat_country = SKIP,
+                   vat_country_id = SKIP, vat_country_iso_code = SKIP,
+                   vat_country_op_co_id = SKIP, document_reference = SKIP,
                    additional_documents = SKIP)
       @account_full_name = account_full_name unless account_full_name == SKIP
       @account_id = account_id unless account_id == SKIP

@@ -25,7 +25,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [InvoiceSearchRequest] body Optional parameter: Invoice Search
     # RequestBody
-    # @return [InvoiceSearchResponse] response from the API call
+    # @return [InvoiceSearchResponse] response from the API call.
     def invoice_search(request_id,
                        body: nil)
       new_api_call_builder
@@ -39,30 +39,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(InvoiceSearchResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(InvoiceSearchResponse.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Search400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Search401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Search403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Search404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Search500ErrorException))
         .execute
     end
 
@@ -84,7 +84,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [InvoiceSummaryRequest] body Optional parameter: Invoice Search
     # RequestBody
-    # @return [InvoiceSummaryResponse] response from the API call
+    # @return [InvoiceSummaryResponse] response from the API call.
     def invoice_summary(request_id,
                         body: nil)
       new_api_call_builder
@@ -98,30 +98,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(InvoiceSummaryResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(InvoiceSummaryResponse.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Summary400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Summary401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Summary403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Summary404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Summary500ErrorException))
         .execute
     end
 
@@ -141,7 +141,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [StatementOfAccountRequest] body Optional parameter:
     # StatementOfAccount RequestBody
-    # @return [StatementOfAccountResponse] response from the API call
+    # @return [StatementOfAccountResponse] response from the API call.
     def statement_of_account(request_id,
                              body: nil)
       new_api_call_builder
@@ -155,30 +155,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(StatementOfAccountResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(StatementOfAccountResponse.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Statementofaccount400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Statementofaccount401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Statementofaccount403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Statementofaccount404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Statementofaccount500ErrorException))
         .execute
     end
 
@@ -190,7 +190,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [InvoiceDatesRequest] body Optional parameter: StatementOfAccount
     # RequestBody
-    # @return [InvoiceDatesResponseData] response from the API call
+    # @return [InvoiceDatesResponseData] response from the API call.
     def dates(request_id,
               body: nil)
       new_api_call_builder
@@ -204,30 +204,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(InvoiceDatesResponseData.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(InvoiceDatesResponseData.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Dates400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Dates401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Dates403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Dates404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Dates500ErrorException))
         .execute
     end
 
@@ -237,7 +237,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [SearchStatementOfAccountRequest] body Optional parameter:
     # searchstatementofaccount RequestBody
-    # @return [SearchStatementOfAccountResponse] response from the API call
+    # @return [SearchStatementOfAccountResponse] response from the API call.
     def search_statement_of_account(request_id,
                                     body: nil)
       new_api_call_builder
@@ -251,30 +251,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(SearchStatementOfAccountResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(SearchStatementOfAccountResponse.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Searchstatementofaccount400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Searchstatementofaccount401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Searchstatementofaccount403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Searchstatementofaccount404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Searchstatementofaccount500ErrorException))
         .execute
     end
 
@@ -286,7 +286,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [SearchDocumentsRequest] body Optional parameter: SearchDocuments
     # RequestBody
-    # @return [SearchDocumentsResponse] response from the API call
+    # @return [SearchDocumentsResponse] response from the API call.
     def search_documents(request_id,
                          body: nil)
       new_api_call_builder
@@ -300,30 +300,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(SearchDocumentsResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(SearchDocumentsResponse.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Searchdocuments400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Searchdocuments401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Searchdocuments403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Searchdocuments404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Searchdocuments500ErrorException))
         .execute
     end
 
@@ -334,7 +334,7 @@ module ShellDataReportingApIs
     # to RFC 4122 standards) for requests and responses. This will be played
     # back in the response from the request.
     # @param [EIDSearchRequest] body Optional parameter: EIDSearch RequestBody
-    # @return [EIDDocumentResponse] response from the API call
+    # @return [EIDDocumentResponse] response from the API call.
     def eid_search(request_id,
                    body: nil)
       new_api_call_builder
@@ -348,30 +348,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(EIDDocumentResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(EIDDocumentResponse.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Eidsearch400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Eidsearch401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Eidsearch403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Eidsearch404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Eidsearch500ErrorException))
         .execute
     end
 
@@ -382,7 +382,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [InvoiceDownloadRequest] body Optional parameter: Invoice Download
     # RequestBody
-    # @return [Binary] response from the API call
+    # @return [Binary] response from the API call.
     def download(request_id,
                  body: nil)
       new_api_call_builder
@@ -395,28 +395,28 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Download400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Download401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Download403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Download404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Download500ErrorException))
         .execute
     end
 
@@ -429,7 +429,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [EIDDownloadRequest] body Optional parameter: EIDInvoice Download
     # RequestBody
-    # @return [Binary] response from the API call
+    # @return [Binary] response from the API call.
     def eid_download(request_id,
                      body: nil)
       new_api_call_builder
@@ -442,28 +442,28 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 InvoiceManagementV1Eiddownload400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 InvoiceManagementV1Eiddownload401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 InvoiceManagementV1Eiddownload403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 InvoiceManagementV1Eiddownload404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 InvoiceManagementV1Eiddownload500ErrorException))
         .execute
     end
   end

@@ -54,20 +54,20 @@ module ShellDataReportingApIs
     attr_accessor :billing_address
 
     # Card group position at –
-    # •	Payer – Payer level
-    # •	Account – Account level
+    # •    Payer – Payer level
+    # •    Account – Account level
     # @return [String]
     attr_accessor :card_group_position
 
     # Card group position at –
-    # •	Payer – Payer level
-    # •	Account – Account level
+    # •    Payer – Payer level
+    # •    Account – Account level
     # @return [Address]
     attr_accessor :correspondence_address
 
     # Card group position at –
-    # •	Payer – Payer level
-    # •	Account – Account level
+    # •    Payer – Payer level
+    # •    Account – Account level
     # @return [Array[DeliveryAddresses]]
     attr_accessor :delivery_addresses
 
@@ -132,28 +132,28 @@ module ShellDataReportingApIs
 
     # Default PIN AdviceType of the customer.
     # Possible Values:
-    # 1.	Paper
-    # 2.	Email
-    # 3.	SMS
-    # 4.	None
+    # 1.    Paper
+    # 2.    Email
+    # 3.    SMS
+    # 4.    None
     # @return [Integer]
     attr_accessor :default_pin_advice_type
 
     # Default PIN AdviceType of the customer.
     # Possible Values:
-    # 1.	Paper
-    # 2.	Email
-    # 3.	SMS
-    # 4.	None
+    # 1.    Paper
+    # 2.    Email
+    # 3.    SMS
+    # 4.    None
     # @return [Array[PINAdviceTypes]]
     attr_accessor :pin_advice_types
 
     # Default PIN AdviceType of the customer.
     # Possible Values:
-    # 1.	Paper
-    # 2.	Email
-    # 3.	SMS
-    # 4.	None
+    # 1.    Paper
+    # 2.    Email
+    # 3.    SMS
+    # 4.    None
     # @return [ErrorStatus]
     attr_accessor :error
 
@@ -267,33 +267,19 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(account_id = SKIP,
-                   account_name = SKIP,
-                   account_number = SKIP,
-                   account_short_name = SKIP,
-                   account_trading_name = SKIP,
-                   allow_fleet_id_input = SKIP,
-                   band = SKIP,
-                   billing_address = SKIP,
-                   card_group_position = SKIP,
-                   correspondence_address = SKIP,
-                   delivery_addresses = SKIP,
-                   fleet_pin = SKIP,
-                   full_name = SKIP,
-                   invoice_customer_id = SKIP,
-                   invoice_customer_short_name = SKIP,
-                   is_invoice_point = SKIP,
-                   marketing_segmentation = SKIP,
-                   vat_number = SKIP,
-                   payer_id = SKIP,
-                   payer_name = SKIP,
-                   payer_number = SKIP,
-                   self_selected_pin = SKIP,
-                   status = SKIP,
-                   default_pin_advice_type = SKIP,
-                   pin_advice_types = SKIP,
-                   error = SKIP,
-                   request_id = SKIP,
+    def initialize(account_id = SKIP, account_name = SKIP,
+                   account_number = SKIP, account_short_name = SKIP,
+                   account_trading_name = SKIP, allow_fleet_id_input = SKIP,
+                   band = SKIP, billing_address = SKIP,
+                   card_group_position = SKIP, correspondence_address = SKIP,
+                   delivery_addresses = SKIP, fleet_pin = SKIP,
+                   full_name = SKIP, invoice_customer_id = SKIP,
+                   invoice_customer_short_name = SKIP, is_invoice_point = SKIP,
+                   marketing_segmentation = SKIP, vat_number = SKIP,
+                   payer_id = SKIP, payer_name = SKIP, payer_number = SKIP,
+                   self_selected_pin = SKIP, status = SKIP,
+                   default_pin_advice_type = SKIP, pin_advice_types = SKIP,
+                   error = SKIP, request_id = SKIP,
                    pin_change_allowed_by_cardholder = SKIP,
                    pin_change_allowed_from_fleet_pin = SKIP)
       @account_id = account_id unless account_id == SKIP

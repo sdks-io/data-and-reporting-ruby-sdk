@@ -22,7 +22,7 @@
 | `transaction_status` | `String` | Optional | Status of the transaction<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` |
 | `driver_name` | `String` | Optional | Driver Name of Card record<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `25` |
 | `card_expiry_period` | `Integer` | Optional | Expiry period of the card<br>**Constraints**: `>= 1`, `<= 9999` |
-| `card_expiry` | `Date` | Optional | Card Expiry Date |
+| `card_expiry` | `String` | Optional | Card Expiry Date |
 | `card_group_id` | `Integer` | Optional | Card Group Code<br>**Constraints**: `>= 1`, `<= 99999` |
 | `card_group_name` | `String` | Optional | Group nmae of the card |
 | `issuer_code` | `Integer` | Optional | Issuer code<br>**Constraints**: `>= 1`, `<= 9999` |
@@ -72,8 +72,8 @@
 | `is_shell_site` | `TrueClass \| FalseClass` | Optional | Is it a shell sites?True or False<br>**Default**: `false` |
 | `fleet_id_input` | `String` | Optional | Fleet identifier |
 | `incoming_product_code` | `Integer` | Optional | In coming product code |
-| `posting_date` | `Date` | Optional | Date of Posting |
-| `posting_time` | `DateTime` | Optional | Time whern posting happened |
+| `posting_date` | `String` | Optional | Date of Posting |
+| `posting_time` | `String` | Optional | Time whern posting happened |
 | `product_code` | `Integer` | Optional | Product Code - 21 Unleaded - High octane,22 Unleaded - Medium octane,23 Unleaded - Low octane,24 Unleaded Environmental |
 | `product_name` | `String` | Optional | Name of the product<br>**Constraints**: *Minimum Length*: `8`, *Maximum Length*: `30` |
 | `product_group_id` | `Integer` | Optional | Id of the product to which group it belongs |
@@ -84,7 +84,7 @@
 | `site_code` | `Integer` | Optional | Shell site code |
 | `incoming_site_number` | `Integer` | Optional | In coming site number |
 | `invoice_currency_code` | `String` | Optional | Currency code on which the invoice is raised<br>**Constraints**: *Minimum Length*: `3`, *Maximum Length*: `3` |
-| `invoice_date` | `Date` | Optional | Date on which the invoice was raised |
+| `invoice_date` | `String` | Optional | Date on which the invoice was raised |
 | `invoice_number` | `Float` | Optional | Invoice number |
 | `fuel_product` | `TrueClass \| FalseClass` | Optional | Is it a fuel product? True or False |
 | `vat_applicable` | `String` | Optional | Is VAT applicable?Y or N<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` |
@@ -112,7 +112,7 @@
 | `quantity` | `Float` | Optional | Quantity of the product |
 | `rebate_rate` | `Float` | Optional | Rebate rate if any |
 | `receipt_number` | `Integer` | Optional | Reciept number |
-| `refund_flag` | [`PricedTransactionRespV2RefundFlagEnum`](../../doc/models/priced-transaction-resp-v2-refund-flag-enum.md) | Optional | Flag to check if there is any refund<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` |
+| `refund_flag` | [`PricedTransactionRespV2RefundFlagEnum`](../../doc/models/priced-transaction-resp-v2-refund-flag-enum.md) | Optional | **Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` |
 | `site_group_id` | `Integer` | Optional | Group identifier for the site |
 | `site_group_name` | `String` | Optional | Name of the Site group |
 | `latitude` | `Float` | Optional | Latitude of the site |
@@ -125,8 +125,8 @@
 | `is_invoiced` | `TrueClass \| FalseClass` | Optional | Is invoice raised<br>**Default**: `false` |
 | `transaction_currency_code` | `String` | Optional | Transaction currency code |
 | `credit_debit_code` | `String` | Optional | Is it Credit or debit C for credit D for Debit |
-| `transaction_date` | `Date` | Optional | Date of transaction |
-| `transaction_time` | `DateTime` | Optional | Time of transaction |
+| `transaction_date` | `String` | Optional | Date of transaction |
+| `transaction_time` | `String` | Optional | Time of transaction |
 | `transaction_item_id` | `String` | Optional | Identifier of the Iem in transaction |
 | `trn_identifier` | `String` | Optional | Transaction identifier |
 | `type` | `String` | Optional | Transaction type for Delco |
@@ -145,14 +145,14 @@
 | `original_vat_amount` | `Float` | Optional | Original VAT amount |
 | `emboss_text` | `String` | Optional | Comapany name embosses in text<br>**Constraints**: *Minimum Length*: `5`, *Maximum Length*: `50` |
 | `original_exchange_rate` | `Float` | Optional | Orginal exchange rate |
-| `original_transaction_item_invoice_date` | `Date` | Optional | Original treansaction date |
+| `original_transaction_item_invoice_date` | `String` | Optional | Original treansaction date |
 | `fee_type_id` | `Integer` | Optional | Fee type identifier<br>**Constraints**: `>= 1`, `<= 1` |
 | `line_item_description` | `TrueClass \| FalseClass` | Optional | Line item identifier of the product<br>**Default**: `false` |
 | `fee_rule_description` | `String` | Optional | Fee rule description<br>**Constraints**: *Minimum Length*: `8`, *Maximum Length*: `25` |
 | `frequency` | `Integer` | Optional | Frequency of transaction<br>**Constraints**: `>= 1`, `<= 1` |
 | `fee_rule_id` | `Integer` | Optional | Fee rule identifier<br>**Constraints**: `>= 1`, `<= 1` |
-| `system_entry_date` | `Date` | Optional | Entry date in the system |
-| `system_entry_time` | `DateTime` | Optional | Entry time in the system |
+| `system_entry_date` | `String` | Optional | Entry date in the system |
+| `system_entry_time` | `String` | Optional | Entry time in the system |
 | `is_manual` | `String` | Optional | Checking if its manual<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` |
 | `original_transaction_item_id` | `String` | Optional | Is it manual<br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` |
 | `original_transaction_item_invoice_number` | `Integer` | Optional | Original invoice transaction number |
@@ -170,10 +170,10 @@
 | `ev_charge_point_connector_type` | `Integer` | Optional | Ev chariging connector type |
 | `ev_charge_point_connector_type_description` | `String` | Optional | EV charging point connector type description |
 | `ev_charge_duration` | `String` | Optional | Ev charging Duration |
-| `ev_charge_start_date` | `Date` | Optional | EvCharging start Date |
-| `ev_charge_start_time` | `DateTime` | Optional | EvCharging start time |
-| `ev_charge_end_date` | `Date` | Optional | EvCharging End Date |
-| `ev_charge_end_time` | `DateTime` | Optional | EvCharging End time |
+| `ev_charge_start_date` | `String` | Optional | EvCharging start Date |
+| `ev_charge_start_time` | `String` | Optional | EvCharging start time |
+| `ev_charge_end_date` | `String` | Optional | EvCharging End Date |
+| `ev_charge_end_time` | `String` | Optional | EvCharging End time |
 | `hosting_collecting_company_number` | `Integer` | Optional | - |
 | `transaction_id` | `Float` | Optional | - |
 | `fuel_only` | `TrueClass \| FalseClass` | Optional | - |
@@ -278,7 +278,6 @@
   "Quantity": 43.28,
   "RebateRate": 0.0022,
   "ReceiptNumber": 6803,
-  "RefundFlag": "Y",
   "SiteGroupId": 202,
   "SiteGroupName": "CZ 9100 ECONOMY NETWORK",
   "Latitude": 53.83606,

@@ -127,20 +127,12 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(date = SKIP,
-                   product_id = SKIP,
-                   product_code = SKIP,
-                   product_name = SKIP,
-                   is_fuel_product = SKIP,
-                   site_group_id = SKIP,
-                   site_group_name = SKIP,
-                   total_volume = SKIP,
-                   total_gross = SKIP,
-                   total_net = SKIP,
-                   currency_code = SKIP,
-                   currency_symbol = SKIP,
-                   product_group_id = SKIP,
-                   product_group_name = SKIP)
+    def initialize(date = SKIP, product_id = SKIP, product_code = SKIP,
+                   product_name = SKIP, is_fuel_product = SKIP,
+                   site_group_id = SKIP, site_group_name = SKIP,
+                   total_volume = SKIP, total_gross = SKIP, total_net = SKIP,
+                   currency_code = SKIP, currency_symbol = SKIP,
+                   product_group_id = SKIP, product_group_name = SKIP)
       @date = date unless date == SKIP
       @product_id = product_id unless product_id == SKIP
       @product_code = product_code unless product_code == SKIP

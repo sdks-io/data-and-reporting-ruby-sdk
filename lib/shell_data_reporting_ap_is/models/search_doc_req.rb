@@ -45,10 +45,10 @@ module ShellDataReportingApIs
     # The status of the invoices
     # Optional
     # One of the following values:
-    # •	NEW
-    # •	VIEWED
-    # •	DOWNLOADED
-    # •	RESTORED
+    # •    NEW
+    # •    VIEWED
+    # •    DOWNLOADED
+    # •    RESTORED
     # @return [String]
     attr_accessor :invoice_status
 
@@ -87,20 +87,20 @@ module ShellDataReportingApIs
     # Optional
     # This parameter will be ignored if GrossAmount parameter is not set.
     # One of the following values:
-    # •	LT (Less Than)
-    # •	LE (Lesser or Equal)
-    # •	EQ (equal)
-    # •	GE (Greater or equal)
-    # •	GT (Greater than)
+    # •    LT (Less Than)
+    # •    LE (Lesser or Equal)
+    # •    EQ (equal)
+    # •    GE (Greater or equal)
+    # •    GT (Greater than)
     # @return [String]
     attr_accessor :gross_amount_operator
 
     # Document Type
     # Optional
     # One of the following values:
-    # •	NAT (National)
-    # •	INT (International)
-    # •	SOA (Statement of Account)
+    # •    NAT (National)
+    # •    INT (International)
+    # •    SOA (Statement of Account)
     # @return [String]
     attr_accessor :document_type
 
@@ -185,21 +185,13 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(payer_number = nil,
-                   col_co_code = nil,
-                   account_number = SKIP,
-                   account_number_list = SKIP,
-                   invoice_number = SKIP,
-                   invoice_number_list = SKIP,
-                   invoice_status = SKIP,
-                   issuing_date_from = SKIP,
-                   issuing_date_to = SKIP,
-                   due_date_from = SKIP,
-                   due_date_to = SKIP,
-                   gross_amount = SKIP,
-                   gross_amount_operator = SKIP,
-                   document_type = SKIP,
-                   vat_issuer_country = SKIP,
+    def initialize(payer_number = nil, col_co_code = nil, account_number = SKIP,
+                   account_number_list = SKIP, invoice_number = SKIP,
+                   invoice_number_list = SKIP, invoice_status = SKIP,
+                   issuing_date_from = SKIP, issuing_date_to = SKIP,
+                   due_date_from = SKIP, due_date_to = SKIP,
+                   gross_amount = SKIP, gross_amount_operator = SKIP,
+                   document_type = SKIP, vat_issuer_country = SKIP,
                    sorty_by = SKIP)
       @payer_number = payer_number
       @account_number = account_number unless account_number == SKIP

@@ -39,8 +39,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(sales_item_id = nil,
-                   new_odometer_value = nil)
+    def initialize(sales_item_id = nil, new_odometer_value = nil)
       @sales_item_id = sales_item_id
       @new_odometer_value = new_odometer_value
     end

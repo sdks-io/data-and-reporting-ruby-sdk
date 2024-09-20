@@ -25,10 +25,5 @@ class ControllerTestBase < Minitest::Test
   def setup_class
     _config = create_configuration
     @client = Client.new(config: _config)
-
-    bearer_token_token = @client.bearer_token.fetch_token()
-    bearer_token_credentials = _config.bearer_token_credentials.clone_with(o_auth_token: bearer_token_token)
-    _config = _config.clone_with(bearer_token_credentials: bearer_token_credentials)
-    @client = Client.new(config: _config)
   end
 end

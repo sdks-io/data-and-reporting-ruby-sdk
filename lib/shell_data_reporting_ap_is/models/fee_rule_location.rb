@@ -97,16 +97,10 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(delco_id = SKIP,
-                   country = SKIP,
-                   country_code = SKIP,
-                   fuel_network_id = SKIP,
-                   network_name = SKIP,
-                   site_group_id = SKIP,
-                   site_group_name = SKIP,
-                   site_code = SKIP,
-                   site_id = SKIP,
-                   site_name = SKIP)
+    def initialize(delco_id = SKIP, country = SKIP, country_code = SKIP,
+                   fuel_network_id = SKIP, network_name = SKIP,
+                   site_group_id = SKIP, site_group_name = SKIP,
+                   site_code = SKIP, site_id = SKIP, site_name = SKIP)
       @delco_id = delco_id unless delco_id == SKIP
       @country = country unless country == SKIP
       @country_code = country_code unless country_code == SKIP

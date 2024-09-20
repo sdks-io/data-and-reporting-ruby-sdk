@@ -12,7 +12,7 @@ Invoice document reference number for the additional invoice files such as KSeF 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `reference` | `String` | Optional | Unique ID for the additional invoice document. |
-| `type` | `String` | Optional | Type of the additional document.<br>Mandatory<br>Possible values:<br>•	KSeF - Applicable for Poland market. |
+| `type` | `String` | Optional | Type of the additional document.<br>Mandatory<br>Possible values:<br>•    KSeF - Applicable for Poland market. |
 | `is_applicable` | `String` | Optional | True if a KSeF PDF will be produced for the customer. |
 
 ## Example (as JSON)

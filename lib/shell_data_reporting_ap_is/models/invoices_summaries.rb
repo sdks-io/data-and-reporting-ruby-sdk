@@ -131,16 +131,11 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(amount_due = SKIP,
-                   amount_not_overdue = SKIP,
-                   amount_overdue = SKIP,
-                   amount_paid = SKIP,
-                   billing_currency_code = SKIP,
-                   billing_currency_symbol = SKIP,
-                   outstanding_balance = SKIP,
-                   payment_due_date = SKIP,
-                   summary_document_date = SKIP,
-                   total_billing_documents = SKIP,
+    def initialize(amount_due = SKIP, amount_not_overdue = SKIP,
+                   amount_overdue = SKIP, amount_paid = SKIP,
+                   billing_currency_code = SKIP, billing_currency_symbol = SKIP,
+                   outstanding_balance = SKIP, payment_due_date = SKIP,
+                   summary_document_date = SKIP, total_billing_documents = SKIP,
                    total_gross_amount_billing_currency = SKIP,
                    total_net_amount_billing_currency = SKIP,
                    total_summary_documents = SKIP,

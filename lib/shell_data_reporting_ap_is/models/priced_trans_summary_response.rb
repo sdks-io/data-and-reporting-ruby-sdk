@@ -44,9 +44,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(transactions_summary = SKIP,
-                   error = SKIP,
-                   request_id = SKIP)
+    def initialize(transactions_summary = SKIP, error = SKIP, request_id = SKIP)
       @transactions_summary = transactions_summary unless transactions_summary == SKIP
       @error = error unless error == SKIP
       @request_id = request_id unless request_id == SKIP

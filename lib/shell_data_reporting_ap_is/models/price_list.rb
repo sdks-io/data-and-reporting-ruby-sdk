@@ -92,12 +92,12 @@ module ShellDataReportingApIs
 
     # Price Type
     # Possible Values are:
-    # •	Country– Price rule defined at country whereas Price Rule DelcoId same
-    # as ColcoId.
-    # •	TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule DelcoId
-    # is different from ColcoId.
-    # •	NetworkPrice – Price rule defined at Fuel Network level.
-    # •	Other – Price rule defined at either Site or SiteGroup level.
+    # •    Country– Price rule defined at country whereas Price Rule DelcoId
+    # same as ColcoId.
+    # •    TPNDelcoPrice – Price rule defined in the TPN whereas Price Rule
+    # DelcoId is different from ColcoId.
+    # •    NetworkPrice – Price rule defined at Fuel Network level.
+    # •    Other – Price rule defined at either Site or SiteGroup level.
     # @return [String]
     attr_accessor :price_type
 
@@ -136,9 +136,9 @@ module ShellDataReportingApIs
 
     # Company Name of the price rule DelCo. 
     # E.g.: 
-    # •	Pilipinas Shell Petroleum Corp
-    # •	Shell U.K. Oil Products Limited
-    # •	G & V SERVICE STATIONS NV
+    # •    Pilipinas Shell Petroleum Corp
+    # •    Shell U.K. Oil Products Limited
+    # •    G & V SERVICE STATIONS NV
     # @return [String]
     attr_accessor :price_rule_delco_name
 
@@ -301,42 +301,22 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(date = SKIP,
-                   day = SKIP,
-                   type = SKIP,
-                   price_list_id = SKIP,
-                   price_list_description = SKIP,
-                   price_rule_id = SKIP,
-                   price_rule_name = SKIP,
-                   del_co_id = SKIP,
-                   country_code = SKIP,
-                   country = SKIP,
-                   product_group_id = SKIP,
-                   product_group_name = SKIP,
-                   product_code = SKIP,
-                   product_id = SKIP,
-                   product_name = SKIP,
-                   price_per_unit = SKIP,
-                   currency_code = SKIP,
-                   currency_symbol = SKIP,
-                   price_type = SKIP,
-                   site_group_id = SKIP,
-                   site_group_name = SKIP,
-                   site_code = SKIP,
-                   site_id = SKIP,
-                   site_name = SKIP,
-                   fuel_network_id = SKIP,
-                   network_name = SKIP,
-                   price_rule_delco_id = SKIP,
-                   price_rule_delco_name = SKIP,
-                   price_rule_country = SKIP,
-                   price_rule_country_code = SKIP,
-                   price_rule_basis_id = SKIP,
-                   discount_value = SKIP,
-                   price_per_unit_after_discount = SKIP,
-                   vat_percentage = SKIP,
-                   price_rule_category_id = SKIP,
-                   tiers = SKIP)
+    def initialize(date = SKIP, day = SKIP, type = SKIP, price_list_id = SKIP,
+                   price_list_description = SKIP, price_rule_id = SKIP,
+                   price_rule_name = SKIP, del_co_id = SKIP,
+                   country_code = SKIP, country = SKIP, product_group_id = SKIP,
+                   product_group_name = SKIP, product_code = SKIP,
+                   product_id = SKIP, product_name = SKIP,
+                   price_per_unit = SKIP, currency_code = SKIP,
+                   currency_symbol = SKIP, price_type = SKIP,
+                   site_group_id = SKIP, site_group_name = SKIP,
+                   site_code = SKIP, site_id = SKIP, site_name = SKIP,
+                   fuel_network_id = SKIP, network_name = SKIP,
+                   price_rule_delco_id = SKIP, price_rule_delco_name = SKIP,
+                   price_rule_country = SKIP, price_rule_country_code = SKIP,
+                   price_rule_basis_id = SKIP, discount_value = SKIP,
+                   price_per_unit_after_discount = SKIP, vat_percentage = SKIP,
+                   price_rule_category_id = SKIP, tiers = SKIP)
       @date = date unless date == SKIP
       @day = day unless day == SKIP
       @type = type unless type == SKIP

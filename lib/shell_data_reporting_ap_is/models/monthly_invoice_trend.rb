@@ -71,11 +71,8 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(currency_code = SKIP,
-                   currency_symbol = SKIP,
-                   month = SKIP,
-                   total_net_amount = SKIP,
-                   total_vat_amount = SKIP,
+    def initialize(currency_code = SKIP, currency_symbol = SKIP, month = SKIP,
+                   total_net_amount = SKIP, total_vat_amount = SKIP,
                    year = SKIP)
       @currency_code = currency_code unless currency_code == SKIP
       @currency_symbol = currency_symbol unless currency_symbol == SKIP

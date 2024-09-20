@@ -100,9 +100,9 @@ module ShellDataReportingApIs
     attr_accessor :so_a_reference_number
 
     # Invoice date search period. Valid values –
-    # 1.	Last 7 days – Issued in last 7 days.
-    # 2.	Last 30 days – Issued in last 30 days.
-    # 3.	Last 90 days – Issued in last 90 days.
+    # 1.    Last 7 days – Issued in last 7 days.
+    # 2.    Last 30 days – Issued in last 30 days.
+    # 3.    Last 90 days – Issued in last 90 days.
     # Optional.
     # This input is a search criterion, if given.
     # Example: 1
@@ -110,11 +110,11 @@ module ShellDataReportingApIs
     attr_accessor :period
 
     # Status of the invoice. Valid values –
-    # •	Due – Invoices due for payment and is within the due date.
-    # •	Paid – Fully paid Invoices.
-    # •	Overdue – Invoices due of payment and has crossed the due date.
-    # •	CreditNote – Credit notes
-    # •	CreditStatement
+    # •    Due – Invoices due for payment and is within the due date.
+    # •    Paid – Fully paid Invoices.
+    # •    Overdue – Invoices due of payment and has crossed the due date.
+    # •    CreditNote – Credit notes
+    # •    CreditStatement
     # Optional.
     # This input is a search criterion, if given.
     # @return [String]
@@ -128,8 +128,8 @@ module ShellDataReportingApIs
     # Whether to include the additional invoice details in the API response. 
     # Optional. Default value “False”.
     # The parameters that are populated 
-    # •	DocumentReference
-    # •	AdditionalDocuments 
+    # •    DocumentReference
+    # •    AdditionalDocuments 
     # The above fields will not be present in the response when the respective
     # data is not available in the source system.
     # @return [TrueClass | FalseClass]
@@ -154,9 +154,9 @@ module ShellDataReportingApIs
     attr_accessor :accounts
 
     # Invoice type. Allowed values –
-    # •	Original – Original document.
-    # •	Reversal – Reversed document.
-    # •	Replacement – Replaced document.
+    # •    Original – Original document.
+    # •    Reversal – Reversed document.
+    # •    Replacement – Replaced document.
     # Optional. (When not passed all invoice, types are considered for search)
     # This input is a search criterion, if given.
     # Example: Original
@@ -237,25 +237,15 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_id = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   invoice_id = SKIP,
-                   invoice_number = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
-                   invoice_date = SKIP,
-                   summary_document_id = SKIP,
-                   summary_document_number = SKIP,
-                   statement_of_account_id = SKIP,
-                   so_a_reference_number = SKIP,
-                   period = SKIP,
-                   invoice_status = SKIP,
+    def initialize(col_co_id = SKIP, payer_id = SKIP, payer_number = SKIP,
+                   invoice_id = SKIP, invoice_number = SKIP, from_date = SKIP,
+                   to_date = SKIP, invoice_date = SKIP,
+                   summary_document_id = SKIP, summary_document_number = SKIP,
+                   statement_of_account_id = SKIP, so_a_reference_number = SKIP,
+                   period = SKIP, invoice_status = SKIP,
                    invoiced_on_behalf_of = SKIP,
-                   include_e_invoice_details = SKIP,
-                   col_co_code = SKIP,
-                   accounts = SKIP,
-                   type = SKIP)
+                   include_e_invoice_details = SKIP, col_co_code = SKIP,
+                   accounts = SKIP, type = SKIP)
       @col_co_id = col_co_id unless col_co_id == SKIP
       @payer_id = payer_id unless payer_id == SKIP
       @payer_number = payer_number unless payer_number == SKIP

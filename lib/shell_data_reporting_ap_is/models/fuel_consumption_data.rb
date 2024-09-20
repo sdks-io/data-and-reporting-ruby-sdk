@@ -167,26 +167,15 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(account_name = SKIP,
-                   account_number = SKIP,
-                   payer_name = SKIP,
-                   payer_number = SKIP,
-                   card_number = SKIP,
-                   card_group_id = SKIP,
-                   card_group_name = SKIP,
-                   driver_name = SKIP,
-                   license_number = SKIP,
-                   initial_odometer = SKIP,
-                   last_odometer = SKIP,
-                   distance = SKIP,
-                   fuel_consumption = SKIP,
-                   fuel_net_amount = SKIP,
-                   discount = SKIP,
-                   fuel_tax = SKIP,
-                   fuel_volume = SKIP,
-                   gross_non_fuel_expenses = SKIP,
-                   co2_produced = SKIP,
-                   transaction_count = SKIP)
+    def initialize(account_name = SKIP, account_number = SKIP,
+                   payer_name = SKIP, payer_number = SKIP, card_number = SKIP,
+                   card_group_id = SKIP, card_group_name = SKIP,
+                   driver_name = SKIP, license_number = SKIP,
+                   initial_odometer = SKIP, last_odometer = SKIP,
+                   distance = SKIP, fuel_consumption = SKIP,
+                   fuel_net_amount = SKIP, discount = SKIP, fuel_tax = SKIP,
+                   fuel_volume = SKIP, gross_non_fuel_expenses = SKIP,
+                   co2_produced = SKIP, transaction_count = SKIP)
       @account_name = account_name unless account_name == SKIP
       @account_number = account_number unless account_number == SKIP
       @payer_name = payer_name unless payer_name == SKIP

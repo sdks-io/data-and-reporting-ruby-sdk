@@ -50,10 +50,8 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(service_reference = SKIP,
-                   update_odometer_references = SKIP,
-                   error = SKIP,
-                   request_id = SKIP)
+    def initialize(service_reference = SKIP, update_odometer_references = SKIP,
+                   error = SKIP, request_id = SKIP)
       @service_reference = service_reference unless service_reference == SKIP
       unless update_odometer_references == SKIP
         @update_odometer_references =

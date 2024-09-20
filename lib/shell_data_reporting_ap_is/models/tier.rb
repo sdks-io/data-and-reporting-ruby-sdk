@@ -35,10 +35,10 @@ module ShellDataReportingApIs
 
     # Tiered pricing group period.
     # Possible Values
-    # 1.	Monthly
-    # 2.	Quarterly
-    # 3.	Semi Annually
-    # 4.	Annual
+    # 1.    Monthly
+    # 2.    Quarterly
+    # 3.    Semi Annually
+    # 4.    Annual
     # @return [String]
     attr_accessor :tiered_pricing_group_period
 
@@ -103,15 +103,11 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(tier_price_list_id = SKIP,
-                   price_list_description = SKIP,
-                   tier_min = SKIP,
-                   tier_max = SKIP,
+    def initialize(tier_price_list_id = SKIP, price_list_description = SKIP,
+                   tier_min = SKIP, tier_max = SKIP,
                    tiered_pricing_group_name = SKIP,
-                   tiered_pricing_group_period = SKIP,
-                   discount_value = SKIP,
-                   price_per_unit = SKIP,
-                   price_per_unit_after_discount = SKIP)
+                   tiered_pricing_group_period = SKIP, discount_value = SKIP,
+                   price_per_unit = SKIP, price_per_unit_after_discount = SKIP)
       @tier_price_list_id = tier_price_list_id unless tier_price_list_id == SKIP
       @price_list_description = price_list_description unless price_list_description == SKIP
       @tier_min = tier_min unless tier_min == SKIP

@@ -41,8 +41,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(sales_item_id = SKIP,
-                   update_odometer_reference_id = SKIP)
+    def initialize(sales_item_id = SKIP, update_odometer_reference_id = SKIP)
       @sales_item_id = sales_item_id unless sales_item_id == SKIP
       unless update_odometer_reference_id == SKIP
         @update_odometer_reference_id =

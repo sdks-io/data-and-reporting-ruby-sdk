@@ -45,8 +45,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(latitude = SKIP,
-                   longitude = SKIP)
+    def initialize(latitude = SKIP, longitude = SKIP)
       @latitude = latitude unless latitude == SKIP
       @longitude = longitude unless longitude == SKIP
     end
@@ -62,6 +61,16 @@ module ShellDataReportingApIs
       # Create object from extracted values.
       SiteLocation.new(latitude,
                        longitude)
+    end
+
+    # Validates an instance of the object from a given value.
+    # @param [SiteLocation | Hash] The value against the validation is performed.
+    def self.validate(value)
+      return true if value.instance_of? self
+
+      return false unless value.instance_of? Hash
+
+      true
     end
   end
 end

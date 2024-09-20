@@ -194,26 +194,17 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(account_id = SKIP,
-                   account_number = SKIP,
-                   account_short_name = SKIP,
-                   summary_document_id = SKIP,
-                   summary_document_number = SKIP,
-                   summary_document_date = SKIP,
+    def initialize(account_id = SKIP, account_number = SKIP,
+                   account_short_name = SKIP, summary_document_id = SKIP,
+                   summary_document_number = SKIP, summary_document_date = SKIP,
                    summary_document_payment_due_date = SKIP,
                    summary_document_total_value = SKIP,
                    summary_document_total_vat = SKIP,
-                   summary_document_dd_amount = SKIP,
-                   payment_date = SKIP,
-                   payment_reference = SKIP,
-                   payment_currency_code = SKIP,
-                   payment_currency_symbol = SKIP,
-                   amount_paid = SKIP,
-                   balance = SKIP,
-                   true_payment = SKIP,
-                   prepaid_balance = SKIP,
-                   local_currency_code = SKIP,
-                   local_currency_symbol = SKIP,
+                   summary_document_dd_amount = SKIP, payment_date = SKIP,
+                   payment_reference = SKIP, payment_currency_code = SKIP,
+                   payment_currency_symbol = SKIP, amount_paid = SKIP,
+                   balance = SKIP, true_payment = SKIP, prepaid_balance = SKIP,
+                   local_currency_code = SKIP, local_currency_symbol = SKIP,
                    local_currency_exchange_rate = SKIP)
       @account_id = account_id unless account_id == SKIP
       @account_number = account_number unless account_number == SKIP

@@ -40,9 +40,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(page_size = nil,
-                   page = nil,
-                   filters = nil)
+    def initialize(page_size = nil, page = nil, filters = nil)
       @page_size = page_size
       @page = page
       @filters = filters

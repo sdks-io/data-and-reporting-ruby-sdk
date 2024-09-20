@@ -71,9 +71,9 @@ module ShellDataReportingApIs
     attr_accessor :roles
 
     # List of payers which the user has access to.
-    # •	It will return 250 payers only and it is configurable. If the user has
-    # more than that, the remaining will be ignored.
-    # •	The payer which is marked as default will be the first item in the
+    # •    It will return 250 payers only and it is configurable. If the user
+    # has more than that, the remaining will be ignored.
+    # •    The payer which is marked as default will be the first item in the
     # output.
     # Note: This list will be empty for users mapped with roles which has either
     # IsShellAdmin or IsServiceAccount set to true as their access level is
@@ -225,30 +225,17 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(user_name = SKIP,
-                   display_name = SKIP,
-                   id_mssoid = SKIP,
-                   preferred_language = SKIP,
-                   is_super_admin = false,
-                   date_format = SKIP,
-                   time_format = SKIP,
-                   week_begins = SKIP,
-                   display_week = true,
-                   csv_separator = SKIP,
-                   decimal_separator = SKIP,
-                   report_format = SKIP,
-                   has_api_access = true,
-                   roles = SKIP,
-                   payers = SKIP,
-                   accounts = SKIP,
-                   collecting_companies = SKIP,
+    def initialize(user_name = SKIP, display_name = SKIP, id_mssoid = SKIP,
+                   preferred_language = SKIP, is_super_admin = false,
+                   date_format = SKIP, time_format = SKIP, week_begins = SKIP,
+                   display_week = true, csv_separator = SKIP,
+                   decimal_separator = SKIP, report_format = SKIP,
+                   has_api_access = true, roles = SKIP, payers = SKIP,
+                   accounts = SKIP, collecting_companies = SKIP,
                    eid_access_details = SKIP,
                    user_classification_by_system = SKIP,
-                   user_classification_by_shell = SKIP,
-                   payer_count = SKIP,
-                   account_count = SKIP,
-                   card_count = SKIP,
-                   error = SKIP,
+                   user_classification_by_shell = SKIP, payer_count = SKIP,
+                   account_count = SKIP, card_count = SKIP, error = SKIP,
                    request_id = SKIP)
       @user_name = user_name unless user_name == SKIP
       @display_name = display_name unless display_name == SKIP

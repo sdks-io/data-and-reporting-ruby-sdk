@@ -15,14 +15,23 @@ class TransactionControllerTests < ControllerTestBase
 
   # This endpoint allows querying last 48 hours of transaction data of Shell Card (i.e. Priced, Billed, Unbilled etc. sales items). It provides a flexible search criteria and supports pagination. E.g., if the request is made at 08:30 AM on 18 Aug 2022 then transactions until 16 Aug 2022 08:30 AM (including) can be retrieved.
   #
+  #
   ##### Supported operations
+  #
   #    * Search by Date and Time range (within the last 48 hours only)
+  #
   #    * Search by Payer and/or Account number
+  #
   #    * Search by Card
+  #
   #    * Search by Purchased Country
+  #
   #    * Search by Transaction posting date
+  #
   #    * Search by Driver Name or Vehicle registration number
+  #
   #    * Search by Fuel only transactions
+  #
   #    * Search by Product and/or Product group
   def test_recent_transactions_new
     # Parameters for the API call
@@ -163,70 +172,69 @@ class TransactionControllerTests < ControllerTestBase
       '2452","Additional2":"GBALLEGO0002452","Additional3":"GBALLEGO0002452","'\
       'Additional4":"GBALLEGO0002452","AllowClearing":"Null","AuthorisationCod'\
       'e":300796,"TransactionStatus":"Y","DriverName":"SATTY BHAMRA","CardExpi'\
-      'ryPeriod":2204,"CardExpiry":"2022-01-01","CardGroupId":40000,"CardGroup'\
-      'Name":"006240 FIRE BRIGHT SOLUTIONS","IssuerCode":7002,"CardPAN":"70020'\
-      '53465789891000","ReleaseCode":9,"CardSequenceNumber":617,"CardType":"GB'\
-      ' STD FLT NAT SINGLE R9","ColCoCode":"014","UnitDiscountInvoiceCurrency"'\
-      ':-0.0051,"ColCoExchangeRate":0.851858,"InvoiceCurrencySymbol":"GBP","Co'\
-      'rrectionFlag":true,"CRMNumber":10,"CustomerCountry":"United Kingdom","C'\
-      'ustomerCurrencyCode":"GBP","CustomerCurrencySymbol":"£","RebateonNetAmo'\
-      'untInCustomerCurrency":0,"EffectiveDiscountInCustomerCurrency":-0.22,"E'\
-      'ffectiveUnitDiscountInCustomerCurrency":-0.0051,"UnitPriceInInvoiceCurr'\
-      'ency":1.1024,"InvoiceTax":0,"InvoiceGrossAmount":57.25,"InvoiceNetAmoun'\
-      't":47.71,"VATonNetAmountInCustomerCurrency":9.54,"CustomerRetailPriceUn'\
-      'itGross":0,"CustomerRetailValueTotalGross":57.52,"CustomerRetailValueTo'\
-      'talNet":47.93,"TransactionTypeDescription":9.59,"RebateonNetAmountInTra'\
-      'nsactionCurrency":-0.22,"EffectiveDiscountInTrxCurrency":-0.22,"DelCoTo'\
-      'ColCoExchangeRate":0,"Cards":[275549],"UnitDiscountTransactionCurrency"'\
-      ':-0.005,"TransactionGrossAmount":57.25,"TransactionNetAmount":47.71,"Tr'\
-      'ansactionTax":9.54,"VATonNetAmount":9.54,"DelcoListPriceUnitNet":0,"Del'\
-      'coRetailPriceUnitGross":1.32888,"UnitPriceInTransactionCurrency":1.1074'\
-      ',"DelcoRetailPriceUnitNet":1.1074,"DelcoRetailValueTotalGross":57.52,"D'\
-      'elcoRetailValueTotalNet":47.93,"TransactionCurrencySymbol":"$","Discoun'\
-      'tType":"Retail","DisputeStatus":false,"IsShellSite":false,"FleetIdInput'\
-      '":"YG67OUM","IncomingProductCode":23,"PostingDate":"2021-08-02","Postin'\
-      'gTime":"0001-01-01T14:15:22Z","ProductCode":30,"ProductName":"Unleaded '\
-      '- Medium octane","ProductGroupId":22,"IncomingCurrencyCode":"GBP","Inco'\
-      'mingSiteDescription":"Shell Broadway Ring","Location":"Shell Broadway R'\
-      'ing","SiteName":"Shell Broadway Ring","SiteCode":32,"IncomingSiteNumber'\
-      '":15,"InvoiceCurrencyCode":"GBP","InvoiceDate":"2021-08-02","InvoiceNum'\
-      'ber":3201016193,"FuelProduct":true,"VATApplicable":"Y","PayerName":"Col'\
-      'ours Services Ltd","PayerNumber":"GB12121212","ParentCustomerNumber":"G'\
-      'B12121212","PayerGroup":"H312066","PayerGroupName":"12162566 - FUEL CAR'\
-      'D SERVICE","CheckDigit":6,"NetInvoiceIndicator":"Y","DelcoCode":5,"Netw'\
-      'orkCode":3,"PurchasedInCountry":"United Kingdom","SiteCountry":"United '\
-      'Kingdom","VATCountry":"United Kingdom","DelcoName":"Shell U.K. Oil Prod'\
-      'ucts Limited","Network":"Shell","OdometerInput":0,"OriginalSalesItemId"'\
-      ':"Null","FleetIDDescription":"YG67OUM","ParentCustomerId":6494,"PINIndi'\
-      'cator":"Y, N","ProductGroupName":"Fees","PurchasedInCountryCode":"GB","'\
-      'Quantity":43.28,"RebateRate":0.0022,"ReceiptNumber":6803,"RefundFlag":"'\
-      'Y","SiteGroupId":202,"SiteGroupName":"CZ 9100 ECONOMY NETWORK","Latitud'\
-      'e":53.83606,"Longitude":-1.61854,"DelCoExchangeRate":0.851858,"EuroReba'\
-      'teAmount":-0.258259,"NetEuroAmount":56.01,"EuroVATAmount":11.2,"ParentC'\
-      'ustomerName":"FUEL CARD SERVICES LTD","IsInvoiced":false,"TransactionCu'\
-      'rrencyCode":"GBP","CreditDebitCode":"D or C","TransactionDate":"2021-08'\
-      '-01","TransactionTime":"0001-01-01T12:16:58Z","TransactionItemId":"H305'\
-      '908971030","TrnIdentifier":"H305908971030","Type":"SALE","TransactionLi'\
-      'ne":1,"TransactionType":"Purchase","UTCOffset":"Europe/London","VATCate'\
-      'gory":"United Kingdom Standard VAT Rate","VATRate":0.2,"VehicleRegistra'\
-      'tion":"YG67OUM","IsCancelled":"Y","ColCoGrossAmount":57.25,"ColCoNetAmo'\
-      'unt":47.71,"ColCoVATAmount":9.54,"OriginalCurrencySymbol":"$","Original'\
-      'CurrencyCode":"$","OriginalVATAmount":0,"EmbossText":"PARKLANE PROPERTI'\
-      'ES LTD","OriginalExchangeRate":0,"OriginalTransactionItemInvoiceDate":"'\
-      '2022-02-02","FeeTypeId":1,"LineItemDescription":true,"FeeRuleDescriptio'\
-      'n":"Simple Fee","Frequency":1,"FeeRuleId":1,"SystemEntryDate":"2021-08-'\
-      '28","SystemEntryTime":"0001-01-01T20:21:08Z","IsManual":"Y","OriginalTr'\
-      'ansactionItemId":"Y","OriginalTransactionItemInvoiceNumber":6750802,"Or'\
-      'iginalTransactionItemInvoiceId":234,"PayerShortName":"FUEL CARD SERVICE'\
-      'S LTD","ReverseCharge":"Y","OriginalGrossAmount":57.25,"OriginalNetAmou'\
-      'nt":57.25,"UnitOfMeasure":"L","RoadType":"National Road","CustomerCount'\
-      'ryIsoCode":"DE","EVOperator":"Shell Recharge","EVSerialId":"GBALLEGO000'\
-      '2452","EVChargePointSerial":"GBALLEGO0002452","EVChargePointConnectorTy'\
-      'pe":5,"EVChargePointConnectorTypeDescription":"DC 50 kW","EVChargeDurat'\
-      'ion":"PT3205S","EVChargeStartDate":"2021-08-01","EVChargeStartTime":"00'\
-      '01-01-01T20:08:01Z","EVChargeEndDate":"2022-08-01","EVChargeEndTime":"0'\
-      '001-01-01T20:08:01Z","HostingCollectingCompanyNumber":0,"TransactionId"'\
-      ':0,"FuelOnly":true}],"Page":3,"PageSize":30,"TotalPages":5}'
+      'ryPeriod":2204,"CardExpiry":"20220101","CardGroupId":40000,"CardGroupNa'\
+      'me":"006240 FIRE BRIGHT SOLUTIONS","IssuerCode":7002,"CardPAN":"7002053'\
+      '465789891000","ReleaseCode":9,"CardSequenceNumber":617,"CardType":"GB S'\
+      'TD FLT NAT SINGLE R9","ColCoCode":"014","UnitDiscountInvoiceCurrency":-'\
+      '0.0051,"ColCoExchangeRate":0.851858,"InvoiceCurrencySymbol":"GBP","Corr'\
+      'ectionFlag":true,"CRMNumber":10,"CustomerCountry":"United Kingdom","Cus'\
+      'tomerCurrencyCode":"GBP","CustomerCurrencySymbol":"£","RebateonNetAmoun'\
+      'tInCustomerCurrency":0,"EffectiveDiscountInCustomerCurrency":-0.22,"Eff'\
+      'ectiveUnitDiscountInCustomerCurrency":-0.0051,"UnitPriceInInvoiceCurren'\
+      'cy":1.1024,"InvoiceTax":0,"InvoiceGrossAmount":57.25,"InvoiceNetAmount"'\
+      ':47.71,"VATonNetAmountInCustomerCurrency":9.54,"CustomerRetailPriceUnit'\
+      'Gross":0,"CustomerRetailValueTotalGross":57.52,"CustomerRetailValueTota'\
+      'lNet":47.93,"TransactionTypeDescription":9.59,"RebateonNetAmountInTrans'\
+      'actionCurrency":-0.22,"EffectiveDiscountInTrxCurrency":-0.22,"DelCoToCo'\
+      'lCoExchangeRate":0,"Cards":[275549],"UnitDiscountTransactionCurrency":-'\
+      '0.005,"TransactionGrossAmount":57.25,"TransactionNetAmount":47.71,"Tran'\
+      'sactionTax":9.54,"VATonNetAmount":9.54,"DelcoListPriceUnitNet":0,"Delco'\
+      'RetailPriceUnitGross":1.32888,"UnitPriceInTransactionCurrency":1.1074,"'\
+      'DelcoRetailPriceUnitNet":1.1074,"DelcoRetailValueTotalGross":57.52,"Del'\
+      'coRetailValueTotalNet":47.93,"TransactionCurrencySymbol":"$","DiscountT'\
+      'ype":"Retail","DisputeStatus":false,"IsShellSite":false,"FleetIdInput":'\
+      '"YG67OUM","IncomingProductCode":23,"PostingDate":"20210802","PostingTim'\
+      'e":"14:15:22","ProductCode":30,"ProductName":"Unleaded - Medium octane"'\
+      ',"ProductGroupId":22,"IncomingCurrencyCode":"GBP","IncomingSiteDescript'\
+      'ion":"Shell Broadway Ring","Location":"Shell Broadway Ring","SiteName":'\
+      '"Shell Broadway Ring","SiteCode":32,"IncomingSiteNumber":15,"InvoiceCur'\
+      'rencyCode":"GBP","InvoiceDate":"20210802","InvoiceNumber":3201016193,"F'\
+      'uelProduct":true,"VATApplicable":"Y","PayerName":"Colours Services Ltd"'\
+      ',"PayerNumber":"GB12121212","ParentCustomerNumber":"GB12121212","PayerG'\
+      'roup":"H312066","PayerGroupName":"12162566 - FUEL CARD SERVICE","CheckD'\
+      'igit":6,"NetInvoiceIndicator":"Y","DelcoCode":5,"NetworkCode":3,"Purcha'\
+      'sedInCountry":"United Kingdom","SiteCountry":"United Kingdom","VATCount'\
+      'ry":"United Kingdom","DelcoName":"Shell U.K. Oil Products Limited","Net'\
+      'work":"Shell","OdometerInput":0,"OriginalSalesItemId":"Null","FleetIDDe'\
+      'scription":"YG67OUM","ParentCustomerId":6494,"PINIndicator":"Y, N","Pro'\
+      'ductGroupName":"Fees","PurchasedInCountryCode":"GB","Quantity":43.28,"R'\
+      'ebateRate":0.0022,"ReceiptNumber":6803,"RefundFlag":"Y","SiteGroupId":2'\
+      '02,"SiteGroupName":"CZ 9100 ECONOMY NETWORK","Latitude":53.83606,"Longi'\
+      'tude":-1.61854,"DelCoExchangeRate":0.851858,"EuroRebateAmount":-0.25825'\
+      '9,"NetEuroAmount":56.01,"EuroVATAmount":11.2,"ParentCustomerName":"FUEL'\
+      ' CARD SERVICES LTD","IsInvoiced":false,"TransactionCurrencyCode":"GBP",'\
+      '"CreditDebitCode":"D or C","TransactionDate":"20210801","TransactionTim'\
+      'e":"12:16:58","TransactionItemId":"H305908971030","TrnIdentifier":"H305'\
+      '908971030","Type":"SALE","TransactionLine":1,"TransactionType":"Purchas'\
+      'e","UTCOffset":"Europe/London","VATCategory":"United Kingdom Standard V'\
+      'AT Rate","VATRate":0.2,"VehicleRegistration":"YG67OUM","IsCancelled":"Y'\
+      '","ColCoGrossAmount":57.25,"ColCoNetAmount":47.71,"ColCoVATAmount":9.54'\
+      ',"OriginalCurrencySymbol":"$","OriginalCurrencyCode":"$","OriginalVATAm'\
+      'ount":0,"EmbossText":"PARKLANE PROPERTIES LTD","OriginalExchangeRate":0'\
+      ',"OriginalTransactionItemInvoiceDate":"20220202","FeeTypeId":1,"LineIte'\
+      'mDescription":true,"FeeRuleDescription":"Simple Fee","Frequency":1,"Fee'\
+      'RuleId":1,"SystemEntryDate":"20210828","SystemEntryTime":"20:21:08","Is'\
+      'Manual":"Y","OriginalTransactionItemId":"Y","OriginalTransactionItemInv'\
+      'oiceNumber":6750802,"OriginalTransactionItemInvoiceId":234,"PayerShortN'\
+      'ame":"FUEL CARD SERVICES LTD","ReverseCharge":"Y","OriginalGrossAmount"'\
+      ':57.25,"OriginalNetAmount":57.25,"UnitOfMeasure":"L","RoadType":"Nation'\
+      'al Road","CustomerCountryIsoCode":"DE","EVOperator":"Shell Recharge","E'\
+      'VSerialId":"GBALLEGO0002452","EVChargePointSerial":"GBALLEGO0002452","E'\
+      'VChargePointConnectorType":5,"EVChargePointConnectorTypeDescription":"D'\
+      'C 50 kW","EVChargeDuration":"PT3205S","EVChargeStartDate":"2021-08-01",'\
+      '"EVChargeStartTime":"20:08:01","EVChargeEndDate":"2022-08-01","EVCharge'\
+      'EndTime":"20:08:01","HostingCollectingCompanyNumber":0,"TransactionId":'\
+      '0,"FuelOnly":true}],"Page":3,"PageSize":30,"TotalPages":5}'
     )
     received_body = JSON.parse(@response_catcher.response.raw_body)
     assert(ComparisonHelper.match_body(expected_body, received_body))

@@ -132,18 +132,11 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(from_date = nil,
-                   to_date = nil,
-                   col_co_id = SKIP,
-                   col_co_code = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   account_id = SKIP,
-                   account_number = SKIP,
-                   customer_specific_list = SKIP,
-                   price_list_type = SKIP,
-                   del_co_id = SKIP,
-                   include_pump_price_discounts = SKIP)
+    def initialize(from_date = nil, to_date = nil, col_co_id = SKIP,
+                   col_co_code = SKIP, payer_id = SKIP, payer_number = SKIP,
+                   account_id = SKIP, account_number = SKIP,
+                   customer_specific_list = SKIP, price_list_type = SKIP,
+                   del_co_id = SKIP, include_pump_price_discounts = SKIP)
       @col_co_id = col_co_id unless col_co_id == SKIP
       @col_co_code = col_co_code unless col_co_code == SKIP
       @payer_id = payer_id unless payer_id == SKIP

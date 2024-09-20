@@ -30,13 +30,13 @@ module ShellDataReportingApIs
     # 
     #  This API fetches transactions for a period based on the below parameters
     # and priority order:
-    # 1.	InvoiceNumber
-    #  2.	InvoiceDate
-    #  3.	FromDate, ToDate
-    # 4.	PostingFromDate, PostingToDate (Can be used only when IncludeFees =
+    # 1.    InvoiceNumber
+    #  2.    InvoiceDate
+    #  3.    FromDate, ToDate
+    # 4.    PostingFromDate, PostingToDate (Can be used only when IncludeFees =
     # false)
-    #  5.	InvoiceDateFrom, InvoiceDateTo
-    #  6.	Period
+    #  5.    InvoiceDateFrom, InvoiceDateTo
+    #  6.    Period
     #  This API considers only one of the above set of parameters at a time. For
     # example, if InvoiceNumber and Period are provided in the input then Period
     # is ignored and transactions associated to the given invoice number are
@@ -53,7 +53,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [PriceTransactionRequest] body Optional parameter: Priced
     # Transaction Request Body
-    # @return [PricedTransactionResponse] response from the API call
+    # @return [PricedTransactionResponse] response from the API call.
     def priced_transactions(apikey,
                             request_id,
                             body: nil)
@@ -69,31 +69,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(PricedTransactionResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(PricedTransactionResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionPricedtransactions400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionPricedtransactions401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionPricedtransactions403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionPricedtransactions404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionPricedtransactions500ErrorException))
         .execute
     end
 
@@ -121,13 +121,13 @@ module ShellDataReportingApIs
     # 
     #  This API fetches transactions for a period based on the below parameters
     # and priority order:
-    #  1.	InvoiceNumber
-    #  2.	InvoiceDate
-    #  3.	FromDate, ToDate
-    #  4.	PostingFromDate, PostingToDate (Can be used only when IncludeFees =
+    #  1.    InvoiceNumber
+    #  2.    InvoiceDate
+    #  3.    FromDate, ToDate
+    #  4.    PostingFromDate, PostingToDate (Can be used only when IncludeFees =
     # false)
-    #  5.	InvoiceDateFrom, InvoiceDateTo
-    #  6.	Period
+    #  5.    InvoiceDateFrom, InvoiceDateTo
+    #  6.    Period
     #  This API considers only one of the above set of parameters at a time. For
     # example, if InvoiceNumber and Period are provided in the input then Period
     # is ignored and transactions associated to the given invoice number are
@@ -141,7 +141,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [PriceTransSummaryRequest] body Optional parameter: PricedSummary
     # RequestBody
-    # @return [PricedTransSummaryResponse] response from the API call
+    # @return [PricedTransSummaryResponse] response from the API call.
     def priced_transactions_summary(apikey,
                                     request_id,
                                     body: nil)
@@ -157,31 +157,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(PricedTransSummaryResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(PricedTransSummaryResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionPricedtransactionssummary400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionPricedtransactionssummary401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionPricedtransactionssummary403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionPricedtransactionssummary404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionPricedtransactionssummary500ErrorException))
         .execute
     end
 
@@ -206,13 +206,13 @@ module ShellDataReportingApIs
     # 
     #  This API fetches transactions for a period based on the below parameters
     # and priority order:
-    #  1.	InvoiceNumber
-    #  2.	InvoiceDate
-    #  3.	FromDate, ToDate
-    #  4.	PostingFromDate, PostingToDate (Can be used only when IncludeFees =
+    #  1.    InvoiceNumber
+    #  2.    InvoiceDate
+    #  3.    FromDate, ToDate
+    #  4.    PostingFromDate, PostingToDate (Can be used only when IncludeFees =
     # false)
-    #  5.	InvoiceDateFrom, InvoiceDateTo
-    #  6.	Period
+    #  5.    InvoiceDateFrom, InvoiceDateTo
+    #  6.    Period
     #  This API considers only one of the above set of parameters at a time. For
     # example, if InvoiceNumber and Period are provided in the input then Period
     # is ignored and transactions associated to the given invoice number are
@@ -226,7 +226,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [MultiPricedTransactionRequest] body Optional parameter: MultiPayer
     # RequestBody
-    # @return [MultiPricedTransactionResponse] response from the API call
+    # @return [MultiPricedTransactionResponse] response from the API call.
     def multipriced_transactions(apikey,
                                  request_id,
                                  body: nil)
@@ -242,31 +242,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(MultiPricedTransactionResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(MultiPricedTransactionResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionMultipayerspricedtransactions400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionMultipayerspricedtransactions401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionMultipayerspricedtransactions403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionMultipayerspricedtransactions404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionMultipayerspricedtransactions500ErrorException))
         .execute
     end
 
@@ -282,7 +282,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [CardUsageSummaryRequest] body Optional parameter: Card Usage
     # Summary RequestBody
-    # @return [CardUsageSummaryResponse] response from the API call
+    # @return [CardUsageSummaryResponse] response from the API call.
     def card_usage_summary(apikey,
                            request_id,
                            body: nil)
@@ -298,31 +298,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(CardUsageSummaryResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(CardUsageSummaryResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionCardusagesummary400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionCardusagesummary401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionCardusagesummary403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionCardusagesummary404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionCardusagesummary500ErrorException))
         .execute
     end
 
@@ -338,7 +338,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [VolumeBasedBonusRequest] body Optional parameter: VolumeBasedBonus
     # RequestBody
-    # @return [VolumeBasedBonusResponse] response from the API call
+    # @return [VolumeBasedBonusResponse] response from the API call.
     def volume_based_bonus(apikey,
                            request_id,
                            body: nil)
@@ -354,31 +354,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(VolumeBasedBonusResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(VolumeBasedBonusResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionVolumebasedbonus400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionVolumebasedbonus401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionVolumebasedbonus403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionVolumebasedbonus404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionVolumebasedbonus500ErrorException))
         .execute
     end
 
@@ -393,7 +393,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [VolumeBasedPricingRequest] body Optional parameter:
     # VolumeBasedPricing RequestBody
-    # @return [VolumeBasedPricingResponse] response from the API call
+    # @return [VolumeBasedPricingResponse] response from the API call.
     def volume_based_pricing(apikey,
                              request_id,
                              body: nil)
@@ -409,31 +409,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(VolumeBasedPricingResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(VolumeBasedPricingResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionVolumebasedpricing400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionVolumebasedpricing401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionVolumebasedpricing403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionVolumebasedpricing404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionVolumebasedpricing500ErrorException))
         .execute
     end
 
@@ -458,7 +458,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [TransactionFeesRequest] body Optional parameter: Transaction Fees
     # RequestBody
-    # @return [TransactionFeesResponse] response from the API call
+    # @return [TransactionFeesResponse] response from the API call.
     def fees(apikey,
              request_id,
              body: nil)
@@ -474,31 +474,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(TransactionFeesResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(TransactionFeesResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionFees400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionFees401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionFees403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionFees404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionFees500ErrorException))
         .execute
     end
 
@@ -523,7 +523,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [TransactionFeesRequest] body Optional parameter: FeeSummary
     # RequestBody
-    # @return [FeeSummaryResponse] response from the API call
+    # @return [FeeSummaryResponse] response from the API call.
     def fee_summary_response(apikey,
                              request_id,
                              body: nil)
@@ -539,31 +539,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(FeeSummaryResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(FeeSummaryResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionFeessummary400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionFeessummary401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionFeessummary403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionFeessummary404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionFeessummary500ErrorException))
         .execute
     end
 
@@ -580,7 +580,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [FuelConsumptionRequest] body Optional parameter: FuelConsumption
     # RequestBody
-    # @return [FuelConsumptionResponse] response from the API call
+    # @return [FuelConsumptionResponse] response from the API call.
     def fuel_consumption(apikey,
                          request_id,
                          body: nil)
@@ -596,31 +596,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(FuelConsumptionResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(FuelConsumptionResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionFuelconsumption400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionFuelconsumption401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionFuelconsumption403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionFuelconsumption404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionFuelconsumption500ErrorException))
         .execute
     end
 
@@ -635,7 +635,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [UpdateOdometerRequest] body Optional parameter: updateOdometer
     # RequestBody
-    # @return [UpdateOdometerResponse] response from the API call
+    # @return [UpdateOdometerResponse] response from the API call.
     def update_odometer(apikey,
                         request_id,
                         body: nil)
@@ -651,31 +651,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(UpdateOdometerResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(UpdateOdometerResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionUpdateodometer400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionUpdateodometer401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionUpdateodometer403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionUpdateodometer404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionUpdateodometer500ErrorException))
         .execute
     end
 
@@ -691,7 +691,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [TransactionExceptionsRequest] body Optional parameter: Transaction
     # Exceptions RequestBody
-    # @return [TransactionExceptionsResponse] response from the API call
+    # @return [TransactionExceptionsResponse] response from the API call.
     def transaction_exceptions(apikey,
                                request_id,
                                body: nil)
@@ -707,31 +707,31 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BasicAuth')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(TransactionExceptionsResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request  due to'\
-                                 ' something that is perceived to be a client\r\n error (e.g.,'\
-                                 ' malformed request syntax, invalid \r\n request message framing,'\
-                                 ' or deceptive request routing).",
-                                DefaultErrorException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\r\n",
-                                DefaultErrorException)
-                   .local_error('403',
-                                "The server understood the request but refuses to authorize it.'\
-                                 '\r\n",
-                                ErrorUserAccessError1Exception)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\r\n",
-                                DefaultErrorException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition the prevented it'\
-                                 ' from fulfilling the request.\r\n",
-                                DefaultErrorException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(TransactionExceptionsResponse.method(:from_hash))
+                    .local_error('400',
+                                 "The server cannot or will not process the request  due to'\
+                                  ' something that is perceived to be a client\r\n error (e.g.,'\
+                                  ' malformed request syntax, invalid \r\n request message'\
+                                  ' framing, or deceptive request routing).",
+                                 FleetmanagementV1TransactionExceptions400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 FleetmanagementV1TransactionExceptions401ErrorException)
+                    .local_error('403',
+                                 'The server understood the request but refuses to authorize it'\
+                                  '.',
+                                 FleetmanagementV1TransactionExceptions403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 FleetmanagementV1TransactionExceptions404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition the prevented'\
+                                  ' it from fulfilling the request.',
+                                 FleetmanagementV1TransactionExceptions500ErrorException))
         .execute
     end
 
@@ -754,7 +754,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [RecentTransactionRequest] body Optional parameter: New Recent
     # Transaction RequestBody
-    # @return [RecentTransactionsResponse] response from the API call
+    # @return [RecentTransactionsResponse] response from the API call.
     def recent_transactions_new(request_id,
                                 body: nil)
       new_api_call_builder
@@ -768,30 +768,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(RecentTransactionsResponse.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(RecentTransactionsResponse.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 TransactionDataV1Recent400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 TransactionDataV1Recent401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 TransactionDataV1Recent403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 TransactionDataV1Recent404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 TransactionDataV1Recent500ErrorException))
         .execute
     end
 
@@ -834,7 +834,7 @@ module ShellDataReportingApIs
     # back in the response from the request.
     # @param [PricedTransactionRequestV2] body Optional parameter: Priced
     # TransactionV2 RequestBody
-    # @return [PricedTransactionResponseV2] response from the API call
+    # @return [PricedTransactionResponseV2] response from the API call.
     def priced_transactions_v2(request_id,
                                body: nil)
       new_api_call_builder
@@ -848,30 +848,30 @@ module ShellDataReportingApIs
                    .body_serializer(proc do |param| param.to_json unless param.nil? end)
                    .auth(Single.new('BearerToken')))
         .response(new_response_handler
-                   .deserializer(APIHelper.method(:custom_type_deserializer))
-                   .deserialize_into(PricedTransactionResponseV2.method(:from_hash))
-                   .local_error('400',
-                                "The server cannot or will not process the request due to'\
-                                 ' something that is perceived to be a client error (e.g.,'\
-                                 ' malformed request syntax, invalid request message framing, or'\
-                                 ' deceptive request routing).\n",
-                                ErrorObjectException)
-                   .local_error('401',
-                                "The request has not been applied because it lacks valid '\
-                                 ' authentication credentials for the target resource.\n",
-                                ErrorObjectException)
-                   .local_error('403',
-                                'Forbidden',
-                                ErrorObjectException)
-                   .local_error('404',
-                                "The origin server did not find a current representation  for'\
-                                 ' the target resource or is not willing to disclose  that one'\
-                                 ' exists.\n",
-                                ErrorObjectException)
-                   .local_error('500',
-                                "The server encountered an unexpected condition that  prevented'\
-                                 ' it from fulfilling the request.\n",
-                                ErrorObjectException))
+                    .deserializer(APIHelper.method(:custom_type_deserializer))
+                    .deserialize_into(PricedTransactionResponseV2.method(:from_hash))
+                    .local_error('400',
+                                 'The server cannot or will not process the request due to'\
+                                  ' something that is perceived to be a client error (e.g.,'\
+                                  ' malformed request syntax, invalid request message framing, or'\
+                                  ' deceptive request routing).',
+                                 TransactionDataV1Priced400ErrorException)
+                    .local_error('401',
+                                 'The request has not been applied because it lacks valid '\
+                                  ' authentication credentials for the target resource.',
+                                 TransactionDataV1Priced401ErrorException)
+                    .local_error('403',
+                                 'Forbidden',
+                                 TransactionDataV1Priced403ErrorException)
+                    .local_error('404',
+                                 'The origin server did not find a current representation  for'\
+                                  ' the target resource or is not willing to disclose  that one'\
+                                  ' exists.',
+                                 TransactionDataV1Priced404ErrorException)
+                    .local_error('500',
+                                 'The server encountered an unexpected condition that  prevented'\
+                                  ' it from fulfilling the request.',
+                                 TransactionDataV1Priced500ErrorException))
         .execute
     end
   end

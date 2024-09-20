@@ -9,23 +9,23 @@ module ShellDataReportingApIs
     SKIP = Object.new
     private_constant :SKIP
 
-    # Latest statement of the account generated for the given Payer.
-    # @return [LastStatementOfAccount]
+    # TODO: Write general description for this method
+    # @return [LastStatementOfAccount2]
     attr_accessor :last_statement_of_account
 
-    # Latest statement of the account generated for the given Payer.
+    # TODO: Write general description for this method
     # @return [Array[MonthlyInvoiceTrend]]
     attr_accessor :monthly_invoice_trend
 
-    # Latest statement of the account generated for the given Payer.
+    # TODO: Write general description for this method
     # @return [Array[PastStatementOfAccounts]]
     attr_accessor :past_statement_of_accounts
 
-    # Latest statement of the account generated for the given Payer.
+    # TODO: Write general description for this method
     # @return [Array[PaymentsSinceLastSOA]]
     attr_accessor :payments_since_last_soa
 
-    # Latest statement of the account generated for the given Payer.
+    # TODO: Write general description for this method
     # @return [Array[InvoicesSummaries]]
     attr_accessor :invoices_summaries
 
@@ -63,8 +63,7 @@ module ShellDataReportingApIs
     def initialize(last_statement_of_account = SKIP,
                    monthly_invoice_trend = SKIP,
                    past_statement_of_accounts = SKIP,
-                   payments_since_last_soa = SKIP,
-                   invoices_summaries = SKIP)
+                   payments_since_last_soa = SKIP, invoices_summaries = SKIP)
       unless last_statement_of_account == SKIP
         @last_statement_of_account =
           last_statement_of_account
@@ -84,7 +83,7 @@ module ShellDataReportingApIs
 
       # Extract variables from the hash.
       if hash['LastStatementOfAccount']
-        last_statement_of_account = LastStatementOfAccount.from_hash(hash['LastStatementOfAccount'])
+        last_statement_of_account = LastStatementOfAccount2.from_hash(hash['LastStatementOfAccount'])
       end
       # Parameter is an array, so we need to iterate through it
       monthly_invoice_trend = nil

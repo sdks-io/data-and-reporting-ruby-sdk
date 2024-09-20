@@ -15,9 +15,8 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :col_co_code
 
-    # Invoice status of the transactions. Mandatory Possible options:I -
-    # Invoiced, U – Un-Invoiced, A – All
-    # @return [PricedTransactionReqV2InvoiceStatusEnum]
+    # Collecting Company Code (Shell Code) of the selected payer.
+    # @return [Object]
     attr_accessor :invoice_status
 
     # Payer Number of the selected payer.
@@ -98,13 +97,9 @@ module ShellDataReportingApIs
     # @return [Array[Integer]]
     attr_accessor :cards
 
-    # Allowed Sorting Options
-    # 1.    TransactionDateAscending
-    # 2.    TransactionDateDescending
-    # 3.    GrossAmountDescending
-    # 4.    GrossAmountAscending
-    # 5.    NetAmountAscending
-    # 6.    NetAmountDescensding
+    # This entity accepts the list of CardId to filter in the response.
+    # Note: The number of cardId allowed to be passed in the request is
+    # configurable to a maximum of 500 cards.
     # @return [PricedTransactionReqV2SortOrderEnum]
     attr_accessor :sort_order
 
@@ -116,10 +111,7 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :to_date
 
-    # Pass below one of the value as per the required transaction period
-    # 1. Last 7 Days
-    # 2. Last 30 Days
-    # 3. Last 90 Days
+    # To transaction delivery date
     # @return [PricedTransactionReqV2PeriodEnum]
     attr_accessor :period
 
@@ -269,7 +261,6 @@ module ShellDataReportingApIs
     def self.nullables
       %w[
         col_co_code
-        invoice_status
         payer_number
         account_id
         account_number
@@ -303,42 +294,22 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_code = nil,
-                   invoice_status = nil,
-                   payer_number = nil,
-                   account_id = SKIP,
-                   account_number = SKIP,
-                   driver_name = SKIP,
-                   card_group_id = SKIP,
-                   card_pan = SKIP,
-                   product_code = SKIP,
-                   product_name = SKIP,
-                   site_code = SKIP,
-                   incoming_site_number = SKIP,
-                   invoice_date = SKIP,
-                   invoice_number = SKIP,
-                   purchased_in_country_code = SKIP,
-                   purchased_in_country = SKIP,
-                   site_group_id = SKIP,
-                   vehicle_registration_number = SKIP,
-                   fee_type_id = SKIP,
-                   line_item_description = SKIP,
-                   cards = SKIP,
-                   sort_order = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
-                   period = SKIP,
-                   posting_date_from = SKIP,
-                   posting_date_to = SKIP,
-                   transaction_item_id = SKIP,
-                   fuel_only = false,
-                   include_fees = SKIP,
-                   is_multipayer = SKIP,
-                   valid_invoice_date_only = false,
-                   invoice_from_date = SKIP,
+    def initialize(col_co_code = nil, invoice_status = nil, payer_number = nil,
+                   account_id = SKIP, account_number = SKIP, driver_name = SKIP,
+                   card_group_id = SKIP, card_pan = SKIP, product_code = SKIP,
+                   product_name = SKIP, site_code = SKIP,
+                   incoming_site_number = SKIP, invoice_date = SKIP,
+                   invoice_number = SKIP, purchased_in_country_code = SKIP,
+                   purchased_in_country = SKIP, site_group_id = SKIP,
+                   vehicle_registration_number = SKIP, fee_type_id = SKIP,
+                   line_item_description = SKIP, cards = SKIP,
+                   sort_order = SKIP, from_date = SKIP, to_date = SKIP,
+                   period = SKIP, posting_date_from = SKIP,
+                   posting_date_to = SKIP, transaction_item_id = SKIP,
+                   fuel_only = false, include_fees = SKIP, is_multipayer = SKIP,
+                   valid_invoice_date_only = false, invoice_from_date = SKIP,
                    invoice_to_date = SKIP,
-                   hosting_collecting_company_number = SKIP,
-                   search = SKIP,
+                   hosting_collecting_company_number = SKIP, search = SKIP,
                    transaction_id = SKIP)
       @col_co_code = col_co_code
       @invoice_status = invoice_status

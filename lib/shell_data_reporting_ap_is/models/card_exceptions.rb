@@ -169,25 +169,14 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(account_id = SKIP,
-                   account_number = SKIP,
-                   account_short_name = SKIP,
-                   card_id = SKIP,
-                   currency_code = SKIP,
-                   currency_symbol = SKIP,
-                   day = SKIP,
-                   driver_name = SKIP,
-                   month = SKIP,
-                   pan = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   payer_short_name = SKIP,
-                   total_amount = SKIP,
-                   total_quantity = SKIP,
-                   total_sales_items = SKIP,
-                   total_transactions = SKIP,
-                   vrn = SKIP,
-                   week = SKIP,
+    def initialize(account_id = SKIP, account_number = SKIP,
+                   account_short_name = SKIP, card_id = SKIP,
+                   currency_code = SKIP, currency_symbol = SKIP, day = SKIP,
+                   driver_name = SKIP, month = SKIP, pan = SKIP,
+                   payer_id = SKIP, payer_number = SKIP,
+                   payer_short_name = SKIP, total_amount = SKIP,
+                   total_quantity = SKIP, total_sales_items = SKIP,
+                   total_transactions = SKIP, vrn = SKIP, week = SKIP,
                    year = SKIP)
       @account_id = account_id unless account_id == SKIP
       @account_number = account_number unless account_number == SKIP

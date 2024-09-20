@@ -139,17 +139,10 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_code = SKIP,
-                   payer_number = SKIP,
-                   invoice_number = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
-                   period = SKIP,
-                   invoice_date = SKIP,
-                   invoice_status = SKIP,
-                   sort_by = SKIP,
-                   col_co_id = SKIP,
-                   payer_id = SKIP)
+    def initialize(col_co_code = SKIP, payer_number = SKIP,
+                   invoice_number = SKIP, from_date = SKIP, to_date = SKIP,
+                   period = SKIP, invoice_date = SKIP, invoice_status = SKIP,
+                   sort_by = SKIP, col_co_id = SKIP, payer_id = SKIP)
       @col_co_code = col_co_code unless col_co_code == SKIP
       @payer_number = payer_number unless payer_number == SKIP
       @invoice_number = invoice_number unless invoice_number == SKIP

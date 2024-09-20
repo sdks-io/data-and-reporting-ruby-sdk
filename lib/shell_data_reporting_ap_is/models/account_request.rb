@@ -13,12 +13,12 @@ module ShellDataReportingApIs
     # Optional if StatusList is passed, else mandatory.
     # Ignored if StatusList is passed.
     # Allowed values:
-    # •	ALL
-    # •	ACTIVE
-    # •	BLOCKED
-    # •	CANCELLED
-    # •	CREDITLOCK
-    # •	DELINQUENCYLOCK
+    # •    ALL
+    # •    ACTIVE
+    # •    BLOCKED
+    # •    CANCELLED
+    # •    CREDITLOCK
+    # •    DELINQUENCYLOCK
     # @return [String]
     attr_accessor :status
 
@@ -100,11 +100,11 @@ module ShellDataReportingApIs
     # Optional 
     # Multiple statuses are allowed to be included in the search criteria.
     # Allowed values:
-    # •	ACTIVE
-    # •	BLOCKED
-    # •	CANCELLED
-    # •	CREDITLOCK
-    # •	DELINQUENCYLOCK
+    # •    ACTIVE
+    # •    BLOCKED
+    # •    CANCELLED
+    # •    CREDITLOCK
+    # •    DELINQUENCYLOCK
     # @return [Array[String]]
     attr_accessor :status_list
 
@@ -167,21 +167,12 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(status = SKIP,
-                   include_card_summary = true,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   page_size = SKIP,
-                   request_id = SKIP,
-                   col_co_code = SKIP,
-                   col_co_country_code = SKIP,
-                   current_page = SKIP,
-                   invoice_points_only = false,
-                   col_co_id = SKIP,
-                   return_tolls_customer_id = SKIP,
-                   accounts = SKIP,
-                   account_name = SKIP,
-                   status_list = SKIP)
+    def initialize(status = SKIP, include_card_summary = true, payer_id = SKIP,
+                   payer_number = SKIP, page_size = SKIP, request_id = SKIP,
+                   col_co_code = SKIP, col_co_country_code = SKIP,
+                   current_page = SKIP, invoice_points_only = false,
+                   col_co_id = SKIP, return_tolls_customer_id = SKIP,
+                   accounts = SKIP, account_name = SKIP, status_list = SKIP)
       @status = status unless status == SKIP
       @include_card_summary = include_card_summary unless include_card_summary == SKIP
       @payer_id = payer_id unless payer_id == SKIP

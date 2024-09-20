@@ -28,12 +28,12 @@ module ShellDataReportingApIs
 
     # List of Payers/Accounts entity.
     # Mandatory.
-    # •	Max number of payers allowed in the input is 10, if it exceeds in the
+    # •    Max number of payers allowed in the input is 10, if it exceeds in the
     # input it will throw an error.
-    # •	This value is configurable. Initial configuration will be 100 and will
-    # change to 10 once SFH changes are integrated.
+    # •    This value is configurable. Initial configuration will be 100 and
+    # will change to 10 once SFH changes are integrated.
     # Note: 
-    # 1.	At least one payer should be present.
+    # 1.    At least one payer should be present.
     # Accounts information are optional.
     # @return [Array[MultiPricedTransactionRequestAccountsItems]]
     attr_accessor :accounts
@@ -72,9 +72,9 @@ module ShellDataReportingApIs
 
     # Transactions Period. 
     # Possible values are:
-    # 1.	Last 7 Days
-    # 2.	Last 30 Days
-    # 3.	Last 90 Days
+    # 1.    Last 7 Days
+    # 2.    Last 30 Days
+    # 3.    Last 90 Days
     # @return [Integer]
     attr_accessor :period
 
@@ -168,12 +168,12 @@ module ShellDataReportingApIs
     attr_accessor :include_fees
 
     # Allowed Sorting Options:
-    # 1.	TransactionDateAscending
-    # 2.	TransactionDateDescending
-    # 3.	GrossAmountDescending
-    # 4.	GrossAmountAscending
-    # 5.	NetAmountAscending
-    # 6.	NetAmountDescensding
+    # 1.    TransactionDateAscending
+    # 2.    TransactionDateDescending
+    # 3.    GrossAmountDescending
+    # 4.    GrossAmountAscending
+    # 5.    NetAmountAscending
+    # 6.    NetAmountDescensding
     # Example value to be passed: 1,3
     # Note: If IncludeFees is ‘True’ then sorting is not allowed. This parameter
     # will be ignored.
@@ -251,25 +251,14 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(col_co_code = nil,
-                   accounts = nil,
-                   col_co_id = SKIP,
-                   invoice_status = SKIP,
-                   purchased_in_country = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
-                   period = SKIP,
-                   posting_date_from = SKIP,
-                   posting_date_to = SKIP,
-                   invoice_date = SKIP,
-                   invoice_number = SKIP,
-                   valid_invoice_date_only = SKIP,
-                   invoice_from_date = SKIP,
-                   invoice_to_date = SKIP,
-                   fuel_only = SKIP,
-                   include_fees = SKIP,
-                   sort_order = SKIP,
-                   current_page = SKIP,
+    def initialize(col_co_code = nil, accounts = nil, col_co_id = SKIP,
+                   invoice_status = SKIP, purchased_in_country = SKIP,
+                   from_date = SKIP, to_date = SKIP, period = SKIP,
+                   posting_date_from = SKIP, posting_date_to = SKIP,
+                   invoice_date = SKIP, invoice_number = SKIP,
+                   valid_invoice_date_only = SKIP, invoice_from_date = SKIP,
+                   invoice_to_date = SKIP, fuel_only = SKIP,
+                   include_fees = SKIP, sort_order = SKIP, current_page = SKIP,
                    page_size = SKIP)
       @col_co_id = col_co_id unless col_co_id == SKIP
       @col_co_code = col_co_code

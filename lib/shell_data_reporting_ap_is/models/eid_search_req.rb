@@ -43,18 +43,18 @@ module ShellDataReportingApIs
     # Invoice type.
     # Optional.
     # Possible values:
-    # •	NAT (National)
-    # •	INT (International)
+    # •    NAT (National)
+    # •    INT (International)
     # @return [String]
     attr_accessor :invoice_type
 
     # Status of the document. 
     # Optional.
     # Possible values:
-    # •	NEW
-    # •	VIEWED
-    # •	DOWNLOADED
-    # •	RESTORED
+    # •    NEW
+    # •    VIEWED
+    # •    DOWNLOADED
+    # •    RESTORED
     # @return [String]
     attr_accessor :invoice_status
 
@@ -107,15 +107,10 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_code = nil,
-                   account_group_country = nil,
-                   account_group_id = nil,
-                   account_group_name = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
-                   invoice_type = SKIP,
-                   invoice_status = SKIP,
-                   sort_by = SKIP)
+    def initialize(col_co_code = nil, account_group_country = nil,
+                   account_group_id = nil, account_group_name = SKIP,
+                   from_date = SKIP, to_date = SKIP, invoice_type = SKIP,
+                   invoice_status = SKIP, sort_by = SKIP)
       @col_co_code = col_co_code
       @account_group_country = account_group_country
       @account_group_id = account_group_id

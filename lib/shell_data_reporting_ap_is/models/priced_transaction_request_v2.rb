@@ -9,10 +9,8 @@ module ShellDataReportingApIs
     SKIP = Object.new
     private_constant :SKIP
 
-    # This endpoint allows querying the transaction data (i.e. Priced, Billed
-    # and Unbilled sales items) from SFSBI. It provides a flexible search
-    # criteria and supports paging
-    # @return [PricedRequestData]
+    # TODO: Write general description for this method
+    # @return [Filters]
     attr_accessor :filters
 
     # Specify the page of results to be returned.
@@ -46,9 +44,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(filters = SKIP,
-                   page = SKIP,
-                   page_size = SKIP)
+    def initialize(filters = SKIP, page = SKIP, page_size = SKIP)
       @filters = filters unless filters == SKIP
       @page = page unless page == SKIP
       @page_size = page_size unless page_size == SKIP
@@ -59,7 +55,7 @@ module ShellDataReportingApIs
       return nil unless hash
 
       # Extract variables from the hash.
-      filters = PricedRequestData.from_hash(hash['Filters']) if hash['Filters']
+      filters = Filters.from_hash(hash['Filters']) if hash['Filters']
       page = hash.key?('Page') ? hash['Page'] : SKIP
       page_size = hash.key?('PageSize') ? hash['PageSize'] : SKIP
 

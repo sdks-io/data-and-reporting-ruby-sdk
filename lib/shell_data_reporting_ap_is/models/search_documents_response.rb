@@ -70,13 +70,9 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(request_id = SKIP,
-                   status = SKIP,
-                   data = SKIP,
-                   total_records = SKIP,
-                   total_records_on_page = SKIP,
-                   is_first_page = SKIP,
-                   is_last_page = SKIP)
+    def initialize(request_id = SKIP, status = SKIP, data = SKIP,
+                   total_records = SKIP, total_records_on_page = SKIP,
+                   is_first_page = SKIP, is_last_page = SKIP)
       @request_id = request_id unless request_id == SKIP
       @status = status unless status == SKIP
       @data = data unless data == SKIP

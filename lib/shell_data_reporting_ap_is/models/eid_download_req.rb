@@ -54,10 +54,8 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_code = nil,
-                   eid_list = nil,
-                   account_group_country = nil,
-                   account_group_id_list = nil)
+    def initialize(col_co_code = nil, eid_list = nil,
+                   account_group_country = nil, account_group_id_list = nil)
       @col_co_code = col_co_code
       @eid_list = eid_list
       @account_group_country = account_group_country

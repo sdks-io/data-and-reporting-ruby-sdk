@@ -187,13 +187,13 @@ module ShellDataReportingApIs
 
     # Site Code
     # Example:
-    # 050001 -	CHARNOCK RICHARD NTHBOUND MWSA 0755
+    # 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
     # @return [String]
     attr_accessor :site_code
 
     # Site Name
     # Example:
-    # 050001 -	CHARNOCK RICHARD NTHBOUND MWSA 0755
+    # 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
     # @return [String]
     attr_accessor :site_name
 
@@ -216,9 +216,9 @@ module ShellDataReportingApIs
     attr_accessor :receipt_number
 
     # Product Code
-    # 10	TMF Charges
-    # 11	Tunnel/Bridges
-    # 12	Motorway toll
+    # 10    TMF Charges
+    # 11    Tunnel/Bridges
+    # 12    Motorway toll
     # @return [String]
     attr_accessor :product_code
 
@@ -233,21 +233,21 @@ module ShellDataReportingApIs
 
     # Product Group Id
     # Example: 
-    # 1	Parent Product Group
-    # 2	All Fuels
-    # 3	Motor gasoline
-    # 4	2 stroke
-    # 5	Autogas
+    # 1    Parent Product Group
+    # 2    All Fuels
+    # 3    Motor gasoline
+    # 4    2 stroke
+    # 5    Autogas
     # @return [Integer]
     attr_accessor :product_group_id
 
     # Product Group Name
     # Example: 
-    # 1	Parent Product Group
-    # 2	All Fuels
-    # 3	Motor gasoline
-    # 4	2 stroke
-    # 5	Autogas
+    # 1    Parent Product Group
+    # 2    All Fuels
+    # 3    Motor gasoline
+    # 4    2 stroke
+    # 5    Autogas
     # @return [String]
     attr_accessor :product_group_name
 
@@ -266,9 +266,9 @@ module ShellDataReportingApIs
     attr_accessor :is_shell_site
 
     # Network  (Shell PH, ESSO, etc.,)
-    # 100013	STEINDORFER
-    # 100015	S.A. BELGIAN SHELL N.V.
-    # 100016	ESSO BE
+    # 100013    STEINDORFER
+    # 100015    S.A. BELGIAN SHELL N.V.
+    # 100016    ESSO BE
     # Note: - The value could be null/blank for fees item.
     # @return [String]
     attr_accessor :network
@@ -492,13 +492,13 @@ module ShellDataReportingApIs
     attr_accessor :crm_number
 
     # Sales Item Dispute Status if disputed
-    # 0	No Dispute
-    # 1	In Dispute
-    # 2	Re-Instated
-    # 3	Adjusted
-    # 4	Written Off by Colco
-    # 5	Written Off by Delco
-    # 6	Charged Back to Site
+    # 0    No Dispute
+    # 1    In Dispute
+    # 2    Re-Instated
+    # 3    Adjusted
+    # 4    Written Off by Colco
+    # 5    Written Off by Delco
+    # 6    Charged Back to Site
     # @return [String]
     attr_accessor :dispute_status
 
@@ -1066,121 +1066,69 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(type = SKIP,
-                   card_id = SKIP,
-                   card_pan = SKIP,
-                   card_expiry = SKIP,
-                   transaction_date = SKIP,
-                   transaction_time = SKIP,
-                   utc_offset = SKIP,
-                   fleet_id_input = SKIP,
-                   odometer_input = SKIP,
-                   driver_name = SKIP,
-                   vehicle_registration = SKIP,
-                   invoice_currency_code = SKIP,
-                   invoice_currency_symbol = SKIP,
+    def initialize(type = SKIP, card_id = SKIP, card_pan = SKIP,
+                   card_expiry = SKIP, transaction_date = SKIP,
+                   transaction_time = SKIP, utc_offset = SKIP,
+                   fleet_id_input = SKIP, odometer_input = SKIP,
+                   driver_name = SKIP, vehicle_registration = SKIP,
+                   invoice_currency_code = SKIP, invoice_currency_symbol = SKIP,
                    transaction_currency_code = SKIP,
                    transaction_currency_symbol = SKIP,
-                   transaction_net_amount = SKIP,
-                   transaction_tax = SKIP,
-                   transaction_gross_amount = SKIP,
-                   invoice_net_amount = SKIP,
-                   invoice_tax = SKIP,
-                   invoice_gross_amount = SKIP,
-                   purchased_in_country = SKIP,
-                   account_id = SKIP,
-                   account_number = SKIP,
-                   account_name = SKIP,
-                   account_short_name = SKIP,
-                   quantity = SKIP,
+                   transaction_net_amount = SKIP, transaction_tax = SKIP,
+                   transaction_gross_amount = SKIP, invoice_net_amount = SKIP,
+                   invoice_tax = SKIP, invoice_gross_amount = SKIP,
+                   purchased_in_country = SKIP, account_id = SKIP,
+                   account_number = SKIP, account_name = SKIP,
+                   account_short_name = SKIP, quantity = SKIP,
                    fuel_product = SKIP,
                    unit_price_in_transaction_currency = SKIP,
                    unit_price_in_invoice_currency = SKIP,
                    unit_discount_transaction_currency = SKIP,
-                   unit_discount_invoice_currency = SKIP,
-                   is_invoiced = SKIP,
-                   invoice_number = SKIP,
-                   invoice_date = SKIP,
-                   site_code = SKIP,
-                   site_name = SKIP,
-                   site_country = SKIP,
-                   location = SKIP,
-                   card_group_name = SKIP,
-                   receipt_number = SKIP,
-                   product_code = SKIP,
-                   product_name = SKIP,
-                   product_group_id = SKIP,
-                   product_group_name = SKIP,
-                   del_co_exchange_rate = SKIP,
-                   col_co_exchange_rate = SKIP,
-                   is_shell_site = SKIP,
-                   network = SKIP,
-                   site_group_id = SKIP,
-                   site_group_name = SKIP,
-                   posting_date = SKIP,
-                   issuer_code = SKIP,
-                   purchased_in_country_code = SKIP,
-                   customer_country_code = SKIP,
-                   customer_country = SKIP,
-                   release_code = SKIP,
-                   card_group_id = SKIP,
-                   card_sequence_number = SKIP,
-                   check_digit = SKIP,
-                   fleet_id_description = SKIP,
-                   vat_rate = SKIP,
-                   vat_category = SKIP,
-                   vat_country = SKIP,
+                   unit_discount_invoice_currency = SKIP, is_invoiced = SKIP,
+                   invoice_number = SKIP, invoice_date = SKIP, site_code = SKIP,
+                   site_name = SKIP, site_country = SKIP, location = SKIP,
+                   card_group_name = SKIP, receipt_number = SKIP,
+                   product_code = SKIP, product_name = SKIP,
+                   product_group_id = SKIP, product_group_name = SKIP,
+                   del_co_exchange_rate = SKIP, col_co_exchange_rate = SKIP,
+                   is_shell_site = SKIP, network = SKIP, site_group_id = SKIP,
+                   site_group_name = SKIP, posting_date = SKIP,
+                   issuer_code = SKIP, purchased_in_country_code = SKIP,
+                   customer_country_code = SKIP, customer_country = SKIP,
+                   release_code = SKIP, card_group_id = SKIP,
+                   card_sequence_number = SKIP, check_digit = SKIP,
+                   fleet_id_description = SKIP, vat_rate = SKIP,
+                   vat_category = SKIP, vat_country = SKIP,
                    effective_discount_in_trx_currency = SKIP,
-                   transaction_type = SKIP,
-                   pin_indicator = SKIP,
-                   vat_applicable = SKIP,
-                   net_invoice_indicator = SKIP,
+                   transaction_type = SKIP, pin_indicator = SKIP,
+                   vat_applicable = SKIP, net_invoice_indicator = SKIP,
                    customer_currency_code = SKIP,
                    customer_currency_symbol = SKIP,
                    effective_unit_discount_in_customer_currency = SKIP,
                    effective_discount_in_customer_currency = SKIP,
                    va_ton_net_amount_in_customer_currency = SKIP,
-                   discount_type = SKIP,
-                   transaction_status = SKIP,
-                   sales_item_id = SKIP,
-                   payer_group = SKIP,
-                   payer_group_name = SKIP,
-                   refund_flag = SKIP,
-                   original_sales_item_id = SKIP,
-                   delco_name = SKIP,
-                   delco_code = SKIP,
-                   payer_number = SKIP,
-                   payer_name = SKIP,
-                   card_expiry_period = SKIP,
-                   authorisation_code = SKIP,
-                   transaction_id = SKIP,
-                   transaction_line = SKIP,
-                   allow_clearing = SKIP,
-                   crm_number = SKIP,
-                   dispute_status = SKIP,
-                   rebate_rate = SKIP,
+                   discount_type = SKIP, transaction_status = SKIP,
+                   sales_item_id = SKIP, payer_group = SKIP,
+                   payer_group_name = SKIP, refund_flag = SKIP,
+                   original_sales_item_id = SKIP, delco_name = SKIP,
+                   delco_code = SKIP, payer_number = SKIP, payer_name = SKIP,
+                   card_expiry_period = SKIP, authorisation_code = SKIP,
+                   transaction_id = SKIP, transaction_line = SKIP,
+                   allow_clearing = SKIP, crm_number = SKIP,
+                   dispute_status = SKIP, rebate_rate = SKIP,
                    del_co_to_col_co_exchange_rate = SKIP,
-                   net_euro_amount = SKIP,
-                   euro_rebate_amount = SKIP,
-                   euro_vat_amount = SKIP,
-                   parent_customer_number = SKIP,
-                   parent_customer_name = SKIP,
-                   parent_customer_id = SKIP,
+                   net_euro_amount = SKIP, euro_rebate_amount = SKIP,
+                   euro_vat_amount = SKIP, parent_customer_number = SKIP,
+                   parent_customer_name = SKIP, parent_customer_id = SKIP,
                    incoming_site_number = SKIP,
                    incoming_site_description = SKIP,
-                   incoming_currency_code = SKIP,
-                   incoming_product_code = SKIP,
-                   credit_debit_code = SKIP,
-                   correction_flag = SKIP,
-                   additional1 = SKIP,
-                   additional2 = SKIP,
-                   additional3 = SKIP,
+                   incoming_currency_code = SKIP, incoming_product_code = SKIP,
+                   credit_debit_code = SKIP, correction_flag = SKIP,
+                   additional1 = SKIP, additional2 = SKIP, additional3 = SKIP,
                    additional4 = SKIP,
                    rebateon_net_amount_in_customer_currency = SKIP,
                    rebateon_net_amount_in_transaction_currency = SKIP,
-                   network_code = SKIP,
-                   trn_identifier = SKIP,
-                   card_type = SKIP,
+                   network_code = SKIP, trn_identifier = SKIP, card_type = SKIP,
                    delco_list_price_unit_net = SKIP,
                    delco_retail_price_unit_net = SKIP,
                    delco_retail_price_unit_gross = SKIP,

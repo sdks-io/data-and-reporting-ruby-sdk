@@ -38,8 +38,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(code = SKIP,
-                   description = SKIP)
+    def initialize(code = SKIP, description = SKIP)
       @code = code unless code == SKIP
       @description = description unless description == SKIP
     end
@@ -55,6 +54,16 @@ module ShellDataReportingApIs
       # Create object from extracted values.
       ErrorStatus.new(code,
                       description)
+    end
+
+    # Validates an instance of the object from a given value.
+    # @param [ErrorStatus | Hash] The value against the validation is performed.
+    def self.validate(value)
+      return true if value.instance_of? self
+
+      return false unless value.instance_of? Hash
+
+      true
     end
   end
 end

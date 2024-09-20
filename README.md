@@ -15,16 +15,16 @@ Go to the Shell Developer Portal: [https://developer.shell.com](https://develope
 Install the gem from the command line:
 
 ```ruby
-gem install data-and-reporting-sdk -v 1.0.0
+gem install data-and-reporting-sdk -v 1.1.0
 ```
 
 Or add the gem to your Gemfile and run `bundle`:
 
 ```ruby
-gem 'data-and-reporting-sdk', '1.0.0'
+gem 'data-and-reporting-sdk', '1.1.0'
 ```
 
-For additional gem details, see the [RubyGems page for the data-and-reporting-sdk gem](https://rubygems.org/gems/data-and-reporting-sdk/versions/1.0.0).
+For additional gem details, see the [RubyGems page for the data-and-reporting-sdk gem](https://rubygems.org/gems/data-and-reporting-sdk/versions/1.1.0).
 
 ## Test the SDK
 
@@ -36,7 +36,7 @@ rake
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -52,8 +52,8 @@ The following parameters are configurable for the API Client:
 | `retry_statuses` | `Array` | A list of HTTP statuses to retry. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | `retry_methods` | `Array` | A list of HTTP methods to retry. <br> **Default: %i[get put]** |
 | `http_callback` | `HttpCallBack` | The Http CallBack allows defining callables for pre and post API calls. |
-| `basic_auth_credentials` | [`BasicAuthCredentials`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/$a/https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/basic-authentication.md) | The credential object for Basic Authentication |
-| `bearer_token_credentials` | [`BearerTokenCredentials`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/$a/https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/oauth-2-client-credentials-grant.md) | The credential object for OAuth 2 Client Credentials Grant |
+| `basic_auth_credentials` | [`BasicAuthCredentials`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/auth/basic-authentication.md) | The credential object for Basic Authentication |
+| `bearer_token_credentials` | [`BearerTokenCredentials`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/auth/oauth-2-client-credentials-grant.md) | The credential object for OAuth 2 Client Credentials Grant |
 
 The API client can be initialized as follows:
 
@@ -86,19 +86,18 @@ The SDK can be configured to use a different environment for making API calls. A
 
 This API uses the following authentication schemes.
 
-* [`BasicAuth (Basic Authentication)`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/$a/https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/basic-authentication.md)
-* [`BearerToken (OAuth 2 Client Credentials Grant)`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/$a/https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/oauth-2-client-credentials-grant.md)
+* [`BasicAuth (Basic Authentication)`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/auth/basic-authentication.md)
+* [`BearerToken (OAuth 2 Client Credentials Grant)`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/auth/oauth-2-client-credentials-grant.md)
 
 ## List of APIs
 
-* [O Auth Authorization](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/controllers/o-auth-authorization.md)
-* [Customer](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/controllers/customer.md)
-* [Transaction](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/controllers/transaction.md)
-* [Invoice](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/controllers/invoice.md)
+* [Customer](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/controllers/customer.md)
+* [Transaction](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/controllers/transaction.md)
+* [Invoice](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/controllers/invoice.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/utility-classes.md)
-* [HttpResponse](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/http-response.md)
-* [HttpRequest](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.0.0/doc/http-request.md)
+* [Utility Classes](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/utility-classes.md)
+* [HttpResponse](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/http-response.md)
+* [HttpRequest](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/1.1.0/doc/http-request.md)
 

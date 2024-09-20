@@ -43,8 +43,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(productid = SKIP,
-                   product_code = SKIP)
+    def initialize(productid = SKIP, product_code = SKIP)
       @productid = productid unless productid == SKIP
       @product_code = product_code unless product_code == SKIP
     end

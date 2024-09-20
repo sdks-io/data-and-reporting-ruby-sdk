@@ -237,31 +237,22 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(pricing_account_id = SKIP,
-                   pricing_account_number = SKIP,
+    def initialize(pricing_account_id = SKIP, pricing_account_number = SKIP,
                    pricing_account_short_name = SKIP,
-                   pricing_account_full_name = SKIP,
-                   fee_rule_id = SKIP,
-                   fee_rule_description = SKIP,
-                   fee_rule_date_effective = SKIP,
-                   fee_rule_date_terminated = SKIP,
-                   bonus_paid_to = SKIP,
+                   pricing_account_full_name = SKIP, fee_rule_id = SKIP,
+                   fee_rule_description = SKIP, fee_rule_date_effective = SKIP,
+                   fee_rule_date_terminated = SKIP, bonus_paid_to = SKIP,
                    bonus_paid_to_account_id = SKIP,
                    bonus_paid_to_account_number = SKIP,
                    bonus_paid_to_account_short_name = SKIP,
-                   bonus_paid_to_account_full_name = SKIP,
-                   frequency = SKIP,
+                   bonus_paid_to_account_full_name = SKIP, frequency = SKIP,
                    next_calculation_date = SKIP,
-                   previous_calculated_date = SKIP,
-                   fee_rule_basis = SKIP,
+                   previous_calculated_date = SKIP, fee_rule_basis = SKIP,
                    fee_rule_currency_code = SKIP,
                    fee_rule_currency_symbol = SKIP,
-                   fee_rule_available_from = SKIP,
-                   fee_rule_available_to = SKIP,
-                   fee_rule_locations = SKIP,
-                   fee_rule_tiers = SKIP,
-                   associated_accounts = SKIP,
-                   fee_rule_products = SKIP)
+                   fee_rule_available_from = SKIP, fee_rule_available_to = SKIP,
+                   fee_rule_locations = SKIP, fee_rule_tiers = SKIP,
+                   associated_accounts = SKIP, fee_rule_products = SKIP)
       @pricing_account_id = pricing_account_id unless pricing_account_id == SKIP
       @pricing_account_number = pricing_account_number unless pricing_account_number == SKIP
       unless pricing_account_short_name == SKIP

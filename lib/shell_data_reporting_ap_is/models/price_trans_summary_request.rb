@@ -84,10 +84,10 @@ module ShellDataReportingApIs
 
     # Product Id
     # Example: 
-    # 21	Unleaded - High octane
-    # 22	Unleaded - Medium octane
-    # 23	Unleaded - Low octane
-    # 24	Unleaded Environmental
+    # 21    Unleaded - High octane
+    # 22    Unleaded - Medium octane
+    # 23    Unleaded - Low octane
+    # 24    Unleaded Environmental
     # @return [Integer]
     attr_accessor :product_id
 
@@ -95,10 +95,10 @@ module ShellDataReportingApIs
     # Optional
     # Max Length: 8
     # Example: 
-    # 10	TMF Charges
-    # 11	Tunnel/Bridges
-    # 12	Motorway toll
-    # 13	Ferries
+    # 10    TMF Charges
+    # 11    Tunnel/Bridges
+    # 12    Motorway toll
+    # 13    Ferries
     # @return [String]
     attr_accessor :product_code
 
@@ -133,9 +133,9 @@ module ShellDataReportingApIs
 
     # Transactions Period. 
     # Possible values are:
-    # 1.	Last 7 Days
-    # 2.	Last 30 Days
-    # 3.	Last 90 Days
+    # 1.    Last 7 Days
+    # 2.    Last 30 Days
+    # 3.    Last 90 Days
     # Optional - Refer introduction section of this operation for the priority
     # and sequence of different date and invoice number filters that are
     # conditionally applied.
@@ -144,10 +144,10 @@ module ShellDataReportingApIs
 
     # Site Code as configured in GFN
     # Example:
-    # 050001 -	CHARNOCK RICHARD NTHBOUND MWSA 0755
-    # 050002 -	CHARNOCK RICHARD STHBOUND MWSA 0755
-    # 050005 -	HARTSHEAD MOOR EASTBOUND MWSA 0761.
-    # 050006 -	HARTSHEAD MOOR WESTBOUND MWSA.
+    # 050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755
+    # 050002 -    CHARNOCK RICHARD STHBOUND MWSA 0755
+    # 050005 -    HARTSHEAD MOOR EASTBOUND MWSA 0761.
+    # 050006 -    HARTSHEAD MOOR WESTBOUND MWSA.
     # Note: If IncludeFees is true then this filter will be ignored
     # @return [String]
     attr_accessor :site_code
@@ -333,35 +333,19 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(col_co_id = SKIP,
-                   col_co_code = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   accounts = SKIP,
-                   card_id = SKIP,
-                   card_pan = SKIP,
-                   driver_name = SKIP,
-                   vehicle_registration_number = SKIP,
-                   invoice_status = SKIP,
-                   product_id = SKIP,
-                   product_code = SKIP,
-                   purchased_in_country = SKIP,
-                   card_group_id = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
-                   period = SKIP,
-                   site_code = SKIP,
-                   site_group_id = SKIP,
-                   posting_date_from = SKIP,
-                   posting_date_to = SKIP,
-                   sales_item_id = SKIP,
-                   transaction_id = SKIP,
-                   invoice_date = SKIP,
-                   invoice_number = SKIP,
-                   valid_invoice_date_only = SKIP,
-                   invoice_from_date = SKIP,
-                   invoice_to_date = SKIP,
-                   fuel_only = SKIP,
+    def initialize(col_co_id = SKIP, col_co_code = SKIP, payer_id = SKIP,
+                   payer_number = SKIP, accounts = SKIP, card_id = SKIP,
+                   card_pan = SKIP, driver_name = SKIP,
+                   vehicle_registration_number = SKIP, invoice_status = SKIP,
+                   product_id = SKIP, product_code = SKIP,
+                   purchased_in_country = SKIP, card_group_id = SKIP,
+                   from_date = SKIP, to_date = SKIP, period = SKIP,
+                   site_code = SKIP, site_group_id = SKIP,
+                   posting_date_from = SKIP, posting_date_to = SKIP,
+                   sales_item_id = SKIP, transaction_id = SKIP,
+                   invoice_date = SKIP, invoice_number = SKIP,
+                   valid_invoice_date_only = SKIP, invoice_from_date = SKIP,
+                   invoice_to_date = SKIP, fuel_only = SKIP,
                    include_fees = SKIP)
       @col_co_id = col_co_id unless col_co_id == SKIP
       @col_co_code = col_co_code unless col_co_code == SKIP

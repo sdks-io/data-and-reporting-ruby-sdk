@@ -64,11 +64,8 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(fee_rule_id = SKIP,
-                   fee_rule_description = SKIP,
-                   month = SKIP,
-                   year = SKIP,
-                   total_volume = SKIP)
+    def initialize(fee_rule_id = SKIP, fee_rule_description = SKIP,
+                   month = SKIP, year = SKIP, total_volume = SKIP)
       @fee_rule_id = fee_rule_id unless fee_rule_id == SKIP
       @fee_rule_description = fee_rule_description unless fee_rule_description == SKIP
       @month = month unless month == SKIP

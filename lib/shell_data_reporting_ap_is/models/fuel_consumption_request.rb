@@ -73,9 +73,9 @@ module ShellDataReportingApIs
     # Transactions Period. This is ignored when FromDate is supplied on the
     # request 
     # Allowed values :
-    # 1.	Last 7 Days
-    # 2.	Last 30 Days
-    # 3.	Last 90 Days
+    # 1.    Last 7 Days
+    # 2.    Last 30 Days
+    # 3.    Last 90 Days
     # Optional - When FromDate/ToDate and Period are not provided, ‘Last 7 Days’
     # value is considered as default Period.
     # @return [Integer]
@@ -120,17 +120,10 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(col_co_id = SKIP,
-                   col_co_code = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   accounts = SKIP,
-                   card_group_id = SKIP,
-                   card_group_name = SKIP,
-                   cards = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
-                   period = SKIP)
+    def initialize(col_co_id = SKIP, col_co_code = SKIP, payer_id = SKIP,
+                   payer_number = SKIP, accounts = SKIP, card_group_id = SKIP,
+                   card_group_name = SKIP, cards = SKIP, from_date = SKIP,
+                   to_date = SKIP, period = SKIP)
       @col_co_id = col_co_id unless col_co_id == SKIP
       @col_co_code = col_co_code unless col_co_code == SKIP
       @payer_id = payer_id unless payer_id == SKIP

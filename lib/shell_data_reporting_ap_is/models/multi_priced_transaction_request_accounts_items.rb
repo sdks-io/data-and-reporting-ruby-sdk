@@ -54,9 +54,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(payer_id = SKIP,
-                   payer_number = SKIP,
-                   account_id = SKIP,
+    def initialize(payer_id = SKIP, payer_number = SKIP, account_id = SKIP,
                    account_number = SKIP)
       @payer_id = payer_id unless payer_id == SKIP
       @payer_number = payer_number unless payer_number == SKIP

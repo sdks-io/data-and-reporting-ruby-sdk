@@ -118,19 +118,13 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(fee_type_group = SKIP,
-                   fee_type_id = SKIP,
-                   product_id = SKIP,
-                   product_code = SKIP,
-                   product_name = SKIP,
-                   product_group_id = SKIP,
-                   product_group_name = SKIP,
-                   total_quantity = SKIP,
-                   total_invoice_net_amount = SKIP,
+    def initialize(fee_type_group = SKIP, fee_type_id = SKIP, product_id = SKIP,
+                   product_code = SKIP, product_name = SKIP,
+                   product_group_id = SKIP, product_group_name = SKIP,
+                   total_quantity = SKIP, total_invoice_net_amount = SKIP,
                    total_invoice_gross_amount = SKIP,
                    total_invoice_vat_amount = SKIP,
-                   invoice_currency_code = SKIP,
-                   invoice_currency_symbol = SKIP)
+                   invoice_currency_code = SKIP, invoice_currency_symbol = SKIP)
       @fee_type_group = fee_type_group unless fee_type_group == SKIP
       @fee_type_id = fee_type_id unless fee_type_id == SKIP
       @product_id = product_id unless product_id == SKIP

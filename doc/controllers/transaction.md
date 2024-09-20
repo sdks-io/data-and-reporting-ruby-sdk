@@ -76,7 +76,7 @@ def priced_transactions(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`PriceTransactionRequest`](../../doc/models/price-transaction-request.md) | Body, Optional | Priced Transaction Request Body |
 
 ## Response Type
@@ -287,11 +287,11 @@ result = transaction_controller.priced_transactions(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionPricedtransactions400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionPricedtransactions401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionPricedtransactions403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionPricedtransactions404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionPricedtransactions500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactions-500-error-exception.md) |
 
 
 # Priced Transactions Summary
@@ -342,7 +342,7 @@ def priced_transactions_summary(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`PriceTransSummaryRequest`](../../doc/models/price-trans-summary-request.md) | Body, Optional | PricedSummary RequestBody |
 
 ## Response Type
@@ -430,11 +430,11 @@ result = transaction_controller.priced_transactions_summary(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionPricedtransactionssummary400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionPricedtransactionssummary401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionPricedtransactionssummary403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionPricedtransactionssummary404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionPricedtransactionssummary500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-pricedtransactionssummary-500-error-exception.md) |
 
 
 # Multipriced Transactions
@@ -481,7 +481,7 @@ def multipriced_transactions(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`MultiPricedTransactionRequest`](../../doc/models/multi-priced-transaction-request.md) | Body, Optional | MultiPayer RequestBody |
 
 ## Response Type
@@ -684,11 +684,11 @@ result = transaction_controller.multipriced_transactions(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionMultipayerspricedtransactions400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionMultipayerspricedtransactions401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionMultipayerspricedtransactions403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionMultipayerspricedtransactions404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionMultipayerspricedtransactions500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-multipayerspricedtransactions-500-error-exception.md) |
 
 
 # Card Usage Summary
@@ -707,7 +707,7 @@ def card_usage_summary(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`CardUsageSummaryRequest`](../../doc/models/card-usage-summary-request.md) | Body, Optional | Card Usage Summary RequestBody |
 
 ## Response Type
@@ -731,11 +731,11 @@ result = transaction_controller.card_usage_summary(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionCardusagesummary400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionCardusagesummary401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionCardusagesummary403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionCardusagesummary404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionCardusagesummary500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-cardusagesummary-500-error-exception.md) |
 
 
 # Volume Based Bonus
@@ -754,7 +754,7 @@ def volume_based_bonus(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`VolumeBasedBonusRequest`](../../doc/models/volume-based-bonus-request.md) | Body, Optional | VolumeBasedBonus RequestBody |
 
 ## Response Type
@@ -778,11 +778,11 @@ result = transaction_controller.volume_based_bonus(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionVolumebasedbonus400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionVolumebasedbonus401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionVolumebasedbonus403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionVolumebasedbonus404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionVolumebasedbonus500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedbonus-500-error-exception.md) |
 
 
 # Volume Based Pricing
@@ -801,7 +801,7 @@ def volume_based_pricing(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`VolumeBasedPricingRequest`](../../doc/models/volume-based-pricing-request.md) | Body, Optional | VolumeBasedPricing RequestBody |
 
 ## Response Type
@@ -825,11 +825,11 @@ result = transaction_controller.volume_based_pricing(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionVolumebasedpricing400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionVolumebasedpricing401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionVolumebasedpricing403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionVolumebasedpricing404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionVolumebasedpricing500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-volumebasedpricing-500-error-exception.md) |
 
 
 # Fees
@@ -860,7 +860,7 @@ def fees(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`TransactionFeesRequest`](../../doc/models/transaction-fees-request.md) | Body, Optional | Transaction Fees RequestBody |
 
 ## Response Type
@@ -1011,11 +1011,11 @@ result = transaction_controller.fees(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionFees400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionFees401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionFees403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionFees404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionFees500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fees-500-error-exception.md) |
 
 
 # Fee Summary Response
@@ -1046,7 +1046,7 @@ def fee_summary_response(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`TransactionFeesRequest`](../../doc/models/transaction-fees-request.md) | Body, Optional | FeeSummary RequestBody |
 
 ## Response Type
@@ -1117,11 +1117,11 @@ result = transaction_controller.fee_summary_response(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionFeessummary400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionFeessummary401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionFeessummary403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionFeessummary404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionFeessummary500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-feessummary-500-error-exception.md) |
 
 
 # Fuel Consumption
@@ -1140,7 +1140,7 @@ def fuel_consumption(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`FuelConsumptionRequest`](../../doc/models/fuel-consumption-request.md) | Body, Optional | FuelConsumption RequestBody |
 
 ## Response Type
@@ -1207,11 +1207,11 @@ result = transaction_controller.fuel_consumption(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionFuelconsumption400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionFuelconsumption401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionFuelconsumption403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionFuelconsumption404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionFuelconsumption500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-fuelconsumption-500-error-exception.md) |
 
 
 # Update Odometer
@@ -1230,7 +1230,7 @@ def update_odometer(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`UpdateOdometerRequest`](../../doc/models/update-odometer-request.md) | Body, Optional | updateOdometer RequestBody |
 
 ## Response Type
@@ -1289,11 +1289,11 @@ result = transaction_controller.update_odometer(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionUpdateodometer400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionUpdateodometer401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionUpdateodometer403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionUpdateodometer404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionUpdateodometer500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-updateodometer-500-error-exception.md) |
 
 
 # Transaction Exceptions
@@ -1312,7 +1312,7 @@ def transaction_exceptions(apikey,
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `apikey` | `String` | Header, Required | This is the API key of the specific environment which needs to be passed by the client. |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`TransactionExceptionsRequest`](../../doc/models/transaction-exceptions-request.md) | Body, Optional | Transaction Exceptions RequestBody |
 
 ## Response Type
@@ -1389,11 +1389,11 @@ result = transaction_controller.transaction_exceptions(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 403 | The server understood the request but refuses to authorize it. | [`ErrorUserAccessError1Exception`](../../doc/models/error-user-access-error-1-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
-| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`DefaultErrorException`](../../doc/models/default-error-exception.md) |
+| 400 | The server cannot or will not process the request  due to something that is perceived to be a client<br>error (e.g., malformed request syntax, invalid<br>request message framing, or deceptive request routing). | [`FleetmanagementV1TransactionExceptions400ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`FleetmanagementV1TransactionExceptions401ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-401-error-exception.md) |
+| 403 | The server understood the request but refuses to authorize it. | [`FleetmanagementV1TransactionExceptions403ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`FleetmanagementV1TransactionExceptions404ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition the prevented it from fulfilling the request. | [`FleetmanagementV1TransactionExceptions500ErrorException`](../../doc/models/fleetmanagement-v1-transaction-exceptions-500-error-exception.md) |
 
 
 # Recent Transactions New
@@ -1403,12 +1403,19 @@ This endpoint allows querying last 48 hours of transaction data of Shell Card (i
 #### Supported operations
 
     * Search by Date and Time range (within the last 48 hours only)
+    
     * Search by Payer and/or Account number
+    
     * Search by Card
+    
     * Search by Purchased Country
+    
     * Search by Transaction posting date
+    
     * Search by Driver Name or Vehicle registration number
+    
     * Search by Fuel only transactions
+    
     * Search by Product and/or Product group
 
 ```ruby
@@ -1420,7 +1427,7 @@ def recent_transactions_new(request_id,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`RecentTransactionRequest`](../../doc/models/recent-transaction-request.md) | Body, Optional | New Recent Transaction RequestBody |
 
 ## Response Type
@@ -1552,11 +1559,11 @@ result = transaction_controller.recent_transactions_new(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Recent400ErrorException`](../../doc/models/transaction-data-v1-recent-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Recent401ErrorException`](../../doc/models/transaction-data-v1-recent-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Recent403ErrorException`](../../doc/models/transaction-data-v1-recent-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Recent404ErrorException`](../../doc/models/transaction-data-v1-recent-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Recent500ErrorException`](../../doc/models/transaction-data-v1-recent-500-error-exception.md) |
 
 
 # Priced Transactions V2
@@ -1603,7 +1610,7 @@ def priced_transactions_v2(request_id,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request. |
+| `request_id` | `String` | Header, Required | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the request.<br>**Constraints**: *Minimum Length*: `36`, *Maximum Length*: `36`, *Pattern*: `^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$` |
 | `body` | [`PricedTransactionRequestV2`](../../doc/models/priced-transaction-request-v2.md) | Body, Optional | Priced TransactionV2 RequestBody |
 
 ## Response Type
@@ -1616,9 +1623,9 @@ def priced_transactions_v2(request_id,
 request_id = '2b0cbe11-f109-4c43-9201-49af0370df1c'
 
 body = PricedTransactionRequestV2.new(
-  PricedRequestData.new(
+  Filters.new(
     '032',
-    PricedTransactionReqV2InvoiceStatusEnum::A,
+    JSON.parse('{"key1":"val1","key2":"val2"}'),
     'DE26685263',
     29484,
     'DE26667080',
@@ -1688,7 +1695,7 @@ result = transaction_controller.priced_transactions_v2(
       "TransactionStatus": "Y",
       "DriverName": "SATTY BHAMRA",
       "CardExpiryPeriod": 2204,
-      "CardExpiry": "2022-01-01",
+      "CardExpiry": "20220101",
       "CardGroupId": 40000,
       "CardGroupName": "006240 FIRE BRIGHT SOLUTIONS",
       "IssuerCode": 7002,
@@ -1740,8 +1747,8 @@ result = transaction_controller.priced_transactions_v2(
       "IsShellSite": false,
       "FleetIdInput": "YG67OUM",
       "IncomingProductCode": 23,
-      "PostingDate": "2021-08-02",
-      "PostingTime": "0001-01-01T14:15:22Z",
+      "PostingDate": "20210802",
+      "PostingTime": "14:15:22",
       "ProductCode": 30,
       "ProductName": "Unleaded - Medium octane",
       "ProductGroupId": 22,
@@ -1752,7 +1759,7 @@ result = transaction_controller.priced_transactions_v2(
       "SiteCode": 32,
       "IncomingSiteNumber": 15,
       "InvoiceCurrencyCode": "GBP",
-      "InvoiceDate": "2021-08-02",
+      "InvoiceDate": "20210802",
       "InvoiceNumber": 3201016193,
       "FuelProduct": true,
       "VATApplicable": "Y",
@@ -1793,8 +1800,8 @@ result = transaction_controller.priced_transactions_v2(
       "IsInvoiced": false,
       "TransactionCurrencyCode": "GBP",
       "CreditDebitCode": "D or C",
-      "TransactionDate": "2021-08-01",
-      "TransactionTime": "0001-01-01T12:16:58Z",
+      "TransactionDate": "20210801",
+      "TransactionTime": "12:16:58",
       "TransactionItemId": "H305908971030",
       "TrnIdentifier": "H305908971030",
       "Type": "SALE",
@@ -1813,14 +1820,14 @@ result = transaction_controller.priced_transactions_v2(
       "OriginalVATAmount": 0,
       "EmbossText": "PARKLANE PROPERTIES LTD",
       "OriginalExchangeRate": 0,
-      "OriginalTransactionItemInvoiceDate": "2022-02-02",
+      "OriginalTransactionItemInvoiceDate": "20220202",
       "FeeTypeId": 1,
       "LineItemDescription": true,
       "FeeRuleDescription": "Simple Fee",
       "Frequency": 1,
       "FeeRuleId": 1,
-      "SystemEntryDate": "2021-08-28",
-      "SystemEntryTime": "0001-01-01T20:21:08Z",
+      "SystemEntryDate": "20210828",
+      "SystemEntryTime": "20:21:08",
       "IsManual": "Y",
       "OriginalTransactionItemId": "Y",
       "OriginalTransactionItemInvoiceNumber": 6750802,
@@ -1839,9 +1846,9 @@ result = transaction_controller.priced_transactions_v2(
       "EVChargePointConnectorTypeDescription": "DC 50 kW",
       "EVChargeDuration": "PT3205S",
       "EVChargeStartDate": "2021-08-01",
-      "EVChargeStartTime": "0001-01-01T20:08:01Z",
+      "EVChargeStartTime": "20:08:01",
       "EVChargeEndDate": "2022-08-01",
-      "EVChargeEndTime": "0001-01-01T20:08:01Z",
+      "EVChargeEndTime": "20:08:01",
       "HostingCollectingCompanyNumber": 0,
       "TransactionId": 0,
       "FuelOnly": true
@@ -1857,9 +1864,9 @@ result = transaction_controller.priced_transactions_v2(
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 403 | Forbidden | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
-| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`ErrorObjectException`](../../doc/models/error-object-exception.md) |
+| 400 | The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). | [`TransactionDataV1Priced400ErrorException`](../../doc/models/transaction-data-v1-priced-400-error-exception.md) |
+| 401 | The request has not been applied because it lacks valid  authentication credentials for the target resource. | [`TransactionDataV1Priced401ErrorException`](../../doc/models/transaction-data-v1-priced-401-error-exception.md) |
+| 403 | Forbidden | [`TransactionDataV1Priced403ErrorException`](../../doc/models/transaction-data-v1-priced-403-error-exception.md) |
+| 404 | The origin server did not find a current representation  for the target resource or is not willing to disclose  that one exists. | [`TransactionDataV1Priced404ErrorException`](../../doc/models/transaction-data-v1-priced-404-error-exception.md) |
+| 500 | The server encountered an unexpected condition that  prevented it from fulfilling the request. | [`TransactionDataV1Priced500ErrorException`](../../doc/models/transaction-data-v1-priced-500-error-exception.md) |
 

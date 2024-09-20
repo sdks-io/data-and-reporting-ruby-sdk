@@ -52,10 +52,8 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(card_exceptions = SKIP,
-                   transaction_exceptions = SKIP,
-                   error = SKIP,
-                   request_id = SKIP)
+    def initialize(card_exceptions = SKIP, transaction_exceptions = SKIP,
+                   error = SKIP, request_id = SKIP)
       @card_exceptions = card_exceptions unless card_exceptions == SKIP
       @transaction_exceptions = transaction_exceptions unless transaction_exceptions == SKIP
       @error = error unless error == SKIP

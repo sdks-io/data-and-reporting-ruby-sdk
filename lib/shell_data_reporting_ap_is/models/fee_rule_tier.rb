@@ -48,9 +48,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(tier_minimum = SKIP,
-                   value = SKIP,
-                   tier_maximum = SKIP)
+    def initialize(tier_minimum = SKIP, value = SKIP, tier_maximum = SKIP)
       @tier_minimum = tier_minimum unless tier_minimum == SKIP
       @value = value unless value == SKIP
       @tier_maximum = tier_maximum unless tier_maximum == SKIP

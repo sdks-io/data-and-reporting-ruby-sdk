@@ -56,10 +56,8 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(configuration = SKIP,
-                   current_period_consumption = SKIP,
-                   historical_bonus_paid = SKIP,
-                   error = SKIP,
+    def initialize(configuration = SKIP, current_period_consumption = SKIP,
+                   historical_bonus_paid = SKIP, error = SKIP,
                    request_id = SKIP)
       @configuration = configuration unless configuration == SKIP
       unless current_period_consumption == SKIP

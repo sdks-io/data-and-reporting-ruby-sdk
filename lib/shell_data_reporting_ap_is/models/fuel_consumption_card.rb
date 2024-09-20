@@ -47,9 +47,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(card_id = SKIP,
-                   pan = SKIP,
-                   expiry_date = SKIP)
+    def initialize(card_id = SKIP, pan = SKIP, expiry_date = SKIP)
       @card_id = card_id unless card_id == SKIP
       @pan = pan unless pan == SKIP
       @expiry_date = expiry_date unless expiry_date == SKIP

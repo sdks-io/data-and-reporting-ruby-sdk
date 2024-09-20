@@ -10,14 +10,14 @@ module ShellDataReportingApIs
     private_constant :SKIP
 
     # Status of requests to be fetched.
-    # •	Success
-    # •	Failed
-    # •	InProgress
-    # •	Submitted
-    # •	Rejected
-    # •	PendingApproval
-    # •	All
-    # •	MailedToCSC
+    # •    Success
+    # •    Failed
+    # •    InProgress
+    # •    Submitted
+    # •    Rejected
+    # •    PendingApproval
+    # •    All
+    # •    MailedToCSC
     # Optional
     # If not passed “All” will be considered as the default value.
     # @return [String]
@@ -83,10 +83,10 @@ module ShellDataReportingApIs
     attr_accessor :requested_operation
 
     # Allowed Sorting Options:
-    # 1.	SubmittedDateDescending
-    # 2.	SubmittedDateAscending 
-    # 3.	AccountNumberAscending
-    # 4.	AccountNumberDescending
+    # 1.    SubmittedDateDescending
+    # 2.    SubmittedDateAscending 
+    # 3.    AccountNumberAscending
+    # 4.    AccountNumberDescending
     # Optional: Default value is 1
     # Example value to be passed: 1,3
     # @return [String]
@@ -185,19 +185,11 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(status = SKIP,
-                   payer_number = SKIP,
-                   payer_id = SKIP,
-                   account_number = SKIP,
-                   col_co_code = SKIP,
-                   col_co_id = SKIP,
-                   accounts = SKIP,
-                   page_size = SKIP,
-                   requested_operation = SKIP,
-                   sort_order = SKIP,
-                   search_text = SKIP,
-                   current_page = SKIP,
-                   from_date = SKIP,
+    def initialize(status = SKIP, payer_number = SKIP, payer_id = SKIP,
+                   account_number = SKIP, col_co_code = SKIP, col_co_id = SKIP,
+                   accounts = SKIP, page_size = SKIP,
+                   requested_operation = SKIP, sort_order = SKIP,
+                   search_text = SKIP, current_page = SKIP, from_date = SKIP,
                    to_date = SKIP)
       @status = status unless status == SKIP
       @payer_number = payer_number unless payer_number == SKIP

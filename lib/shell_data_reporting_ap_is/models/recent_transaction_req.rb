@@ -134,21 +134,13 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_code = nil,
-                   payer_number = nil,
-                   account_number = SKIP,
-                   product_code = SKIP,
-                   purchased_in_country = SKIP,
-                   card_pan = SKIP,
-                   from_date_time = SKIP,
-                   to_date_time = SKIP,
-                   transaction_status = SKIP,
-                   fuel_only = SKIP,
+    def initialize(col_co_code = nil, payer_number = nil, account_number = SKIP,
+                   product_code = SKIP, purchased_in_country = SKIP,
+                   card_pan = SKIP, from_date_time = SKIP, to_date_time = SKIP,
+                   transaction_status = SKIP, fuel_only = SKIP,
                    product_group_name = SKIP,
-                   vehicle_registration_number = SKIP,
-                   include_declines = SKIP,
-                   card_issuer_name = SKIP,
-                   column_list = SKIP)
+                   vehicle_registration_number = SKIP, include_declines = SKIP,
+                   card_issuer_name = SKIP, column_list = SKIP)
       @col_co_code = col_co_code
       @payer_number = payer_number
       @account_number = account_number unless account_number == SKIP

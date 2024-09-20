@@ -87,51 +87,51 @@ module ShellDataReportingApIs
 
     # Payment method description of the Payer. 
     # Example: Id & Description
-    # •	Incoming - Direct Debit
-    # •	Incoming - Cheque
-    # •	Incoming - Direct Debit A
-    # •	Incoming - Bank Transfer
-    # •	Incoming - Cash
+    # •    Incoming - Direct Debit
+    # •    Incoming - Cheque
+    # •    Incoming - Direct Debit A
+    # •    Incoming - Bank Transfer
+    # •    Incoming - Cash
     # @return [String]
     attr_accessor :payment_method
 
     # Payment method Id of the Payer. 
     # Example: Id & Description
-    # •	Incoming - Direct Debit
-    # •	Incoming - Cheque
-    # •	Incoming - Direct Debit A
-    # •	Incoming - Bank Transfer
-    # •	Incoming - Cash
+    # •    Incoming - Direct Debit
+    # •    Incoming - Cheque
+    # •    Incoming - Direct Debit A
+    # •    Incoming - Bank Transfer
+    # •    Incoming - Cash
     # @return [Integer]
     attr_accessor :payment_method_id
 
     # Payment terms description of the Payer.
     # Example: Id & Description
-    # •	14 days after Invoice
-    # •	15 days after Invoice
-    # •	21 days after Invoice
-    # •	30 days after Invoice
-    # •	45 days after Invoice
-    # •	0 days after invoice
-    # •	days after invoice
-    # •	days after invoice
-    # •	7 days after invoice
-    # •	10th of the following month
+    # •    14 days after Invoice
+    # •    15 days after Invoice
+    # •    21 days after Invoice
+    # •    30 days after Invoice
+    # •    45 days after Invoice
+    # •    0 days after invoice
+    # •    days after invoice
+    # •    days after invoice
+    # •    7 days after invoice
+    # •    10th of the following month
     # @return [String]
     attr_accessor :payment_terms
 
     # Payment terms Id of the Payer.
     # Example: Id & Description
-    # •	14 days after Invoice
-    # •	15 days after Invoice
-    # •	21 days after Invoice
-    # •	30 days after Invoice
-    # •	45 days after Invoice
-    # •	0 days after invoice
-    # •	days after invoice
-    # •	days after invoice
-    # •	7 days after invoice
-    # •	10th of the following month
+    # •    14 days after Invoice
+    # •    15 days after Invoice
+    # •    21 days after Invoice
+    # •    30 days after Invoice
+    # •    45 days after Invoice
+    # •    0 days after invoice
+    # •    days after invoice
+    # •    days after invoice
+    # •    7 days after invoice
+    # •    10th of the following month
     # @return [Integer]
     attr_accessor :payment_terms_id
 
@@ -263,29 +263,20 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(amount_due = SKIP,
-                   amount_not_overdue = SKIP,
-                   amount_overdue = SKIP,
-                   credit_limit = SKIP,
+    def initialize(amount_due = SKIP, amount_not_overdue = SKIP,
+                   amount_overdue = SKIP, credit_limit = SKIP,
                    credit_limit_currency_code = SKIP,
                    credit_limit_currency_symbol = SKIP,
                    credit_limit_in_customer_currency = SKIP,
-                   currency_code = SKIP,
-                   currency_symbol = SKIP,
+                   currency_code = SKIP, currency_symbol = SKIP,
                    last_payment_currency_code = SKIP,
                    last_payment_currency_symbol = SKIP,
-                   last_payment_date = SKIP,
-                   last_payment_value = SKIP,
-                   outstanding_balance = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   payment_due_date = SKIP,
-                   payment_method = SKIP,
-                   payment_method_id = SKIP,
-                   payment_terms = SKIP,
-                   payment_terms_id = SKIP,
-                   so_a_reference_number = SKIP,
-                   statement_date = SKIP,
+                   last_payment_date = SKIP, last_payment_value = SKIP,
+                   outstanding_balance = SKIP, payer_id = SKIP,
+                   payer_number = SKIP, payment_due_date = SKIP,
+                   payment_method = SKIP, payment_method_id = SKIP,
+                   payment_terms = SKIP, payment_terms_id = SKIP,
+                   so_a_reference_number = SKIP, statement_date = SKIP,
                    statement_of_account_id = SKIP,
                    total_billing_documents = SKIP,
                    total_summary_billing_documents = SKIP,

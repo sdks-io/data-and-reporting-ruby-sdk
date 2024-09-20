@@ -106,10 +106,10 @@ module ShellDataReportingApIs
 
     # Fee items Period. This is ignored when FromDate/Todate is supplied on the
     # request. 
-    # 1.	Last 7 Days
-    # 2.	Last 30 Days
-    # 3.	Last 90 Days
-    # 4.	Last 180 Days
+    # 1.    Last 7 Days
+    # 2.    Last 30 Days
+    # 3.    Last 90 Days
+    # 4.    Last 180 Days
     # Example : Pass 1 for Last 7 days fee items
     # @return [Integer]
     attr_accessor :period
@@ -121,11 +121,11 @@ module ShellDataReportingApIs
     # Product Id
     # Optional
     # Example: Sample list of product ids and description.
-    # 100	Service fee
-    # 102	Invoice production fee
-    # 103	Account fee
-    # 104	Transaction fee
-    # 105	Card membership fee
+    # 100    Service fee
+    # 102    Invoice production fee
+    # 103    Account fee
+    # 104    Transaction fee
+    # 105    Card membership fee
     # @return [Integer]
     attr_accessor :product_id
 
@@ -149,10 +149,10 @@ module ShellDataReportingApIs
     attr_accessor :line_item_description
 
     # Allowed Sorting Options:
-    # •	FeeDateAscending
-    # •	FeeDateDescending
-    # •	NetAmountAscending
-    # •	NetAmountDescending
+    # •    FeeDateAscending
+    # •    FeeDateDescending
+    # •    NetAmountAscending
+    # •    NetAmountDescending
     # Optional.
     # Default: 1
     # @return [String]
@@ -243,26 +243,14 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_id = SKIP,
-                   col_co_code = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   accounts = SKIP,
-                   card_id = SKIP,
-                   card_pan = SKIP,
-                   invoice_status = SKIP,
-                   fee_type_group = SKIP,
-                   fee_type_id = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
-                   period = SKIP,
-                   include_cancelled_items = SKIP,
-                   product_id = SKIP,
-                   product_code = SKIP,
-                   line_item_description = SKIP,
-                   sort_order = SKIP,
-                   current_page = SKIP,
-                   page_size = SKIP)
+    def initialize(col_co_id = SKIP, col_co_code = SKIP, payer_id = SKIP,
+                   payer_number = SKIP, accounts = SKIP, card_id = SKIP,
+                   card_pan = SKIP, invoice_status = SKIP,
+                   fee_type_group = SKIP, fee_type_id = SKIP, from_date = SKIP,
+                   to_date = SKIP, period = SKIP,
+                   include_cancelled_items = SKIP, product_id = SKIP,
+                   product_code = SKIP, line_item_description = SKIP,
+                   sort_order = SKIP, current_page = SKIP, page_size = SKIP)
       @col_co_id = col_co_id unless col_co_id == SKIP
       @col_co_code = col_co_code unless col_co_code == SKIP
       @payer_id = payer_id unless payer_id == SKIP

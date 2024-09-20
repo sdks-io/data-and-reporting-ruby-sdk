@@ -22,10 +22,10 @@ module ShellDataReportingApIs
     attr_accessor :page
 
     # Sort option –
-    # 1.	InvoiceDate ASC
-    # 2.	InvoiceDate DESC
-    # 3.	NetAmountCustomerCurrency ASC
-    # 4.	NetAmountCustomerCurrency DESC
+    # 1.    InvoiceDate ASC
+    # 2.    InvoiceDate DESC
+    # 3.    NetAmountCustomerCurrency ASC
+    # 4.    NetAmountCustomerCurrency DESC
     # Optional
     # Note:
     # This option uses a column name with a combination of “ASC or DESC” for
@@ -61,9 +61,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(filters = SKIP,
-                   page_size = SKIP,
-                   page = SKIP,
+    def initialize(filters = SKIP, page_size = SKIP, page = SKIP,
                    sort_by = SKIP)
       @filters = filters unless filters == SKIP
       @page_size = page_size unless page_size == SKIP

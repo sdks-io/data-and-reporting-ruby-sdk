@@ -152,15 +152,15 @@ module ShellDataReportingApIs
 
     # Product Group Id
     # Example: Sample list
-    # 22	Card related fees
-    # 23	Monetary Adjustment
+    # 22    Card related fees
+    # 23    Monetary Adjustment
     # @return [Integer]
     attr_accessor :product_group_id
 
     # Product Group Name
     # Example: Sample list
-    # 22	Card related fees
-    # 23	Monetary Adjustment
+    # 22    Card related fees
+    # 23    Monetary Adjustment
     # @return [String]
     attr_accessor :product_group_name
 
@@ -594,80 +594,44 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(fee_item_id = SKIP,
-                   account_id = SKIP,
-                   account_number = SKIP,
-                   account_short_name = SKIP,
-                   invoice_account_id = SKIP,
+    def initialize(fee_item_id = SKIP, account_id = SKIP, account_number = SKIP,
+                   account_short_name = SKIP, invoice_account_id = SKIP,
                    invoice_account_number = SKIP,
-                   invoice_account_short_name = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   payer_short_name = SKIP,
-                   card_id = SKIP,
-                   pan = SKIP,
-                   card_group_id = SKIP,
-                   card_group_name = SKIP,
-                   fee_type_id = SKIP,
-                   fee_type = SKIP,
-                   fee_type_group = SKIP,
-                   fee_rule_id = SKIP,
-                   fee_rule_description = SKIP,
-                   fee_rule_tiers = SKIP,
-                   fee_item_date = SKIP,
-                   fee_item_time = SKIP,
-                   is_manual = SKIP,
-                   is_cancelled = SKIP,
+                   invoice_account_short_name = SKIP, payer_id = SKIP,
+                   payer_number = SKIP, payer_short_name = SKIP, card_id = SKIP,
+                   pan = SKIP, card_group_id = SKIP, card_group_name = SKIP,
+                   fee_type_id = SKIP, fee_type = SKIP, fee_type_group = SKIP,
+                   fee_rule_id = SKIP, fee_rule_description = SKIP,
+                   fee_rule_tiers = SKIP, fee_item_date = SKIP,
+                   fee_item_time = SKIP, is_manual = SKIP, is_cancelled = SKIP,
                    customer_currency_code = SKIP,
-                   customer_currency_symbol = SKIP,
-                   product_id = SKIP,
-                   product_code = SKIP,
-                   product_name = SKIP,
-                   product_group_id = SKIP,
-                   product_group_name = SKIP,
-                   line_item_description = SKIP,
-                   quantity = SKIP,
-                   is_invoiced = SKIP,
-                   vat_country_code = SKIP,
-                   vat_country_name = SKIP,
-                   vat_percentage = SKIP,
-                   vat_category_id = SKIP,
-                   vat_category_description = SKIP,
-                   legislative_region_id = SKIP,
-                   legislative_region_name = SKIP,
-                   system_entry_date = SKIP,
-                   system_entry_time = SKIP,
-                   col_co_net_amount = SKIP,
-                   col_co_vat_amount = SKIP,
-                   col_co_gross_amount = SKIP,
-                   interim_invoice_id = SKIP,
-                   interim_invoice_number = SKIP,
-                   invoice_id = SKIP,
-                   invoice_number = SKIP,
-                   invoice_date = SKIP,
-                   customer_exchange_rate = SKIP,
-                   invoice_net_amount = SKIP,
-                   invoice_gross_amount = SKIP,
-                   invoice_vat_amount = SKIP,
-                   reverse_charge = SKIP,
-                   original_fee_item_id = SKIP,
+                   customer_currency_symbol = SKIP, product_id = SKIP,
+                   product_code = SKIP, product_name = SKIP,
+                   product_group_id = SKIP, product_group_name = SKIP,
+                   line_item_description = SKIP, quantity = SKIP,
+                   is_invoiced = SKIP, vat_country_code = SKIP,
+                   vat_country_name = SKIP, vat_percentage = SKIP,
+                   vat_category_id = SKIP, vat_category_description = SKIP,
+                   legislative_region_id = SKIP, legislative_region_name = SKIP,
+                   system_entry_date = SKIP, system_entry_time = SKIP,
+                   col_co_net_amount = SKIP, col_co_vat_amount = SKIP,
+                   col_co_gross_amount = SKIP, interim_invoice_id = SKIP,
+                   interim_invoice_number = SKIP, invoice_id = SKIP,
+                   invoice_number = SKIP, invoice_date = SKIP,
+                   customer_exchange_rate = SKIP, invoice_net_amount = SKIP,
+                   invoice_gross_amount = SKIP, invoice_vat_amount = SKIP,
+                   reverse_charge = SKIP, original_fee_item_id = SKIP,
                    original_currency_code = SKIP,
-                   original_currency_symbol = SKIP,
-                   original_unit_price = SKIP,
-                   original_net_amount = SKIP,
-                   original_vat_amount = SKIP,
-                   original_gross_amount = SKIP,
-                   original_exchange_rate = SKIP,
+                   original_currency_symbol = SKIP, original_unit_price = SKIP,
+                   original_net_amount = SKIP, original_vat_amount = SKIP,
+                   original_gross_amount = SKIP, original_exchange_rate = SKIP,
                    original_legislative_region_id = SKIP,
-                   original_legislative_region_name = SKIP,
-                   frequency = SKIP,
+                   original_legislative_region_name = SKIP, frequency = SKIP,
                    fee_item_card_level_breakup = SKIP,
                    original_fee_item_invoice_id = SKIP,
                    original_fee_item_invoice_number = SKIP,
-                   original_fee_item_invoice_date = SKIP,
-                   driver_name = SKIP,
-                   emboss_text = SKIP,
-                   vrn = SKIP)
+                   original_fee_item_invoice_date = SKIP, driver_name = SKIP,
+                   emboss_text = SKIP, vrn = SKIP)
       @fee_item_id = fee_item_id unless fee_item_id == SKIP
       @account_id = account_id unless account_id == SKIP
       @account_number = account_number unless account_number == SKIP

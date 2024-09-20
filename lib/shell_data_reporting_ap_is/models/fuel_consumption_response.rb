@@ -44,9 +44,7 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(fuel_consumption = SKIP,
-                   error = SKIP,
-                   request_id = SKIP)
+    def initialize(fuel_consumption = SKIP, error = SKIP, request_id = SKIP)
       @fuel_consumption = fuel_consumption unless fuel_consumption == SKIP
       @error = error unless error == SKIP
       @request_id = request_id unless request_id == SKIP

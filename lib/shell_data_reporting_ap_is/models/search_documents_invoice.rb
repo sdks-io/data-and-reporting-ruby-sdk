@@ -35,9 +35,9 @@ module ShellDataReportingApIs
 
     # Document type
     # String containing one of the following values:
-    # •	NAT (National)
-    # •	INT (International)
-    # •	SOA (Statement of Account)
+    # •    NAT (National)
+    # •    INT (International)
+    # •    SOA (Statement of Account)
     # @return [String]
     attr_accessor :document_type
 
@@ -132,19 +132,12 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(document_reference = SKIP,
-                   invoice_number = SKIP,
-                   payer_name = SKIP,
-                   account_number = SKIP,
-                   account_name = SKIP,
-                   document_type = SKIP,
-                   gross_amount = SKIP,
-                   net_amount = SKIP,
-                   tax_amount = SKIP,
-                   currency_code = SKIP,
-                   invoice_status = SKIP,
-                   invoice_date = SKIP,
-                   due_date = SKIP,
+    def initialize(document_reference = SKIP, invoice_number = SKIP,
+                   payer_name = SKIP, account_number = SKIP,
+                   account_name = SKIP, document_type = SKIP,
+                   gross_amount = SKIP, net_amount = SKIP, tax_amount = SKIP,
+                   currency_code = SKIP, invoice_status = SKIP,
+                   invoice_date = SKIP, due_date = SKIP,
                    vat_country_iso_code = SKIP)
       @document_reference = document_reference unless document_reference == SKIP
       @invoice_number = invoice_number unless invoice_number == SKIP

@@ -95,12 +95,8 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(col_co_code = SKIP,
-                   col_co_id = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   from_date = SKIP,
-                   to_date = SKIP,
+    def initialize(col_co_code = SKIP, col_co_id = SKIP, payer_id = SKIP,
+                   payer_number = SKIP, from_date = SKIP, to_date = SKIP,
                    accounts = SKIP)
       @col_co_code = col_co_code unless col_co_code == SKIP
       @col_co_id = col_co_id unless col_co_id == SKIP

@@ -114,23 +114,23 @@ module ShellDataReportingApIs
 
     # User requested operation. 
     # Possible values:
-    # •	OrderCard
-    # •	CreateCardGroup
-    # •	PINReminder
-    # •	MoveCard
-    # •	UpdateCardStatus
-    # •	UpdateCardGroup
-    # •	AutoRenew
-    # •	BulkCardOrder
-    # •	BulkCardBlock
-    # •	BulkCardOrderMultiAccount
-    # •	MobilePaymentRegistration
-    # •	UpdateCompanyInfo
-    # •	BCOSummary
-    # •	BCOMultiAccountSummary
-    # •	BCBSummary
-    # •	FundTransfer
-    # •	DeliveryAddressUpdate
+    # •    OrderCard
+    # •    CreateCardGroup
+    # •    PINReminder
+    # •    MoveCard
+    # •    UpdateCardStatus
+    # •    UpdateCardGroup
+    # •    AutoRenew
+    # •    BulkCardOrder
+    # •    BulkCardBlock
+    # •    BulkCardOrderMultiAccount
+    # •    MobilePaymentRegistration
+    # •    UpdateCompanyInfo
+    # •    BCOSummary
+    # •    BCOMultiAccountSummary
+    # •    BCBSummary
+    # •    FundTransfer
+    # •    DeliveryAddressUpdate
     # @return [String]
     attr_accessor :requested_operation
 
@@ -140,35 +140,35 @@ module ShellDataReportingApIs
 
     # Request type initiated under the requested operation. 
     # Possible values:
-    # •	OrderCard
-    # •	CreateCardGroup
-    # •	PINReminder
-    # •	MoveCard
-    # •	UpdateCardStatus
-    # •	UpdateCardGroup
-    # •	AutoRenew
-    # •	BulkCardOrder
-    # •	BulkCardBlock
-    # •	BulkCardOrderMultiAccount
-    # •	MobilePaymentRegistration
-    # •	UpdateCompanyInfo
-    # •	BCOSummary
-    # •	BCOMultiAccountSummary
-    # •	BCBSummary
-    # •	FundTransfer
-    # •	DeliveryAddressUpdate
+    # •    OrderCard
+    # •    CreateCardGroup
+    # •    PINReminder
+    # •    MoveCard
+    # •    UpdateCardStatus
+    # •    UpdateCardGroup
+    # •    AutoRenew
+    # •    BulkCardOrder
+    # •    BulkCardBlock
+    # •    BulkCardOrderMultiAccount
+    # •    MobilePaymentRegistration
+    # •    UpdateCompanyInfo
+    # •    BCOSummary
+    # •    BCOMultiAccountSummary
+    # •    BCBSummary
+    # •    FundTransfer
+    # •    DeliveryAddressUpdate
     # @return [String]
     attr_accessor :request_type
 
     # Status of the request.
     # Possible values:
-    # •	Success
-    # •	Failed
-    # •	InProgress
-    # •	Submitted
-    # •	Rejected
-    # •	PendingApproval
-    # •	MailedToCSC
+    # •    Success
+    # •    Failed
+    # •    InProgress
+    # •    Submitted
+    # •    Rejected
+    # •    PendingApproval
+    # •    MailedToCSC
     # @return [String]
     attr_accessor :status
 
@@ -297,8 +297,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(account_id = SKIP,
-                   account_number = SKIP,
+    def initialize(account_id = SKIP, account_number = SKIP,
                    additional_information1 = SKIP,
                    additional_information2 = SKIP,
                    additional_information3 = SKIP,
@@ -307,26 +306,14 @@ module ShellDataReportingApIs
                    additional_information6 = SKIP,
                    additional_information7 = SKIP,
                    additional_information8 = SKIP,
-                   additional_information9 = SKIP,
-                   card_group_id = SKIP,
-                   card_group_name = SKIP,
-                   card_id = SKIP,
-                   col_co_code = SKIP,
-                   col_co_id = SKIP,
-                   error_code = SKIP,
-                   error_string = SKIP,
-                   global_request_id = SKIP,
-                   pan = SKIP,
-                   payer_id = SKIP,
-                   payer_number = SKIP,
-                   processed_on = SKIP,
-                   requested_by = SKIP,
-                   requested_operation = SKIP,
-                   request_reference = SKIP,
-                   request_type = SKIP,
-                   status = SKIP,
-                   submitted_on = SKIP,
-                   sub_request_reference = SKIP,
+                   additional_information9 = SKIP, card_group_id = SKIP,
+                   card_group_name = SKIP, card_id = SKIP, col_co_code = SKIP,
+                   col_co_id = SKIP, error_code = SKIP, error_string = SKIP,
+                   global_request_id = SKIP, pan = SKIP, payer_id = SKIP,
+                   payer_number = SKIP, processed_on = SKIP,
+                   requested_by = SKIP, requested_operation = SKIP,
+                   request_reference = SKIP, request_type = SKIP, status = SKIP,
+                   submitted_on = SKIP, sub_request_reference = SKIP,
                    user_display_name = SKIP)
       @account_id = account_id unless account_id == SKIP
       @account_number = account_number unless account_number == SKIP

@@ -41,8 +41,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(lat = SKIP,
-                   lng = SKIP)
+    def initialize(lat = SKIP, lng = SKIP)
       @lat = lat unless lat == SKIP
       @lng = lng unless lng == SKIP
     end

@@ -11,10 +11,10 @@ module ShellDataReportingApIs
 
     # Id of of PIN advice type.
     # Possible Values:
-    # 1.	Paper
-    # 2.	Email
-    # 3.	SMS
-    # 4.	None
+    # 1.    Paper
+    # 2.    Email
+    # 3.    SMS
+    # 4.    None
     # @return [Integer]
     attr_accessor :pin_advice_type_id
 
@@ -51,8 +51,7 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(pin_advice_type_id = SKIP,
-                   is_card_order_option = SKIP,
+    def initialize(pin_advice_type_id = SKIP, is_card_order_option = SKIP,
                    is_pin_reminder_option = SKIP)
       @pin_advice_type_id = pin_advice_type_id unless pin_advice_type_id == SKIP
       @is_card_order_option = is_card_order_option unless is_card_order_option == SKIP

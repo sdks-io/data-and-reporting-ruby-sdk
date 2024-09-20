@@ -15,10 +15,10 @@ module ShellDataReportingApIs
 
     # Product Code
     # Examples: 
-    # 10	TMF Charges
-    # 11	Tunnel/Bridges
-    # 12	Motorway toll
-    # 13	Ferries
+    # 10    TMF Charges
+    # 11    Tunnel/Bridges
+    # 12    Motorway toll
+    # 13    Ferries
     # @return [String]
     attr_accessor :product_code
 
@@ -33,24 +33,24 @@ module ShellDataReportingApIs
 
     # Product Group Id
     # Example: 
-    # 1	Parent Product Group
-    # 2	All Fuels
-    # 3	Motor gasoline
-    # 4	2 stroke
-    # 5	Autogas
-    # 6	CNG
+    # 1    Parent Product Group
+    # 2    All Fuels
+    # 3    Motor gasoline
+    # 4    2 stroke
+    # 5    Autogas
+    # 6    CNG
     # @return [Integer]
     attr_accessor :product_group_id
 
     # Product Group Name
     # Example: 
-    # 1	Parent Product Group
-    # 2	All Fuels
-    # 3	Motor gasoline
-    # 4	2 stroke
-    # 5	Autogas
-    # 6	CNG
-    # 7	Automotive Gas Oil
+    # 1    Parent Product Group
+    # 2    All Fuels
+    # 3    Motor gasoline
+    # 4    2 stroke
+    # 5    Autogas
+    # 6    CNG
+    # 7    Automotive Gas Oil
     # @return [String]
     attr_accessor :product_group_name
 
@@ -156,17 +156,11 @@ module ShellDataReportingApIs
       ]
     end
 
-    def initialize(product_id = SKIP,
-                   product_code = SKIP,
-                   product_name = SKIP,
-                   product_group_id = SKIP,
-                   product_group_name = SKIP,
-                   site_group_id = SKIP,
-                   site_group_name = SKIP,
-                   total_fuel_quantity = SKIP,
-                   total_net_amount = SKIP,
-                   total_gross_amount = SKIP,
-                   invoice_currency_code = SKIP,
+    def initialize(product_id = SKIP, product_code = SKIP, product_name = SKIP,
+                   product_group_id = SKIP, product_group_name = SKIP,
+                   site_group_id = SKIP, site_group_name = SKIP,
+                   total_fuel_quantity = SKIP, total_net_amount = SKIP,
+                   total_gross_amount = SKIP, invoice_currency_code = SKIP,
                    invoice_currency_symbol = SKIP,
                    customer_retail_value_total_net = SKIP,
                    customer_retail_value_total_gross = SKIP)
