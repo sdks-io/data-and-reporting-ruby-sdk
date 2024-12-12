@@ -42,24 +42,24 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client\r\n error (e.g.,'\
                                   ' malformed request syntax, invalid \r\n request message'\
                                   ' framing, or deceptive request routing).",
-                                 FleetmanagementV1UserLoggedinuser400ErrorException)
+                                 DefaultErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 FleetmanagementV1UserLoggedinuser401ErrorException)
+                                 DefaultErrorException)
                     .local_error('403',
                                  'The server understood the request but refuses to authorize it'\
                                   '.',
-                                 FleetmanagementV1UserLoggedinuser403ErrorException)
+                                 ErrorUserAccessError1Exception)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 FleetmanagementV1UserLoggedinuser404ErrorException)
+                                 DefaultErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition the prevented'\
                                   ' it from fulfilling the request.',
-                                 FleetmanagementV1UserLoggedinuser500ErrorException))
+                                 DefaultErrorException))
         .execute
     end
 
@@ -102,24 +102,24 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client\r\n error (e.g.,'\
                                   ' malformed request syntax, invalid \r\n request message'\
                                   ' framing, or deceptive request routing).",
-                                 FleetmanagementV1CustomerPayers400ErrorException)
+                                 DefaultErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 FleetmanagementV1CustomerPayers401ErrorException)
+                                 DefaultErrorException)
                     .local_error('403',
                                  'The server understood the request but refuses to authorize it'\
                                   '.',
-                                 FleetmanagementV1CustomerPayers403ErrorException)
+                                 ErrorUserAccessError1Exception)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 FleetmanagementV1CustomerPayers404ErrorException)
+                                 DefaultErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition the prevented'\
                                   ' it from fulfilling the request.',
-                                 FleetmanagementV1CustomerPayers500ErrorException))
+                                 DefaultErrorException))
         .execute
     end
 
@@ -156,24 +156,24 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client\r\n error (e.g.,'\
                                   ' malformed request syntax, invalid \r\n request message'\
                                   ' framing, or deceptive request routing).",
-                                 FleetmanagementV1CustomerCustomer400ErrorException)
+                                 DefaultErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 FleetmanagementV1CustomerCustomer401ErrorException)
+                                 DefaultErrorException)
                     .local_error('403',
                                  'The server understood the request but refuses to authorize it'\
                                   '.',
-                                 FleetmanagementV1CustomerCustomer403ErrorException)
+                                 ErrorUserAccessError1Exception)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 FleetmanagementV1CustomerCustomer404ErrorException)
+                                 DefaultErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition the prevented'\
                                   ' it from fulfilling the request.',
-                                 FleetmanagementV1CustomerCustomer500ErrorException))
+                                 DefaultErrorException))
         .execute
     end
 
@@ -218,24 +218,24 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client\r\n error (e.g.,'\
                                   ' malformed request syntax, invalid \r\n request message'\
                                   ' framing, or deceptive request routing).",
-                                 FleetmanagementV2CustomerPricelist400ErrorException)
+                                 DefaultErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 FleetmanagementV2CustomerPricelist401ErrorException)
+                                 DefaultErrorException)
                     .local_error('403',
                                  'The server understood the request but refuses to authorize it'\
                                   '.',
-                                 FleetmanagementV2CustomerPricelist403ErrorException)
+                                 ErrorUserAccessError1Exception)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 FleetmanagementV2CustomerPricelist404ErrorException)
+                                 DefaultErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition the prevented'\
                                   ' it from fulfilling the request.',
-                                 FleetmanagementV2CustomerPricelist500ErrorException))
+                                 DefaultErrorException))
         .execute
     end
 
@@ -271,24 +271,24 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client\r\n error (e.g.,'\
                                   ' malformed request syntax, invalid \r\n request message'\
                                   ' framing, or deceptive request routing).",
-                                 FleetmanagementV1CustomerAccounts400ErrorException)
+                                 DefaultErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 FleetmanagementV1CustomerAccounts401ErrorException)
+                                 DefaultErrorException)
                     .local_error('403',
                                  'The server understood the request but refuses to authorize it'\
                                   '.',
-                                 FleetmanagementV1CustomerAccounts403ErrorException)
+                                 ErrorUserAccessError1Exception)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 FleetmanagementV1CustomerAccounts404ErrorException)
+                                 DefaultErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition the prevented'\
                                   ' it from fulfilling the request.',
-                                 FleetmanagementV1CustomerAccounts500ErrorException))
+                                 DefaultErrorException))
         .execute
     end
 
@@ -324,24 +324,24 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client\r\n error (e.g.,'\
                                   ' malformed request syntax, invalid \r\n request message'\
                                   ' framing, or deceptive request routing).",
-                                 FleetmanagementV2CustomerCardtype400ErrorException)
+                                 DefaultErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 FleetmanagementV2CustomerCardtype401ErrorException)
+                                 DefaultErrorException)
                     .local_error('403',
                                  'The server understood the request but refuses to authorize it'\
                                   '.',
-                                 FleetmanagementV2CustomerCardtype403ErrorException)
+                                 ErrorUserAccessError1Exception)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 FleetmanagementV2CustomerCardtype404ErrorException)
+                                 DefaultErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition the prevented'\
                                   ' it from fulfilling the request.',
-                                 FleetmanagementV2CustomerCardtype500ErrorException))
+                                 DefaultErrorException))
         .execute
     end
 
@@ -384,24 +384,24 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client\r\n error (e.g.,'\
                                   ' malformed request syntax, invalid \r\n request message'\
                                   ' framing, or deceptive request routing).",
-                                 FleetmanagementV1CustomerCardgroups400ErrorException)
+                                 DefaultErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 FleetmanagementV1CustomerCardgroups401ErrorException)
+                                 DefaultErrorException)
                     .local_error('403',
                                  'The server understood the request but refuses to authorize it'\
                                   '.',
-                                 FleetmanagementV1CustomerCardgroups403ErrorException)
+                                 ErrorUserAccessError1Exception)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 FleetmanagementV1CustomerCardgroups404ErrorException)
+                                 DefaultErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition the prevented'\
                                   ' it from fulfilling the request.',
-                                 FleetmanagementV1CustomerCardgroups500ErrorException))
+                                 DefaultErrorException))
         .execute
     end
 
@@ -454,24 +454,24 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client\r\n error (e.g.,'\
                                   ' malformed request syntax, invalid \r\n request message'\
                                   ' framing, or deceptive request routing).",
-                                 FleetmanagementV1CustomerAuditreport400ErrorException)
+                                 DefaultErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 FleetmanagementV1CustomerAuditreport401ErrorException)
+                                 DefaultErrorException)
                     .local_error('403',
                                  'The server understood the request but refuses to authorize it'\
                                   '.',
-                                 FleetmanagementV1CustomerAuditreport403ErrorException)
+                                 ErrorUserAccessError1Exception)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 FleetmanagementV1CustomerAuditreport404ErrorException)
+                                 DefaultErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition the prevented'\
                                   ' it from fulfilling the request.',
-                                 FleetmanagementV1CustomerAuditreport500ErrorException))
+                                 DefaultErrorException))
         .execute
     end
   end

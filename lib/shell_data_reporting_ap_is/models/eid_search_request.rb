@@ -17,7 +17,7 @@ module ShellDataReportingApIs
     # @return [Integer]
     attr_accessor :page
 
-    # Specify the number of records to returned; Max 1000
+    # Specify the number of records to returned; Max 100
     # @return [Integer]
     attr_accessor :page_size
 

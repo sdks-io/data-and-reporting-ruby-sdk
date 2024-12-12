@@ -46,23 +46,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Search400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Search401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Search403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Search404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Search500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
 
@@ -105,23 +105,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Summary400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Summary401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Summary403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Summary404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Summary500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
 
@@ -162,23 +162,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Statementofaccount400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Statementofaccount401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Statementofaccount403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Statementofaccount404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Statementofaccount500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
 
@@ -211,23 +211,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Dates400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Dates401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Dates403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Dates404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Dates500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
 
@@ -258,23 +258,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Searchstatementofaccount400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Searchstatementofaccount401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Searchstatementofaccount403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Searchstatementofaccount404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Searchstatementofaccount500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
 
@@ -307,23 +307,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Searchdocuments400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Searchdocuments401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Searchdocuments403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Searchdocuments404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Searchdocuments500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
 
@@ -355,23 +355,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Eidsearch400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Eidsearch401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Eidsearch403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Eidsearch404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Eidsearch500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
 
@@ -400,23 +400,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Download400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Download401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Download403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Download404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Download500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
 
@@ -447,23 +447,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 InvoiceManagementV1Eiddownload400ErrorException)
+                                 ErrorObjectException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 InvoiceManagementV1Eiddownload401ErrorException)
+                                 ErrorObjectException)
                     .local_error('403',
                                  'Forbidden',
-                                 InvoiceManagementV1Eiddownload403ErrorException)
+                                 ErrorObjectException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 InvoiceManagementV1Eiddownload404ErrorException)
+                                 ErrorObjectException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 InvoiceManagementV1Eiddownload500ErrorException))
+                                 ErrorObjectException))
         .execute
     end
   end

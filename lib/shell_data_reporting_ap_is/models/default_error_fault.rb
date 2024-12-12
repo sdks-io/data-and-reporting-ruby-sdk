@@ -13,8 +13,8 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :faultstring
 
-    # Error Description
-    # @return [Detail]
+    # Details about the error
+    # @return [DefaultErrorFaultDetail]
     attr_accessor :detail
 
     # A mapping from model property names to API property names.
@@ -49,7 +49,7 @@ module ShellDataReportingApIs
 
       # Extract variables from the hash.
       faultstring = hash.key?('faultstring') ? hash['faultstring'] : SKIP
-      detail = Detail.from_hash(hash['detail']) if hash['detail']
+      detail = DefaultErrorFaultDetail.from_hash(hash['detail']) if hash['detail']
 
       # Create object from extracted values.
       DefaultErrorFault.new(faultstring,

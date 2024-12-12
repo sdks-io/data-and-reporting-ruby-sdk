@@ -9,23 +9,23 @@ module ShellDataReportingApIs
     SKIP = Object.new
     private_constant :SKIP
 
-    # TODO: Write general description for this method
-    # @return [LastStatementOfAccount2]
+    # Latest statement of the account generated for the given Payer.
+    # @return [LastStatementOfAccount]
     attr_accessor :last_statement_of_account
 
-    # TODO: Write general description for this method
+    # Latest statement of the account generated for the given Payer.
     # @return [Array[MonthlyInvoiceTrend]]
     attr_accessor :monthly_invoice_trend
 
-    # TODO: Write general description for this method
+    # Latest statement of the account generated for the given Payer.
     # @return [Array[PastStatementOfAccounts]]
     attr_accessor :past_statement_of_accounts
 
-    # TODO: Write general description for this method
+    # Latest statement of the account generated for the given Payer.
     # @return [Array[PaymentsSinceLastSOA]]
     attr_accessor :payments_since_last_soa
 
-    # TODO: Write general description for this method
+    # Latest statement of the account generated for the given Payer.
     # @return [Array[InvoicesSummaries]]
     attr_accessor :invoices_summaries
 
@@ -83,7 +83,7 @@ module ShellDataReportingApIs
 
       # Extract variables from the hash.
       if hash['LastStatementOfAccount']
-        last_statement_of_account = LastStatementOfAccount2.from_hash(hash['LastStatementOfAccount'])
+        last_statement_of_account = LastStatementOfAccount.from_hash(hash['LastStatementOfAccount'])
       end
       # Parameter is an array, so we need to iterate through it
       monthly_invoice_trend = nil

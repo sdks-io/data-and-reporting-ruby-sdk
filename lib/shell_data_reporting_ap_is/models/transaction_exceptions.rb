@@ -182,8 +182,8 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :site_country
 
-    # Site Country
-    # @return [Location]
+    # Geography Location entity for Site Location
+    # @return [ExceptionSiteLocation]
     attr_accessor :location
 
     # Card Group Name
@@ -1026,7 +1026,7 @@ module ShellDataReportingApIs
       site_code = hash.key?('SiteCode') ? hash['SiteCode'] : SKIP
       site_name = hash.key?('SiteName') ? hash['SiteName'] : SKIP
       site_country = hash.key?('SiteCountry') ? hash['SiteCountry'] : SKIP
-      location = Location.from_hash(hash['Location']) if hash['Location']
+      location = ExceptionSiteLocation.from_hash(hash['Location']) if hash['Location']
       card_group_name =
         hash.key?('CardGroupName') ? hash['CardGroupName'] : SKIP
       receipt_number = hash.key?('ReceiptNumber') ? hash['ReceiptNumber'] : SKIP

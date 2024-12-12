@@ -469,11 +469,9 @@ module ShellDataReportingApIs
     # @return [TrueClass | FalseClass]
     attr_accessor :has_active_vol_based_association_bonus
 
-    # True, if the payer is setup for volume-based association bonus and is
-    # active on the current date, else false.
-    # This field is returned only when IncludeBonusParameters is set to True in
-    # the request. Else set to null.
-    # @return [FinanceCurrency2]
+    # This entity will not be present in the response if the
+    # ‘IncludeFinanceCurrency’ flag in the request is ‘false’
+    # @return [FinanceCurrency]
     attr_accessor :finance_currency
 
     # Customer id in e-TM system
@@ -1243,7 +1241,7 @@ module ShellDataReportingApIs
         hash.key?('HasActiveVolBasedBonus') ? hash['HasActiveVolBasedBonus'] : SKIP
       has_active_vol_based_association_bonus =
         hash.key?('HasActiveVolBasedAssociationBonus') ? hash['HasActiveVolBasedAssociationBonus'] : SKIP
-      finance_currency = FinanceCurrency2.from_hash(hash['FinanceCurrency']) if
+      finance_currency = FinanceCurrency.from_hash(hash['FinanceCurrency']) if
         hash['FinanceCurrency']
       tolls_customer_id =
         hash.key?('TollsCustomerId') ? hash['TollsCustomerId'] : SKIP

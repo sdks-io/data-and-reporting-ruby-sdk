@@ -130,7 +130,7 @@ class TransactionControllerTests < ControllerTestBase
   #    * EVChargeStartDate
   #    * EVChargeStartTime
   #    * EVChargeEndDate
-  #    * EVChargeEndTime
+  #    * EVChargeEndTime
   def test_priced_transactions_v2
     # Parameters for the API call
     request_id = '2b0cbe11-f109-4c43-9201-49af0370df1c'

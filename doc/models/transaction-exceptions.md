@@ -50,7 +50,7 @@
 | `site_code` | `String` | Optional | Site Code |
 | `site_name` | `String` | Optional | Site Name |
 | `site_country` | `String` | Optional | Site Country |
-| `location` | [`Location`](../../doc/models/location.md) | Optional | - |
+| `location` | [`ExceptionSiteLocation`](../../doc/models/exception-site-location.md) | Optional | Geography Location entity for Site Location |
 | `card_group_name` | `String` | Optional | Card Group Name |
 | `receipt_number` | `String` | Optional | Receipt Number |
 | `product_code` | `String` | Optional | Product Code |
