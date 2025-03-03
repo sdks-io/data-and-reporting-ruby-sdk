@@ -118,5 +118,21 @@ module ShellDataReportingApIs
                                 total_records,
                                 total_pages)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} request_id: #{@request_id}, status: #{@status}, data: #{@data}, page:"\
+      " #{@page}, page_size: #{@page_size}, total_records: #{@total_records}, total_pages:"\
+      " #{@total_pages}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} request_id: #{@request_id.inspect}, status: #{@status.inspect}, data:"\
+      " #{@data.inspect}, page: #{@page.inspect}, page_size: #{@page_size.inspect}, total_records:"\
+      " #{@total_records.inspect}, total_pages: #{@total_pages.inspect}>"
+    end
   end
 end

@@ -461,5 +461,50 @@ module ShellDataReportingApIs
                     price_rule_category_id,
                     tiers)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} date: #{@date}, day: #{@day}, type: #{@type}, price_list_id:"\
+      " #{@price_list_id}, price_list_description: #{@price_list_description}, price_rule_id:"\
+      " #{@price_rule_id}, price_rule_name: #{@price_rule_name}, del_co_id: #{@del_co_id},"\
+      " country_code: #{@country_code}, country: #{@country}, product_group_id:"\
+      " #{@product_group_id}, product_group_name: #{@product_group_name}, product_code:"\
+      " #{@product_code}, product_id: #{@product_id}, product_name: #{@product_name},"\
+      " price_per_unit: #{@price_per_unit}, currency_code: #{@currency_code}, currency_symbol:"\
+      " #{@currency_symbol}, price_type: #{@price_type}, site_group_id: #{@site_group_id},"\
+      " site_group_name: #{@site_group_name}, site_code: #{@site_code}, site_id: #{@site_id},"\
+      " site_name: #{@site_name}, fuel_network_id: #{@fuel_network_id}, network_name:"\
+      " #{@network_name}, price_rule_delco_id: #{@price_rule_delco_id}, price_rule_delco_name:"\
+      " #{@price_rule_delco_name}, price_rule_country: #{@price_rule_country},"\
+      " price_rule_country_code: #{@price_rule_country_code}, price_rule_basis_id:"\
+      " #{@price_rule_basis_id}, discount_value: #{@discount_value},"\
+      " price_per_unit_after_discount: #{@price_per_unit_after_discount}, vat_percentage:"\
+      " #{@vat_percentage}, price_rule_category_id: #{@price_rule_category_id}, tiers: #{@tiers}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} date: #{@date.inspect}, day: #{@day.inspect}, type: #{@type.inspect},"\
+      " price_list_id: #{@price_list_id.inspect}, price_list_description:"\
+      " #{@price_list_description.inspect}, price_rule_id: #{@price_rule_id.inspect},"\
+      " price_rule_name: #{@price_rule_name.inspect}, del_co_id: #{@del_co_id.inspect},"\
+      " country_code: #{@country_code.inspect}, country: #{@country.inspect}, product_group_id:"\
+      " #{@product_group_id.inspect}, product_group_name: #{@product_group_name.inspect},"\
+      " product_code: #{@product_code.inspect}, product_id: #{@product_id.inspect}, product_name:"\
+      " #{@product_name.inspect}, price_per_unit: #{@price_per_unit.inspect}, currency_code:"\
+      " #{@currency_code.inspect}, currency_symbol: #{@currency_symbol.inspect}, price_type:"\
+      " #{@price_type.inspect}, site_group_id: #{@site_group_id.inspect}, site_group_name:"\
+      " #{@site_group_name.inspect}, site_code: #{@site_code.inspect}, site_id:"\
+      " #{@site_id.inspect}, site_name: #{@site_name.inspect}, fuel_network_id:"\
+      " #{@fuel_network_id.inspect}, network_name: #{@network_name.inspect}, price_rule_delco_id:"\
+      " #{@price_rule_delco_id.inspect}, price_rule_delco_name: #{@price_rule_delco_name.inspect},"\
+      " price_rule_country: #{@price_rule_country.inspect}, price_rule_country_code:"\
+      " #{@price_rule_country_code.inspect}, price_rule_basis_id: #{@price_rule_basis_id.inspect},"\
+      " discount_value: #{@discount_value.inspect}, price_per_unit_after_discount:"\
+      " #{@price_per_unit_after_discount.inspect}, vat_percentage: #{@vat_percentage.inspect},"\
+      " price_rule_category_id: #{@price_rule_category_id.inspect}, tiers: #{@tiers.inspect}>"
+    end
   end
 end

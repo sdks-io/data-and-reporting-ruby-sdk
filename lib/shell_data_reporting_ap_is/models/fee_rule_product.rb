@@ -91,5 +91,21 @@ module ShellDataReportingApIs
                          product_id,
                          product_name)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} product_group_id: #{@product_group_id}, product_group_name:"\
+      " #{@product_group_name}, product_code: #{@product_code}, product_id: #{@product_id},"\
+      " product_name: #{@product_name}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} product_group_id: #{@product_group_id.inspect}, product_group_name:"\
+      " #{@product_group_name.inspect}, product_code: #{@product_code.inspect}, product_id:"\
+      " #{@product_id.inspect}, product_name: #{@product_name.inspect}>"
+    end
   end
 end

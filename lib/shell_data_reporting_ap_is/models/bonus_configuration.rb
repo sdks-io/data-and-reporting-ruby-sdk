@@ -406,5 +406,50 @@ module ShellDataReportingApIs
                              associated_accounts,
                              fee_rule_products)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} pricing_account_id: #{@pricing_account_id}, pricing_account_number:"\
+      " #{@pricing_account_number}, pricing_account_short_name: #{@pricing_account_short_name},"\
+      " pricing_account_full_name: #{@pricing_account_full_name}, fee_rule_id: #{@fee_rule_id},"\
+      " fee_rule_description: #{@fee_rule_description}, fee_rule_date_effective:"\
+      " #{@fee_rule_date_effective}, fee_rule_date_terminated: #{@fee_rule_date_terminated},"\
+      " bonus_paid_to: #{@bonus_paid_to}, bonus_paid_to_account_id: #{@bonus_paid_to_account_id},"\
+      " bonus_paid_to_account_number: #{@bonus_paid_to_account_number},"\
+      " bonus_paid_to_account_short_name: #{@bonus_paid_to_account_short_name},"\
+      " bonus_paid_to_account_full_name: #{@bonus_paid_to_account_full_name}, frequency:"\
+      " #{@frequency}, next_calculation_date: #{@next_calculation_date}, previous_calculated_date:"\
+      " #{@previous_calculated_date}, fee_rule_basis: #{@fee_rule_basis}, fee_rule_currency_code:"\
+      " #{@fee_rule_currency_code}, fee_rule_currency_symbol: #{@fee_rule_currency_symbol},"\
+      " fee_rule_available_from: #{@fee_rule_available_from}, fee_rule_available_to:"\
+      " #{@fee_rule_available_to}, fee_rule_locations: #{@fee_rule_locations}, fee_rule_tiers:"\
+      " #{@fee_rule_tiers}, associated_accounts: #{@associated_accounts}, fee_rule_products:"\
+      " #{@fee_rule_products}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} pricing_account_id: #{@pricing_account_id.inspect}, pricing_account_number:"\
+      " #{@pricing_account_number.inspect}, pricing_account_short_name:"\
+      " #{@pricing_account_short_name.inspect}, pricing_account_full_name:"\
+      " #{@pricing_account_full_name.inspect}, fee_rule_id: #{@fee_rule_id.inspect},"\
+      " fee_rule_description: #{@fee_rule_description.inspect}, fee_rule_date_effective:"\
+      " #{@fee_rule_date_effective.inspect}, fee_rule_date_terminated:"\
+      " #{@fee_rule_date_terminated.inspect}, bonus_paid_to: #{@bonus_paid_to.inspect},"\
+      " bonus_paid_to_account_id: #{@bonus_paid_to_account_id.inspect},"\
+      " bonus_paid_to_account_number: #{@bonus_paid_to_account_number.inspect},"\
+      " bonus_paid_to_account_short_name: #{@bonus_paid_to_account_short_name.inspect},"\
+      " bonus_paid_to_account_full_name: #{@bonus_paid_to_account_full_name.inspect}, frequency:"\
+      " #{@frequency.inspect}, next_calculation_date: #{@next_calculation_date.inspect},"\
+      " previous_calculated_date: #{@previous_calculated_date.inspect}, fee_rule_basis:"\
+      " #{@fee_rule_basis.inspect}, fee_rule_currency_code: #{@fee_rule_currency_code.inspect},"\
+      " fee_rule_currency_symbol: #{@fee_rule_currency_symbol.inspect}, fee_rule_available_from:"\
+      " #{@fee_rule_available_from.inspect}, fee_rule_available_to:"\
+      " #{@fee_rule_available_to.inspect}, fee_rule_locations: #{@fee_rule_locations.inspect},"\
+      " fee_rule_tiers: #{@fee_rule_tiers.inspect}, associated_accounts:"\
+      " #{@associated_accounts.inspect}, fee_rule_products: #{@fee_rule_products.inspect}>"
+    end
   end
 end

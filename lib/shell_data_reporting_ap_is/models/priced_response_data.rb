@@ -2018,5 +2018,226 @@ module ShellDataReportingApIs
                              transaction_id,
                              fuel_only)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_name: #{@account_name}, account_id: #{@account_id}, account_number:"\
+      " #{@account_number}, account_short_name: #{@account_short_name}, additional1:"\
+      " #{@additional1}, additional2: #{@additional2}, additional3: #{@additional3}, additional4:"\
+      " #{@additional4}, allow_clearing: #{@allow_clearing}, authorisation_code:"\
+      " #{@authorisation_code}, transaction_status: #{@transaction_status}, driver_name:"\
+      " #{@driver_name}, card_expiry_period: #{@card_expiry_period}, card_expiry: #{@card_expiry},"\
+      " card_group_id: #{@card_group_id}, card_group_name: #{@card_group_name}, issuer_code:"\
+      " #{@issuer_code}, card_pan: #{@card_pan}, release_code: #{@release_code},"\
+      " card_sequence_number: #{@card_sequence_number}, card_type: #{@card_type}, col_co_code:"\
+      " #{@col_co_code}, unit_discount_invoice_currency: #{@unit_discount_invoice_currency},"\
+      " col_co_exchange_rate: #{@col_co_exchange_rate}, invoice_currency_symbol:"\
+      " #{@invoice_currency_symbol}, correction_flag: #{@correction_flag}, crm_number:"\
+      " #{@crm_number}, customer_country: #{@customer_country}, customer_currency_code:"\
+      " #{@customer_currency_code}, customer_currency_symbol: #{@customer_currency_symbol},"\
+      " rebateon_net_amount_in_customer_currency: #{@rebateon_net_amount_in_customer_currency},"\
+      " effective_discount_in_customer_currency: #{@effective_discount_in_customer_currency},"\
+      ' effective_unit_discount_in_customer_currency:'\
+      " #{@effective_unit_discount_in_customer_currency}, unit_price_in_invoice_currency:"\
+      " #{@unit_price_in_invoice_currency}, invoice_tax: #{@invoice_tax}, invoice_gross_amount:"\
+      " #{@invoice_gross_amount}, invoice_net_amount: #{@invoice_net_amount},"\
+      " va_ton_net_amount_in_customer_currency: #{@va_ton_net_amount_in_customer_currency},"\
+      " customer_retail_price_unit_gross: #{@customer_retail_price_unit_gross},"\
+      " customer_retail_value_total_gross: #{@customer_retail_value_total_gross},"\
+      " customer_retail_value_total_net: #{@customer_retail_value_total_net},"\
+      " transaction_type_description: #{@transaction_type_description},"\
+      ' rebateon_net_amount_in_transaction_currency:'\
+      " #{@rebateon_net_amount_in_transaction_currency}, effective_discount_in_trx_currency:"\
+      " #{@effective_discount_in_trx_currency}, del_co_to_col_co_exchange_rate:"\
+      " #{@del_co_to_col_co_exchange_rate}, cards: #{@cards}, unit_discount_transaction_currency:"\
+      " #{@unit_discount_transaction_currency}, transaction_gross_amount:"\
+      " #{@transaction_gross_amount}, transaction_net_amount: #{@transaction_net_amount},"\
+      " transaction_tax: #{@transaction_tax}, va_ton_net_amount: #{@va_ton_net_amount},"\
+      " delco_list_price_unit_net: #{@delco_list_price_unit_net}, delco_retail_price_unit_gross:"\
+      " #{@delco_retail_price_unit_gross}, unit_price_in_transaction_currency:"\
+      " #{@unit_price_in_transaction_currency}, delco_retail_price_unit_net:"\
+      " #{@delco_retail_price_unit_net}, delco_retail_value_total_gross:"\
+      " #{@delco_retail_value_total_gross}, delco_retail_value_total_net:"\
+      " #{@delco_retail_value_total_net}, transaction_currency_symbol:"\
+      " #{@transaction_currency_symbol}, discount_type: #{@discount_type}, dispute_status:"\
+      " #{@dispute_status}, is_shell_site: #{@is_shell_site}, fleet_id_input: #{@fleet_id_input},"\
+      " incoming_product_code: #{@incoming_product_code}, posting_date: #{@posting_date},"\
+      " posting_time: #{@posting_time}, product_code: #{@product_code}, product_name:"\
+      " #{@product_name}, product_group_id: #{@product_group_id}, incoming_currency_code:"\
+      " #{@incoming_currency_code}, incoming_site_description: #{@incoming_site_description},"\
+      " location: #{@location}, site_name: #{@site_name}, site_code: #{@site_code},"\
+      " incoming_site_number: #{@incoming_site_number}, invoice_currency_code:"\
+      " #{@invoice_currency_code}, invoice_date: #{@invoice_date}, invoice_number:"\
+      " #{@invoice_number}, fuel_product: #{@fuel_product}, vat_applicable: #{@vat_applicable},"\
+      " payer_name: #{@payer_name}, payer_number: #{@payer_number}, parent_customer_number:"\
+      " #{@parent_customer_number}, payer_group: #{@payer_group}, payer_group_name:"\
+      " #{@payer_group_name}, check_digit: #{@check_digit}, net_invoice_indicator:"\
+      " #{@net_invoice_indicator}, delco_code: #{@delco_code}, network_code: #{@network_code},"\
+      " purchased_in_country: #{@purchased_in_country}, site_country: #{@site_country},"\
+      " vat_country: #{@vat_country}, delco_name: #{@delco_name}, network: #{@network},"\
+      " odometer_input: #{@odometer_input}, original_sales_item_id: #{@original_sales_item_id},"\
+      " fleet_id_description: #{@fleet_id_description}, parent_customer_id:"\
+      " #{@parent_customer_id}, pin_indicator: #{@pin_indicator}, product_group_name:"\
+      " #{@product_group_name}, purchased_in_country_code: #{@purchased_in_country_code},"\
+      " quantity: #{@quantity}, rebate_rate: #{@rebate_rate}, receipt_number: #{@receipt_number},"\
+      " refund_flag: #{@refund_flag}, site_group_id: #{@site_group_id}, site_group_name:"\
+      " #{@site_group_name}, latitude: #{@latitude}, longitude: #{@longitude},"\
+      " del_co_exchange_rate: #{@del_co_exchange_rate}, euro_rebate_amount:"\
+      " #{@euro_rebate_amount}, net_euro_amount: #{@net_euro_amount}, euro_vat_amount:"\
+      " #{@euro_vat_amount}, parent_customer_name: #{@parent_customer_name}, is_invoiced:"\
+      " #{@is_invoiced}, transaction_currency_code: #{@transaction_currency_code},"\
+      " credit_debit_code: #{@credit_debit_code}, transaction_date: #{@transaction_date},"\
+      " transaction_time: #{@transaction_time}, transaction_item_id: #{@transaction_item_id},"\
+      " trn_identifier: #{@trn_identifier}, type: #{@type}, transaction_line:"\
+      " #{@transaction_line}, transaction_type: #{@transaction_type}, utc_offset: #{@utc_offset},"\
+      " vat_category: #{@vat_category}, vat_rate: #{@vat_rate}, vehicle_registration:"\
+      " #{@vehicle_registration}, is_cancelled: #{@is_cancelled}, col_co_gross_amount:"\
+      " #{@col_co_gross_amount}, col_co_net_amount: #{@col_co_net_amount}, col_co_vat_amount:"\
+      " #{@col_co_vat_amount}, original_currency_symbol: #{@original_currency_symbol},"\
+      " original_currency_code: #{@original_currency_code}, original_vat_amount:"\
+      " #{@original_vat_amount}, emboss_text: #{@emboss_text}, original_exchange_rate:"\
+      " #{@original_exchange_rate}, original_transaction_item_invoice_date:"\
+      " #{@original_transaction_item_invoice_date}, fee_type_id: #{@fee_type_id},"\
+      " line_item_description: #{@line_item_description}, fee_rule_description:"\
+      " #{@fee_rule_description}, frequency: #{@frequency}, fee_rule_id: #{@fee_rule_id},"\
+      " system_entry_date: #{@system_entry_date}, system_entry_time: #{@system_entry_time},"\
+      " is_manual: #{@is_manual}, original_transaction_item_id: #{@original_transaction_item_id},"\
+      " original_transaction_item_invoice_number: #{@original_transaction_item_invoice_number},"\
+      " original_transaction_item_invoice_id: #{@original_transaction_item_invoice_id},"\
+      " payer_short_name: #{@payer_short_name}, reverse_charge: #{@reverse_charge},"\
+      " original_gross_amount: #{@original_gross_amount}, original_net_amount:"\
+      " #{@original_net_amount}, unit_of_measure: #{@unit_of_measure}, road_type: #{@road_type},"\
+      " customer_country_iso_code: #{@customer_country_iso_code}, ev_operator: #{@ev_operator},"\
+      " ev_serial_id: #{@ev_serial_id}, ev_charge_point_serial: #{@ev_charge_point_serial},"\
+      " ev_charge_point_connector_type: #{@ev_charge_point_connector_type},"\
+      ' ev_charge_point_connector_type_description:'\
+      " #{@ev_charge_point_connector_type_description}, ev_charge_duration:"\
+      " #{@ev_charge_duration}, ev_charge_start_date: #{@ev_charge_start_date},"\
+      " ev_charge_start_time: #{@ev_charge_start_time}, ev_charge_end_date:"\
+      " #{@ev_charge_end_date}, ev_charge_end_time: #{@ev_charge_end_time},"\
+      " hosting_collecting_company_number: #{@hosting_collecting_company_number}, transaction_id:"\
+      " #{@transaction_id}, fuel_only: #{@fuel_only}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_name: #{@account_name.inspect}, account_id: #{@account_id.inspect},"\
+      " account_number: #{@account_number.inspect}, account_short_name:"\
+      " #{@account_short_name.inspect}, additional1: #{@additional1.inspect}, additional2:"\
+      " #{@additional2.inspect}, additional3: #{@additional3.inspect}, additional4:"\
+      " #{@additional4.inspect}, allow_clearing: #{@allow_clearing.inspect}, authorisation_code:"\
+      " #{@authorisation_code.inspect}, transaction_status: #{@transaction_status.inspect},"\
+      " driver_name: #{@driver_name.inspect}, card_expiry_period: #{@card_expiry_period.inspect},"\
+      " card_expiry: #{@card_expiry.inspect}, card_group_id: #{@card_group_id.inspect},"\
+      " card_group_name: #{@card_group_name.inspect}, issuer_code: #{@issuer_code.inspect},"\
+      " card_pan: #{@card_pan.inspect}, release_code: #{@release_code.inspect},"\
+      " card_sequence_number: #{@card_sequence_number.inspect}, card_type: #{@card_type.inspect},"\
+      " col_co_code: #{@col_co_code.inspect}, unit_discount_invoice_currency:"\
+      " #{@unit_discount_invoice_currency.inspect}, col_co_exchange_rate:"\
+      " #{@col_co_exchange_rate.inspect}, invoice_currency_symbol:"\
+      " #{@invoice_currency_symbol.inspect}, correction_flag: #{@correction_flag.inspect},"\
+      " crm_number: #{@crm_number.inspect}, customer_country: #{@customer_country.inspect},"\
+      " customer_currency_code: #{@customer_currency_code.inspect}, customer_currency_symbol:"\
+      " #{@customer_currency_symbol.inspect}, rebateon_net_amount_in_customer_currency:"\
+      " #{@rebateon_net_amount_in_customer_currency.inspect},"\
+      ' effective_discount_in_customer_currency:'\
+      " #{@effective_discount_in_customer_currency.inspect},"\
+      ' effective_unit_discount_in_customer_currency:'\
+      " #{@effective_unit_discount_in_customer_currency.inspect}, unit_price_in_invoice_currency:"\
+      " #{@unit_price_in_invoice_currency.inspect}, invoice_tax: #{@invoice_tax.inspect},"\
+      " invoice_gross_amount: #{@invoice_gross_amount.inspect}, invoice_net_amount:"\
+      " #{@invoice_net_amount.inspect}, va_ton_net_amount_in_customer_currency:"\
+      " #{@va_ton_net_amount_in_customer_currency.inspect}, customer_retail_price_unit_gross:"\
+      " #{@customer_retail_price_unit_gross.inspect}, customer_retail_value_total_gross:"\
+      " #{@customer_retail_value_total_gross.inspect}, customer_retail_value_total_net:"\
+      " #{@customer_retail_value_total_net.inspect}, transaction_type_description:"\
+      " #{@transaction_type_description.inspect}, rebateon_net_amount_in_transaction_currency:"\
+      " #{@rebateon_net_amount_in_transaction_currency.inspect},"\
+      " effective_discount_in_trx_currency: #{@effective_discount_in_trx_currency.inspect},"\
+      " del_co_to_col_co_exchange_rate: #{@del_co_to_col_co_exchange_rate.inspect}, cards:"\
+      " #{@cards.inspect}, unit_discount_transaction_currency:"\
+      " #{@unit_discount_transaction_currency.inspect}, transaction_gross_amount:"\
+      " #{@transaction_gross_amount.inspect}, transaction_net_amount:"\
+      " #{@transaction_net_amount.inspect}, transaction_tax: #{@transaction_tax.inspect},"\
+      " va_ton_net_amount: #{@va_ton_net_amount.inspect}, delco_list_price_unit_net:"\
+      " #{@delco_list_price_unit_net.inspect}, delco_retail_price_unit_gross:"\
+      " #{@delco_retail_price_unit_gross.inspect}, unit_price_in_transaction_currency:"\
+      " #{@unit_price_in_transaction_currency.inspect}, delco_retail_price_unit_net:"\
+      " #{@delco_retail_price_unit_net.inspect}, delco_retail_value_total_gross:"\
+      " #{@delco_retail_value_total_gross.inspect}, delco_retail_value_total_net:"\
+      " #{@delco_retail_value_total_net.inspect}, transaction_currency_symbol:"\
+      " #{@transaction_currency_symbol.inspect}, discount_type: #{@discount_type.inspect},"\
+      " dispute_status: #{@dispute_status.inspect}, is_shell_site: #{@is_shell_site.inspect},"\
+      " fleet_id_input: #{@fleet_id_input.inspect}, incoming_product_code:"\
+      " #{@incoming_product_code.inspect}, posting_date: #{@posting_date.inspect}, posting_time:"\
+      " #{@posting_time.inspect}, product_code: #{@product_code.inspect}, product_name:"\
+      " #{@product_name.inspect}, product_group_id: #{@product_group_id.inspect},"\
+      " incoming_currency_code: #{@incoming_currency_code.inspect}, incoming_site_description:"\
+      " #{@incoming_site_description.inspect}, location: #{@location.inspect}, site_name:"\
+      " #{@site_name.inspect}, site_code: #{@site_code.inspect}, incoming_site_number:"\
+      " #{@incoming_site_number.inspect}, invoice_currency_code:"\
+      " #{@invoice_currency_code.inspect}, invoice_date: #{@invoice_date.inspect}, invoice_number:"\
+      " #{@invoice_number.inspect}, fuel_product: #{@fuel_product.inspect}, vat_applicable:"\
+      " #{@vat_applicable.inspect}, payer_name: #{@payer_name.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, parent_customer_number: #{@parent_customer_number.inspect},"\
+      " payer_group: #{@payer_group.inspect}, payer_group_name: #{@payer_group_name.inspect},"\
+      " check_digit: #{@check_digit.inspect}, net_invoice_indicator:"\
+      " #{@net_invoice_indicator.inspect}, delco_code: #{@delco_code.inspect}, network_code:"\
+      " #{@network_code.inspect}, purchased_in_country: #{@purchased_in_country.inspect},"\
+      " site_country: #{@site_country.inspect}, vat_country: #{@vat_country.inspect}, delco_name:"\
+      " #{@delco_name.inspect}, network: #{@network.inspect}, odometer_input:"\
+      " #{@odometer_input.inspect}, original_sales_item_id: #{@original_sales_item_id.inspect},"\
+      " fleet_id_description: #{@fleet_id_description.inspect}, parent_customer_id:"\
+      " #{@parent_customer_id.inspect}, pin_indicator: #{@pin_indicator.inspect},"\
+      " product_group_name: #{@product_group_name.inspect}, purchased_in_country_code:"\
+      " #{@purchased_in_country_code.inspect}, quantity: #{@quantity.inspect}, rebate_rate:"\
+      " #{@rebate_rate.inspect}, receipt_number: #{@receipt_number.inspect}, refund_flag:"\
+      " #{@refund_flag.inspect}, site_group_id: #{@site_group_id.inspect}, site_group_name:"\
+      " #{@site_group_name.inspect}, latitude: #{@latitude.inspect}, longitude:"\
+      " #{@longitude.inspect}, del_co_exchange_rate: #{@del_co_exchange_rate.inspect},"\
+      " euro_rebate_amount: #{@euro_rebate_amount.inspect}, net_euro_amount:"\
+      " #{@net_euro_amount.inspect}, euro_vat_amount: #{@euro_vat_amount.inspect},"\
+      " parent_customer_name: #{@parent_customer_name.inspect}, is_invoiced:"\
+      " #{@is_invoiced.inspect}, transaction_currency_code: #{@transaction_currency_code.inspect},"\
+      " credit_debit_code: #{@credit_debit_code.inspect}, transaction_date:"\
+      " #{@transaction_date.inspect}, transaction_time: #{@transaction_time.inspect},"\
+      " transaction_item_id: #{@transaction_item_id.inspect}, trn_identifier:"\
+      " #{@trn_identifier.inspect}, type: #{@type.inspect}, transaction_line:"\
+      " #{@transaction_line.inspect}, transaction_type: #{@transaction_type.inspect}, utc_offset:"\
+      " #{@utc_offset.inspect}, vat_category: #{@vat_category.inspect}, vat_rate:"\
+      " #{@vat_rate.inspect}, vehicle_registration: #{@vehicle_registration.inspect},"\
+      " is_cancelled: #{@is_cancelled.inspect}, col_co_gross_amount:"\
+      " #{@col_co_gross_amount.inspect}, col_co_net_amount: #{@col_co_net_amount.inspect},"\
+      " col_co_vat_amount: #{@col_co_vat_amount.inspect}, original_currency_symbol:"\
+      " #{@original_currency_symbol.inspect}, original_currency_code:"\
+      " #{@original_currency_code.inspect}, original_vat_amount: #{@original_vat_amount.inspect},"\
+      " emboss_text: #{@emboss_text.inspect}, original_exchange_rate:"\
+      " #{@original_exchange_rate.inspect}, original_transaction_item_invoice_date:"\
+      " #{@original_transaction_item_invoice_date.inspect}, fee_type_id: #{@fee_type_id.inspect},"\
+      " line_item_description: #{@line_item_description.inspect}, fee_rule_description:"\
+      " #{@fee_rule_description.inspect}, frequency: #{@frequency.inspect}, fee_rule_id:"\
+      " #{@fee_rule_id.inspect}, system_entry_date: #{@system_entry_date.inspect},"\
+      " system_entry_time: #{@system_entry_time.inspect}, is_manual: #{@is_manual.inspect},"\
+      " original_transaction_item_id: #{@original_transaction_item_id.inspect},"\
+      ' original_transaction_item_invoice_number:'\
+      " #{@original_transaction_item_invoice_number.inspect},"\
+      " original_transaction_item_invoice_id: #{@original_transaction_item_invoice_id.inspect},"\
+      " payer_short_name: #{@payer_short_name.inspect}, reverse_charge:"\
+      " #{@reverse_charge.inspect}, original_gross_amount: #{@original_gross_amount.inspect},"\
+      " original_net_amount: #{@original_net_amount.inspect}, unit_of_measure:"\
+      " #{@unit_of_measure.inspect}, road_type: #{@road_type.inspect}, customer_country_iso_code:"\
+      " #{@customer_country_iso_code.inspect}, ev_operator: #{@ev_operator.inspect}, ev_serial_id:"\
+      " #{@ev_serial_id.inspect}, ev_charge_point_serial: #{@ev_charge_point_serial.inspect},"\
+      " ev_charge_point_connector_type: #{@ev_charge_point_connector_type.inspect},"\
+      ' ev_charge_point_connector_type_description:'\
+      " #{@ev_charge_point_connector_type_description.inspect}, ev_charge_duration:"\
+      " #{@ev_charge_duration.inspect}, ev_charge_start_date: #{@ev_charge_start_date.inspect},"\
+      " ev_charge_start_time: #{@ev_charge_start_time.inspect}, ev_charge_end_date:"\
+      " #{@ev_charge_end_date.inspect}, ev_charge_end_time: #{@ev_charge_end_time.inspect},"\
+      " hosting_collecting_company_number: #{@hosting_collecting_company_number.inspect},"\
+      " transaction_id: #{@transaction_id.inspect}, fuel_only: #{@fuel_only.inspect}>"
+    end
   end
 end

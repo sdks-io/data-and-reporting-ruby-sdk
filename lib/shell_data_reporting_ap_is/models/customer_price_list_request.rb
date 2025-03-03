@@ -189,5 +189,27 @@ module ShellDataReportingApIs
                                    del_co_id,
                                    include_pump_price_discounts)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id}, col_co_code: #{@col_co_code}, payer_id:"\
+      " #{@payer_id}, payer_number: #{@payer_number}, account_id: #{@account_id}, account_number:"\
+      " #{@account_number}, customer_specific_list: #{@customer_specific_list}, price_list_type:"\
+      " #{@price_list_type}, del_co_id: #{@del_co_id}, from_date: #{@from_date}, to_date:"\
+      " #{@to_date}, include_pump_price_discounts: #{@include_pump_price_discounts}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id.inspect}, col_co_code: #{@col_co_code.inspect},"\
+      " payer_id: #{@payer_id.inspect}, payer_number: #{@payer_number.inspect}, account_id:"\
+      " #{@account_id.inspect}, account_number: #{@account_number.inspect},"\
+      " customer_specific_list: #{@customer_specific_list.inspect}, price_list_type:"\
+      " #{@price_list_type.inspect}, del_co_id: #{@del_co_id.inspect}, from_date:"\
+      " #{@from_date.inspect}, to_date: #{@to_date.inspect}, include_pump_price_discounts:"\
+      " #{@include_pump_price_discounts.inspect}>"
+    end
   end
 end

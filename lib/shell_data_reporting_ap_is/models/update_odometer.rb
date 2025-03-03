@@ -57,5 +57,19 @@ module ShellDataReportingApIs
       UpdateOdometer.new(sales_item_id,
                          new_odometer_value)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} sales_item_id: #{@sales_item_id}, new_odometer_value:"\
+      " #{@new_odometer_value}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} sales_item_id: #{@sales_item_id.inspect}, new_odometer_value:"\
+      " #{@new_odometer_value.inspect}>"
+    end
   end
 end

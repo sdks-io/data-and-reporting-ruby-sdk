@@ -105,5 +105,22 @@ module ShellDataReportingApIs
                               total_vat_amount,
                               year)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} currency_code: #{@currency_code}, currency_symbol: #{@currency_symbol},"\
+      " month: #{@month}, total_net_amount: #{@total_net_amount}, total_vat_amount:"\
+      " #{@total_vat_amount}, year: #{@year}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} currency_code: #{@currency_code.inspect}, currency_symbol:"\
+      " #{@currency_symbol.inspect}, month: #{@month.inspect}, total_net_amount:"\
+      " #{@total_net_amount.inspect}, total_vat_amount: #{@total_vat_amount.inspect}, year:"\
+      " #{@year.inspect}>"
+    end
   end
 end

@@ -212,5 +212,36 @@ module ShellDataReportingApIs
                             total_summary_documents,
                             total_vat_amount_billing_currency)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} amount_due: #{@amount_due}, amount_not_overdue: #{@amount_not_overdue},"\
+      " amount_overdue: #{@amount_overdue}, amount_paid: #{@amount_paid}, billing_currency_code:"\
+      " #{@billing_currency_code}, billing_currency_symbol: #{@billing_currency_symbol},"\
+      " outstanding_balance: #{@outstanding_balance}, payment_due_date: #{@payment_due_date},"\
+      " summary_document_date: #{@summary_document_date}, total_billing_documents:"\
+      " #{@total_billing_documents}, total_gross_amount_billing_currency:"\
+      " #{@total_gross_amount_billing_currency}, total_net_amount_billing_currency:"\
+      " #{@total_net_amount_billing_currency}, total_summary_documents:"\
+      " #{@total_summary_documents}, total_vat_amount_billing_currency:"\
+      " #{@total_vat_amount_billing_currency}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} amount_due: #{@amount_due.inspect}, amount_not_overdue:"\
+      " #{@amount_not_overdue.inspect}, amount_overdue: #{@amount_overdue.inspect}, amount_paid:"\
+      " #{@amount_paid.inspect}, billing_currency_code: #{@billing_currency_code.inspect},"\
+      " billing_currency_symbol: #{@billing_currency_symbol.inspect}, outstanding_balance:"\
+      " #{@outstanding_balance.inspect}, payment_due_date: #{@payment_due_date.inspect},"\
+      " summary_document_date: #{@summary_document_date.inspect}, total_billing_documents:"\
+      " #{@total_billing_documents.inspect}, total_gross_amount_billing_currency:"\
+      " #{@total_gross_amount_billing_currency.inspect}, total_net_amount_billing_currency:"\
+      " #{@total_net_amount_billing_currency.inspect}, total_summary_documents:"\
+      " #{@total_summary_documents.inspect}, total_vat_amount_billing_currency:"\
+      " #{@total_vat_amount_billing_currency.inspect}>"
+    end
   end
 end

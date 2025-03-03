@@ -345,5 +345,35 @@ module ShellDataReportingApIs
                                         current_page,
                                         page_size)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id}, col_co_code: #{@col_co_code}, accounts:"\
+      " #{@accounts}, invoice_status: #{@invoice_status}, purchased_in_country:"\
+      " #{@purchased_in_country}, from_date: #{@from_date}, to_date: #{@to_date}, period:"\
+      " #{@period}, posting_date_from: #{@posting_date_from}, posting_date_to:"\
+      " #{@posting_date_to}, invoice_date: #{@invoice_date}, invoice_number: #{@invoice_number},"\
+      " valid_invoice_date_only: #{@valid_invoice_date_only}, invoice_from_date:"\
+      " #{@invoice_from_date}, invoice_to_date: #{@invoice_to_date}, fuel_only: #{@fuel_only},"\
+      " include_fees: #{@include_fees}, sort_order: #{@sort_order}, current_page:"\
+      " #{@current_page}, page_size: #{@page_size}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id.inspect}, col_co_code: #{@col_co_code.inspect},"\
+      " accounts: #{@accounts.inspect}, invoice_status: #{@invoice_status.inspect},"\
+      " purchased_in_country: #{@purchased_in_country.inspect}, from_date: #{@from_date.inspect},"\
+      " to_date: #{@to_date.inspect}, period: #{@period.inspect}, posting_date_from:"\
+      " #{@posting_date_from.inspect}, posting_date_to: #{@posting_date_to.inspect}, invoice_date:"\
+      " #{@invoice_date.inspect}, invoice_number: #{@invoice_number.inspect},"\
+      " valid_invoice_date_only: #{@valid_invoice_date_only.inspect}, invoice_from_date:"\
+      " #{@invoice_from_date.inspect}, invoice_to_date: #{@invoice_to_date.inspect}, fuel_only:"\
+      " #{@fuel_only.inspect}, include_fees: #{@include_fees.inspect}, sort_order:"\
+      " #{@sort_order.inspect}, current_page: #{@current_page.inspect}, page_size:"\
+      " #{@page_size.inspect}>"
+    end
   end
 end

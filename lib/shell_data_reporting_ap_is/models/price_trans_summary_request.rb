@@ -457,5 +457,44 @@ module ShellDataReportingApIs
                                    fuel_only,
                                    include_fees)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id}, col_co_code: #{@col_co_code}, payer_id:"\
+      " #{@payer_id}, payer_number: #{@payer_number}, accounts: #{@accounts}, card_id:"\
+      " #{@card_id}, card_pan: #{@card_pan}, driver_name: #{@driver_name},"\
+      " vehicle_registration_number: #{@vehicle_registration_number}, invoice_status:"\
+      " #{@invoice_status}, product_id: #{@product_id}, product_code: #{@product_code},"\
+      " purchased_in_country: #{@purchased_in_country}, card_group_id: #{@card_group_id},"\
+      " from_date: #{@from_date}, to_date: #{@to_date}, period: #{@period}, site_code:"\
+      " #{@site_code}, site_group_id: #{@site_group_id}, posting_date_from: #{@posting_date_from},"\
+      " posting_date_to: #{@posting_date_to}, sales_item_id: #{@sales_item_id}, transaction_id:"\
+      " #{@transaction_id}, invoice_date: #{@invoice_date}, invoice_number: #{@invoice_number},"\
+      " valid_invoice_date_only: #{@valid_invoice_date_only}, invoice_from_date:"\
+      " #{@invoice_from_date}, invoice_to_date: #{@invoice_to_date}, fuel_only: #{@fuel_only},"\
+      " include_fees: #{@include_fees}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id.inspect}, col_co_code: #{@col_co_code.inspect},"\
+      " payer_id: #{@payer_id.inspect}, payer_number: #{@payer_number.inspect}, accounts:"\
+      " #{@accounts.inspect}, card_id: #{@card_id.inspect}, card_pan: #{@card_pan.inspect},"\
+      " driver_name: #{@driver_name.inspect}, vehicle_registration_number:"\
+      " #{@vehicle_registration_number.inspect}, invoice_status: #{@invoice_status.inspect},"\
+      " product_id: #{@product_id.inspect}, product_code: #{@product_code.inspect},"\
+      " purchased_in_country: #{@purchased_in_country.inspect}, card_group_id:"\
+      " #{@card_group_id.inspect}, from_date: #{@from_date.inspect}, to_date: #{@to_date.inspect},"\
+      " period: #{@period.inspect}, site_code: #{@site_code.inspect}, site_group_id:"\
+      " #{@site_group_id.inspect}, posting_date_from: #{@posting_date_from.inspect},"\
+      " posting_date_to: #{@posting_date_to.inspect}, sales_item_id: #{@sales_item_id.inspect},"\
+      " transaction_id: #{@transaction_id.inspect}, invoice_date: #{@invoice_date.inspect},"\
+      " invoice_number: #{@invoice_number.inspect}, valid_invoice_date_only:"\
+      " #{@valid_invoice_date_only.inspect}, invoice_from_date: #{@invoice_from_date.inspect},"\
+      " invoice_to_date: #{@invoice_to_date.inspect}, fuel_only: #{@fuel_only.inspect},"\
+      " include_fees: #{@include_fees.inspect}>"
+    end
   end
 end

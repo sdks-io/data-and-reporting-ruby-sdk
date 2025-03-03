@@ -92,5 +92,21 @@ module ShellDataReportingApIs
                              document_reference,
                              invoice_or_soa_number)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, payer_number: #{@payer_number},"\
+      " account_number: #{@account_number}, document_reference: #{@document_reference},"\
+      " invoice_or_soa_number: #{@invoice_or_soa_number}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, account_number: #{@account_number.inspect}, document_reference:"\
+      " #{@document_reference.inspect}, invoice_or_soa_number: #{@invoice_or_soa_number.inspect}>"
+    end
   end
 end

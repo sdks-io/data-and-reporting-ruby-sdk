@@ -232,5 +232,33 @@ module ShellDataReportingApIs
                                                              customer_retail_value_total_net,
                                                              customer_retail_value_total_gross)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} product_id: #{@product_id}, product_code: #{@product_code}, product_name:"\
+      " #{@product_name}, product_group_id: #{@product_group_id}, product_group_name:"\
+      " #{@product_group_name}, site_group_id: #{@site_group_id}, site_group_name:"\
+      " #{@site_group_name}, total_fuel_quantity: #{@total_fuel_quantity}, total_net_amount:"\
+      " #{@total_net_amount}, total_gross_amount: #{@total_gross_amount}, invoice_currency_code:"\
+      " #{@invoice_currency_code}, invoice_currency_symbol: #{@invoice_currency_symbol},"\
+      " customer_retail_value_total_net: #{@customer_retail_value_total_net},"\
+      " customer_retail_value_total_gross: #{@customer_retail_value_total_gross}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} product_id: #{@product_id.inspect}, product_code: #{@product_code.inspect},"\
+      " product_name: #{@product_name.inspect}, product_group_id: #{@product_group_id.inspect},"\
+      " product_group_name: #{@product_group_name.inspect}, site_group_id:"\
+      " #{@site_group_id.inspect}, site_group_name: #{@site_group_name.inspect},"\
+      " total_fuel_quantity: #{@total_fuel_quantity.inspect}, total_net_amount:"\
+      " #{@total_net_amount.inspect}, total_gross_amount: #{@total_gross_amount.inspect},"\
+      " invoice_currency_code: #{@invoice_currency_code.inspect}, invoice_currency_symbol:"\
+      " #{@invoice_currency_symbol.inspect}, customer_retail_value_total_net:"\
+      " #{@customer_retail_value_total_net.inspect}, customer_retail_value_total_gross:"\
+      " #{@customer_retail_value_total_gross.inspect}>"
+    end
   end
 end

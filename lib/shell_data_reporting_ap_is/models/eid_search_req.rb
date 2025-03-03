@@ -151,5 +151,24 @@ module ShellDataReportingApIs
                        invoice_status,
                        sort_by)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, account_group_country:"\
+      " #{@account_group_country}, account_group_id: #{@account_group_id}, account_group_name:"\
+      " #{@account_group_name}, from_date: #{@from_date}, to_date: #{@to_date}, invoice_type:"\
+      " #{@invoice_type}, invoice_status: #{@invoice_status}, sort_by: #{@sort_by}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, account_group_country:"\
+      " #{@account_group_country.inspect}, account_group_id: #{@account_group_id.inspect},"\
+      " account_group_name: #{@account_group_name.inspect}, from_date: #{@from_date.inspect},"\
+      " to_date: #{@to_date.inspect}, invoice_type: #{@invoice_type.inspect}, invoice_status:"\
+      " #{@invoice_status.inspect}, sort_by: #{@sort_by.inspect}>"
+    end
   end
 end

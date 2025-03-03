@@ -116,5 +116,23 @@ module ShellDataReportingApIs
                            fee_rule_basis_id,
                            fee_rule_basis_description)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} tier_min: #{@tier_min}, tier_max: #{@tier_max}, date_effective:"\
+      " #{@date_effective}, date_terminated: #{@date_terminated}, tier_value: #{@tier_value},"\
+      " fee_rule_basis_id: #{@fee_rule_basis_id}, fee_rule_basis_description:"\
+      " #{@fee_rule_basis_description}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} tier_min: #{@tier_min.inspect}, tier_max: #{@tier_max.inspect},"\
+      " date_effective: #{@date_effective.inspect}, date_terminated: #{@date_terminated.inspect},"\
+      " tier_value: #{@tier_value.inspect}, fee_rule_basis_id: #{@fee_rule_basis_id.inspect},"\
+      " fee_rule_basis_description: #{@fee_rule_basis_description.inspect}>"
+    end
   end
 end

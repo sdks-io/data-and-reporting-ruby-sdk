@@ -408,5 +408,50 @@ module ShellDataReportingApIs
                                  total_summary_billing_documents,
                                  unallocated_payment)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} amount_due: #{@amount_due}, amount_not_overdue: #{@amount_not_overdue},"\
+      " amount_overdue: #{@amount_overdue}, credit_limit: #{@credit_limit},"\
+      " credit_limit_currency_code: #{@credit_limit_currency_code}, credit_limit_currency_symbol:"\
+      " #{@credit_limit_currency_symbol}, credit_limit_in_customer_currency:"\
+      " #{@credit_limit_in_customer_currency}, currency_code: #{@currency_code}, currency_symbol:"\
+      " #{@currency_symbol}, last_payment_currency_code: #{@last_payment_currency_code},"\
+      " last_payment_currency_symbol: #{@last_payment_currency_symbol}, last_payment_date:"\
+      " #{@last_payment_date}, last_payment_value: #{@last_payment_value}, outstanding_balance:"\
+      " #{@outstanding_balance}, payer_id: #{@payer_id}, payer_number: #{@payer_number},"\
+      " payment_due_date: #{@payment_due_date}, payment_method: #{@payment_method},"\
+      " payment_method_id: #{@payment_method_id}, payment_terms: #{@payment_terms},"\
+      " payment_terms_id: #{@payment_terms_id}, so_a_reference_number: #{@so_a_reference_number},"\
+      " statement_date: #{@statement_date}, statement_of_account_id: #{@statement_of_account_id},"\
+      " total_billing_documents: #{@total_billing_documents}, total_summary_billing_documents:"\
+      " #{@total_summary_billing_documents}, unallocated_payment: #{@unallocated_payment}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} amount_due: #{@amount_due.inspect}, amount_not_overdue:"\
+      " #{@amount_not_overdue.inspect}, amount_overdue: #{@amount_overdue.inspect}, credit_limit:"\
+      " #{@credit_limit.inspect}, credit_limit_currency_code:"\
+      " #{@credit_limit_currency_code.inspect}, credit_limit_currency_symbol:"\
+      " #{@credit_limit_currency_symbol.inspect}, credit_limit_in_customer_currency:"\
+      " #{@credit_limit_in_customer_currency.inspect}, currency_code: #{@currency_code.inspect},"\
+      " currency_symbol: #{@currency_symbol.inspect}, last_payment_currency_code:"\
+      " #{@last_payment_currency_code.inspect}, last_payment_currency_symbol:"\
+      " #{@last_payment_currency_symbol.inspect}, last_payment_date:"\
+      " #{@last_payment_date.inspect}, last_payment_value: #{@last_payment_value.inspect},"\
+      " outstanding_balance: #{@outstanding_balance.inspect}, payer_id: #{@payer_id.inspect},"\
+      " payer_number: #{@payer_number.inspect}, payment_due_date: #{@payment_due_date.inspect},"\
+      " payment_method: #{@payment_method.inspect}, payment_method_id:"\
+      " #{@payment_method_id.inspect}, payment_terms: #{@payment_terms.inspect}, payment_terms_id:"\
+      " #{@payment_terms_id.inspect}, so_a_reference_number: #{@so_a_reference_number.inspect},"\
+      " statement_date: #{@statement_date.inspect}, statement_of_account_id:"\
+      " #{@statement_of_account_id.inspect}, total_billing_documents:"\
+      " #{@total_billing_documents.inspect}, total_summary_billing_documents:"\
+      " #{@total_summary_billing_documents.inspect}, unallocated_payment:"\
+      " #{@unallocated_payment.inspect}>"
+    end
   end
 end

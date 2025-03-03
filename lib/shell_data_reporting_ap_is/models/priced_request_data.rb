@@ -15,8 +15,13 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :col_co_code
 
-    # Collecting Company Code (Shell Code) of the selected payer.
-    # @return [Object]
+    # The Collecting Company Id in the Shell Card Platform.
+    # @return [Integer]
+    attr_accessor :col_co_id
+
+    # Invoice status of the transactions. Mandatory Possible options:I -
+    # Invoiced, U – Un-Invoiced, A – All
+    # @return [PricedTransactionReqV2InvoiceStatusEnum]
     attr_accessor :invoice_status
 
     # Payer Number of the selected payer.
@@ -34,6 +39,10 @@ module ShellDataReportingApIs
     # Driver Name (of Card record)
     # @return [String]
     attr_accessor :driver_name
+
+    # Unique Card Id in the Shell Card Platform
+    # @return [Integer]
+    attr_accessor :card_id
 
     # Card Group Id in GFN
     # @return [Integer]
@@ -180,11 +189,13 @@ module ShellDataReportingApIs
     def self.names
       @_hash = {} if @_hash.nil?
       @_hash['col_co_code'] = 'ColCoCode'
+      @_hash['col_co_id'] = 'ColCoId'
       @_hash['invoice_status'] = 'InvoiceStatus'
       @_hash['payer_number'] = 'PayerNumber'
       @_hash['account_id'] = 'AccountId'
       @_hash['account_number'] = 'AccountNumber'
       @_hash['driver_name'] = 'DriverName'
+      @_hash['card_id'] = 'CardId'
       @_hash['card_group_id'] = 'CardGroupId'
       @_hash['card_pan'] = 'CardPAN'
       @_hash['product_code'] = 'ProductCode'
@@ -223,9 +234,11 @@ module ShellDataReportingApIs
     # An array for optional fields
     def self.optionals
       %w[
+        col_co_id
         account_id
         account_number
         driver_name
+        card_id
         card_group_id
         card_pan
         product_code
@@ -298,11 +311,12 @@ module ShellDataReportingApIs
     end
 
     def initialize(col_co_code = nil, invoice_status = nil, payer_number = nil,
-                   account_id = SKIP, account_number = SKIP, driver_name = SKIP,
-                   card_group_id = SKIP, card_pan = SKIP, product_code = SKIP,
-                   product_name = SKIP, site_code = SKIP,
-                   incoming_site_number = SKIP, invoice_date = SKIP,
-                   invoice_number = SKIP, purchased_in_country_code = SKIP,
+                   col_co_id = SKIP, account_id = SKIP, account_number = SKIP,
+                   driver_name = SKIP, card_id = SKIP, card_group_id = SKIP,
+                   card_pan = SKIP, product_code = SKIP, product_name = SKIP,
+                   site_code = SKIP, incoming_site_number = SKIP,
+                   invoice_date = SKIP, invoice_number = SKIP,
+                   purchased_in_country_code = SKIP,
                    purchased_in_country = SKIP, site_group_id = SKIP,
                    vehicle_registration_number = SKIP, fee_type_id = SKIP,
                    line_item_description = SKIP, cards = SKIP,
@@ -315,11 +329,13 @@ module ShellDataReportingApIs
                    hosting_collecting_company_number = SKIP, search = SKIP,
                    transaction_id = SKIP)
       @col_co_code = col_co_code
+      @col_co_id = col_co_id unless col_co_id == SKIP
       @invoice_status = invoice_status
       @payer_number = payer_number
       @account_id = account_id unless account_id == SKIP
       @account_number = account_number unless account_number == SKIP
       @driver_name = driver_name unless driver_name == SKIP
+      @card_id = card_id unless card_id == SKIP
       @card_group_id = card_group_id unless card_group_id == SKIP
       @card_pan = card_pan unless card_pan == SKIP
       @product_code = product_code unless product_code == SKIP
@@ -370,9 +386,11 @@ module ShellDataReportingApIs
       col_co_code = hash.key?('ColCoCode') ? hash['ColCoCode'] : nil
       invoice_status = hash.key?('InvoiceStatus') ? hash['InvoiceStatus'] : nil
       payer_number = hash.key?('PayerNumber') ? hash['PayerNumber'] : nil
+      col_co_id = hash.key?('ColCoId') ? hash['ColCoId'] : SKIP
       account_id = hash.key?('AccountId') ? hash['AccountId'] : SKIP
       account_number = hash.key?('AccountNumber') ? hash['AccountNumber'] : SKIP
       driver_name = hash.key?('DriverName') ? hash['DriverName'] : SKIP
+      card_id = hash.key?('CardId') ? hash['CardId'] : SKIP
       card_group_id = hash.key?('CardGroupId') ? hash['CardGroupId'] : SKIP
       card_pan = hash.key?('CardPAN') ? hash['CardPAN'] : SKIP
       product_code = hash.key?('ProductCode') ? hash['ProductCode'] : SKIP
@@ -420,9 +438,11 @@ module ShellDataReportingApIs
       PricedRequestData.new(col_co_code,
                             invoice_status,
                             payer_number,
+                            col_co_id,
                             account_id,
                             account_number,
                             driver_name,
+                            card_id,
                             card_group_id,
                             card_pan,
                             product_code,
@@ -454,6 +474,55 @@ module ShellDataReportingApIs
                             hosting_collecting_company_number,
                             search,
                             transaction_id)
+    end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, col_co_id: #{@col_co_id}, invoice_status:"\
+      " #{@invoice_status}, payer_number: #{@payer_number}, account_id: #{@account_id},"\
+      " account_number: #{@account_number}, driver_name: #{@driver_name}, card_id: #{@card_id},"\
+      " card_group_id: #{@card_group_id}, card_pan: #{@card_pan}, product_code: #{@product_code},"\
+      " product_name: #{@product_name}, site_code: #{@site_code}, incoming_site_number:"\
+      " #{@incoming_site_number}, invoice_date: #{@invoice_date}, invoice_number:"\
+      " #{@invoice_number}, purchased_in_country_code: #{@purchased_in_country_code},"\
+      " purchased_in_country: #{@purchased_in_country}, site_group_id: #{@site_group_id},"\
+      " vehicle_registration_number: #{@vehicle_registration_number}, fee_type_id:"\
+      " #{@fee_type_id}, line_item_description: #{@line_item_description}, cards: #{@cards},"\
+      " sort_order: #{@sort_order}, from_date: #{@from_date}, to_date: #{@to_date}, period:"\
+      " #{@period}, posting_date_from: #{@posting_date_from}, posting_date_to:"\
+      " #{@posting_date_to}, transaction_item_id: #{@transaction_item_id}, fuel_only:"\
+      " #{@fuel_only}, include_fees: #{@include_fees}, is_multipayer: #{@is_multipayer},"\
+      " valid_invoice_date_only: #{@valid_invoice_date_only}, invoice_from_date:"\
+      " #{@invoice_from_date}, invoice_to_date: #{@invoice_to_date},"\
+      " hosting_collecting_company_number: #{@hosting_collecting_company_number}, search:"\
+      " #{@search}, transaction_id: #{@transaction_id}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, col_co_id: #{@col_co_id.inspect},"\
+      " invoice_status: #{@invoice_status.inspect}, payer_number: #{@payer_number.inspect},"\
+      " account_id: #{@account_id.inspect}, account_number: #{@account_number.inspect},"\
+      " driver_name: #{@driver_name.inspect}, card_id: #{@card_id.inspect}, card_group_id:"\
+      " #{@card_group_id.inspect}, card_pan: #{@card_pan.inspect}, product_code:"\
+      " #{@product_code.inspect}, product_name: #{@product_name.inspect}, site_code:"\
+      " #{@site_code.inspect}, incoming_site_number: #{@incoming_site_number.inspect},"\
+      " invoice_date: #{@invoice_date.inspect}, invoice_number: #{@invoice_number.inspect},"\
+      " purchased_in_country_code: #{@purchased_in_country_code.inspect}, purchased_in_country:"\
+      " #{@purchased_in_country.inspect}, site_group_id: #{@site_group_id.inspect},"\
+      " vehicle_registration_number: #{@vehicle_registration_number.inspect}, fee_type_id:"\
+      " #{@fee_type_id.inspect}, line_item_description: #{@line_item_description.inspect}, cards:"\
+      " #{@cards.inspect}, sort_order: #{@sort_order.inspect}, from_date: #{@from_date.inspect},"\
+      " to_date: #{@to_date.inspect}, period: #{@period.inspect}, posting_date_from:"\
+      " #{@posting_date_from.inspect}, posting_date_to: #{@posting_date_to.inspect},"\
+      " transaction_item_id: #{@transaction_item_id.inspect}, fuel_only: #{@fuel_only.inspect},"\
+      " include_fees: #{@include_fees.inspect}, is_multipayer: #{@is_multipayer.inspect},"\
+      " valid_invoice_date_only: #{@valid_invoice_date_only.inspect}, invoice_from_date:"\
+      " #{@invoice_from_date.inspect}, invoice_to_date: #{@invoice_to_date.inspect},"\
+      " hosting_collecting_company_number: #{@hosting_collecting_company_number.inspect}, search:"\
+      " #{@search.inspect}, transaction_id: #{@transaction_id.inspect}>"
     end
   end
 end

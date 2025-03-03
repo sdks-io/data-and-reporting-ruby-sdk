@@ -1218,5 +1218,132 @@ module ShellDataReportingApIs
                                 va_ton_net_amount,
                                 vat_country)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} sales_item_id: #{@sales_item_id}, card_id: #{@card_id}, product_id:"\
+      " #{@product_id}, transaction_guid: #{@transaction_guid}, transaction_date:"\
+      " #{@transaction_date}, customer_invoice_value_total_gross:"\
+      " #{@customer_invoice_value_total_gross}, card_pan: #{@card_pan}, card_expiry:"\
+      " #{@card_expiry}, transaction_time: #{@transaction_time}, utc_offset: #{@utc_offset},"\
+      " fleet_id_input: #{@fleet_id_input}, odometer_input: #{@odometer_input}, driver_name:"\
+      " #{@driver_name}, vehicle_registration: #{@vehicle_registration}, invoice_currency_code:"\
+      " #{@invoice_currency_code}, invoice_currency_symbol: #{@invoice_currency_symbol},"\
+      " transaction_currency_code: #{@transaction_currency_code}, transaction_currency_symbol:"\
+      " #{@transaction_currency_symbol}, transaction_net_amount: #{@transaction_net_amount},"\
+      " transaction_tax: #{@transaction_tax}, transaction_gross_amount:"\
+      " #{@transaction_gross_amount}, invoice_net_amount: #{@invoice_net_amount}, invoice_tax:"\
+      " #{@invoice_tax}, invoice_gross_amount: #{@invoice_gross_amount}, purchased_in_country:"\
+      " #{@purchased_in_country}, account_id: #{@account_id}, account_number: #{@account_number},"\
+      " account_name: #{@account_name}, account_short_name: #{@account_short_name}, quantity:"\
+      " #{@quantity}, fuel_product: #{@fuel_product}, unit_price_in_transaction_currency:"\
+      " #{@unit_price_in_transaction_currency}, unit_price_in_invoice_currency:"\
+      " #{@unit_price_in_invoice_currency}, unit_discount_transaction_currency:"\
+      " #{@unit_discount_transaction_currency}, unit_discount_invoice_currency:"\
+      " #{@unit_discount_invoice_currency}, is_invoiced: #{@is_invoiced}, invoice_number:"\
+      " #{@invoice_number}, invoice_date: #{@invoice_date}, site_code: #{@site_code}, site_name:"\
+      " #{@site_name}, site_country: #{@site_country}, location: #{@location}, card_group_name:"\
+      " #{@card_group_name}, receipt_number: #{@receipt_number}, product_code: #{@product_code},"\
+      " product_name: #{@product_name}, product_group_id: #{@product_group_id},"\
+      " product_group_name: #{@product_group_name}, del_co_exchange_rate:"\
+      " #{@del_co_exchange_rate}, col_co_exchange_rate: #{@col_co_exchange_rate}, is_shell_site:"\
+      " #{@is_shell_site}, network: #{@network}, site_group_id: #{@site_group_id},"\
+      " site_group_name: #{@site_group_name}, posting_date: #{@posting_date}, issuer_code:"\
+      " #{@issuer_code}, purchased_in_country_code: #{@purchased_in_country_code},"\
+      " customer_country_code: #{@customer_country_code}, customer_country: #{@customer_country},"\
+      " release_code: #{@release_code}, card_group_id: #{@card_group_id}, card_sequence_number:"\
+      " #{@card_sequence_number}, check_digit: #{@check_digit}, fleet_id_description:"\
+      " #{@fleet_id_description}, vat_rate: #{@vat_rate}, vat_category: #{@vat_category},"\
+      " effective_discount_in_trx_currency: #{@effective_discount_in_trx_currency},"\
+      " transaction_type: #{@transaction_type}, pin_indicator: #{@pin_indicator}, vat_applicable:"\
+      " #{@vat_applicable}, net_invoice_indicator: #{@net_invoice_indicator},"\
+      " customer_currency_code: #{@customer_currency_code}, customer_currency_symbol:"\
+      " #{@customer_currency_symbol}, effective_unit_discount_in_customer_currency:"\
+      " #{@effective_unit_discount_in_customer_currency}, effective_discount_in_customer_currency:"\
+      " #{@effective_discount_in_customer_currency}, va_ton_net_amount_in_customer_currency:"\
+      " #{@va_ton_net_amount_in_customer_currency}, discount_type: #{@discount_type},"\
+      " transaction_status: #{@transaction_status}, payer_group: #{@payer_group}, refund_flag:"\
+      " #{@refund_flag}, original_sales_item_id: #{@original_sales_item_id}, delco_name:"\
+      " #{@delco_name}, delco_code: #{@delco_code}, payer_number: #{@payer_number}, payer_name:"\
+      " #{@payer_name}, card_expiry_period: #{@card_expiry_period}, authorisation_code:"\
+      " #{@authorisation_code}, transaction_id: #{@transaction_id}, transaction_line:"\
+      " #{@transaction_line}, allow_clearing: #{@allow_clearing}, crm_number: #{@crm_number},"\
+      " dispute_status: #{@dispute_status}, rebate_rate: #{@rebate_rate},"\
+      " del_co_to_col_co_exchange_rate: #{@del_co_to_col_co_exchange_rate}, net_euro_amount:"\
+      " #{@net_euro_amount}, euro_rebate_amount: #{@euro_rebate_amount}, euro_vat_amount:"\
+      " #{@euro_vat_amount}, parent_customer_number: #{@parent_customer_number},"\
+      " va_ton_net_amount: #{@va_ton_net_amount}, vat_country: #{@vat_country}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} sales_item_id: #{@sales_item_id.inspect}, card_id: #{@card_id.inspect},"\
+      " product_id: #{@product_id.inspect}, transaction_guid: #{@transaction_guid.inspect},"\
+      " transaction_date: #{@transaction_date.inspect}, customer_invoice_value_total_gross:"\
+      " #{@customer_invoice_value_total_gross.inspect}, card_pan: #{@card_pan.inspect},"\
+      " card_expiry: #{@card_expiry.inspect}, transaction_time: #{@transaction_time.inspect},"\
+      " utc_offset: #{@utc_offset.inspect}, fleet_id_input: #{@fleet_id_input.inspect},"\
+      " odometer_input: #{@odometer_input.inspect}, driver_name: #{@driver_name.inspect},"\
+      " vehicle_registration: #{@vehicle_registration.inspect}, invoice_currency_code:"\
+      " #{@invoice_currency_code.inspect}, invoice_currency_symbol:"\
+      " #{@invoice_currency_symbol.inspect}, transaction_currency_code:"\
+      " #{@transaction_currency_code.inspect}, transaction_currency_symbol:"\
+      " #{@transaction_currency_symbol.inspect}, transaction_net_amount:"\
+      " #{@transaction_net_amount.inspect}, transaction_tax: #{@transaction_tax.inspect},"\
+      " transaction_gross_amount: #{@transaction_gross_amount.inspect}, invoice_net_amount:"\
+      " #{@invoice_net_amount.inspect}, invoice_tax: #{@invoice_tax.inspect},"\
+      " invoice_gross_amount: #{@invoice_gross_amount.inspect}, purchased_in_country:"\
+      " #{@purchased_in_country.inspect}, account_id: #{@account_id.inspect}, account_number:"\
+      " #{@account_number.inspect}, account_name: #{@account_name.inspect}, account_short_name:"\
+      " #{@account_short_name.inspect}, quantity: #{@quantity.inspect}, fuel_product:"\
+      " #{@fuel_product.inspect}, unit_price_in_transaction_currency:"\
+      " #{@unit_price_in_transaction_currency.inspect}, unit_price_in_invoice_currency:"\
+      " #{@unit_price_in_invoice_currency.inspect}, unit_discount_transaction_currency:"\
+      " #{@unit_discount_transaction_currency.inspect}, unit_discount_invoice_currency:"\
+      " #{@unit_discount_invoice_currency.inspect}, is_invoiced: #{@is_invoiced.inspect},"\
+      " invoice_number: #{@invoice_number.inspect}, invoice_date: #{@invoice_date.inspect},"\
+      " site_code: #{@site_code.inspect}, site_name: #{@site_name.inspect}, site_country:"\
+      " #{@site_country.inspect}, location: #{@location.inspect}, card_group_name:"\
+      " #{@card_group_name.inspect}, receipt_number: #{@receipt_number.inspect}, product_code:"\
+      " #{@product_code.inspect}, product_name: #{@product_name.inspect}, product_group_id:"\
+      " #{@product_group_id.inspect}, product_group_name: #{@product_group_name.inspect},"\
+      " del_co_exchange_rate: #{@del_co_exchange_rate.inspect}, col_co_exchange_rate:"\
+      " #{@col_co_exchange_rate.inspect}, is_shell_site: #{@is_shell_site.inspect}, network:"\
+      " #{@network.inspect}, site_group_id: #{@site_group_id.inspect}, site_group_name:"\
+      " #{@site_group_name.inspect}, posting_date: #{@posting_date.inspect}, issuer_code:"\
+      " #{@issuer_code.inspect}, purchased_in_country_code: #{@purchased_in_country_code.inspect},"\
+      " customer_country_code: #{@customer_country_code.inspect}, customer_country:"\
+      " #{@customer_country.inspect}, release_code: #{@release_code.inspect}, card_group_id:"\
+      " #{@card_group_id.inspect}, card_sequence_number: #{@card_sequence_number.inspect},"\
+      " check_digit: #{@check_digit.inspect}, fleet_id_description:"\
+      " #{@fleet_id_description.inspect}, vat_rate: #{@vat_rate.inspect}, vat_category:"\
+      " #{@vat_category.inspect}, effective_discount_in_trx_currency:"\
+      " #{@effective_discount_in_trx_currency.inspect}, transaction_type:"\
+      " #{@transaction_type.inspect}, pin_indicator: #{@pin_indicator.inspect}, vat_applicable:"\
+      " #{@vat_applicable.inspect}, net_invoice_indicator: #{@net_invoice_indicator.inspect},"\
+      " customer_currency_code: #{@customer_currency_code.inspect}, customer_currency_symbol:"\
+      " #{@customer_currency_symbol.inspect}, effective_unit_discount_in_customer_currency:"\
+      " #{@effective_unit_discount_in_customer_currency.inspect},"\
+      ' effective_discount_in_customer_currency:'\
+      " #{@effective_discount_in_customer_currency.inspect},"\
+      ' va_ton_net_amount_in_customer_currency:'\
+      " #{@va_ton_net_amount_in_customer_currency.inspect}, discount_type:"\
+      " #{@discount_type.inspect}, transaction_status: #{@transaction_status.inspect},"\
+      " payer_group: #{@payer_group.inspect}, refund_flag: #{@refund_flag.inspect},"\
+      " original_sales_item_id: #{@original_sales_item_id.inspect}, delco_name:"\
+      " #{@delco_name.inspect}, delco_code: #{@delco_code.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, payer_name: #{@payer_name.inspect}, card_expiry_period:"\
+      " #{@card_expiry_period.inspect}, authorisation_code: #{@authorisation_code.inspect},"\
+      " transaction_id: #{@transaction_id.inspect}, transaction_line:"\
+      " #{@transaction_line.inspect}, allow_clearing: #{@allow_clearing.inspect}, crm_number:"\
+      " #{@crm_number.inspect}, dispute_status: #{@dispute_status.inspect}, rebate_rate:"\
+      " #{@rebate_rate.inspect}, del_co_to_col_co_exchange_rate:"\
+      " #{@del_co_to_col_co_exchange_rate.inspect}, net_euro_amount: #{@net_euro_amount.inspect},"\
+      " euro_rebate_amount: #{@euro_rebate_amount.inspect}, euro_vat_amount:"\
+      " #{@euro_vat_amount.inspect}, parent_customer_number: #{@parent_customer_number.inspect},"\
+      " va_ton_net_amount: #{@va_ton_net_amount.inspect}, vat_country: #{@vat_country.inspect}>"
+    end
   end
 end

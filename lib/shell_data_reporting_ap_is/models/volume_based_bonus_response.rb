@@ -114,5 +114,22 @@ module ShellDataReportingApIs
                                    error,
                                    request_id)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} configuration: #{@configuration}, current_period_consumption:"\
+      " #{@current_period_consumption}, historical_bonus_paid: #{@historical_bonus_paid}, error:"\
+      " #{@error}, request_id: #{@request_id}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} configuration: #{@configuration.inspect}, current_period_consumption:"\
+      " #{@current_period_consumption.inspect}, historical_bonus_paid:"\
+      " #{@historical_bonus_paid.inspect}, error: #{@error.inspect}, request_id:"\
+      " #{@request_id.inspect}>"
+    end
   end
 end

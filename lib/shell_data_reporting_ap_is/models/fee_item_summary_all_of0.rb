@@ -184,5 +184,32 @@ module ShellDataReportingApIs
                                invoice_currency_code,
                                invoice_currency_symbol)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} fee_type_group: #{@fee_type_group}, fee_type_id: #{@fee_type_id},"\
+      " product_id: #{@product_id}, product_code: #{@product_code}, product_name:"\
+      " #{@product_name}, product_group_id: #{@product_group_id}, product_group_name:"\
+      " #{@product_group_name}, total_quantity: #{@total_quantity}, total_invoice_net_amount:"\
+      " #{@total_invoice_net_amount}, total_invoice_gross_amount: #{@total_invoice_gross_amount},"\
+      " total_invoice_vat_amount: #{@total_invoice_vat_amount}, invoice_currency_code:"\
+      " #{@invoice_currency_code}, invoice_currency_symbol: #{@invoice_currency_symbol}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} fee_type_group: #{@fee_type_group.inspect}, fee_type_id:"\
+      " #{@fee_type_id.inspect}, product_id: #{@product_id.inspect}, product_code:"\
+      " #{@product_code.inspect}, product_name: #{@product_name.inspect}, product_group_id:"\
+      " #{@product_group_id.inspect}, product_group_name: #{@product_group_name.inspect},"\
+      " total_quantity: #{@total_quantity.inspect}, total_invoice_net_amount:"\
+      " #{@total_invoice_net_amount.inspect}, total_invoice_gross_amount:"\
+      " #{@total_invoice_gross_amount.inspect}, total_invoice_vat_amount:"\
+      " #{@total_invoice_vat_amount.inspect}, invoice_currency_code:"\
+      " #{@invoice_currency_code.inspect}, invoice_currency_symbol:"\
+      " #{@invoice_currency_symbol.inspect}>"
+    end
   end
 end

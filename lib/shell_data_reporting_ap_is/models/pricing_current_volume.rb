@@ -108,5 +108,23 @@ module ShellDataReportingApIs
                                total_volume,
                                next_fee_creation_date)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} fee_rule_id: #{@fee_rule_id}, fee_rule_description:"\
+      " #{@fee_rule_description}, price_rule_id: #{@price_rule_id}, price_rule_description:"\
+      " #{@price_rule_description}, total_volume: #{@total_volume}, next_fee_creation_date:"\
+      " #{@next_fee_creation_date}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} fee_rule_id: #{@fee_rule_id.inspect}, fee_rule_description:"\
+      " #{@fee_rule_description.inspect}, price_rule_id: #{@price_rule_id.inspect},"\
+      " price_rule_description: #{@price_rule_description.inspect}, total_volume:"\
+      " #{@total_volume.inspect}, next_fee_creation_date: #{@next_fee_creation_date.inspect}>"
+    end
   end
 end

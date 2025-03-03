@@ -888,5 +888,98 @@ module ShellDataReportingApIs
                                document_reference,
                                additional_documents)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_full_name: #{@account_full_name}, account_id: #{@account_id},"\
+      " account_number: #{@account_number}, account_short_name: #{@account_short_name}, col_co_id:"\
+      " #{@col_co_id}, col_co_op_co_id: #{@col_co_op_co_id}, current_billing_frequency:"\
+      " #{@current_billing_frequency}, current_billing_frequency_id:"\
+      " #{@current_billing_frequency_id}, current_distribution_method:"\
+      " #{@current_distribution_method}, current_distribution_method_id:"\
+      " #{@current_distribution_method_id}, customer_currency_code: #{@customer_currency_code},"\
+      " customer_currency_symbol: #{@customer_currency_symbol}, del_co_client_number:"\
+      " #{@del_co_client_number}, del_co_id: #{@del_co_id}, del_co_op_co_id: #{@del_co_op_co_id},"\
+      " document_type: #{@document_type}, document_type_id: #{@document_type_id}, due_date:"\
+      " #{@due_date}, gross_amount_customer_currency: #{@gross_amount_customer_currency},"\
+      " gross_amount_transaction_currency: #{@gross_amount_transaction_currency}, invoice_date:"\
+      " #{@invoice_date}, invoiced_by: #{@invoiced_by}, invoiced_on_behalf_of:"\
+      " #{@invoiced_on_behalf_of}, invoice_id: #{@invoice_id}, invoice_number: #{@invoice_number},"\
+      " is_international: #{@is_international}, is_national: #{@is_national},"\
+      " net_amount_customer_currency: #{@net_amount_customer_currency},"\
+      " net_amount_transaction_currency: #{@net_amount_transaction_currency}, payer_id:"\
+      " #{@payer_id}, payer_number: #{@payer_number}, payment_terms: #{@payment_terms},"\
+      " payment_terms_id: #{@payment_terms_id}, replacement_invoice_id:"\
+      " #{@replacement_invoice_id}, reversal_invoice_id: #{@reversal_invoice_id}, status:"\
+      " #{@status}, summary_document_billing_type: #{@summary_document_billing_type},"\
+      " summary_document_billing_type_id: #{@summary_document_billing_type_id},"\
+      " summary_document_date: #{@summary_document_date}, summary_document_dd_amount:"\
+      " #{@summary_document_dd_amount}, summary_document_due_date: #{@summary_document_due_date},"\
+      " summary_document_id: #{@summary_document_id}, summary_document_is_fully_paid:"\
+      " #{@summary_document_is_fully_paid}, summary_document_number: #{@summary_document_number},"\
+      " summary_document_paid_amount: #{@summary_document_paid_amount},"\
+      " summary_document_so_a_reference_number: #{@summary_document_so_a_reference_number},"\
+      " summary_document_statement_of_account_id: #{@summary_document_statement_of_account_id},"\
+      " transaction_currency_code: #{@transaction_currency_code}, transaction_currency_symbol:"\
+      " #{@transaction_currency_symbol}, type: #{@type}, type_id: #{@type_id},"\
+      " vat_amount_customer_currency: #{@vat_amount_customer_currency},"\
+      " vat_amount_transaction_currency: #{@vat_amount_transaction_currency}, vat_country:"\
+      " #{@vat_country}, vat_country_id: #{@vat_country_id}, vat_country_iso_code:"\
+      " #{@vat_country_iso_code}, vat_country_op_co_id: #{@vat_country_op_co_id},"\
+      " document_reference: #{@document_reference}, additional_documents:"\
+      " #{@additional_documents}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_full_name: #{@account_full_name.inspect}, account_id:"\
+      " #{@account_id.inspect}, account_number: #{@account_number.inspect}, account_short_name:"\
+      " #{@account_short_name.inspect}, col_co_id: #{@col_co_id.inspect}, col_co_op_co_id:"\
+      " #{@col_co_op_co_id.inspect}, current_billing_frequency:"\
+      " #{@current_billing_frequency.inspect}, current_billing_frequency_id:"\
+      " #{@current_billing_frequency_id.inspect}, current_distribution_method:"\
+      " #{@current_distribution_method.inspect}, current_distribution_method_id:"\
+      " #{@current_distribution_method_id.inspect}, customer_currency_code:"\
+      " #{@customer_currency_code.inspect}, customer_currency_symbol:"\
+      " #{@customer_currency_symbol.inspect}, del_co_client_number:"\
+      " #{@del_co_client_number.inspect}, del_co_id: #{@del_co_id.inspect}, del_co_op_co_id:"\
+      " #{@del_co_op_co_id.inspect}, document_type: #{@document_type.inspect}, document_type_id:"\
+      " #{@document_type_id.inspect}, due_date: #{@due_date.inspect},"\
+      " gross_amount_customer_currency: #{@gross_amount_customer_currency.inspect},"\
+      " gross_amount_transaction_currency: #{@gross_amount_transaction_currency.inspect},"\
+      " invoice_date: #{@invoice_date.inspect}, invoiced_by: #{@invoiced_by.inspect},"\
+      " invoiced_on_behalf_of: #{@invoiced_on_behalf_of.inspect}, invoice_id:"\
+      " #{@invoice_id.inspect}, invoice_number: #{@invoice_number.inspect}, is_international:"\
+      " #{@is_international.inspect}, is_national: #{@is_national.inspect},"\
+      " net_amount_customer_currency: #{@net_amount_customer_currency.inspect},"\
+      " net_amount_transaction_currency: #{@net_amount_transaction_currency.inspect}, payer_id:"\
+      " #{@payer_id.inspect}, payer_number: #{@payer_number.inspect}, payment_terms:"\
+      " #{@payment_terms.inspect}, payment_terms_id: #{@payment_terms_id.inspect},"\
+      " replacement_invoice_id: #{@replacement_invoice_id.inspect}, reversal_invoice_id:"\
+      " #{@reversal_invoice_id.inspect}, status: #{@status.inspect},"\
+      " summary_document_billing_type: #{@summary_document_billing_type.inspect},"\
+      " summary_document_billing_type_id: #{@summary_document_billing_type_id.inspect},"\
+      " summary_document_date: #{@summary_document_date.inspect}, summary_document_dd_amount:"\
+      " #{@summary_document_dd_amount.inspect}, summary_document_due_date:"\
+      " #{@summary_document_due_date.inspect}, summary_document_id:"\
+      " #{@summary_document_id.inspect}, summary_document_is_fully_paid:"\
+      " #{@summary_document_is_fully_paid.inspect}, summary_document_number:"\
+      " #{@summary_document_number.inspect}, summary_document_paid_amount:"\
+      " #{@summary_document_paid_amount.inspect}, summary_document_so_a_reference_number:"\
+      " #{@summary_document_so_a_reference_number.inspect},"\
+      ' summary_document_statement_of_account_id:'\
+      " #{@summary_document_statement_of_account_id.inspect}, transaction_currency_code:"\
+      " #{@transaction_currency_code.inspect}, transaction_currency_symbol:"\
+      " #{@transaction_currency_symbol.inspect}, type: #{@type.inspect}, type_id:"\
+      " #{@type_id.inspect}, vat_amount_customer_currency:"\
+      " #{@vat_amount_customer_currency.inspect}, vat_amount_transaction_currency:"\
+      " #{@vat_amount_transaction_currency.inspect}, vat_country: #{@vat_country.inspect},"\
+      " vat_country_id: #{@vat_country_id.inspect}, vat_country_iso_code:"\
+      " #{@vat_country_iso_code.inspect}, vat_country_op_co_id: #{@vat_country_op_co_id.inspect},"\
+      " document_reference: #{@document_reference.inspect}, additional_documents:"\
+      " #{@additional_documents.inspect}>"
+    end
   end
 end

@@ -883,5 +883,103 @@ module ShellDataReportingApIs
                              ev_printed_number,
                              is_rfid)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, payer_number: #{@payer_number},"\
+      " account_number: #{@account_number}, card_issue_number: #{@card_issue_number},"\
+      " collecting_company_currency_code: #{@collecting_company_currency_code},"\
+      " cust_data_customer_entered: #{@cust_data_customer_entered}, cust_data_driver_id:"\
+      " #{@cust_data_driver_id}, cust_data_fleet_description: #{@cust_data_fleet_description},"\
+      " fleet_id_input: #{@fleet_id_input}, amount: #{@amount}, euroshell_site_number:"\
+      " #{@euroshell_site_number}, incoming_product_code: #{@incoming_product_code}, product_code:"\
+      " #{@product_code}, product_name: #{@product_name}, site_code: #{@site_code},"\
+      " hosting_collecting_company_name: #{@hosting_collecting_company_name},"\
+      " hosting_collecting_company_number: #{@hosting_collecting_company_number},"\
+      " iccdata_tran_type_code: #{@iccdata_tran_type_code}, transaction_type:"\
+      " #{@transaction_type}, latitude: #{@latitude}, longitude: #{@longitude}, merchant_category:"\
+      " #{@merchant_category}, merchant_category_description: #{@merchant_category_description},"\
+      " purchased_in_country: #{@purchased_in_country}, merchant_id: #{@merchant_id}, site_name:"\
+      " #{@site_name}, network: #{@network}, delco_code: #{@delco_code}, odometer_input:"\
+      " #{@odometer_input}, odometer_reading_km: #{@odometer_reading_km}, odometer_reading_miles:"\
+      " #{@odometer_reading_miles}, card_pan: #{@card_pan}, pin_indicator: #{@pin_indicator},"\
+      " poi_receipt_number: #{@poi_receipt_number}, products_code_additional:"\
+      " #{@products_code_additional}, products_tax_code: #{@products_tax_code}, fuel_volume:"\
+      " #{@fuel_volume}, sfgw_card_date_of_expiry: #{@sfgw_card_date_of_expiry},"\
+      " site_currency_iso_code: #{@site_currency_iso_code}, card_id: #{@card_id},"\
+      " transaction_date: #{@transaction_date}, transaction_date_time: #{@transaction_date_time},"\
+      " transaction_id: #{@transaction_id}, transaction_status: #{@transaction_status},"\
+      " unit_of_measure: #{@unit_of_measure}, vehicle_registration_number:"\
+      " #{@vehicle_registration_number}, network_delco_name: #{@network_delco_name},"\
+      " product_group_name: #{@product_group_name}, fuel_product: #{@fuel_product},"\
+      " account_customer_name: #{@account_customer_name}, payer_name: #{@payer_name},"\
+      " transaction_time: #{@transaction_time}, transaction_currency: #{@transaction_currency},"\
+      " unit_price: #{@unit_price}, authorised_flag: #{@authorised_flag}, transaction_time_gmt:"\
+      " #{@transaction_time_gmt}, reason_code: #{@reason_code}, issuer_action_code:"\
+      " #{@issuer_action_code}, issuer_action_code_description:"\
+      " #{@issuer_action_code_description}, declined_reason: #{@declined_reason},"\
+      " card_status_reason_description: #{@card_status_reason_description}, transaction_country:"\
+      " #{@transaction_country}, issuing_collecting_company_name:"\
+      " #{@issuing_collecting_company_name}, card_issuer_name: #{@card_issuer_name}, driver_name:"\
+      " #{@driver_name}, bearer_description: #{@bearer_description}, card_category_description:"\
+      " #{@card_category_description}, card_type_description: #{@card_type_description},"\
+      " card_token_type_description: #{@card_token_type_description}, emboss_type:"\
+      " #{@emboss_type}, ev_printed_number: #{@ev_printed_number}, is_rfid: #{@is_rfid}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, account_number: #{@account_number.inspect}, card_issue_number:"\
+      " #{@card_issue_number.inspect}, collecting_company_currency_code:"\
+      " #{@collecting_company_currency_code.inspect}, cust_data_customer_entered:"\
+      " #{@cust_data_customer_entered.inspect}, cust_data_driver_id:"\
+      " #{@cust_data_driver_id.inspect}, cust_data_fleet_description:"\
+      " #{@cust_data_fleet_description.inspect}, fleet_id_input: #{@fleet_id_input.inspect},"\
+      " amount: #{@amount.inspect}, euroshell_site_number: #{@euroshell_site_number.inspect},"\
+      " incoming_product_code: #{@incoming_product_code.inspect}, product_code:"\
+      " #{@product_code.inspect}, product_name: #{@product_name.inspect}, site_code:"\
+      " #{@site_code.inspect}, hosting_collecting_company_name:"\
+      " #{@hosting_collecting_company_name.inspect}, hosting_collecting_company_number:"\
+      " #{@hosting_collecting_company_number.inspect}, iccdata_tran_type_code:"\
+      " #{@iccdata_tran_type_code.inspect}, transaction_type: #{@transaction_type.inspect},"\
+      " latitude: #{@latitude.inspect}, longitude: #{@longitude.inspect}, merchant_category:"\
+      " #{@merchant_category.inspect}, merchant_category_description:"\
+      " #{@merchant_category_description.inspect}, purchased_in_country:"\
+      " #{@purchased_in_country.inspect}, merchant_id: #{@merchant_id.inspect}, site_name:"\
+      " #{@site_name.inspect}, network: #{@network.inspect}, delco_code: #{@delco_code.inspect},"\
+      " odometer_input: #{@odometer_input.inspect}, odometer_reading_km:"\
+      " #{@odometer_reading_km.inspect}, odometer_reading_miles:"\
+      " #{@odometer_reading_miles.inspect}, card_pan: #{@card_pan.inspect}, pin_indicator:"\
+      " #{@pin_indicator.inspect}, poi_receipt_number: #{@poi_receipt_number.inspect},"\
+      " products_code_additional: #{@products_code_additional.inspect}, products_tax_code:"\
+      " #{@products_tax_code.inspect}, fuel_volume: #{@fuel_volume.inspect},"\
+      " sfgw_card_date_of_expiry: #{@sfgw_card_date_of_expiry.inspect}, site_currency_iso_code:"\
+      " #{@site_currency_iso_code.inspect}, card_id: #{@card_id.inspect}, transaction_date:"\
+      " #{@transaction_date.inspect}, transaction_date_time: #{@transaction_date_time.inspect},"\
+      " transaction_id: #{@transaction_id.inspect}, transaction_status:"\
+      " #{@transaction_status.inspect}, unit_of_measure: #{@unit_of_measure.inspect},"\
+      " vehicle_registration_number: #{@vehicle_registration_number.inspect}, network_delco_name:"\
+      " #{@network_delco_name.inspect}, product_group_name: #{@product_group_name.inspect},"\
+      " fuel_product: #{@fuel_product.inspect}, account_customer_name:"\
+      " #{@account_customer_name.inspect}, payer_name: #{@payer_name.inspect}, transaction_time:"\
+      " #{@transaction_time.inspect}, transaction_currency: #{@transaction_currency.inspect},"\
+      " unit_price: #{@unit_price.inspect}, authorised_flag: #{@authorised_flag.inspect},"\
+      " transaction_time_gmt: #{@transaction_time_gmt.inspect}, reason_code:"\
+      " #{@reason_code.inspect}, issuer_action_code: #{@issuer_action_code.inspect},"\
+      " issuer_action_code_description: #{@issuer_action_code_description.inspect},"\
+      " declined_reason: #{@declined_reason.inspect}, card_status_reason_description:"\
+      " #{@card_status_reason_description.inspect}, transaction_country:"\
+      " #{@transaction_country.inspect}, issuing_collecting_company_name:"\
+      " #{@issuing_collecting_company_name.inspect}, card_issuer_name:"\
+      " #{@card_issuer_name.inspect}, driver_name: #{@driver_name.inspect}, bearer_description:"\
+      " #{@bearer_description.inspect}, card_category_description:"\
+      " #{@card_category_description.inspect}, card_type_description:"\
+      " #{@card_type_description.inspect}, card_token_type_description:"\
+      " #{@card_token_type_description.inspect}, emboss_type: #{@emboss_type.inspect},"\
+      " ev_printed_number: #{@ev_printed_number.inspect}, is_rfid: #{@is_rfid.inspect}>"
+    end
   end
 end

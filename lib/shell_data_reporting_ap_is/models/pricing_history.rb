@@ -98,5 +98,21 @@ module ShellDataReportingApIs
                          fees_rule_description,
                          total_volume)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} from_date: #{@from_date}, to_date: #{@to_date}, fees_rule_id:"\
+      " #{@fees_rule_id}, fees_rule_description: #{@fees_rule_description}, total_volume:"\
+      " #{@total_volume}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} from_date: #{@from_date.inspect}, to_date: #{@to_date.inspect},"\
+      " fees_rule_id: #{@fees_rule_id.inspect}, fees_rule_description:"\
+      " #{@fees_rule_description.inspect}, total_volume: #{@total_volume.inspect}>"
+    end
   end
 end

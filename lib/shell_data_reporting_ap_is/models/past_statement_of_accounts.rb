@@ -487,5 +487,63 @@ module ShellDataReportingApIs
                                   local_currency_symbol,
                                   local_currency_exchange_rate)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} amount_due: #{@amount_due}, amount_not_overdue: #{@amount_not_overdue},"\
+      " amount_overdue: #{@amount_overdue}, amount_overdue_from_unallocated:"\
+      " #{@amount_overdue_from_unallocated}, amount_paid: #{@amount_paid},"\
+      " balance_on_this_statement: #{@balance_on_this_statement}, billing_currency_code:"\
+      " #{@billing_currency_code}, billing_currency_symbol: #{@billing_currency_symbol},"\
+      " credit_limit: #{@credit_limit}, credit_limit_currency_code:"\
+      " #{@credit_limit_currency_code}, credit_limit_currency_symbol:"\
+      " #{@credit_limit_currency_symbol}, credit_limit_in_customer_currency:"\
+      " #{@credit_limit_in_customer_currency}, currency_code: #{@currency_code}, currency_symbol:"\
+      " #{@currency_symbol}, fully_paid: #{@fully_paid}, last_payment_currency_code:"\
+      " #{@last_payment_currency_code}, last_payment_currency_symbol:"\
+      " #{@last_payment_currency_symbol}, last_payment_date: #{@last_payment_date},"\
+      " last_payment_value: #{@last_payment_value}, outstanding_balance: #{@outstanding_balance},"\
+      " payer_id: #{@payer_id}, payer_number: #{@payer_number}, payment_due_date:"\
+      " #{@payment_due_date}, so_a_reference_number: #{@so_a_reference_number}, statement_date:"\
+      " #{@statement_date}, statement_of_account_id: #{@statement_of_account_id},"\
+      " total_billing_documents: #{@total_billing_documents}, total_net_amount_billing_currency:"\
+      " #{@total_net_amount_billing_currency}, total_summary_billing_documents:"\
+      " #{@total_summary_billing_documents}, total_vat_amount_billing_currency:"\
+      " #{@total_vat_amount_billing_currency}, unallocated_payment: #{@unallocated_payment},"\
+      " local_currency_code: #{@local_currency_code}, local_currency_symbol:"\
+      " #{@local_currency_symbol}, local_currency_exchange_rate:"\
+      " #{@local_currency_exchange_rate}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} amount_due: #{@amount_due.inspect}, amount_not_overdue:"\
+      " #{@amount_not_overdue.inspect}, amount_overdue: #{@amount_overdue.inspect},"\
+      " amount_overdue_from_unallocated: #{@amount_overdue_from_unallocated.inspect}, amount_paid:"\
+      " #{@amount_paid.inspect}, balance_on_this_statement: #{@balance_on_this_statement.inspect},"\
+      " billing_currency_code: #{@billing_currency_code.inspect}, billing_currency_symbol:"\
+      " #{@billing_currency_symbol.inspect}, credit_limit: #{@credit_limit.inspect},"\
+      " credit_limit_currency_code: #{@credit_limit_currency_code.inspect},"\
+      " credit_limit_currency_symbol: #{@credit_limit_currency_symbol.inspect},"\
+      " credit_limit_in_customer_currency: #{@credit_limit_in_customer_currency.inspect},"\
+      " currency_code: #{@currency_code.inspect}, currency_symbol: #{@currency_symbol.inspect},"\
+      " fully_paid: #{@fully_paid.inspect}, last_payment_currency_code:"\
+      " #{@last_payment_currency_code.inspect}, last_payment_currency_symbol:"\
+      " #{@last_payment_currency_symbol.inspect}, last_payment_date:"\
+      " #{@last_payment_date.inspect}, last_payment_value: #{@last_payment_value.inspect},"\
+      " outstanding_balance: #{@outstanding_balance.inspect}, payer_id: #{@payer_id.inspect},"\
+      " payer_number: #{@payer_number.inspect}, payment_due_date: #{@payment_due_date.inspect},"\
+      " so_a_reference_number: #{@so_a_reference_number.inspect}, statement_date:"\
+      " #{@statement_date.inspect}, statement_of_account_id: #{@statement_of_account_id.inspect},"\
+      " total_billing_documents: #{@total_billing_documents.inspect},"\
+      " total_net_amount_billing_currency: #{@total_net_amount_billing_currency.inspect},"\
+      " total_summary_billing_documents: #{@total_summary_billing_documents.inspect},"\
+      " total_vat_amount_billing_currency: #{@total_vat_amount_billing_currency.inspect},"\
+      " unallocated_payment: #{@unallocated_payment.inspect}, local_currency_code:"\
+      " #{@local_currency_code.inspect}, local_currency_symbol: #{@local_currency_symbol.inspect},"\
+      " local_currency_exchange_rate: #{@local_currency_exchange_rate.inspect}>"
+    end
   end
 end

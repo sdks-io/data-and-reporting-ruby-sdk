@@ -252,5 +252,35 @@ module ShellDataReportingApIs
                               co2_produced,
                               transaction_count)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_name: #{@account_name}, account_number: #{@account_number},"\
+      " payer_name: #{@payer_name}, payer_number: #{@payer_number}, card_number: #{@card_number},"\
+      " card_group_id: #{@card_group_id}, card_group_name: #{@card_group_name}, driver_name:"\
+      " #{@driver_name}, license_number: #{@license_number}, initial_odometer:"\
+      " #{@initial_odometer}, last_odometer: #{@last_odometer}, distance: #{@distance},"\
+      " fuel_consumption: #{@fuel_consumption}, fuel_net_amount: #{@fuel_net_amount}, discount:"\
+      " #{@discount}, fuel_tax: #{@fuel_tax}, fuel_volume: #{@fuel_volume},"\
+      " gross_non_fuel_expenses: #{@gross_non_fuel_expenses}, co2_produced: #{@co2_produced},"\
+      " transaction_count: #{@transaction_count}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_name: #{@account_name.inspect}, account_number:"\
+      " #{@account_number.inspect}, payer_name: #{@payer_name.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, card_number: #{@card_number.inspect}, card_group_id:"\
+      " #{@card_group_id.inspect}, card_group_name: #{@card_group_name.inspect}, driver_name:"\
+      " #{@driver_name.inspect}, license_number: #{@license_number.inspect}, initial_odometer:"\
+      " #{@initial_odometer.inspect}, last_odometer: #{@last_odometer.inspect}, distance:"\
+      " #{@distance.inspect}, fuel_consumption: #{@fuel_consumption.inspect}, fuel_net_amount:"\
+      " #{@fuel_net_amount.inspect}, discount: #{@discount.inspect}, fuel_tax:"\
+      " #{@fuel_tax.inspect}, fuel_volume: #{@fuel_volume.inspect}, gross_non_fuel_expenses:"\
+      " #{@gross_non_fuel_expenses.inspect}, co2_produced: #{@co2_produced.inspect},"\
+      " transaction_count: #{@transaction_count.inspect}>"
+    end
   end
 end

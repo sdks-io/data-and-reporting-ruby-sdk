@@ -143,5 +143,24 @@ module ShellDataReportingApIs
                           site_id,
                           site_name)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} delco_id: #{@delco_id}, country: #{@country}, country_code:"\
+      " #{@country_code}, fuel_network_id: #{@fuel_network_id}, network_name: #{@network_name},"\
+      " site_group_id: #{@site_group_id}, site_group_name: #{@site_group_name}, site_code:"\
+      " #{@site_code}, site_id: #{@site_id}, site_name: #{@site_name}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} delco_id: #{@delco_id.inspect}, country: #{@country.inspect}, country_code:"\
+      " #{@country_code.inspect}, fuel_network_id: #{@fuel_network_id.inspect}, network_name:"\
+      " #{@network_name.inspect}, site_group_id: #{@site_group_id.inspect}, site_group_name:"\
+      " #{@site_group_name.inspect}, site_code: #{@site_code.inspect}, site_id:"\
+      " #{@site_id.inspect}, site_name: #{@site_name.inspect}>"
+    end
   end
 end

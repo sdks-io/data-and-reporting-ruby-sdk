@@ -125,5 +125,26 @@ module ShellDataReportingApIs
                                 customer_currency_code,
                                 customer_currency_symbol)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} total_invoices: #{@total_invoices}, total_gross_amount_customer_currency:"\
+      " #{@total_gross_amount_customer_currency}, total_net_amount_customer_currency:"\
+      " #{@total_net_amount_customer_currency}, total_vat_amount_customer_currency:"\
+      " #{@total_vat_amount_customer_currency}, customer_currency_code:"\
+      " #{@customer_currency_code}, customer_currency_symbol: #{@customer_currency_symbol}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} total_invoices: #{@total_invoices.inspect},"\
+      " total_gross_amount_customer_currency: #{@total_gross_amount_customer_currency.inspect},"\
+      " total_net_amount_customer_currency: #{@total_net_amount_customer_currency.inspect},"\
+      " total_vat_amount_customer_currency: #{@total_vat_amount_customer_currency.inspect},"\
+      " customer_currency_code: #{@customer_currency_code.inspect}, customer_currency_symbol:"\
+      " #{@customer_currency_symbol.inspect}>"
+    end
   end
 end

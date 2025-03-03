@@ -332,5 +332,33 @@ module ShellDataReportingApIs
                                  current_page,
                                  page_size)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id}, col_co_code: #{@col_co_code}, payer_id:"\
+      " #{@payer_id}, payer_number: #{@payer_number}, accounts: #{@accounts}, card_id:"\
+      " #{@card_id}, card_pan: #{@card_pan}, invoice_status: #{@invoice_status}, fee_type_group:"\
+      " #{@fee_type_group}, fee_type_id: #{@fee_type_id}, from_date: #{@from_date}, to_date:"\
+      " #{@to_date}, period: #{@period}, include_cancelled_items: #{@include_cancelled_items},"\
+      " product_id: #{@product_id}, product_code: #{@product_code}, line_item_description:"\
+      " #{@line_item_description}, sort_order: #{@sort_order}, current_page: #{@current_page},"\
+      " page_size: #{@page_size}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id.inspect}, col_co_code: #{@col_co_code.inspect},"\
+      " payer_id: #{@payer_id.inspect}, payer_number: #{@payer_number.inspect}, accounts:"\
+      " #{@accounts.inspect}, card_id: #{@card_id.inspect}, card_pan: #{@card_pan.inspect},"\
+      " invoice_status: #{@invoice_status.inspect}, fee_type_group: #{@fee_type_group.inspect},"\
+      " fee_type_id: #{@fee_type_id.inspect}, from_date: #{@from_date.inspect}, to_date:"\
+      " #{@to_date.inspect}, period: #{@period.inspect}, include_cancelled_items:"\
+      " #{@include_cancelled_items.inspect}, product_id: #{@product_id.inspect}, product_code:"\
+      " #{@product_code.inspect}, line_item_description: #{@line_item_description.inspect},"\
+      " sort_order: #{@sort_order.inspect}, current_page: #{@current_page.inspect}, page_size:"\
+      " #{@page_size.inspect}>"
+    end
   end
 end

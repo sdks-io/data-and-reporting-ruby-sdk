@@ -205,5 +205,31 @@ module ShellDataReportingApIs
                                card_issuer_name,
                                column_list)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, payer_number: #{@payer_number},"\
+      " account_number: #{@account_number}, product_code: #{@product_code}, purchased_in_country:"\
+      " #{@purchased_in_country}, card_pan: #{@card_pan}, from_date_time: #{@from_date_time},"\
+      " to_date_time: #{@to_date_time}, transaction_status: #{@transaction_status}, fuel_only:"\
+      " #{@fuel_only}, product_group_name: #{@product_group_name}, vehicle_registration_number:"\
+      " #{@vehicle_registration_number}, include_declines: #{@include_declines}, card_issuer_name:"\
+      " #{@card_issuer_name}, column_list: #{@column_list}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, account_number: #{@account_number.inspect}, product_code:"\
+      " #{@product_code.inspect}, purchased_in_country: #{@purchased_in_country.inspect},"\
+      " card_pan: #{@card_pan.inspect}, from_date_time: #{@from_date_time.inspect}, to_date_time:"\
+      " #{@to_date_time.inspect}, transaction_status: #{@transaction_status.inspect}, fuel_only:"\
+      " #{@fuel_only.inspect}, product_group_name: #{@product_group_name.inspect},"\
+      " vehicle_registration_number: #{@vehicle_registration_number.inspect}, include_declines:"\
+      " #{@include_declines.inspect}, card_issuer_name: #{@card_issuer_name.inspect}, column_list:"\
+      " #{@column_list.inspect}>"
+    end
   end
 end

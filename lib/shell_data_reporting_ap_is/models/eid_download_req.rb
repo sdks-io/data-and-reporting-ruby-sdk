@@ -80,5 +80,21 @@ module ShellDataReportingApIs
                          account_group_country,
                          account_group_id_list)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, eid_list: #{@eid_list},"\
+      " account_group_country: #{@account_group_country}, account_group_id_list:"\
+      " #{@account_group_id_list}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, eid_list: #{@eid_list.inspect},"\
+      " account_group_country: #{@account_group_country.inspect}, account_group_id_list:"\
+      " #{@account_group_id_list.inspect}>"
+    end
   end
 end

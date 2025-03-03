@@ -138,5 +138,21 @@ module ShellDataReportingApIs
                                      to_date,
                                      accounts)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, col_co_id: #{@col_co_id}, payer_id:"\
+      " #{@payer_id}, payer_number: #{@payer_number}, from_date: #{@from_date}, to_date:"\
+      " #{@to_date}, accounts: #{@accounts}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, col_co_id: #{@col_co_id.inspect},"\
+      " payer_id: #{@payer_id.inspect}, payer_number: #{@payer_number.inspect}, from_date:"\
+      " #{@from_date.inspect}, to_date: #{@to_date.inspect}, accounts: #{@accounts.inspect}>"
+    end
   end
 end

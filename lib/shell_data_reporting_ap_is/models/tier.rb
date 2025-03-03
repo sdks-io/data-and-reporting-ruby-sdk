@@ -159,5 +159,26 @@ module ShellDataReportingApIs
                price_per_unit,
                price_per_unit_after_discount)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} tier_price_list_id: #{@tier_price_list_id}, price_list_description:"\
+      " #{@price_list_description}, tier_min: #{@tier_min}, tier_max: #{@tier_max},"\
+      " tiered_pricing_group_name: #{@tiered_pricing_group_name}, tiered_pricing_group_period:"\
+      " #{@tiered_pricing_group_period}, discount_value: #{@discount_value}, price_per_unit:"\
+      " #{@price_per_unit}, price_per_unit_after_discount: #{@price_per_unit_after_discount}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} tier_price_list_id: #{@tier_price_list_id.inspect}, price_list_description:"\
+      " #{@price_list_description.inspect}, tier_min: #{@tier_min.inspect}, tier_max:"\
+      " #{@tier_max.inspect}, tiered_pricing_group_name: #{@tiered_pricing_group_name.inspect},"\
+      " tiered_pricing_group_period: #{@tiered_pricing_group_period.inspect}, discount_value:"\
+      " #{@discount_value.inspect}, price_per_unit: #{@price_per_unit.inspect},"\
+      " price_per_unit_after_discount: #{@price_per_unit_after_discount.inspect}>"
+    end
   end
 end

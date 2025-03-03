@@ -425,5 +425,52 @@ module ShellDataReportingApIs
                        tier_minimum,
                        tier_rate)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} payer_id: #{@payer_id}, payer_number: #{@payer_number}, payer_short_name:"\
+      " #{@payer_short_name}, payer_full_name: #{@payer_full_name}, account_id: #{@account_id},"\
+      " account_number: #{@account_number}, account_short_name: #{@account_short_name},"\
+      " account_full_name: #{@account_full_name}, invoice_account_id: #{@invoice_account_id},"\
+      " invoice_account_number: #{@invoice_account_number}, invoice_account_short_name:"\
+      " #{@invoice_account_short_name}, invoice_account_full_name: #{@invoice_account_full_name},"\
+      " fee_rule_id: #{@fee_rule_id}, fee_rule_description: #{@fee_rule_description}, from_date:"\
+      " #{@from_date}, to_date: #{@to_date}, bonus_paid_to: #{@bonus_paid_to}, fee_item_id:"\
+      " #{@fee_item_id}, fee_rule_basis: #{@fee_rule_basis}, fee_item_currency_code:"\
+      " #{@fee_item_currency_code}, fee_item_currency_symbol: #{@fee_item_currency_symbol},"\
+      " prorated_volume: #{@prorated_volume}, total_volume: #{@total_volume}, fee_product:"\
+      " #{@fee_product}, invoice_gross_amount: #{@invoice_gross_amount}, invoice_net_amount:"\
+      " #{@invoice_net_amount}, invoice_vat_amount: #{@invoice_vat_amount}, is_fee_cancelled:"\
+      " #{@is_fee_cancelled}, fee_item_tier_prorated_volume: #{@fee_item_tier_prorated_volume},"\
+      " fee_item_tier_total_volume: #{@fee_item_tier_total_volume}, tier_minimum:"\
+      " #{@tier_minimum}, tier_rate: #{@tier_rate}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} payer_id: #{@payer_id.inspect}, payer_number: #{@payer_number.inspect},"\
+      " payer_short_name: #{@payer_short_name.inspect}, payer_full_name:"\
+      " #{@payer_full_name.inspect}, account_id: #{@account_id.inspect}, account_number:"\
+      " #{@account_number.inspect}, account_short_name: #{@account_short_name.inspect},"\
+      " account_full_name: #{@account_full_name.inspect}, invoice_account_id:"\
+      " #{@invoice_account_id.inspect}, invoice_account_number:"\
+      " #{@invoice_account_number.inspect}, invoice_account_short_name:"\
+      " #{@invoice_account_short_name.inspect}, invoice_account_full_name:"\
+      " #{@invoice_account_full_name.inspect}, fee_rule_id: #{@fee_rule_id.inspect},"\
+      " fee_rule_description: #{@fee_rule_description.inspect}, from_date: #{@from_date.inspect},"\
+      " to_date: #{@to_date.inspect}, bonus_paid_to: #{@bonus_paid_to.inspect}, fee_item_id:"\
+      " #{@fee_item_id.inspect}, fee_rule_basis: #{@fee_rule_basis.inspect},"\
+      " fee_item_currency_code: #{@fee_item_currency_code.inspect}, fee_item_currency_symbol:"\
+      " #{@fee_item_currency_symbol.inspect}, prorated_volume: #{@prorated_volume.inspect},"\
+      " total_volume: #{@total_volume.inspect}, fee_product: #{@fee_product.inspect},"\
+      " invoice_gross_amount: #{@invoice_gross_amount.inspect}, invoice_net_amount:"\
+      " #{@invoice_net_amount.inspect}, invoice_vat_amount: #{@invoice_vat_amount.inspect},"\
+      " is_fee_cancelled: #{@is_fee_cancelled.inspect}, fee_item_tier_prorated_volume:"\
+      " #{@fee_item_tier_prorated_volume.inspect}, fee_item_tier_total_volume:"\
+      " #{@fee_item_tier_total_volume.inspect}, tier_minimum: #{@tier_minimum.inspect}, tier_rate:"\
+      " #{@tier_rate.inspect}>"
+    end
   end
 end

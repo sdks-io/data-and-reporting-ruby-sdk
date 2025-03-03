@@ -114,5 +114,22 @@ module ShellDataReportingApIs
                                   is_first_page,
                                   is_last_page)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} request_id: #{@request_id}, status: #{@status}, data: #{@data},"\
+      " total_records: #{@total_records}, total_records_on_page: #{@total_records_on_page},"\
+      " is_first_page: #{@is_first_page}, is_last_page: #{@is_last_page}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} request_id: #{@request_id.inspect}, status: #{@status.inspect}, data:"\
+      " #{@data.inspect}, total_records: #{@total_records.inspect}, total_records_on_page:"\
+      " #{@total_records_on_page.inspect}, is_first_page: #{@is_first_page.inspect}, is_last_page:"\
+      " #{@is_last_page.inspect}>"
+    end
   end
 end

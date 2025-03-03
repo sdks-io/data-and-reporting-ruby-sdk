@@ -64,5 +64,18 @@ module ShellDataReportingApIs
                            page,
                            page_size)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} filters: #{@filters}, page: #{@page}, page_size: #{@page_size}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} filters: #{@filters.inspect}, page: #{@page.inspect}, page_size:"\
+      " #{@page_size.inspect}>"
+    end
   end
 end

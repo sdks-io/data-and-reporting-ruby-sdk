@@ -190,5 +190,29 @@ module ShellDataReportingApIs
                                            col_co_id,
                                            accounts)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, payer_id: #{@payer_id}, payer_number:"\
+      " #{@payer_number}, include_monthly_invoice_trend: #{@include_monthly_invoice_trend},"\
+      " include_past_statement_of_accounts: #{@include_past_statement_of_accounts},"\
+      " due_or_over_due_soa_documents_only: #{@due_or_over_due_soa_documents_only},"\
+      " number_of_soa_documents: #{@number_of_soa_documents}, include_account_invoices_summary:"\
+      " #{@include_account_invoices_summary}, col_co_id: #{@col_co_id}, accounts: #{@accounts}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, payer_id: #{@payer_id.inspect},"\
+      " payer_number: #{@payer_number.inspect}, include_monthly_invoice_trend:"\
+      " #{@include_monthly_invoice_trend.inspect}, include_past_statement_of_accounts:"\
+      " #{@include_past_statement_of_accounts.inspect}, due_or_over_due_soa_documents_only:"\
+      " #{@due_or_over_due_soa_documents_only.inspect}, number_of_soa_documents:"\
+      " #{@number_of_soa_documents.inspect}, include_account_invoices_summary:"\
+      " #{@include_account_invoices_summary.inspect}, col_co_id: #{@col_co_id.inspect}, accounts:"\
+      " #{@accounts.inspect}>"
+    end
   end
 end

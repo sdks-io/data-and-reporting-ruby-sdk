@@ -209,5 +209,32 @@ module ShellDataReportingApIs
                                    gross_amount_customer_currency,
                                    document_reference_number)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} statement_of_account_id: #{@statement_of_account_id},"\
+      " so_a_reference_number: #{@so_a_reference_number}, statement_date: #{@statement_date},"\
+      " payer_id: #{@payer_id}, payer_number: #{@payer_number}, amount_due: #{@amount_due},"\
+      " amount_overdue: #{@amount_overdue}, currency_code: #{@currency_code}, currency_symbol:"\
+      " #{@currency_symbol}, due_date: #{@due_date}, invoiced_on_behalf_of:"\
+      " #{@invoiced_on_behalf_of}, status: #{@status}, gross_amount_customer_currency:"\
+      " #{@gross_amount_customer_currency}, document_reference_number:"\
+      " #{@document_reference_number}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} statement_of_account_id: #{@statement_of_account_id.inspect},"\
+      " so_a_reference_number: #{@so_a_reference_number.inspect}, statement_date:"\
+      " #{@statement_date.inspect}, payer_id: #{@payer_id.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, amount_due: #{@amount_due.inspect}, amount_overdue:"\
+      " #{@amount_overdue.inspect}, currency_code: #{@currency_code.inspect}, currency_symbol:"\
+      " #{@currency_symbol.inspect}, due_date: #{@due_date.inspect}, invoiced_on_behalf_of:"\
+      " #{@invoiced_on_behalf_of.inspect}, status: #{@status.inspect},"\
+      " gross_amount_customer_currency: #{@gross_amount_customer_currency.inspect},"\
+      " document_reference_number: #{@document_reference_number.inspect}>"
+    end
   end
 end

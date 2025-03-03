@@ -937,5 +937,102 @@ module ShellDataReportingApIs
                   emboss_text,
                   vrn)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} fee_item_id: #{@fee_item_id}, account_id: #{@account_id}, account_number:"\
+      " #{@account_number}, account_short_name: #{@account_short_name}, invoice_account_id:"\
+      " #{@invoice_account_id}, invoice_account_number: #{@invoice_account_number},"\
+      " invoice_account_short_name: #{@invoice_account_short_name}, payer_id: #{@payer_id},"\
+      " payer_number: #{@payer_number}, payer_short_name: #{@payer_short_name}, card_id:"\
+      " #{@card_id}, pan: #{@pan}, card_group_id: #{@card_group_id}, card_group_name:"\
+      " #{@card_group_name}, fee_type_id: #{@fee_type_id}, fee_type: #{@fee_type}, fee_type_group:"\
+      " #{@fee_type_group}, fee_rule_id: #{@fee_rule_id}, fee_rule_description:"\
+      " #{@fee_rule_description}, fee_rule_tiers: #{@fee_rule_tiers}, fee_item_date:"\
+      " #{@fee_item_date}, fee_item_time: #{@fee_item_time}, is_manual: #{@is_manual},"\
+      " is_cancelled: #{@is_cancelled}, customer_currency_code: #{@customer_currency_code},"\
+      " customer_currency_symbol: #{@customer_currency_symbol}, product_id: #{@product_id},"\
+      " product_code: #{@product_code}, product_name: #{@product_name}, product_group_id:"\
+      " #{@product_group_id}, product_group_name: #{@product_group_name}, line_item_description:"\
+      " #{@line_item_description}, quantity: #{@quantity}, is_invoiced: #{@is_invoiced},"\
+      " vat_country_code: #{@vat_country_code}, vat_country_name: #{@vat_country_name},"\
+      " vat_percentage: #{@vat_percentage}, vat_category_id: #{@vat_category_id},"\
+      " vat_category_description: #{@vat_category_description}, legislative_region_id:"\
+      " #{@legislative_region_id}, legislative_region_name: #{@legislative_region_name},"\
+      " system_entry_date: #{@system_entry_date}, system_entry_time: #{@system_entry_time},"\
+      " col_co_net_amount: #{@col_co_net_amount}, col_co_vat_amount: #{@col_co_vat_amount},"\
+      " col_co_gross_amount: #{@col_co_gross_amount}, interim_invoice_id: #{@interim_invoice_id},"\
+      " interim_invoice_number: #{@interim_invoice_number}, invoice_id: #{@invoice_id},"\
+      " invoice_number: #{@invoice_number}, invoice_date: #{@invoice_date},"\
+      " customer_exchange_rate: #{@customer_exchange_rate}, invoice_net_amount:"\
+      " #{@invoice_net_amount}, invoice_gross_amount: #{@invoice_gross_amount},"\
+      " invoice_vat_amount: #{@invoice_vat_amount}, reverse_charge: #{@reverse_charge},"\
+      " original_fee_item_id: #{@original_fee_item_id}, original_currency_code:"\
+      " #{@original_currency_code}, original_currency_symbol: #{@original_currency_symbol},"\
+      " original_unit_price: #{@original_unit_price}, original_net_amount:"\
+      " #{@original_net_amount}, original_vat_amount: #{@original_vat_amount},"\
+      " original_gross_amount: #{@original_gross_amount}, original_exchange_rate:"\
+      " #{@original_exchange_rate}, original_legislative_region_id:"\
+      " #{@original_legislative_region_id}, original_legislative_region_name:"\
+      " #{@original_legislative_region_name}, frequency: #{@frequency},"\
+      " fee_item_card_level_breakup: #{@fee_item_card_level_breakup},"\
+      " original_fee_item_invoice_id: #{@original_fee_item_invoice_id},"\
+      " original_fee_item_invoice_number: #{@original_fee_item_invoice_number},"\
+      " original_fee_item_invoice_date: #{@original_fee_item_invoice_date}, driver_name:"\
+      " #{@driver_name}, emboss_text: #{@emboss_text}, vrn: #{@vrn}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} fee_item_id: #{@fee_item_id.inspect}, account_id: #{@account_id.inspect},"\
+      " account_number: #{@account_number.inspect}, account_short_name:"\
+      " #{@account_short_name.inspect}, invoice_account_id: #{@invoice_account_id.inspect},"\
+      " invoice_account_number: #{@invoice_account_number.inspect}, invoice_account_short_name:"\
+      " #{@invoice_account_short_name.inspect}, payer_id: #{@payer_id.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, payer_short_name: #{@payer_short_name.inspect}, card_id:"\
+      " #{@card_id.inspect}, pan: #{@pan.inspect}, card_group_id: #{@card_group_id.inspect},"\
+      " card_group_name: #{@card_group_name.inspect}, fee_type_id: #{@fee_type_id.inspect},"\
+      " fee_type: #{@fee_type.inspect}, fee_type_group: #{@fee_type_group.inspect}, fee_rule_id:"\
+      " #{@fee_rule_id.inspect}, fee_rule_description: #{@fee_rule_description.inspect},"\
+      " fee_rule_tiers: #{@fee_rule_tiers.inspect}, fee_item_date: #{@fee_item_date.inspect},"\
+      " fee_item_time: #{@fee_item_time.inspect}, is_manual: #{@is_manual.inspect}, is_cancelled:"\
+      " #{@is_cancelled.inspect}, customer_currency_code: #{@customer_currency_code.inspect},"\
+      " customer_currency_symbol: #{@customer_currency_symbol.inspect}, product_id:"\
+      " #{@product_id.inspect}, product_code: #{@product_code.inspect}, product_name:"\
+      " #{@product_name.inspect}, product_group_id: #{@product_group_id.inspect},"\
+      " product_group_name: #{@product_group_name.inspect}, line_item_description:"\
+      " #{@line_item_description.inspect}, quantity: #{@quantity.inspect}, is_invoiced:"\
+      " #{@is_invoiced.inspect}, vat_country_code: #{@vat_country_code.inspect}, vat_country_name:"\
+      " #{@vat_country_name.inspect}, vat_percentage: #{@vat_percentage.inspect}, vat_category_id:"\
+      " #{@vat_category_id.inspect}, vat_category_description:"\
+      " #{@vat_category_description.inspect}, legislative_region_id:"\
+      " #{@legislative_region_id.inspect}, legislative_region_name:"\
+      " #{@legislative_region_name.inspect}, system_entry_date: #{@system_entry_date.inspect},"\
+      " system_entry_time: #{@system_entry_time.inspect}, col_co_net_amount:"\
+      " #{@col_co_net_amount.inspect}, col_co_vat_amount: #{@col_co_vat_amount.inspect},"\
+      " col_co_gross_amount: #{@col_co_gross_amount.inspect}, interim_invoice_id:"\
+      " #{@interim_invoice_id.inspect}, interim_invoice_number:"\
+      " #{@interim_invoice_number.inspect}, invoice_id: #{@invoice_id.inspect}, invoice_number:"\
+      " #{@invoice_number.inspect}, invoice_date: #{@invoice_date.inspect},"\
+      " customer_exchange_rate: #{@customer_exchange_rate.inspect}, invoice_net_amount:"\
+      " #{@invoice_net_amount.inspect}, invoice_gross_amount: #{@invoice_gross_amount.inspect},"\
+      " invoice_vat_amount: #{@invoice_vat_amount.inspect}, reverse_charge:"\
+      " #{@reverse_charge.inspect}, original_fee_item_id: #{@original_fee_item_id.inspect},"\
+      " original_currency_code: #{@original_currency_code.inspect}, original_currency_symbol:"\
+      " #{@original_currency_symbol.inspect}, original_unit_price:"\
+      " #{@original_unit_price.inspect}, original_net_amount: #{@original_net_amount.inspect},"\
+      " original_vat_amount: #{@original_vat_amount.inspect}, original_gross_amount:"\
+      " #{@original_gross_amount.inspect}, original_exchange_rate:"\
+      " #{@original_exchange_rate.inspect}, original_legislative_region_id:"\
+      " #{@original_legislative_region_id.inspect}, original_legislative_region_name:"\
+      " #{@original_legislative_region_name.inspect}, frequency: #{@frequency.inspect},"\
+      " fee_item_card_level_breakup: #{@fee_item_card_level_breakup.inspect},"\
+      " original_fee_item_invoice_id: #{@original_fee_item_invoice_id.inspect},"\
+      " original_fee_item_invoice_number: #{@original_fee_item_invoice_number.inspect},"\
+      " original_fee_item_invoice_date: #{@original_fee_item_invoice_date.inspect}, driver_name:"\
+      " #{@driver_name.inspect}, emboss_text: #{@emboss_text.inspect}, vrn: #{@vrn.inspect}>"
+    end
   end
 end

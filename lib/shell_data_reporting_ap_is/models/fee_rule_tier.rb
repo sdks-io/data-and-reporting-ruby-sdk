@@ -68,5 +68,19 @@ module ShellDataReportingApIs
                       value,
                       tier_maximum)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} tier_minimum: #{@tier_minimum}, value: #{@value}, tier_maximum:"\
+      " #{@tier_maximum}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} tier_minimum: #{@tier_minimum.inspect}, value: #{@value.inspect},"\
+      " tier_maximum: #{@tier_maximum.inspect}>"
+    end
   end
 end

@@ -193,5 +193,29 @@ module ShellDataReportingApIs
                                  due_date,
                                  vat_country_iso_code)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} document_reference: #{@document_reference}, invoice_number:"\
+      " #{@invoice_number}, payer_name: #{@payer_name}, account_number: #{@account_number},"\
+      " account_name: #{@account_name}, document_type: #{@document_type}, gross_amount:"\
+      " #{@gross_amount}, net_amount: #{@net_amount}, tax_amount: #{@tax_amount}, currency_code:"\
+      " #{@currency_code}, invoice_status: #{@invoice_status}, invoice_date: #{@invoice_date},"\
+      " due_date: #{@due_date}, vat_country_iso_code: #{@vat_country_iso_code}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} document_reference: #{@document_reference.inspect}, invoice_number:"\
+      " #{@invoice_number.inspect}, payer_name: #{@payer_name.inspect}, account_number:"\
+      " #{@account_number.inspect}, account_name: #{@account_name.inspect}, document_type:"\
+      " #{@document_type.inspect}, gross_amount: #{@gross_amount.inspect}, net_amount:"\
+      " #{@net_amount.inspect}, tax_amount: #{@tax_amount.inspect}, currency_code:"\
+      " #{@currency_code.inspect}, invoice_status: #{@invoice_status.inspect}, invoice_date:"\
+      " #{@invoice_date.inspect}, due_date: #{@due_date.inspect}, vat_country_iso_code:"\
+      " #{@vat_country_iso_code.inspect}>"
+    end
   end
 end

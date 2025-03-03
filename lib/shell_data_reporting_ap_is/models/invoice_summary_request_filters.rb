@@ -331,5 +331,35 @@ module ShellDataReportingApIs
                                        accounts,
                                        type)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id}, payer_id: #{@payer_id}, payer_number:"\
+      " #{@payer_number}, invoice_id: #{@invoice_id}, invoice_number: #{@invoice_number},"\
+      " from_date: #{@from_date}, to_date: #{@to_date}, invoice_date: #{@invoice_date},"\
+      " summary_document_id: #{@summary_document_id}, summary_document_number:"\
+      " #{@summary_document_number}, statement_of_account_id: #{@statement_of_account_id},"\
+      " so_a_reference_number: #{@so_a_reference_number}, period: #{@period}, invoice_status:"\
+      " #{@invoice_status}, invoiced_on_behalf_of: #{@invoiced_on_behalf_of},"\
+      " include_e_invoice_details: #{@include_e_invoice_details}, col_co_code: #{@col_co_code},"\
+      " accounts: #{@accounts}, type: #{@type}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id.inspect}, payer_id: #{@payer_id.inspect},"\
+      " payer_number: #{@payer_number.inspect}, invoice_id: #{@invoice_id.inspect},"\
+      " invoice_number: #{@invoice_number.inspect}, from_date: #{@from_date.inspect}, to_date:"\
+      " #{@to_date.inspect}, invoice_date: #{@invoice_date.inspect}, summary_document_id:"\
+      " #{@summary_document_id.inspect}, summary_document_number:"\
+      " #{@summary_document_number.inspect}, statement_of_account_id:"\
+      " #{@statement_of_account_id.inspect}, so_a_reference_number:"\
+      " #{@so_a_reference_number.inspect}, period: #{@period.inspect}, invoice_status:"\
+      " #{@invoice_status.inspect}, invoiced_on_behalf_of: #{@invoiced_on_behalf_of.inspect},"\
+      " include_e_invoice_details: #{@include_e_invoice_details.inspect}, col_co_code:"\
+      " #{@col_co_code.inspect}, accounts: #{@accounts.inspect}, type: #{@type.inspect}>"
+    end
   end
 end

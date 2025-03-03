@@ -133,5 +133,23 @@ module ShellDataReportingApIs
                                  payments_since_last_soa,
                                  invoices_summaries)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} last_statement_of_account: #{@last_statement_of_account},"\
+      " monthly_invoice_trend: #{@monthly_invoice_trend}, past_statement_of_accounts:"\
+      " #{@past_statement_of_accounts}, payments_since_last_soa: #{@payments_since_last_soa},"\
+      " invoices_summaries: #{@invoices_summaries}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} last_statement_of_account: #{@last_statement_of_account.inspect},"\
+      " monthly_invoice_trend: #{@monthly_invoice_trend.inspect}, past_statement_of_accounts:"\
+      " #{@past_statement_of_accounts.inspect}, payments_since_last_soa:"\
+      " #{@payments_since_last_soa.inspect}, invoices_summaries: #{@invoices_summaries.inspect}>"
+    end
   end
 end

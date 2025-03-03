@@ -74,5 +74,19 @@ module ShellDataReportingApIs
                                           type,
                                           is_applicable)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} reference: #{@reference}, type: #{@type}, is_applicable:"\
+      " #{@is_applicable}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} reference: #{@reference.inspect}, type: #{@type.inspect}, is_applicable:"\
+      " #{@is_applicable.inspect}>"
+    end
   end
 end

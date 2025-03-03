@@ -254,5 +254,30 @@ module ShellDataReportingApIs
                                        site_group_ids,
                                        use_field_id)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id}, col_co_code: #{@col_co_code}, payer_id:"\
+      " #{@payer_id}, payer_number: #{@payer_number}, accounts: #{@accounts},"\
+      " transactions_from_date: #{@transactions_from_date}, transactions_to_date:"\
+      " #{@transactions_to_date}, value: #{@value}, condition: #{@condition}, products:"\
+      " #{@products}, exception_period: #{@exception_period}, output_type: #{@output_type},"\
+      " fuel_only: #{@fuel_only}, site_group_ids: #{@site_group_ids}, use_field_id:"\
+      " #{@use_field_id}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id.inspect}, col_co_code: #{@col_co_code.inspect},"\
+      " payer_id: #{@payer_id.inspect}, payer_number: #{@payer_number.inspect}, accounts:"\
+      " #{@accounts.inspect}, transactions_from_date: #{@transactions_from_date.inspect},"\
+      " transactions_to_date: #{@transactions_to_date.inspect}, value: #{@value.inspect},"\
+      " condition: #{@condition.inspect}, products: #{@products.inspect}, exception_period:"\
+      " #{@exception_period.inspect}, output_type: #{@output_type.inspect}, fuel_only:"\
+      " #{@fuel_only.inspect}, site_group_ids: #{@site_group_ids.inspect}, use_field_id:"\
+      " #{@use_field_id.inspect}>"
+    end
   end
 end

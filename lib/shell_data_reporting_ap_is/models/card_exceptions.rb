@@ -253,5 +253,32 @@ module ShellDataReportingApIs
                          week,
                          year)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_id: #{@account_id}, account_number: #{@account_number},"\
+      " account_short_name: #{@account_short_name}, card_id: #{@card_id}, currency_code:"\
+      " #{@currency_code}, currency_symbol: #{@currency_symbol}, day: #{@day}, driver_name:"\
+      " #{@driver_name}, month: #{@month}, pan: #{@pan}, payer_id: #{@payer_id}, payer_number:"\
+      " #{@payer_number}, payer_short_name: #{@payer_short_name}, total_amount: #{@total_amount},"\
+      " total_quantity: #{@total_quantity}, total_sales_items: #{@total_sales_items},"\
+      " total_transactions: #{@total_transactions}, vrn: #{@vrn}, week: #{@week}, year: #{@year}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_id: #{@account_id.inspect}, account_number:"\
+      " #{@account_number.inspect}, account_short_name: #{@account_short_name.inspect}, card_id:"\
+      " #{@card_id.inspect}, currency_code: #{@currency_code.inspect}, currency_symbol:"\
+      " #{@currency_symbol.inspect}, day: #{@day.inspect}, driver_name: #{@driver_name.inspect},"\
+      " month: #{@month.inspect}, pan: #{@pan.inspect}, payer_id: #{@payer_id.inspect},"\
+      " payer_number: #{@payer_number.inspect}, payer_short_name: #{@payer_short_name.inspect},"\
+      " total_amount: #{@total_amount.inspect}, total_quantity: #{@total_quantity.inspect},"\
+      " total_sales_items: #{@total_sales_items.inspect}, total_transactions:"\
+      " #{@total_transactions.inspect}, vrn: #{@vrn.inspect}, week: #{@week.inspect}, year:"\
+      " #{@year.inspect}>"
+    end
   end
 end

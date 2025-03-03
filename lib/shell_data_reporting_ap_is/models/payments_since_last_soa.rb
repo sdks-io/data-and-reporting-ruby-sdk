@@ -309,5 +309,45 @@ module ShellDataReportingApIs
                                local_currency_symbol,
                                local_currency_exchange_rate)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_id: #{@account_id}, account_number: #{@account_number},"\
+      " account_short_name: #{@account_short_name}, summary_document_id: #{@summary_document_id},"\
+      " summary_document_number: #{@summary_document_number}, summary_document_date:"\
+      " #{@summary_document_date}, summary_document_payment_due_date:"\
+      " #{@summary_document_payment_due_date}, summary_document_total_value:"\
+      " #{@summary_document_total_value}, summary_document_total_vat:"\
+      " #{@summary_document_total_vat}, summary_document_dd_amount:"\
+      " #{@summary_document_dd_amount}, payment_date: #{@payment_date}, payment_reference:"\
+      " #{@payment_reference}, payment_currency_code: #{@payment_currency_code},"\
+      " payment_currency_symbol: #{@payment_currency_symbol}, amount_paid: #{@amount_paid},"\
+      " balance: #{@balance}, true_payment: #{@true_payment}, prepaid_balance:"\
+      " #{@prepaid_balance}, local_currency_code: #{@local_currency_code}, local_currency_symbol:"\
+      " #{@local_currency_symbol}, local_currency_exchange_rate:"\
+      " #{@local_currency_exchange_rate}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} account_id: #{@account_id.inspect}, account_number:"\
+      " #{@account_number.inspect}, account_short_name: #{@account_short_name.inspect},"\
+      " summary_document_id: #{@summary_document_id.inspect}, summary_document_number:"\
+      " #{@summary_document_number.inspect}, summary_document_date:"\
+      " #{@summary_document_date.inspect}, summary_document_payment_due_date:"\
+      " #{@summary_document_payment_due_date.inspect}, summary_document_total_value:"\
+      " #{@summary_document_total_value.inspect}, summary_document_total_vat:"\
+      " #{@summary_document_total_vat.inspect}, summary_document_dd_amount:"\
+      " #{@summary_document_dd_amount.inspect}, payment_date: #{@payment_date.inspect},"\
+      " payment_reference: #{@payment_reference.inspect}, payment_currency_code:"\
+      " #{@payment_currency_code.inspect}, payment_currency_symbol:"\
+      " #{@payment_currency_symbol.inspect}, amount_paid: #{@amount_paid.inspect}, balance:"\
+      " #{@balance.inspect}, true_payment: #{@true_payment.inspect}, prepaid_balance:"\
+      " #{@prepaid_balance.inspect}, local_currency_code: #{@local_currency_code.inspect},"\
+      " local_currency_symbol: #{@local_currency_symbol.inspect}, local_currency_exchange_rate:"\
+      " #{@local_currency_exchange_rate.inspect}>"
+    end
   end
 end

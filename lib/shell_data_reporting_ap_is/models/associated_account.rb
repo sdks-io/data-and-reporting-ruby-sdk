@@ -94,5 +94,23 @@ module ShellDataReportingApIs
                             associated_account_short_name,
                             associated_account_full_name)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} associated_account_id: #{@associated_account_id},"\
+      " associated_account_number: #{@associated_account_number}, associated_account_short_name:"\
+      " #{@associated_account_short_name}, associated_account_full_name:"\
+      " #{@associated_account_full_name}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} associated_account_id: #{@associated_account_id.inspect},"\
+      " associated_account_number: #{@associated_account_number.inspect},"\
+      " associated_account_short_name: #{@associated_account_short_name.inspect},"\
+      " associated_account_full_name: #{@associated_account_full_name.inspect}>"
+    end
   end
 end

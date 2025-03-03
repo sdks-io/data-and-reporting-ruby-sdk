@@ -190,5 +190,28 @@ module ShellDataReportingApIs
                        product_group_id,
                        product_group_name)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} date: #{@date}, product_id: #{@product_id}, product_code: #{@product_code},"\
+      " product_name: #{@product_name}, is_fuel_product: #{@is_fuel_product}, site_group_id:"\
+      " #{@site_group_id}, site_group_name: #{@site_group_name}, total_volume: #{@total_volume},"\
+      " total_gross: #{@total_gross}, total_net: #{@total_net}, currency_code: #{@currency_code},"\
+      " currency_symbol: #{@currency_symbol}, product_group_id: #{@product_group_id},"\
+      " product_group_name: #{@product_group_name}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} date: #{@date.inspect}, product_id: #{@product_id.inspect}, product_code:"\
+      " #{@product_code.inspect}, product_name: #{@product_name.inspect}, is_fuel_product:"\
+      " #{@is_fuel_product.inspect}, site_group_id: #{@site_group_id.inspect}, site_group_name:"\
+      " #{@site_group_name.inspect}, total_volume: #{@total_volume.inspect}, total_gross:"\
+      " #{@total_gross.inspect}, total_net: #{@total_net.inspect}, currency_code:"\
+      " #{@currency_code.inspect}, currency_symbol: #{@currency_symbol.inspect}, product_group_id:"\
+      " #{@product_group_id.inspect}, product_group_name: #{@product_group_name.inspect}>"
+    end
   end
 end

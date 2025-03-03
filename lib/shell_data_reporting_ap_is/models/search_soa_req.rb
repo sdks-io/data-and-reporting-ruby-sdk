@@ -186,5 +186,25 @@ module ShellDataReportingApIs
                        col_co_id,
                        payer_id)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code}, payer_number: #{@payer_number},"\
+      " invoice_number: #{@invoice_number}, from_date: #{@from_date}, to_date: #{@to_date},"\
+      " period: #{@period}, invoice_date: #{@invoice_date}, invoice_status: #{@invoice_status},"\
+      " sort_by: #{@sort_by}, col_co_id: #{@col_co_id}, payer_id: #{@payer_id}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_code: #{@col_co_code.inspect}, payer_number:"\
+      " #{@payer_number.inspect}, invoice_number: #{@invoice_number.inspect}, from_date:"\
+      " #{@from_date.inspect}, to_date: #{@to_date.inspect}, period: #{@period.inspect},"\
+      " invoice_date: #{@invoice_date.inspect}, invoice_status: #{@invoice_status.inspect},"\
+      " sort_by: #{@sort_by.inspect}, col_co_id: #{@col_co_id.inspect}, payer_id:"\
+      " #{@payer_id.inspect}>"
+    end
   end
 end

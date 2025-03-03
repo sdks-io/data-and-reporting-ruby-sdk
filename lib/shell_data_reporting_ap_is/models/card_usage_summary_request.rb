@@ -150,5 +150,24 @@ module ShellDataReportingApIs
                                   pan,
                                   card_expiry_date)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id}, col_co_code: #{@col_co_code}, payer_id:"\
+      " #{@payer_id}, payer_number: #{@payer_number}, account_id: #{@account_id}, account_number:"\
+      " #{@account_number}, card_id: #{@card_id}, pan: #{@pan}, card_expiry_date:"\
+      " #{@card_expiry_date}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} col_co_id: #{@col_co_id.inspect}, col_co_code: #{@col_co_code.inspect},"\
+      " payer_id: #{@payer_id.inspect}, payer_number: #{@payer_number.inspect}, account_id:"\
+      " #{@account_id.inspect}, account_number: #{@account_number.inspect}, card_id:"\
+      " #{@card_id.inspect}, pan: #{@pan.inspect}, card_expiry_date:"\
+      " #{@card_expiry_date.inspect}>"
+    end
   end
 end

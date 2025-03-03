@@ -1625,11 +1625,13 @@ request_id = '2b0cbe11-f109-4c43-9201-49af0370df1c'
 body = PricedTransactionRequestV2.new(
   PricedRequestData.new(
     '032',
-    JSON.parse('{"key1":"val1","key2":"val2"}'),
+    PricedTransactionReqV2InvoiceStatusEnum::A,
     'DE26685263',
+    nil,
     29484,
     'DE26667080',
     'HH NX 508',
+    nil,
     40000,
     '7002051006629890645',
     '10',

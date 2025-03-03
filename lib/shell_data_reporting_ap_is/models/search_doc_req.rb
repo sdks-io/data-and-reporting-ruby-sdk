@@ -257,5 +257,33 @@ module ShellDataReportingApIs
                        vat_issuer_country,
                        sorty_by)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} payer_number: #{@payer_number}, account_number: #{@account_number},"\
+      " account_number_list: #{@account_number_list}, invoice_number: #{@invoice_number},"\
+      " invoice_number_list: #{@invoice_number_list}, invoice_status: #{@invoice_status},"\
+      " issuing_date_from: #{@issuing_date_from}, issuing_date_to: #{@issuing_date_to},"\
+      " due_date_from: #{@due_date_from}, due_date_to: #{@due_date_to}, gross_amount:"\
+      " #{@gross_amount}, gross_amount_operator: #{@gross_amount_operator}, document_type:"\
+      " #{@document_type}, vat_issuer_country: #{@vat_issuer_country}, sorty_by: #{@sorty_by},"\
+      " col_co_code: #{@col_co_code}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} payer_number: #{@payer_number.inspect}, account_number:"\
+      " #{@account_number.inspect}, account_number_list: #{@account_number_list.inspect},"\
+      " invoice_number: #{@invoice_number.inspect}, invoice_number_list:"\
+      " #{@invoice_number_list.inspect}, invoice_status: #{@invoice_status.inspect},"\
+      " issuing_date_from: #{@issuing_date_from.inspect}, issuing_date_to:"\
+      " #{@issuing_date_to.inspect}, due_date_from: #{@due_date_from.inspect}, due_date_to:"\
+      " #{@due_date_to.inspect}, gross_amount: #{@gross_amount.inspect}, gross_amount_operator:"\
+      " #{@gross_amount_operator.inspect}, document_type: #{@document_type.inspect},"\
+      " vat_issuer_country: #{@vat_issuer_country.inspect}, sorty_by: #{@sorty_by.inspect},"\
+      " col_co_code: #{@col_co_code.inspect}>"
+    end
   end
 end

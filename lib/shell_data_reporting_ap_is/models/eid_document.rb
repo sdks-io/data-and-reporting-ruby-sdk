@@ -157,5 +157,26 @@ module ShellDataReportingApIs
                       document_status,
                       document_name)
     end
+
+    # Provides a human-readable string representation of the object.
+    def to_s
+      class_name = self.class.name.split('::').last
+      "<#{class_name} document_id: #{@document_id}, account_group_id: #{@account_group_id},"\
+      " account_group_name: #{@account_group_name}, document_type: #{@document_type},"\
+      " document_format: #{@document_format}, document_date: #{@document_date},"\
+      " number_of_invoices: #{@number_of_invoices}, file_size: #{@file_size}, document_status:"\
+      " #{@document_status}, document_name: #{@document_name}>"
+    end
+
+    # Provides a debugging-friendly string with detailed object information.
+    def inspect
+      class_name = self.class.name.split('::').last
+      "<#{class_name} document_id: #{@document_id.inspect}, account_group_id:"\
+      " #{@account_group_id.inspect}, account_group_name: #{@account_group_name.inspect},"\
+      " document_type: #{@document_type.inspect}, document_format: #{@document_format.inspect},"\
+      " document_date: #{@document_date.inspect}, number_of_invoices:"\
+      " #{@number_of_invoices.inspect}, file_size: #{@file_size.inspect}, document_status:"\
+      " #{@document_status.inspect}, document_name: #{@document_name.inspect}>"
+    end
   end
 end
