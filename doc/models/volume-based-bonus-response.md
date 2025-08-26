@@ -12,8 +12,6 @@
 | `configuration` | [`Array<BonusConfiguration>`](../../doc/models/bonus-configuration.md) | Optional | - |
 | `current_period_consumption` | [`Array<CurrentVolume>`](../../doc/models/current-volume.md) | Optional | - |
 | `historical_bonus_paid` | [`Array<BonusHistory>`](../../doc/models/bonus-history.md) | Optional | - |
-| `error` | [`ErrorStatus`](../../doc/models/error-status.md) | Optional | - |
-| `request_id` | `String` | Optional | API Request Id |
 
 ## Example (as JSON)
 
@@ -66,12 +64,7 @@
       "PayerFullName": "PayerFullName0",
       "AccountId": 216
     }
-  ],
-  "Error": {
-    "Code": "Code4",
-    "Description": "Description2"
-  },
-  "RequestId": "RequestId2"
+  ]
 }
 ```
 

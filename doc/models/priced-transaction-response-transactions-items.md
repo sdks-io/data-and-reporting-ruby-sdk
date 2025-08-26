@@ -133,8 +133,6 @@
 | `customer_retail_value_total_gross` | `Float` | Optional | Retail gross price (or gross pump price) in customer currency |
 | `customer_retail_value_total_net` | `Float` | Optional | Retail gross price (or gross pump price) in customer currency<br>Retail net price (or net pump price) in customer currency |
 | `transaction_type_description` | `String` | Optional | Transaction Type Description<br>Note: - The value could be null/blank for fees item |
-| `error` | [`ErrorStatus`](../../doc/models/error-status.md) | Optional | - |
-| `request_id` | `String` | Optional | API Request Id |
 
 ## Example (as JSON)
 
