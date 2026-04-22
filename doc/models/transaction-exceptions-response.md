@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `card_exceptions` | [`Array<CardExceptions>`](../../doc/models/card-exceptions.md) | Optional | - |
-| `transaction_exceptions` | [`Array<TransactionExceptions>`](../../doc/models/transaction-exceptions.md) | Optional | - |
+| `card_exceptions` | [`Array[CardExceptions]`](../../doc/models/card-exceptions.md) | Optional | - |
+| `transaction_exceptions` | [`Array[TransactionExceptions]`](../../doc/models/transaction-exceptions.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `usage_summary` | [`Array<UsageSummary>`](../../doc/models/usage-summary.md) | Optional | - |
+| `usage_summary` | [`Array[UsageSummary]`](../../doc/models/usage-summary.md) | Optional | - |
 
 ## Example (as JSON)
 

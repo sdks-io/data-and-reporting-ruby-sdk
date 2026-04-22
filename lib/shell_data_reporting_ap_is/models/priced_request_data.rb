@@ -119,7 +119,10 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :to_date
 
-    # To transaction delivery date
+    # Pass below one of the value as per the required transaction period
+    # 1. Last 7 Days
+    # 2. Last 30 Days
+    # 3. Last 90 Days
     # @return [PricedTransactionReqV2PeriodEnum]
     attr_accessor :period
 

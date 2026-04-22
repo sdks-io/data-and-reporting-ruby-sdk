@@ -29,7 +29,7 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :purchased_in_country
 
-    # Card identifier number masked
+    # Card PAN Number without masked
     # @return [String]
     attr_accessor :card_pan
 

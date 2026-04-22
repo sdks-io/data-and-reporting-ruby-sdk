@@ -15,7 +15,7 @@
 | `payer_number` | `String` | Optional | Payer Number of the selected payer.<br>Optional if PayerId is passed else Mandatory |
 | `from_date` | `String` | Optional | Invoice date searched from this date.<br>Optional.<br>This input is a search criterion, if given.<br>Date format: yyyyMMdd |
 | `to_date` | `String` | Optional | Invoice date searched until this date.<br>Optional.<br>This input is a search criterion, if given.<br>Date format: yyyyMMdd |
-| `accounts` | [`Array<Accounts>`](../../doc/models/accounts.md) | Optional | - |
+| `accounts` | [`Array[Accounts]`](../../doc/models/accounts.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -46,7 +46,7 @@ class InvoiceControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 
@@ -115,7 +115,7 @@ class InvoiceControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 
@@ -158,7 +158,7 @@ class InvoiceControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 
@@ -216,7 +216,7 @@ class InvoiceControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 
@@ -248,7 +248,7 @@ class InvoiceControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 
@@ -274,12 +274,11 @@ class InvoiceControllerTest < ControllerTestBase
     body = SearchDocumentsRequest.from_hash(APIHelper.json_deserialize(
       '{"Filters":{"PayerNumber":"DE00000096","AccountNumber":"DE00000096","Co'\
       'lCoCode":14,"AccountNumberList":["DE00000123","DE00000225"],"InvoiceNum'\
-      'ber":"1234567","InvoiceNumberList":["6400013693","9421000010"],"Invoice'\
-      'Status":"NEW","IssuingDateFrom":"2023/05/01","IssuingDateTo":"2023/06/3'\
-      '0","DueDateFrom":"2023/05/04","DueDateTo":"2023/06/30","GrossAmount":"1'\
-      '000","GrossAmountOperator":"LT","DocumentType":"SOA","VATIssuerCountry"'\
-      ':"DE","SortyBy":["InvoiceNumber ASC","InvoiceDate DESC"]},"Page":"1","P'\
-      'ageSize":"50"}', false))
+      'ber":"1234567","InvoiceNumberList":["6400013693","9421000010"],"Issuing'\
+      'DateFrom":"2023/05/01","IssuingDateTo":"2023/06/30","DueDateFrom":"2023'\
+      '/05/04","DueDateTo":"2023/06/30","GrossAmount":"1000","GrossAmountOpera'\
+      'tor":"LT","DocumentType":"SOA","VATIssuerCountry":"DE","SortyBy":["Invo'\
+      'iceNumber ASC","InvoiceDate DESC"]},"Page":"1","PageSize":"50"}', false))
 
     # Perform the API call through the SDK function
     result = @controller.search_documents(request_id, body: body)
@@ -288,7 +287,7 @@ class InvoiceControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 
@@ -296,12 +295,12 @@ class InvoiceControllerTest < ControllerTestBase
     refute_nil(result)
     expected_body = JSON.parse(
       '{"RequestId":"a8b81c1d-f44a-4365-8113-8958061c0b7e","Status":"SUCCESS",'\
-      '"Data":[{"DocumentReference":311161,"InvoiceNumber":"6400013693","Payer'\
-      'Name":"DE00000096","AccountNumber":"DE00000096","AccountName":"DE000000'\
-      '96","DocumentType":"NAT","GrossAmount":-3141.93,"NetAmount":0,"TaxAmoun'\
-      't":0,"CurrencyCode":"EUR","InvoiceStatus":"NEW","InvoiceDate":"2023/01/'\
-      '31","DueDate":"2023/02/07","VATCountryISOCode":"DE"}],"TotalRecords":2,'\
-      '"TotalRecordsOnPage":2,"IsFirstPage":true,"IsLastPage":true}'
+      '"Invoices":[{"DocumentReference":311161,"InvoiceNumber":"6400013693","P'\
+      'ayerName":"DE00000096","AccountNumber":"DE00000096","AccountName":"DE00'\
+      '000096","DocumentType":"NAT","GrossAmount":-3141.93,"NetAmount":0,"TaxA'\
+      'mount":0,"CurrencyCode":"EUR","InvoiceDate":"2023/01/31","DueDate":"202'\
+      '3/02/07","VATCountryISOCode":"DE"}],"TotalRecords":2,"TotalRecordsOnPag'\
+      'e":2,"IsFirstPage":true,"IsLastPage":true}'
     )
     received_body = JSON.parse(@response_catcher.response.raw_body)
     assert(ComparisonHelper.match_body(expected_body, received_body))
@@ -314,8 +313,8 @@ class InvoiceControllerTest < ControllerTestBase
     body = EIDSearchRequest.from_hash(APIHelper.json_deserialize(
       '{"Filters":{"ColCoCode":32,"AccountGroupCountry":32,"AccountGroupId":["'\
       '122"],"AccountGroupName":null,"FromDate":"2017/08/30","ToDate":"2017/10'\
-      '/31","InvoiceType":"NAT","InvoiceStatus":"NEW","SortBy":["DocumentDate '\
-      'ASC"]},"Page":1,"PageSize":10}', false))
+      '/31","InvoiceType":"NAT","SortBy":["DocumentDate ASC"]},"Page":1,"PageS'\
+      'ize":10}', false))
 
     # Perform the API call through the SDK function
     result = @controller.eid_search(request_id, body: body)
@@ -324,7 +323,7 @@ class InvoiceControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 
@@ -332,12 +331,11 @@ class InvoiceControllerTest < ControllerTestBase
     refute_nil(result)
     expected_body = JSON.parse(
       '{"RequestId":"a0a1596f-b242-4672-b513-66c5e5554195","Status":"SUCCESS",'\
-      '"Data":[{"DocumentId":15029,"AccountGroupId":"122","AccountGroupName":"'\
-      'EID-122","DocumentType":"INT","DocumentFormat":"FLAT","DocumentDate":"2'\
-      '022/12/28","NumberOfInvoices":1,"FileSize":1624,"DocumentStatus":"DOWNL'\
-      'OADED","DocumentName":"032_122_INT_28122022.TXT"}],"PageSize":1,"Page":'\
-      '1,"TotalPages":12,"TotalRecords":120,"IsFirstPage":true,"IsLastPage":fa'\
-      'lse}'
+      '"Document":[{"DocumentId":15029,"AccountGroupId":"122","AccountGroupNam'\
+      'e":"EID-122","DocumentType":"INT","DocumentFormat":"FLAT","DocumentDate'\
+      '":"2022/12/28","NumberOfInvoices":1,"FileSize":1624,"DocumentName":"032'\
+      '_122_INT_28122022.TXT"}],"PageSize":1,"Page":1,"TotalPages":12,"TotalRe'\
+      'cords":120,"IsFirstPage":true,"IsLastPage":false}'
     )
     received_body = JSON.parse(@response_catcher.response.raw_body)
     assert(ComparisonHelper.match_body(expected_body, received_body))

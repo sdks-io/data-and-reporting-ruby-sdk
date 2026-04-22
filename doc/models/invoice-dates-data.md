@@ -9,8 +9,8 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `invoice_numbers` | `Array<String>` | Optional | List of Invoice numbers. |
-| `invoice_dates` | `Array<String>` | Optional | List of Invoicing dates.<br>Format: yyyyMMdd |
+| `invoice_numbers` | `Array[String]` | Optional | List of Invoice numbers. |
+| `invoice_dates` | `Array[String]` | Optional | List of Invoicing dates.<br>Format: yyyyMMdd |
 
 ## Example (as JSON)
 

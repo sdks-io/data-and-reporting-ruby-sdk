@@ -20,7 +20,7 @@ module ShellDataReportingApIs
 
     # Indicates overall status of the request. Allowed values: SUCCESS, FAILED
     # @return [Array[EIDDocument]]
-    attr_accessor :data
+    attr_accessor :document
 
     # Number of records returned in the response
     # @return [Integer]
@@ -51,7 +51,7 @@ module ShellDataReportingApIs
       @_hash = {} if @_hash.nil?
       @_hash['request_id'] = 'RequestId'
       @_hash['status'] = 'Status'
-      @_hash['data'] = 'Data'
+      @_hash['document'] = 'Document'
       @_hash['page_size'] = 'PageSize'
       @_hash['page'] = 'Page'
       @_hash['total_pages'] = 'TotalPages'
@@ -66,7 +66,7 @@ module ShellDataReportingApIs
       %w[
         request_id
         status
-        data
+        document
         page_size
         page
         total_pages
@@ -81,13 +81,13 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(request_id = SKIP, status = SKIP, data = SKIP,
+    def initialize(request_id = SKIP, status = SKIP, document = SKIP,
                    page_size = SKIP, page = SKIP, total_pages = SKIP,
                    total_records = SKIP, is_first_page = SKIP,
                    is_last_page = SKIP)
       @request_id = request_id unless request_id == SKIP
       @status = status unless status == SKIP
-      @data = data unless data == SKIP
+      @document = document unless document == SKIP
       @page_size = page_size unless page_size == SKIP
       @page = page unless page == SKIP
       @total_pages = total_pages unless total_pages == SKIP
@@ -104,15 +104,15 @@ module ShellDataReportingApIs
       request_id = hash.key?('RequestId') ? hash['RequestId'] : SKIP
       status = hash.key?('Status') ? hash['Status'] : SKIP
       # Parameter is an array, so we need to iterate through it
-      data = nil
-      unless hash['Data'].nil?
-        data = []
-        hash['Data'].each do |structure|
-          data << (EIDDocument.from_hash(structure) if structure)
+      document = nil
+      unless hash['Document'].nil?
+        document = []
+        hash['Document'].each do |structure|
+          document << (EIDDocument.from_hash(structure) if structure)
         end
       end
 
-      data = SKIP unless hash.key?('Data')
+      document = SKIP unless hash.key?('Document')
       page_size = hash.key?('PageSize') ? hash['PageSize'] : SKIP
       page = hash.key?('Page') ? hash['Page'] : SKIP
       total_pages = hash.key?('TotalPages') ? hash['TotalPages'] : SKIP
@@ -123,7 +123,7 @@ module ShellDataReportingApIs
       # Create object from extracted values.
       EIDDocumentResponse.new(request_id,
                               status,
-                              data,
+                              document,
                               page_size,
                               page,
                               total_pages,
@@ -135,18 +135,18 @@ module ShellDataReportingApIs
     # Provides a human-readable string representation of the object.
     def to_s
       class_name = self.class.name.split('::').last
-      "<#{class_name} request_id: #{@request_id}, status: #{@status}, data: #{@data}, page_size:"\
-      " #{@page_size}, page: #{@page}, total_pages: #{@total_pages}, total_records:"\
+      "<#{class_name} request_id: #{@request_id}, status: #{@status}, document: #{@document},"\
+      " page_size: #{@page_size}, page: #{@page}, total_pages: #{@total_pages}, total_records:"\
       " #{@total_records}, is_first_page: #{@is_first_page}, is_last_page: #{@is_last_page}>"
     end
 
     # Provides a debugging-friendly string with detailed object information.
     def inspect
       class_name = self.class.name.split('::').last
-      "<#{class_name} request_id: #{@request_id.inspect}, status: #{@status.inspect}, data:"\
-      " #{@data.inspect}, page_size: #{@page_size.inspect}, page: #{@page.inspect}, total_pages:"\
-      " #{@total_pages.inspect}, total_records: #{@total_records.inspect}, is_first_page:"\
-      " #{@is_first_page.inspect}, is_last_page: #{@is_last_page.inspect}>"
+      "<#{class_name} request_id: #{@request_id.inspect}, status: #{@status.inspect}, document:"\
+      " #{@document.inspect}, page_size: #{@page_size.inspect}, page: #{@page.inspect},"\
+      " total_pages: #{@total_pages.inspect}, total_records: #{@total_records.inspect},"\
+      " is_first_page: #{@is_first_page.inspect}, is_last_page: #{@is_last_page.inspect}>"
     end
   end
 end

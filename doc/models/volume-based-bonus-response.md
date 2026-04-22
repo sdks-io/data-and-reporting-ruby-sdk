@@ -9,9 +9,9 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `configuration` | [`Array<BonusConfiguration>`](../../doc/models/bonus-configuration.md) | Optional | - |
-| `current_period_consumption` | [`Array<CurrentVolume>`](../../doc/models/current-volume.md) | Optional | - |
-| `historical_bonus_paid` | [`Array<BonusHistory>`](../../doc/models/bonus-history.md) | Optional | - |
+| `configuration` | [`Array[BonusConfiguration]`](../../doc/models/bonus-configuration.md) | Optional | - |
+| `current_period_consumption` | [`Array[CurrentVolume]`](../../doc/models/current-volume.md) | Optional | - |
+| `historical_bonus_paid` | [`Array[BonusHistory]`](../../doc/models/bonus-history.md) | Optional | - |
 
 ## Example (as JSON)
 

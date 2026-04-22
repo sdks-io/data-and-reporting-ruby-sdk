@@ -48,16 +48,6 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :invoice_type
 
-    # Status of the document. 
-    # Optional.
-    # Possible values:
-    # •    NEW
-    # •    VIEWED
-    # •    DOWNLOADED
-    # •    RESTORED
-    # @return [String]
-    attr_accessor :invoice_status
-
     # Sort option –
     # •    InvoiceNumber ASC
     # •    InvoiceDate ASC
@@ -77,7 +67,6 @@ module ShellDataReportingApIs
       @_hash['from_date'] = 'FromDate'
       @_hash['to_date'] = 'ToDate'
       @_hash['invoice_type'] = 'InvoiceType'
-      @_hash['invoice_status'] = 'InvoiceStatus'
       @_hash['sort_by'] = 'SortBy'
       @_hash
     end
@@ -89,7 +78,6 @@ module ShellDataReportingApIs
         from_date
         to_date
         invoice_type
-        invoice_status
         sort_by
       ]
     end
@@ -103,14 +91,13 @@ module ShellDataReportingApIs
         from_date
         to_date
         invoice_type
-        invoice_status
       ]
     end
 
     def initialize(col_co_code = nil, account_group_country = nil,
                    account_group_id = nil, account_group_name = SKIP,
                    from_date = SKIP, to_date = SKIP, invoice_type = SKIP,
-                   invoice_status = SKIP, sort_by = SKIP)
+                   sort_by = SKIP)
       @col_co_code = col_co_code
       @account_group_country = account_group_country
       @account_group_id = account_group_id
@@ -118,7 +105,6 @@ module ShellDataReportingApIs
       @from_date = from_date unless from_date == SKIP
       @to_date = to_date unless to_date == SKIP
       @invoice_type = invoice_type unless invoice_type == SKIP
-      @invoice_status = invoice_status unless invoice_status == SKIP
       @sort_by = sort_by unless sort_by == SKIP
     end
 
@@ -137,7 +123,6 @@ module ShellDataReportingApIs
       from_date = hash.key?('FromDate') ? hash['FromDate'] : SKIP
       to_date = hash.key?('ToDate') ? hash['ToDate'] : SKIP
       invoice_type = hash.key?('InvoiceType') ? hash['InvoiceType'] : SKIP
-      invoice_status = hash.key?('InvoiceStatus') ? hash['InvoiceStatus'] : SKIP
       sort_by = hash.key?('SortBy') ? hash['SortBy'] : SKIP
 
       # Create object from extracted values.
@@ -148,7 +133,6 @@ module ShellDataReportingApIs
                        from_date,
                        to_date,
                        invoice_type,
-                       invoice_status,
                        sort_by)
     end
 
@@ -158,7 +142,7 @@ module ShellDataReportingApIs
       "<#{class_name} col_co_code: #{@col_co_code}, account_group_country:"\
       " #{@account_group_country}, account_group_id: #{@account_group_id}, account_group_name:"\
       " #{@account_group_name}, from_date: #{@from_date}, to_date: #{@to_date}, invoice_type:"\
-      " #{@invoice_type}, invoice_status: #{@invoice_status}, sort_by: #{@sort_by}>"
+      " #{@invoice_type}, sort_by: #{@sort_by}>"
     end
 
     # Provides a debugging-friendly string with detailed object information.
@@ -167,8 +151,8 @@ module ShellDataReportingApIs
       "<#{class_name} col_co_code: #{@col_co_code.inspect}, account_group_country:"\
       " #{@account_group_country.inspect}, account_group_id: #{@account_group_id.inspect},"\
       " account_group_name: #{@account_group_name.inspect}, from_date: #{@from_date.inspect},"\
-      " to_date: #{@to_date.inspect}, invoice_type: #{@invoice_type.inspect}, invoice_status:"\
-      " #{@invoice_status.inspect}, sort_by: #{@sort_by.inspect}>"
+      " to_date: #{@to_date.inspect}, invoice_type: #{@invoice_type.inspect}, sort_by:"\
+      " #{@sort_by.inspect}>"
     end
   end
 end

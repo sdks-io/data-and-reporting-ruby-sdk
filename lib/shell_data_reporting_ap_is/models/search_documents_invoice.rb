@@ -59,10 +59,6 @@ module ShellDataReportingApIs
 
     # Included tax amount in the invoice
     # @return [String]
-    attr_accessor :invoice_status
-
-    # Included tax amount in the invoice
-    # @return [String]
     attr_accessor :invoice_date
 
     # Included tax amount in the invoice
@@ -72,6 +68,11 @@ module ShellDataReportingApIs
     # Included tax amount in the invoice
     # @return [String]
     attr_accessor :vat_country_iso_code
+
+    # Unique identifier for the invoice in KSeF system. This field is populated
+    # only when the invoice is registered in KSeF system.
+    # @return [String]
+    attr_accessor :ksef_document_reference
 
     # A mapping from model property names to API property names.
     def self.names
@@ -86,10 +87,10 @@ module ShellDataReportingApIs
       @_hash['net_amount'] = 'NetAmount'
       @_hash['tax_amount'] = 'TaxAmount'
       @_hash['currency_code'] = 'CurrencyCode'
-      @_hash['invoice_status'] = 'InvoiceStatus'
       @_hash['invoice_date'] = 'InvoiceDate'
       @_hash['due_date'] = 'DueDate'
       @_hash['vat_country_iso_code'] = 'VATCountryISOCode'
+      @_hash['ksef_document_reference'] = 'KsefDocumentReference'
       @_hash
     end
 
@@ -106,10 +107,10 @@ module ShellDataReportingApIs
         net_amount
         tax_amount
         currency_code
-        invoice_status
         invoice_date
         due_date
         vat_country_iso_code
+        ksef_document_reference
       ]
     end
 
@@ -125,7 +126,6 @@ module ShellDataReportingApIs
         net_amount
         tax_amount
         currency_code
-        invoice_status
         invoice_date
         due_date
         vat_country_iso_code
@@ -136,9 +136,8 @@ module ShellDataReportingApIs
                    payer_name = SKIP, account_number = SKIP,
                    account_name = SKIP, document_type = SKIP,
                    gross_amount = SKIP, net_amount = SKIP, tax_amount = SKIP,
-                   currency_code = SKIP, invoice_status = SKIP,
-                   invoice_date = SKIP, due_date = SKIP,
-                   vat_country_iso_code = SKIP)
+                   currency_code = SKIP, invoice_date = SKIP, due_date = SKIP,
+                   vat_country_iso_code = SKIP, ksef_document_reference = SKIP)
       @document_reference = document_reference unless document_reference == SKIP
       @invoice_number = invoice_number unless invoice_number == SKIP
       @payer_name = payer_name unless payer_name == SKIP
@@ -149,10 +148,10 @@ module ShellDataReportingApIs
       @net_amount = net_amount unless net_amount == SKIP
       @tax_amount = tax_amount unless tax_amount == SKIP
       @currency_code = currency_code unless currency_code == SKIP
-      @invoice_status = invoice_status unless invoice_status == SKIP
       @invoice_date = invoice_date unless invoice_date == SKIP
       @due_date = due_date unless due_date == SKIP
       @vat_country_iso_code = vat_country_iso_code unless vat_country_iso_code == SKIP
+      @ksef_document_reference = ksef_document_reference unless ksef_document_reference == SKIP
     end
 
     # Creates an instance of the object from a hash.
@@ -171,11 +170,12 @@ module ShellDataReportingApIs
       net_amount = hash.key?('NetAmount') ? hash['NetAmount'] : SKIP
       tax_amount = hash.key?('TaxAmount') ? hash['TaxAmount'] : SKIP
       currency_code = hash.key?('CurrencyCode') ? hash['CurrencyCode'] : SKIP
-      invoice_status = hash.key?('InvoiceStatus') ? hash['InvoiceStatus'] : SKIP
       invoice_date = hash.key?('InvoiceDate') ? hash['InvoiceDate'] : SKIP
       due_date = hash.key?('DueDate') ? hash['DueDate'] : SKIP
       vat_country_iso_code =
         hash.key?('VATCountryISOCode') ? hash['VATCountryISOCode'] : SKIP
+      ksef_document_reference =
+        hash.key?('KsefDocumentReference') ? hash['KsefDocumentReference'] : SKIP
 
       # Create object from extracted values.
       SearchDocumentsInvoice.new(document_reference,
@@ -188,10 +188,10 @@ module ShellDataReportingApIs
                                  net_amount,
                                  tax_amount,
                                  currency_code,
-                                 invoice_status,
                                  invoice_date,
                                  due_date,
-                                 vat_country_iso_code)
+                                 vat_country_iso_code,
+                                 ksef_document_reference)
     end
 
     # Provides a human-readable string representation of the object.
@@ -201,8 +201,9 @@ module ShellDataReportingApIs
       " #{@invoice_number}, payer_name: #{@payer_name}, account_number: #{@account_number},"\
       " account_name: #{@account_name}, document_type: #{@document_type}, gross_amount:"\
       " #{@gross_amount}, net_amount: #{@net_amount}, tax_amount: #{@tax_amount}, currency_code:"\
-      " #{@currency_code}, invoice_status: #{@invoice_status}, invoice_date: #{@invoice_date},"\
-      " due_date: #{@due_date}, vat_country_iso_code: #{@vat_country_iso_code}>"
+      " #{@currency_code}, invoice_date: #{@invoice_date}, due_date: #{@due_date},"\
+      " vat_country_iso_code: #{@vat_country_iso_code}, ksef_document_reference:"\
+      " #{@ksef_document_reference}>"
     end
 
     # Provides a debugging-friendly string with detailed object information.
@@ -213,9 +214,9 @@ module ShellDataReportingApIs
       " #{@account_number.inspect}, account_name: #{@account_name.inspect}, document_type:"\
       " #{@document_type.inspect}, gross_amount: #{@gross_amount.inspect}, net_amount:"\
       " #{@net_amount.inspect}, tax_amount: #{@tax_amount.inspect}, currency_code:"\
-      " #{@currency_code.inspect}, invoice_status: #{@invoice_status.inspect}, invoice_date:"\
-      " #{@invoice_date.inspect}, due_date: #{@due_date.inspect}, vat_country_iso_code:"\
-      " #{@vat_country_iso_code.inspect}>"
+      " #{@currency_code.inspect}, invoice_date: #{@invoice_date.inspect}, due_date:"\
+      " #{@due_date.inspect}, vat_country_iso_code: #{@vat_country_iso_code.inspect},"\
+      " ksef_document_reference: #{@ksef_document_reference.inspect}>"
     end
   end
 end

@@ -19,15 +19,16 @@
 | `net_amount` | `Float` | Optional | - |
 | `tax_amount` | `Float` | Optional | - |
 | `currency_code` | `String` | Optional | - |
-| `invoice_status` | `String` | Optional | - |
 | `invoice_date` | `String` | Optional | - |
 | `due_date` | `String` | Optional | - |
 | `vat_country_iso_code` | `String` | Optional | - |
+| `ksef_document_reference` | `String` | Optional | Unique identifier for the invoice in KSeF system. This field is populated only when the invoice is registered in KSeF system. |
 
 ## Example (as JSON)
 
 ```json
 {
+  "KsefDocumentReference": "1234567890123456",
   "DocumentReference": 10,
   "InvoiceNumber": "InvoiceNumber0",
   "PayerName": "PayerName0",

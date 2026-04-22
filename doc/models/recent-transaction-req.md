@@ -14,7 +14,7 @@
 | `account_number` | `String` | Optional | Customer account number. |
 | `product_code` | `String` | Optional | Global product code |
 | `purchased_in_country` | `String` | Optional | Delco country<br><br>**Constraints**: *Minimum Length*: `2`, *Maximum Length*: `2` |
-| `card_pan` | `String` | Optional | Card identifier number masked |
+| `card_pan` | `String` | Optional | Card PAN Number without masked |
 | `from_date_time` | `String` | Optional | Start date and time of transactions |
 | `to_date_time` | `String` | Optional | End date and time of transactions. Mandatory if FromDateTime is provided. |
 | `transaction_status` | `String` | Optional | Status of transaction. DO NOT pass the value if includeDeclines is passed |
@@ -34,7 +34,7 @@
   "AccountNumber": "GB00001233",
   "ProductCode": "22",
   "PurchasedInCountry": "GB",
-  "CardPAN": "700205******890645",
+  "CardPAN": "7002051006629890645",
   "FromDateTime": "2020-11-09 13:56:03.000",
   "ToDateTime": "2020-12-09 13:56:03.000",
   "TransactionStatus": "APPROVED",

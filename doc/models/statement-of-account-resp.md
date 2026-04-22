@@ -10,10 +10,10 @@
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `last_statement_of_account` | [`LastStatementOfAccount2`](../../doc/models/last-statement-of-account-2.md) | Optional | - |
-| `monthly_invoice_trend` | [`Array<MonthlyInvoiceTrend>`](../../doc/models/monthly-invoice-trend.md) | Optional | - |
-| `past_statement_of_accounts` | [`Array<PastStatementOfAccounts>`](../../doc/models/past-statement-of-accounts.md) | Optional | - |
-| `payments_since_last_soa` | [`Array<PaymentsSinceLastSOA>`](../../doc/models/payments-since-last-soa.md) | Optional | - |
-| `invoices_summaries` | [`Array<InvoicesSummaries>`](../../doc/models/invoices-summaries.md) | Optional | - |
+| `monthly_invoice_trend` | [`Array[MonthlyInvoiceTrend]`](../../doc/models/monthly-invoice-trend.md) | Optional | - |
+| `past_statement_of_accounts` | [`Array[PastStatementOfAccounts]`](../../doc/models/past-statement-of-accounts.md) | Optional | - |
+| `payments_since_last_soa` | [`Array[PaymentsSinceLastSOA]`](../../doc/models/payments-since-last-soa.md) | Optional | - |
+| `invoices_summaries` | [`Array[InvoicesSummaries]`](../../doc/models/invoices-summaries.md) | Optional | - |
 
 ## Example (as JSON)
 

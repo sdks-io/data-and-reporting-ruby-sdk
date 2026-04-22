@@ -11,7 +11,7 @@
 |  --- | --- | --- | --- |
 | `request_id` | `String` | Optional | API Request Id |
 | `status` | `String` | Optional | Indicates overall status of the request. Allowed values: SUCCES, FAILED |
-| `data` | [`Array<InvoiceSummaryDetails>`](../../doc/models/invoice-summary-details.md) | Optional | - |
+| `data` | [`Array[InvoiceSummaryDetails]`](../../doc/models/invoice-summary-details.md) | Optional | - |
 
 ## Example (as JSON)
 

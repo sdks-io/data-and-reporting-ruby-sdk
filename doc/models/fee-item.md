@@ -28,7 +28,7 @@
 | `fee_type_group` | `String` | Optional | Fee type group in under which the Fee item is generated.<br>Example:<br>Account<br>Card<br>Others |
 | `fee_rule_id` | `Integer` | Optional | Fee rule identifier |
 | `fee_rule_description` | `String` | Optional | Fee rule description |
-| `fee_rule_tiers` | [`Array<FeesFeeRuleTiers>`](../../doc/models/fees-fee-rule-tiers.md) | Optional | - |
+| `fee_rule_tiers` | [`Array[FeesFeeRuleTiers]`](../../doc/models/fees-fee-rule-tiers.md) | Optional | - |
 | `fee_item_date` | `String` | Optional | Local Fee Item Date of when the transaction took place<br>Format: yyyyMMdd |
 | `fee_item_time` | `String` | Optional | Local Fee Item Time of where the transaction took place<br>Format: HH:mm:ss (24 hours format) |
 | `is_manual` | `TrueClass \| FalseClass` | Optional | True/False.<br>Is manual |

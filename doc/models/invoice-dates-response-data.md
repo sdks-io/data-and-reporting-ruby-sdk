@@ -11,7 +11,7 @@
 |  --- | --- | --- | --- |
 | `request_id` | `String` | Optional | Unique request identifier passed from end user. This identifier helps in tracing a transaction |
 | `status` | `String` | Optional | Indicates overall status of the request. Allowed values: SUCCES, FAILED |
-| `data` | [`Array<InvoiceDatesData>`](../../doc/models/invoice-dates-data.md) | Optional | - |
+| `data` | [`Array[InvoiceDatesData]`](../../doc/models/invoice-dates-data.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `transactions` | [`Array<MultiPricedTransactionResponseTransactionsItems>`](../../doc/models/multi-priced-transaction-response-transactions-items.md) | Optional | - |
+| `transactions` | [`Array[MultiPricedTransactionResponseTransactionsItems]`](../../doc/models/multi-priced-transaction-response-transactions-items.md) | Optional | - |
 
 ## Example (as JSON)
 

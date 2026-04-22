@@ -39,12 +39,12 @@ class TransactionControllerTest < ControllerTestBase
     body = RecentTransactionRequest.from_hash(APIHelper.json_deserialize(
       '{"PageSize":1,"Page":1,"Filters":{"ColCoCode":14,"PayerNumber":"GB00001'\
       '232","AccountNumber":"GB00001233","ProductCode":"22","PurchasedInCountr'\
-      'y":"GB","CardPAN":"700205******890645","FromDateTime":"2020-11-09 13:56'\
-      ':03.000","ToDateTime":"2020-12-09 13:56:03.000","TransactionStatus":"AP'\
-      'PROVED","FuelOnly":"False","ProductGroupName":"Motor gasoline","Vehicle'\
-      'RegistrationNumber":"YG67OUM","IncludeDeclines":true,"CardIssuerName":"'\
-      'Mathew","ColumnList":"PayerNumber,AccountNumber,ProductName,FuelVolume,'\
-      'PAN"}}', false))
+      'y":"GB","CardPAN":"7002051006629890645","FromDateTime":"2020-11-09 13:5'\
+      '6:03.000","ToDateTime":"2020-12-09 13:56:03.000","TransactionStatus":"A'\
+      'PPROVED","FuelOnly":"False","ProductGroupName":"Motor gasoline","Vehicl'\
+      'eRegistrationNumber":"YG67OUM","IncludeDeclines":true,"CardIssuerName":'\
+      '"Mathew","ColumnList":"PayerNumber,AccountNumber,ProductName,FuelVolume'\
+      ',PAN"}}', false))
 
     # Perform the API call through the SDK function
     result = @controller.recent_transactions_new(request_id, body: body)
@@ -53,7 +53,7 @@ class TransactionControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 
@@ -157,7 +157,7 @@ class TransactionControllerTest < ControllerTestBase
     assert_equal(200, @response_catcher.response.status_code)
     # Test headers
     expected_headers = {}
-    expected_headers['content-type'] = 'application/json'
+    expected_headers['content-type'] = 'application/json; charset=utf-8'
 
     assert(ComparisonHelper.match_headers(expected_headers, @response_catcher.response.headers))
 

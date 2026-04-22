@@ -38,16 +38,51 @@ Go to the Shell Developer Portal: [https://developer.shell.com](https://develope
 Install the gem from the command line:
 
 ```bash
-gem install data-and-reporting-sdk -v 2.0.0
+gem install data-and-reporting-sdk -v 3.0.0
 ```
 
 Or add the gem to your Gemfile and run `bundle`:
 
 ```ruby
-gem 'data-and-reporting-sdk', '2.0.0'
+gem 'data-and-reporting-sdk', '3.0.0'
 ```
 
-For additional gem details, see the [RubyGems page for the data-and-reporting-sdk gem](https://rubygems.org/gems/data-and-reporting-sdk/versions/2.0.0).
+For additional gem details, see the [RubyGems page for the data-and-reporting-sdk gem](https://rubygems.org/gems/data-and-reporting-sdk/versions/3.0.0).
+
+## IRB Console Usage
+
+You can explore the SDK interactively using IRB in two ways
+
+### 1. Use IRB with Installed Gem
+
+Open your system terminal (Command Prompt, Git Bash or macOS Terminal) and type the following command to start the irb console.
+
+```bash
+irb
+```
+
+Now you can load the SDK in the IRB
+
+```ruby
+require 'shell_data_reporting_ap_is'
+include ShellDataReportingApIs
+```
+
+### 2. Use IRB within SDK
+
+Open your system terminal (Command Prompt, Git Bash or macOS Terminal) and navigate to the root folder of SDK.
+
+```
+cd path/to/shell_data_reporting_ap_is
+```
+
+Now you can start the preconfigured irb console by running the following command
+
+```bash
+ruby bin/console
+```
+
+**_Note:_** This automatically loads the SDK from lib/
 
 ## Test the SDK
 
@@ -59,13 +94,13 @@ rake
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
-| environment | `Environment` | The API environment. <br> **Default: `Environment.SIT`** |
+| environment | [`Environment`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/README.md#environments) | The API environment. <br> **Default: `Environment.SIT`** |
 | connection | `Faraday::Connection` | The Faraday connection object passed by the SDK user for making requests |
 | adapter | `Faraday::Adapter` | The Faraday adapter object passed by the SDK user for performing http requests |
 | timeout | `Float` | The value to use for connection timeout. <br> **Default: 60** |
@@ -75,10 +110,12 @@ The following parameters are configurable for the API Client:
 | retry_statuses | `Array` | A list of HTTP statuses to retry. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | retry_methods | `Array` | A list of HTTP methods to retry. <br> **Default: %i[get put]** |
 | http_callback | `HttpCallBack` | The Http CallBack allows defining callables for pre and post API calls. |
-| proxy_settings | [`ProxySettings`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/proxy-settings.md) | Optional proxy configuration to route HTTP requests through a proxy server. |
-| client_credentials_auth_credentials | [`ClientCredentialsAuthCredentials`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/auth/oauth-2-client-credentials-grant.md) | The credential object for OAuth 2 Client Credentials Grant |
+| proxy_settings | [`ProxySettings`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/proxy-settings.md) | Optional proxy configuration to route HTTP requests through a proxy server. |
+| client_credentials_auth_credentials | [`ClientCredentialsAuthCredentials`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/auth/oauth-2-client-credentials-grant.md) | The credential object for OAuth 2 Client Credentials Grant |
 
 The API client can be initialized as follows:
+
+### Code-Based Client Initialization
 
 ```ruby
 require 'shell_data_reporting_ap_is'
@@ -93,6 +130,18 @@ client = Client.new(
 )
 ```
 
+### Environment-Based Client Initialization
+
+```ruby
+require 'shell_data_reporting_ap_is'
+include ShellDataReportingApIs
+
+# Create client from environment
+client = Client.from_env
+```
+
+See the [`Environment-Based Client Initialization`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/environment-based-client-initialization.md) section for details.
+
 ## Environments
 
 The SDK can be configured to use a different environment for making API calls. Available environments are:
@@ -102,33 +151,34 @@ The SDK can be configured to use a different environment for making API calls. A
 | Name | Description |
 |  --- | --- |
 | SIT | **Default** |
-| Production | - |
+| PRODUCTION | - |
 
 ## Authorization
 
 This API uses the following authentication schemes.
 
-* [`BearerToken (OAuth 2 Client Credentials Grant)`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/auth/oauth-2-client-credentials-grant.md)
+* [`BearerToken (OAuth 2 Client Credentials Grant)`](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/auth/oauth-2-client-credentials-grant.md)
 
 ## List of APIs
 
-* [Customer](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/controllers/customer.md)
-* [Transaction](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/controllers/transaction.md)
-* [Invoice](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/controllers/invoice.md)
+* [Customer](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/controllers/customer.md)
+* [Transaction](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/controllers/transaction.md)
+* [Invoice](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/controllers/invoice.md)
 
 ## SDK Infrastructure
 
 ### Configuration
 
-* [ProxySettings](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/proxy-settings.md)
+* [ProxySettings](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/proxy-settings.md)
+* [Environment-Based Client Initialization](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/environment-based-client-initialization.md)
 
 ### HTTP
 
-* [HttpResponse](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/http-response.md)
-* [HttpRequest](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/http-request.md)
+* [HttpResponse](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/http-response.md)
+* [HttpRequest](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/http-request.md)
 
 ### Utilities
 
-* [ApiHelper](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/api-helper.md)
-* [DateTimeHelper](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/2.0.0/doc/date-time-helper.md)
+* [ApiHelper](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/api-helper.md)
+* [DateTimeHelper](https://www.github.com/sdks-io/data-and-reporting-ruby-sdk/tree/3.0.0/doc/date-time-helper.md)
 

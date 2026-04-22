@@ -18,7 +18,7 @@
 | `number_of_soa_documents` | `Integer` | Optional | This parameter is only applicable when “IncludePastStatementOfAccounts” parameter is set to True. |
 | `include_account_invoices_summary` | `TrueClass \| FalseClass` | Optional | True/False<br>Optional.<br>Default value is false.<br>When true InvoicesSummaries list will be returned in the API output. |
 | `col_co_id` | `Integer` | Optional | Collecting Company Id of the selected payer.<br>Optional If ColCo Code is passed else Mandatory. |
-| `accounts` | [`Array<Accounts>`](../../doc/models/accounts.md) | Optional | - |
+| `accounts` | [`Array[Accounts]`](../../doc/models/accounts.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -67,7 +67,7 @@
 | `vat_country_iso_code` | `String` | Optional | Country ISO code of the VAT country.<br>Example : CZ, SK, UK, etc., |
 | `vat_country_op_co_id` | `String` | Optional | VAT country’s OpCo Id.<br>Example: 032 |
 | `document_reference` | `String` | Optional | document reference number of the Invoice file |
-| `additional_documents` | [`Array<InvoiceSearchAdditionalDocument>`](../../doc/models/invoice-search-additional-document.md) | Optional | - |
+| `additional_documents` | [`Array[InvoiceSearchAdditionalDocument]`](../../doc/models/invoice-search-additional-document.md) | Optional | - |
 
 ## Example (as JSON)
 

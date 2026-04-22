@@ -42,16 +42,6 @@ module ShellDataReportingApIs
     # @return [Array[String]]
     attr_accessor :invoice_number_list
 
-    # The status of the invoices
-    # Optional
-    # One of the following values:
-    # •    NEW
-    # •    VIEWED
-    # •    DOWNLOADED
-    # •    RESTORED
-    # @return [String]
-    attr_accessor :invoice_status
-
     # Invoice Issuing Date Range/From
     # Optional
     # Format: yyyy/MM/dd
@@ -132,7 +122,6 @@ module ShellDataReportingApIs
       @_hash['account_number_list'] = 'AccountNumberList'
       @_hash['invoice_number'] = 'InvoiceNumber'
       @_hash['invoice_number_list'] = 'InvoiceNumberList'
-      @_hash['invoice_status'] = 'InvoiceStatus'
       @_hash['issuing_date_from'] = 'IssuingDateFrom'
       @_hash['issuing_date_to'] = 'IssuingDateTo'
       @_hash['due_date_from'] = 'DueDateFrom'
@@ -153,7 +142,6 @@ module ShellDataReportingApIs
         account_number_list
         invoice_number
         invoice_number_list
-        invoice_status
         issuing_date_from
         issuing_date_to
         due_date_from
@@ -172,7 +160,6 @@ module ShellDataReportingApIs
         payer_number
         account_number
         invoice_number
-        invoice_status
         issuing_date_from
         issuing_date_to
         due_date_from
@@ -187,18 +174,16 @@ module ShellDataReportingApIs
 
     def initialize(payer_number = nil, col_co_code = nil, account_number = SKIP,
                    account_number_list = SKIP, invoice_number = SKIP,
-                   invoice_number_list = SKIP, invoice_status = SKIP,
-                   issuing_date_from = SKIP, issuing_date_to = SKIP,
-                   due_date_from = SKIP, due_date_to = SKIP,
-                   gross_amount = SKIP, gross_amount_operator = SKIP,
-                   document_type = SKIP, vat_issuer_country = SKIP,
-                   sorty_by = SKIP)
+                   invoice_number_list = SKIP, issuing_date_from = SKIP,
+                   issuing_date_to = SKIP, due_date_from = SKIP,
+                   due_date_to = SKIP, gross_amount = SKIP,
+                   gross_amount_operator = SKIP, document_type = SKIP,
+                   vat_issuer_country = SKIP, sorty_by = SKIP)
       @payer_number = payer_number
       @account_number = account_number unless account_number == SKIP
       @account_number_list = account_number_list unless account_number_list == SKIP
       @invoice_number = invoice_number unless invoice_number == SKIP
       @invoice_number_list = invoice_number_list unless invoice_number_list == SKIP
-      @invoice_status = invoice_status unless invoice_status == SKIP
       @issuing_date_from = issuing_date_from unless issuing_date_from == SKIP
       @issuing_date_to = issuing_date_to unless issuing_date_to == SKIP
       @due_date_from = due_date_from unless due_date_from == SKIP
@@ -224,7 +209,6 @@ module ShellDataReportingApIs
       invoice_number = hash.key?('InvoiceNumber') ? hash['InvoiceNumber'] : SKIP
       invoice_number_list =
         hash.key?('InvoiceNumberList') ? hash['InvoiceNumberList'] : SKIP
-      invoice_status = hash.key?('InvoiceStatus') ? hash['InvoiceStatus'] : SKIP
       issuing_date_from =
         hash.key?('IssuingDateFrom') ? hash['IssuingDateFrom'] : SKIP
       issuing_date_to =
@@ -246,7 +230,6 @@ module ShellDataReportingApIs
                        account_number_list,
                        invoice_number,
                        invoice_number_list,
-                       invoice_status,
                        issuing_date_from,
                        issuing_date_to,
                        due_date_from,
@@ -263,12 +246,11 @@ module ShellDataReportingApIs
       class_name = self.class.name.split('::').last
       "<#{class_name} payer_number: #{@payer_number}, account_number: #{@account_number},"\
       " account_number_list: #{@account_number_list}, invoice_number: #{@invoice_number},"\
-      " invoice_number_list: #{@invoice_number_list}, invoice_status: #{@invoice_status},"\
-      " issuing_date_from: #{@issuing_date_from}, issuing_date_to: #{@issuing_date_to},"\
-      " due_date_from: #{@due_date_from}, due_date_to: #{@due_date_to}, gross_amount:"\
-      " #{@gross_amount}, gross_amount_operator: #{@gross_amount_operator}, document_type:"\
-      " #{@document_type}, vat_issuer_country: #{@vat_issuer_country}, sorty_by: #{@sorty_by},"\
-      " col_co_code: #{@col_co_code}>"
+      " invoice_number_list: #{@invoice_number_list}, issuing_date_from: #{@issuing_date_from},"\
+      " issuing_date_to: #{@issuing_date_to}, due_date_from: #{@due_date_from}, due_date_to:"\
+      " #{@due_date_to}, gross_amount: #{@gross_amount}, gross_amount_operator:"\
+      " #{@gross_amount_operator}, document_type: #{@document_type}, vat_issuer_country:"\
+      " #{@vat_issuer_country}, sorty_by: #{@sorty_by}, col_co_code: #{@col_co_code}>"
     end
 
     # Provides a debugging-friendly string with detailed object information.
@@ -277,13 +259,12 @@ module ShellDataReportingApIs
       "<#{class_name} payer_number: #{@payer_number.inspect}, account_number:"\
       " #{@account_number.inspect}, account_number_list: #{@account_number_list.inspect},"\
       " invoice_number: #{@invoice_number.inspect}, invoice_number_list:"\
-      " #{@invoice_number_list.inspect}, invoice_status: #{@invoice_status.inspect},"\
-      " issuing_date_from: #{@issuing_date_from.inspect}, issuing_date_to:"\
-      " #{@issuing_date_to.inspect}, due_date_from: #{@due_date_from.inspect}, due_date_to:"\
-      " #{@due_date_to.inspect}, gross_amount: #{@gross_amount.inspect}, gross_amount_operator:"\
-      " #{@gross_amount_operator.inspect}, document_type: #{@document_type.inspect},"\
-      " vat_issuer_country: #{@vat_issuer_country.inspect}, sorty_by: #{@sorty_by.inspect},"\
-      " col_co_code: #{@col_co_code.inspect}>"
+      " #{@invoice_number_list.inspect}, issuing_date_from: #{@issuing_date_from.inspect},"\
+      " issuing_date_to: #{@issuing_date_to.inspect}, due_date_from: #{@due_date_from.inspect},"\
+      " due_date_to: #{@due_date_to.inspect}, gross_amount: #{@gross_amount.inspect},"\
+      " gross_amount_operator: #{@gross_amount_operator.inspect}, document_type:"\
+      " #{@document_type.inspect}, vat_issuer_country: #{@vat_issuer_country.inspect}, sorty_by:"\
+      " #{@sorty_by.inspect}, col_co_code: #{@col_co_code.inspect}>"
     end
   end
 end

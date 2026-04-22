@@ -33,5 +33,22 @@ module ShellDataReportingApIs
 
       PRICED_TRANSACTION_REQ_V2_SORT_ORDER_ENUM.include?(value)
     end
+
+    def self.from_value(value, default_value = ENUM_1)
+      return default_value if value.nil?
+
+      str = value.to_s.strip
+
+      case str.downcase
+      when 'enum_1' then ENUM_1
+      when 'enum_2' then ENUM_2
+      when 'enum_3' then ENUM_3
+      when 'enum_4' then ENUM_4
+      when 'enum_5' then ENUM_5
+      when 'enum_6' then ENUM_6
+      else
+        default_value
+      end
+    end
   end
 end

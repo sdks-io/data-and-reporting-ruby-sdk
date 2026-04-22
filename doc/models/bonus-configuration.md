@@ -30,10 +30,10 @@
 | `fee_rule_currency_symbol` | `String` | Optional | Currency symbol of the currency configured in the Bonus Configuration, if any. |
 | `fee_rule_available_from` | `String` | Optional | This bonus or association bonus is available from this date.<br>Format: YYYYMMDD |
 | `fee_rule_available_to` | `String` | Optional | This bonus or association bonus configuration will not be available from this date.<br>Format: YYYYMMDD |
-| `fee_rule_locations` | [`Array<FeeRuleLocation>`](../../doc/models/fee-rule-location.md) | Optional | - |
-| `fee_rule_tiers` | [`Array<FeeRuleTier>`](../../doc/models/fee-rule-tier.md) | Optional | - |
-| `associated_accounts` | [`Array<AssociatedAccount>`](../../doc/models/associated-account.md) | Optional | - |
-| `fee_rule_products` | [`Array<FeeRuleProduct>`](../../doc/models/fee-rule-product.md) | Optional | - |
+| `fee_rule_locations` | [`Array[FeeRuleLocation]`](../../doc/models/fee-rule-location.md) | Optional | - |
+| `fee_rule_tiers` | [`Array[FeeRuleTier]`](../../doc/models/fee-rule-tier.md) | Optional | - |
+| `associated_accounts` | [`Array[AssociatedAccount]`](../../doc/models/associated-account.md) | Optional | - |
+| `fee_rule_products` | [`Array[FeeRuleProduct]`](../../doc/models/fee-rule-product.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -47,7 +47,7 @@
 | `site_code` | `String` | Optional | Site Code<br>Example:<br>050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755 |
 | `site_name` | `String` | Optional | Site Name<br>Example:<br>050001 -    CHARNOCK RICHARD NTHBOUND MWSA 0755 |
 | `site_country` | `String` | Optional | Site Country<br>Example: France, Germany |
-| `location` | [`Array<SiteLocation>`](../../doc/models/site-location.md) | Optional | - |
+| `location` | [`Array[SiteLocation]`](../../doc/models/site-location.md) | Optional | - |
 | `card_group_name` | `String` | Optional | Card Group Name |
 | `receipt_number` | `String` | Optional | ReceiptNumber |
 | `product_code` | `String` | Optional | Product Code<br>10    TMF Charges<br>11    Tunnel/Bridges<br>12    Motorway toll |

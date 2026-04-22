@@ -14,7 +14,7 @@
 | `payer_id` | `Integer` | Optional | Payer Id (i.e. Customer Id of the Payment Customer in Cards Platform) of the selected payer.<br>Optional if PayerNumber is passed else Mandatory |
 | `account_id` | `Integer` | Optional | Account Id (i.e. Customer Id of the Sub Account in GFN) of the selected account.<br>Optional if AccountNumber is passed else Mandatory |
 | `account_number` | `String` | Optional | Account Number (ex: GB000000123) of the selected account.<br>Optional if AccountId is passed else Mandatory |
-| `update_odometers` | [`Array<UpdateOdometer>`](../../doc/models/update-odometer.md) | Optional | - |
+| `update_odometers` | [`Array[UpdateOdometer]`](../../doc/models/update-odometer.md) | Optional | - |
 | `notify_caller` | `TrueClass \| FalseClass` | Optional | True/False.<br>Optional.<br>Default: False<br>If true, the caller would be notified back with the status as success or failure after the update odometer is processed. |
 | `caller` | `String` | Optional | The caller to be notified with the status of the update odometer.<br>Mandatory, if NotifyCaller is true. |
 

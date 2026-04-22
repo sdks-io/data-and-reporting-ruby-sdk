@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `price_list` | [`Array<PriceList>`](../../doc/models/price-list.md) | Optional | - |
+| `price_list` | [`Array[PriceList]`](../../doc/models/price-list.md) | Optional | - |
 
 ## Example (as JSON)
 

@@ -26,7 +26,7 @@
 | `invoiced_on_behalf_of` | `String` | Optional | ISO code of the country i.e., UK, DE, MY, etc.<br>Optional |
 | `include_e_invoice_details` | `TrueClass \| FalseClass` | Optional | Whether to include the additional invoice details in the API response.<br>Optional. Default value “False”.<br>The parameters that are populated<br>•    DocumentReference<br>•    AdditionalDocuments<br>The above fields will not be present in the response when the respective data is not available in the source system. |
 | `col_co_code` | `Integer` | Optional | Collecting Company Code of the selected payer.<br>Mandatory - It is mandatory field to external source ATOS for E-invoicing.<br>Example:<br>86-Philippines<br>5-UK |
-| `accounts` | [`Array<Accounts>`](../../doc/models/accounts.md) | Optional | - |
+| `accounts` | [`Array[Accounts]`](../../doc/models/accounts.md) | Optional | - |
 | `type` | `String` | Optional | Invoice type. Allowed values –<br>•    Original – Original document.<br>•    Reversal – Reversed document.<br>•    Replacement – Replaced document.<br>Optional. (When not passed all invoice, types are considered for search)<br>This input is a search criterion, if given.<br>Example: Original |
 
 ## Example (as JSON)

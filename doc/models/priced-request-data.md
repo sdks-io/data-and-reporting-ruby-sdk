@@ -33,11 +33,11 @@ This endpoint allows querying the transaction data (i.e. Priced, Billed and Unbi
 | `vehicle_registration_number` | `String` | Optional | Vehicle Registration (of Card record)<br><br>**Constraints**: *Minimum Length*: `4`, *Maximum Length*: `128` |
 | `fee_type_id` | `Integer` | Optional | Card Id (i.e. Unique Card Id in GFN) |
 | `line_item_description` | `String` | Optional | Item identifier in the transaction.<br><br>**Constraints**: *Minimum Length*: `4`, *Maximum Length*: `128` |
-| `cards` | `Array<Integer>` | Optional | This entity accepts the list of CardId to filter in the response.<br>Note: The number of cardId allowed to be passed in the request is configurable to a maximum of 500 cards.<br><br>**Constraints**: *Minimum Items*: `1`, *Maximum Items*: `500` |
+| `cards` | `Array[Integer]` | Optional | This entity accepts the list of CardId to filter in the response.<br>Note: The number of cardId allowed to be passed in the request is configurable to a maximum of 500 cards.<br><br>**Constraints**: *Minimum Items*: `1`, *Maximum Items*: `500` |
 | `sort_order` | [`PricedTransactionReqV2SortOrderEnum`](../../doc/models/priced-transaction-req-v2-sort-order-enum.md) | Optional | **Constraints**: *Minimum Length*: `1`, *Maximum Length*: `1` |
 | `from_date` | `String` | Optional | From transaction delivery date<br><br>**Constraints**: *Minimum Length*: `10`, *Maximum Length*: `19` |
 | `to_date` | `String` | Optional | To transaction delivery date<br><br>**Constraints**: *Minimum Length*: `10`, *Maximum Length*: `19` |
-| `period` | [`PricedTransactionReqV2PeriodEnum`](../../doc/models/priced-transaction-req-v2-period-enum.md) | Optional | - |
+| `period` | [`PricedTransactionReqV2PeriodEnum`](../../doc/models/priced-transaction-req-v2-period-enum.md) | Optional | Pass below one of the value as per the required transaction period<br><br>1. Last 7 Days<br>2. Last 30 Days<br>3. Last 90 Days |
 | `posting_date_from` | `String` | Optional | Transaction posting start date and time<br><br>**Constraints**: *Minimum Length*: `10`, *Maximum Length*: `19` |
 | `posting_date_to` | `String` | Optional | Transaction posting end date and time<br><br>**Constraints**: *Minimum Length*: `10`, *Maximum Length*: `19` |
 | `transaction_item_id` | `String` | Optional | Unique id of the transaction that may include one or more salesitems |
@@ -78,6 +78,7 @@ This endpoint allows querying the transaction data (i.e. Priced, Billed and Unbi
   "LineItemDescription": "ABC3",
   "FromDate": "2022-01-01 00:00:00",
   "ToDate": "2022-01-01 00:00:00",
+  "Period": 3,
   "PostingDateFrom": "2022-01-01 00:00:00",
   "PostingDateTo": "2022-01-01 00:00:00",
   "TransactionItemId": "io9KVXk1UkW57XWKyeaHHg",

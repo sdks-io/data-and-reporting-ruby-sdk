@@ -11,7 +11,7 @@
 |  --- | --- | --- | --- |
 | `request_id` | `String` | Optional | Mandatory UUID (according to RFC 4122 standards) for requests and responses. This will be played back in the response from the req |
 | `status` | `String` | Optional | Indicates overall status of the request |
-| `data` | [`Array<SearchStatementOfAccount>`](../../doc/models/search-statement-of-account.md) | Optional | - |
+| `data` | [`Array[SearchStatementOfAccount]`](../../doc/models/search-statement-of-account.md) | Optional | - |
 | `page` | `Integer` | Optional | Current page |
 | `total_records` | `Integer` | Optional | Total Number of records in response |
 | `total_pages` | `Integer` | Optional | Total number of pages available for the requested data |

@@ -54,7 +54,7 @@
 | `rebateon_net_amount_in_transaction_currency` | `Float` | Optional | Rebate give to net amountin transaction currency that is used |
 | `effective_discount_in_trx_currency` | `Float` | Optional | Currency used to giveEffective discount on transactions |
 | `del_co_to_col_co_exchange_rate` | `Integer` | Optional | Exchange rate between Delco and Colco |
-| `cards` | `Array<Integer>` | Optional | **Constraints**: *Minimum Items*: `1`, *Maximum Items*: `500` |
+| `cards` | `Array[Integer]` | Optional | **Constraints**: *Minimum Items*: `1`, *Maximum Items*: `500` |
 | `unit_discount_transaction_currency` | `Float` | Optional | Currency used forto provide unit Transaction discount |
 | `transaction_gross_amount` | `Float` | Optional | Transactional amount before tax |
 | `transaction_net_amount` | `Float` | Optional | Transaction net amount after tax |

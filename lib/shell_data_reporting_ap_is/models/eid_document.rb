@@ -46,15 +46,6 @@ module ShellDataReportingApIs
     # @return [Integer]
     attr_accessor :file_size
 
-    # Document status.
-    # Possible values:
-    # •    NEW
-    # •    VIEWED
-    # •    DOWNLOADED
-    # •    RESTORED
-    # @return [String]
-    attr_accessor :document_status
-
     # Document file name.
     # @return [String]
     attr_accessor :document_name
@@ -70,7 +61,6 @@ module ShellDataReportingApIs
       @_hash['document_date'] = 'DocumentDate'
       @_hash['number_of_invoices'] = 'NumberOfInvoices'
       @_hash['file_size'] = 'FileSize'
-      @_hash['document_status'] = 'DocumentStatus'
       @_hash['document_name'] = 'DocumentName'
       @_hash
     end
@@ -86,7 +76,6 @@ module ShellDataReportingApIs
         document_date
         number_of_invoices
         file_size
-        document_status
         document_name
       ]
     end
@@ -102,7 +91,6 @@ module ShellDataReportingApIs
         document_date
         number_of_invoices
         file_size
-        document_status
         document_name
       ]
     end
@@ -111,7 +99,7 @@ module ShellDataReportingApIs
                    account_group_name = SKIP, document_type = SKIP,
                    document_format = SKIP, document_date = SKIP,
                    number_of_invoices = SKIP, file_size = SKIP,
-                   document_status = SKIP, document_name = SKIP)
+                   document_name = SKIP)
       @document_id = document_id unless document_id == SKIP
       @account_group_id = account_group_id unless account_group_id == SKIP
       @account_group_name = account_group_name unless account_group_name == SKIP
@@ -120,7 +108,6 @@ module ShellDataReportingApIs
       @document_date = document_date unless document_date == SKIP
       @number_of_invoices = number_of_invoices unless number_of_invoices == SKIP
       @file_size = file_size unless file_size == SKIP
-      @document_status = document_status unless document_status == SKIP
       @document_name = document_name unless document_name == SKIP
     end
 
@@ -141,8 +128,6 @@ module ShellDataReportingApIs
       number_of_invoices =
         hash.key?('NumberOfInvoices') ? hash['NumberOfInvoices'] : SKIP
       file_size = hash.key?('FileSize') ? hash['FileSize'] : SKIP
-      document_status =
-        hash.key?('DocumentStatus') ? hash['DocumentStatus'] : SKIP
       document_name = hash.key?('DocumentName') ? hash['DocumentName'] : SKIP
 
       # Create object from extracted values.
@@ -154,7 +139,6 @@ module ShellDataReportingApIs
                       document_date,
                       number_of_invoices,
                       file_size,
-                      document_status,
                       document_name)
     end
 
@@ -164,8 +148,8 @@ module ShellDataReportingApIs
       "<#{class_name} document_id: #{@document_id}, account_group_id: #{@account_group_id},"\
       " account_group_name: #{@account_group_name}, document_type: #{@document_type},"\
       " document_format: #{@document_format}, document_date: #{@document_date},"\
-      " number_of_invoices: #{@number_of_invoices}, file_size: #{@file_size}, document_status:"\
-      " #{@document_status}, document_name: #{@document_name}>"
+      " number_of_invoices: #{@number_of_invoices}, file_size: #{@file_size}, document_name:"\
+      " #{@document_name}>"
     end
 
     # Provides a debugging-friendly string with detailed object information.
@@ -175,8 +159,8 @@ module ShellDataReportingApIs
       " #{@account_group_id.inspect}, account_group_name: #{@account_group_name.inspect},"\
       " document_type: #{@document_type.inspect}, document_format: #{@document_format.inspect},"\
       " document_date: #{@document_date.inspect}, number_of_invoices:"\
-      " #{@number_of_invoices.inspect}, file_size: #{@file_size.inspect}, document_status:"\
-      " #{@document_status.inspect}, document_name: #{@document_name.inspect}>"
+      " #{@number_of_invoices.inspect}, file_size: #{@file_size.inspect}, document_name:"\
+      " #{@document_name.inspect}>"
     end
   end
 end

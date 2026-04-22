@@ -161,6 +161,7 @@ require_relative 'shell_data_reporting_ap_is/models/recent_transaction_req'
 require_relative 'shell_data_reporting_ap_is/models/' \
                  'recent_transactions_response'
 require_relative 'shell_data_reporting_ap_is/models/recent_transactions'
+require_relative 'shell_data_reporting_ap_is/models/error_object'
 require_relative 'shell_data_reporting_ap_is/models/error_details'
 require_relative 'shell_data_reporting_ap_is/models/' \
                  'priced_transaction_request_v2'
@@ -229,6 +230,7 @@ require_relative 'shell_data_reporting_ap_is/models/filters'
 require_relative 'shell_data_reporting_ap_is/models/last_statement_of_account2'
 require_relative 'shell_data_reporting_ap_is/models/location'
 require_relative 'shell_data_reporting_ap_is/models/warning'
+require_relative 'shell_data_reporting_ap_is/models/cart_type_account'
 require_relative 'shell_data_reporting_ap_is/models/o_auth_token'
 require_relative 'shell_data_reporting_ap_is/models/' \
                  'priced_transaction_req_v2_invoice_status_enum'
@@ -242,7 +244,321 @@ require_relative 'shell_data_reporting_ap_is/models/o_auth_provider_error_enum'
 
 # Exceptions
 require_relative 'shell_data_reporting_ap_is/exceptions/api_exception'
-require_relative 'shell_data_reporting_ap_is/exceptions/error_object_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_accounts400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_accounts401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_accounts403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_accounts404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_accounts500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_auditreport400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_auditreport401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_auditreport403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_auditreport404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_auditreport500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_cardgroups400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_cardgroups401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_cardgroups403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_cardgroups404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_cardgroups500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_customer400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_customer401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_customer403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_customer404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_customer500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_payers400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_payers401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_payers403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_payers404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_payers500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_pricelist400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_pricelist401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_pricelist403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_pricelist404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v1_pricelist500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v2_cardtype400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v2_cardtype401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v2_cardtype403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v2_cardtype404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'customer_management_v2_cardtype500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_dates400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_dates401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_dates403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_dates404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_dates500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_download400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_download401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_download403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_download404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_download500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eiddownload400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eiddownload401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eiddownload403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eiddownload404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eiddownload500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eidsearch400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eidsearch401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eidsearch403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eidsearch404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_eidsearch500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_search400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_search401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_search403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_search404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_search500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchdocuments400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchdocuments401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchdocuments403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchdocuments404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchdocuments500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchstatemento' \
+                 'faccount400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchstatemento' \
+                 'faccount401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchstatemento' \
+                 'faccount403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchstatemento' \
+                 'faccount404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_searchstatemento' \
+                 'faccount500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_statementofaccount400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_statementofaccount401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_statementofaccount403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_statementofaccount404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_statementofaccount500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_summary400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_summary401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_summary403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_summary404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'invoice_management_v1_summary500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_cardusagesummary400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_cardusagesummary401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_cardusagesummary403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_cardusagesummary404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_cardusagesummary500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_exceptions400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_exceptions401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_exceptions403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_exceptions404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_exceptions500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fees400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fees401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fees403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fees404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fees500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_feessummary400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_feessummary401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_feessummary403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_feessummary404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_feessummary500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fuelconsumption400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fuelconsumption401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fuelconsumption403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fuelconsumption404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_fuelconsumption500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_multipayerspricedt' \
+                 'ransactions400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_multipayerspricedt' \
+                 'ransactions401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_multipayerspricedt' \
+                 'ransactions403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_multipayerspricedt' \
+                 'ransactions404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_multipayerspricedt' \
+                 'ransactions500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_priced400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_priced401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_priced403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_priced404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_priced500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransaction400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransaction401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransaction403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransaction404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransaction500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransactions' \
+                 'summary400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransactions' \
+                 'summary401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransactions' \
+                 'summary403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransactions' \
+                 'summary404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_pricedtransactions' \
+                 'summary500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_recent400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_recent401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_recent403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_recent404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_recent500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_updateodometer400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_updateodometer401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_updateodometer403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_updateodometer404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_updateodometer500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedbonus400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedbonus401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedbonus403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedbonus404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedbonus500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedpricing400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedpricing401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedpricing403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedpricing404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'transaction_data_v1_volumebasedpricing500_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'user_management_v1_loggedinuser400_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'user_management_v1_loggedinuser401_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'user_management_v1_loggedinuser403_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'user_management_v1_loggedinuser404_error_exception'
+require_relative 'shell_data_reporting_ap_is/exceptions/' \
+                 'user_management_v1_loggedinuser500_error_exception'
 require_relative 'shell_data_reporting_ap_is/exceptions/' \
                  'o_auth_provider_exception'
 

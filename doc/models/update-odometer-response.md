@@ -10,7 +10,7 @@
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `service_reference` | `Integer` | Optional | Main reference number for tracking. |
-| `update_odometer_references` | [`Array<UpdateOdometerReference>`](../../doc/models/update-odometer-reference.md) | Optional | - |
+| `update_odometer_references` | [`Array[UpdateOdometerReference]`](../../doc/models/update-odometer-reference.md) | Optional | - |
 
 ## Example (as JSON)
 

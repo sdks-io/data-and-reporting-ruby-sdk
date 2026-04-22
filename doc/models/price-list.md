@@ -44,7 +44,7 @@
 | `price_per_unit_after_discount` | `Float` | Optional | Price per unit after discount |
 | `vat_percentage` | `Float` | Optional | VAT Percentage |
 | `price_rule_category_id` | `Integer` | Optional | PriceRuleCategoryId |
-| `tiers` | [`Array<Tier>`](../../doc/models/tier.md) | Optional | - |
+| `tiers` | [`Array[Tier]`](../../doc/models/tier.md) | Optional | - |
 
 ## Example (as JSON)
 

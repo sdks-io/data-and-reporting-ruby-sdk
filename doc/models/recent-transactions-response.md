@@ -14,7 +14,7 @@
 | `page` | `Integer` | Optional | CurrentPage |
 | `row_count` | `Integer` | Optional | RowCount |
 | `total_pages` | `Integer` | Optional | TotalPages |
-| `data` | [`Array<RecentTransactions>`](../../doc/models/recent-transactions.md) | Optional | API Response |
+| `data` | [`Array[RecentTransactions]`](../../doc/models/recent-transactions.md) | Optional | API Response |
 
 ## Example (as JSON)
 

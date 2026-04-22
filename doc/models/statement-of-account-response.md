@@ -11,7 +11,7 @@
 |  --- | --- | --- | --- |
 | `request_id` | `String` | Optional | Unique request identifier passed from end user. This identifier helps in tracing a transaction |
 | `status` | `String` | Optional | Indicates overall status of the request. Allowed values: SUCCES, FAILED |
-| `data` | [`Array<StatementOfAccountResp>`](../../doc/models/statement-of-account-resp.md) | Optional | - |
+| `data` | [`Array[StatementOfAccountResp]`](../../doc/models/statement-of-account-resp.md) | Optional | - |
 
 ## Example (as JSON)
 

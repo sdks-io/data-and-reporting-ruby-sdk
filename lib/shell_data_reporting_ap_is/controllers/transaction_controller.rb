@@ -72,23 +72,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Pricedtransaction400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Pricedtransaction401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Pricedtransaction403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Pricedtransaction404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Pricedtransaction500ErrorException))
         .execute
     end
 
@@ -155,23 +155,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Pricedtransactionssummary400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Pricedtransactionssummary401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Pricedtransactionssummary403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Pricedtransactionssummary404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Pricedtransactionssummary500ErrorException))
         .execute
     end
 
@@ -235,23 +235,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Multipayerspricedtransactions400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Multipayerspricedtransactions401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Multipayerspricedtransactions403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Multipayerspricedtransactions404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Multipayerspricedtransactions500ErrorException))
         .execute
     end
 
@@ -286,23 +286,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Cardusagesummary400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Cardusagesummary401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Cardusagesummary403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Cardusagesummary404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Cardusagesummary500ErrorException))
         .execute
     end
 
@@ -321,7 +321,7 @@ module ShellDataReportingApIs
                            body: nil)
       @api_call
         .request(new_request_builder(HttpMethodEnum::POST,
-                                     '/transaction-data/v1/volumebasedbonuss',
+                                     '/transaction-data/v1/volumebasedbonus',
                                      Server::SHELL)
                    .header_param(new_parameter(request_id, key: 'RequestId'))
                    .header_param(new_parameter('application/json', key: 'Content-Type'))
@@ -337,23 +337,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Volumebasedbonus400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Volumebasedbonus401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Volumebasedbonus403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Volumebasedbonus404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Volumebasedbonus500ErrorException))
         .execute
     end
 
@@ -387,23 +387,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Volumebasedpricing400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Volumebasedpricing401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Volumebasedpricing403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Volumebasedpricing404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Volumebasedpricing500ErrorException))
         .execute
     end
 
@@ -447,23 +447,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Fees400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Fees401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Fees403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Fees404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Fees500ErrorException))
         .execute
     end
 
@@ -507,23 +507,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Feessummary400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Feessummary401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Feessummary403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Feessummary404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Feessummary500ErrorException))
         .execute
     end
 
@@ -559,23 +559,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Fuelconsumption400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Fuelconsumption401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Fuelconsumption403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Fuelconsumption404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Fuelconsumption500ErrorException))
         .execute
     end
 
@@ -609,23 +609,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Updateodometer400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Updateodometer401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Updateodometer403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Updateodometer404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Updateodometer500ErrorException))
         .execute
     end
 
@@ -660,23 +660,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Exceptions400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Exceptions401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Exceptions403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Exceptions404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Exceptions500ErrorException))
         .execute
     end
 
@@ -720,23 +720,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Recent400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Recent401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Recent403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Recent404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Recent500ErrorException))
         .execute
     end
 
@@ -800,23 +800,23 @@ module ShellDataReportingApIs
                                   ' something that is perceived to be a client error (e.g.,'\
                                   ' malformed request syntax, invalid request message framing, or'\
                                   ' deceptive request routing).',
-                                 ErrorObjectException)
+                                 TransactionDataV1Priced400ErrorException)
                     .local_error('401',
                                  'The request has not been applied because it lacks valid '\
                                   ' authentication credentials for the target resource.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Priced401ErrorException)
                     .local_error('403',
                                  'Forbidden',
-                                 ErrorObjectException)
+                                 TransactionDataV1Priced403ErrorException)
                     .local_error('404',
                                  'The origin server did not find a current representation  for'\
                                   ' the target resource or is not willing to disclose  that one'\
                                   ' exists.',
-                                 ErrorObjectException)
+                                 TransactionDataV1Priced404ErrorException)
                     .local_error('500',
                                  'The server encountered an unexpected condition that  prevented'\
                                   ' it from fulfilling the request.',
-                                 ErrorObjectException))
+                                 TransactionDataV1Priced500ErrorException))
         .execute
     end
   end

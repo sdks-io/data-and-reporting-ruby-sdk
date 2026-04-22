@@ -4,8 +4,8 @@
 # APIMATIC v3.0 ( https://www.apimatic.io ).
 
 module ShellDataReportingApIs
-  # ErrorObject class.
-  class ErrorObjectException < APIException
+  # Customer Management V1 Payers 403 Error class.
+  class CustomerManagementV1Payers403ErrorException < APIException
     SKIP = Object.new
     private_constant :SKIP
 

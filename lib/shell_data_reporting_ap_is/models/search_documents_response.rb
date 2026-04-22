@@ -20,7 +20,7 @@ module ShellDataReportingApIs
 
     # Indicates overall status of the request. Allowed values: SUCCES, FAILED
     # @return [Array[SearchDocumentsInvoice]]
-    attr_accessor :data
+    attr_accessor :invoices
 
     # Total number of elements corresponding to the request
     # @return [Integer]
@@ -44,7 +44,7 @@ module ShellDataReportingApIs
       @_hash = {} if @_hash.nil?
       @_hash['request_id'] = 'RequestId'
       @_hash['status'] = 'Status'
-      @_hash['data'] = 'Data'
+      @_hash['invoices'] = 'Invoices'
       @_hash['total_records'] = 'TotalRecords'
       @_hash['total_records_on_page'] = 'TotalRecordsOnPage'
       @_hash['is_first_page'] = 'IsFirstPage'
@@ -57,7 +57,7 @@ module ShellDataReportingApIs
       %w[
         request_id
         status
-        data
+        invoices
         total_records
         total_records_on_page
         is_first_page
@@ -70,12 +70,12 @@ module ShellDataReportingApIs
       []
     end
 
-    def initialize(request_id = SKIP, status = SKIP, data = SKIP,
+    def initialize(request_id = SKIP, status = SKIP, invoices = SKIP,
                    total_records = SKIP, total_records_on_page = SKIP,
                    is_first_page = SKIP, is_last_page = SKIP)
       @request_id = request_id unless request_id == SKIP
       @status = status unless status == SKIP
-      @data = data unless data == SKIP
+      @invoices = invoices unless invoices == SKIP
       @total_records = total_records unless total_records == SKIP
       @total_records_on_page = total_records_on_page unless total_records_on_page == SKIP
       @is_first_page = is_first_page unless is_first_page == SKIP
@@ -90,15 +90,15 @@ module ShellDataReportingApIs
       request_id = hash.key?('RequestId') ? hash['RequestId'] : SKIP
       status = hash.key?('Status') ? hash['Status'] : SKIP
       # Parameter is an array, so we need to iterate through it
-      data = nil
-      unless hash['Data'].nil?
-        data = []
-        hash['Data'].each do |structure|
-          data << (SearchDocumentsInvoice.from_hash(structure) if structure)
+      invoices = nil
+      unless hash['Invoices'].nil?
+        invoices = []
+        hash['Invoices'].each do |structure|
+          invoices << (SearchDocumentsInvoice.from_hash(structure) if structure)
         end
       end
 
-      data = SKIP unless hash.key?('Data')
+      invoices = SKIP unless hash.key?('Invoices')
       total_records = hash.key?('TotalRecords') ? hash['TotalRecords'] : SKIP
       total_records_on_page =
         hash.key?('TotalRecordsOnPage') ? hash['TotalRecordsOnPage'] : SKIP
@@ -108,7 +108,7 @@ module ShellDataReportingApIs
       # Create object from extracted values.
       SearchDocumentsResponse.new(request_id,
                                   status,
-                                  data,
+                                  invoices,
                                   total_records,
                                   total_records_on_page,
                                   is_first_page,
@@ -118,7 +118,7 @@ module ShellDataReportingApIs
     # Provides a human-readable string representation of the object.
     def to_s
       class_name = self.class.name.split('::').last
-      "<#{class_name} request_id: #{@request_id}, status: #{@status}, data: #{@data},"\
+      "<#{class_name} request_id: #{@request_id}, status: #{@status}, invoices: #{@invoices},"\
       " total_records: #{@total_records}, total_records_on_page: #{@total_records_on_page},"\
       " is_first_page: #{@is_first_page}, is_last_page: #{@is_last_page}>"
     end
@@ -126,8 +126,8 @@ module ShellDataReportingApIs
     # Provides a debugging-friendly string with detailed object information.
     def inspect
       class_name = self.class.name.split('::').last
-      "<#{class_name} request_id: #{@request_id.inspect}, status: #{@status.inspect}, data:"\
-      " #{@data.inspect}, total_records: #{@total_records.inspect}, total_records_on_page:"\
+      "<#{class_name} request_id: #{@request_id.inspect}, status: #{@status.inspect}, invoices:"\
+      " #{@invoices.inspect}, total_records: #{@total_records.inspect}, total_records_on_page:"\
       " #{@total_records_on_page.inspect}, is_first_page: #{@is_first_page.inspect}, is_last_page:"\
       " #{@is_last_page.inspect}>"
     end

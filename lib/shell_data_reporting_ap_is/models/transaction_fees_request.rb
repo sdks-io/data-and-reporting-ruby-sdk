@@ -67,6 +67,23 @@ module ShellDataReportingApIs
     # @return [String]
     attr_accessor :invoice_status
 
+    # Invoice Number 
+    # Optional
+    # @return [String]
+    attr_accessor :invoice_number
+
+    # Fee Item Posted Date From 
+    # Optional
+    # Format: yyyyMMdd
+    # @return [String]
+    attr_accessor :posted_date_from
+
+    # Fee Item Posted Date To 
+    # Optional
+    # Format: yyyyMMdd
+    # @return [String]
+    attr_accessor :posted_date_to
+
     # Fee type group in under which the Fee item is generated.
     # Optional.
     # Allowed values:
@@ -169,6 +186,9 @@ module ShellDataReportingApIs
       @_hash['card_id'] = 'CardId'
       @_hash['card_pan'] = 'CardPAN'
       @_hash['invoice_status'] = 'InvoiceStatus'
+      @_hash['invoice_number'] = 'InvoiceNumber'
+      @_hash['posted_date_from'] = 'PostedDateFrom'
+      @_hash['posted_date_to'] = 'PostedDateTo'
       @_hash['fee_type_group'] = 'FeeTypeGroup'
       @_hash['fee_type_id'] = 'FeeTypeId'
       @_hash['from_date'] = 'FromDate'
@@ -193,6 +213,9 @@ module ShellDataReportingApIs
         card_id
         card_pan
         invoice_status
+        invoice_number
+        posted_date_from
+        posted_date_to
         fee_type_group
         fee_type_id
         from_date
@@ -216,6 +239,9 @@ module ShellDataReportingApIs
         card_id
         card_pan
         invoice_status
+        invoice_number
+        posted_date_from
+        posted_date_to
         fee_type_group
         fee_type_id
         from_date
@@ -232,11 +258,12 @@ module ShellDataReportingApIs
     def initialize(col_co_id = SKIP, col_co_code = SKIP, payer_id = SKIP,
                    payer_number = SKIP, accounts = SKIP, card_id = SKIP,
                    card_pan = SKIP, invoice_status = SKIP,
-                   fee_type_group = SKIP, fee_type_id = SKIP, from_date = SKIP,
-                   to_date = SKIP, period = SKIP,
-                   include_cancelled_items = SKIP, product_id = SKIP,
-                   product_code = SKIP, line_item_description = SKIP,
-                   sort_order = SKIP)
+                   invoice_number = SKIP, posted_date_from = SKIP,
+                   posted_date_to = SKIP, fee_type_group = SKIP,
+                   fee_type_id = SKIP, from_date = SKIP, to_date = SKIP,
+                   period = SKIP, include_cancelled_items = SKIP,
+                   product_id = SKIP, product_code = SKIP,
+                   line_item_description = SKIP, sort_order = SKIP)
       @col_co_id = col_co_id unless col_co_id == SKIP
       @col_co_code = col_co_code unless col_co_code == SKIP
       @payer_id = payer_id unless payer_id == SKIP
@@ -245,6 +272,9 @@ module ShellDataReportingApIs
       @card_id = card_id unless card_id == SKIP
       @card_pan = card_pan unless card_pan == SKIP
       @invoice_status = invoice_status unless invoice_status == SKIP
+      @invoice_number = invoice_number unless invoice_number == SKIP
+      @posted_date_from = posted_date_from unless posted_date_from == SKIP
+      @posted_date_to = posted_date_to unless posted_date_to == SKIP
       @fee_type_group = fee_type_group unless fee_type_group == SKIP
       @fee_type_id = fee_type_id unless fee_type_id == SKIP
       @from_date = from_date unless from_date == SKIP
@@ -279,6 +309,10 @@ module ShellDataReportingApIs
       card_id = hash.key?('CardId') ? hash['CardId'] : SKIP
       card_pan = hash.key?('CardPAN') ? hash['CardPAN'] : SKIP
       invoice_status = hash.key?('InvoiceStatus') ? hash['InvoiceStatus'] : SKIP
+      invoice_number = hash.key?('InvoiceNumber') ? hash['InvoiceNumber'] : SKIP
+      posted_date_from =
+        hash.key?('PostedDateFrom') ? hash['PostedDateFrom'] : SKIP
+      posted_date_to = hash.key?('PostedDateTo') ? hash['PostedDateTo'] : SKIP
       fee_type_group = hash.key?('FeeTypeGroup') ? hash['FeeTypeGroup'] : SKIP
       fee_type_id = hash.key?('FeeTypeId') ? hash['FeeTypeId'] : SKIP
       from_date = hash.key?('FromDate') ? hash['FromDate'] : SKIP
@@ -301,6 +335,9 @@ module ShellDataReportingApIs
                                  card_id,
                                  card_pan,
                                  invoice_status,
+                                 invoice_number,
+                                 posted_date_from,
+                                 posted_date_to,
                                  fee_type_group,
                                  fee_type_id,
                                  from_date,
@@ -318,11 +355,13 @@ module ShellDataReportingApIs
       class_name = self.class.name.split('::').last
       "<#{class_name} col_co_id: #{@col_co_id}, col_co_code: #{@col_co_code}, payer_id:"\
       " #{@payer_id}, payer_number: #{@payer_number}, accounts: #{@accounts}, card_id:"\
-      " #{@card_id}, card_pan: #{@card_pan}, invoice_status: #{@invoice_status}, fee_type_group:"\
-      " #{@fee_type_group}, fee_type_id: #{@fee_type_id}, from_date: #{@from_date}, to_date:"\
-      " #{@to_date}, period: #{@period}, include_cancelled_items: #{@include_cancelled_items},"\
-      " product_id: #{@product_id}, product_code: #{@product_code}, line_item_description:"\
-      " #{@line_item_description}, sort_order: #{@sort_order}>"
+      " #{@card_id}, card_pan: #{@card_pan}, invoice_status: #{@invoice_status}, invoice_number:"\
+      " #{@invoice_number}, posted_date_from: #{@posted_date_from}, posted_date_to:"\
+      " #{@posted_date_to}, fee_type_group: #{@fee_type_group}, fee_type_id: #{@fee_type_id},"\
+      " from_date: #{@from_date}, to_date: #{@to_date}, period: #{@period},"\
+      " include_cancelled_items: #{@include_cancelled_items}, product_id: #{@product_id},"\
+      " product_code: #{@product_code}, line_item_description: #{@line_item_description},"\
+      " sort_order: #{@sort_order}>"
     end
 
     # Provides a debugging-friendly string with detailed object information.
@@ -331,12 +370,14 @@ module ShellDataReportingApIs
       "<#{class_name} col_co_id: #{@col_co_id.inspect}, col_co_code: #{@col_co_code.inspect},"\
       " payer_id: #{@payer_id.inspect}, payer_number: #{@payer_number.inspect}, accounts:"\
       " #{@accounts.inspect}, card_id: #{@card_id.inspect}, card_pan: #{@card_pan.inspect},"\
-      " invoice_status: #{@invoice_status.inspect}, fee_type_group: #{@fee_type_group.inspect},"\
-      " fee_type_id: #{@fee_type_id.inspect}, from_date: #{@from_date.inspect}, to_date:"\
-      " #{@to_date.inspect}, period: #{@period.inspect}, include_cancelled_items:"\
-      " #{@include_cancelled_items.inspect}, product_id: #{@product_id.inspect}, product_code:"\
-      " #{@product_code.inspect}, line_item_description: #{@line_item_description.inspect},"\
-      " sort_order: #{@sort_order.inspect}>"
+      " invoice_status: #{@invoice_status.inspect}, invoice_number: #{@invoice_number.inspect},"\
+      " posted_date_from: #{@posted_date_from.inspect}, posted_date_to:"\
+      " #{@posted_date_to.inspect}, fee_type_group: #{@fee_type_group.inspect}, fee_type_id:"\
+      " #{@fee_type_id.inspect}, from_date: #{@from_date.inspect}, to_date: #{@to_date.inspect},"\
+      " period: #{@period.inspect}, include_cancelled_items: #{@include_cancelled_items.inspect},"\
+      " product_id: #{@product_id.inspect}, product_code: #{@product_code.inspect},"\
+      " line_item_description: #{@line_item_description.inspect}, sort_order:"\
+      " #{@sort_order.inspect}>"
     end
   end
 end

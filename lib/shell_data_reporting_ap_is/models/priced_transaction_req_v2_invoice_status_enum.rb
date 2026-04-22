@@ -23,5 +23,19 @@ module ShellDataReportingApIs
 
       PRICED_TRANSACTION_REQ_V2_INVOICE_STATUS_ENUM.include?(value)
     end
+
+    def self.from_value(value, default_value = I)
+      return default_value if value.nil?
+
+      str = value.to_s.strip
+
+      case str.downcase
+      when 'i' then I
+      when 'u' then U
+      when 'a' then A
+      else
+        default_value
+      end
+    end
   end
 end

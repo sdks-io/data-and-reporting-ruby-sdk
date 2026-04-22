@@ -13,10 +13,13 @@
 | `col_co_code` | `Integer` | Optional | Collecting Company Code (Shell Code) of the selected payer.<br>Mandatory for serviced OUs such as Romania, Latvia, Lithuania, Estonia, Ukraine etc. It is optional for other countries if ColCoID is provided.<br>Example:<br>86 for Philippines<br>5 for UK |
 | `payer_id` | `Integer` | Optional | Payer Id of the selected payer.<br>Optional if PayerNumber is passed else Mandatory<br>Example: 123456 |
 | `payer_number` | `String` | Optional | Payer Number (Ex: GB000000123) of the selected payer.<br>Optional if PayerId is passed else Mandatory |
-| `accounts` | [`Array<Accounts>`](../../doc/models/accounts.md) | Optional | - |
+| `accounts` | [`Array[Accounts]`](../../doc/models/accounts.md) | Optional | - |
 | `card_id` | `Integer` | Optional | Card Id<br>Optional<br>When both Card Id and Card PAN are not present on request, the response will have all the fee items under the selected payer or account.<br>Example: 275549 |
 | `card_pan` | `String` | Optional | Full Card PAN<br>Optional<br>When both Card Id and Card PAN are not present on request, the response will have all the fee items under the selected payer or account or card group. |
 | `invoice_status` | `String` | Optional | Invoice status of the fee items<br>Mandatory<br>Possible options:<br>I - Invoiced<br>U – Un-Invoiced<br>A – All |
+| `invoice_number` | `String` | Optional | Invoice Number<br>Optional |
+| `posted_date_from` | `String` | Optional | Fee Item Posted Date From<br>Optional<br>Format: yyyyMMdd |
+| `posted_date_to` | `String` | Optional | Fee Item Posted Date To<br>Optional<br>Format: yyyyMMdd |
 | `fee_type_group` | `String` | Optional | Fee type group in under which the Fee item is generated.<br>Optional.<br>Allowed values:<br><br>- Account Charges<br>- Card Charges<br>- Others Charges |
 | `fee_type_id` | `Integer` | Optional | Fee Type Id.<br>Optional.<br>Example:<br><br>1. Simple Fee<br>2. Card Event Fee<br>3. Customer Event Fee |
 | `from_date` | `String` | Optional | Fee Item FromDate/Time<br>Should be with in last 24 months<br>Optional<br>Maximum of 210 days duration allowed per search, its configurable.<br>Format: yyyyMMdd |
